@@ -13,7 +13,12 @@ const stylesForLinks = {
 
 const Header = () => {
   return (
-    <AppBar component="nav" sx={{ position: 'fixed', background: '#fff' }}>
+    <AppBar
+      component="nav"
+      sx={{
+        position: 'fixed',
+        background: '#fff',
+      }}>
       <Container>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <NavLink to="/">

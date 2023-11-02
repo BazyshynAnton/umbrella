@@ -24,3 +24,33 @@ body {
 a {
   text-decoration: none;
 }
+/* swiper */
+.swiper .swiper-button-next:after,
+.swiper .swiper-button-prev:after {
+  background: linear-gradient(#ef3829, #ad2526);
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper .swiper-button-next:after {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background: linear-gradient(#ef3829, #ad2526) !important;
+  border: none !important;
+}
+.swiper .swiper-pagination-bullet {
+  font-size: 0.8em;
+  background: #fff;
+  border: 0.2em solid #84878c;
+  opacity: 1;
+  height: 1.2em;
+  width: 1.2em;
+  --swiper-pagination-bullet-horizontal-gap: 0.35em;
+}

@@ -55,6 +55,7 @@ const AboutVaccine = () => {
           bottom: '-45px',
           width: '58%',
           right: '0',
+          zIndex: '99',
           ...animationForAd,
         }}>
         <Box
@@ -176,7 +177,11 @@ const AboutVaccine = () => {
             </Typography>
           </Box>
         </Box>
-        <NavLink to="">
+        <NavLink
+          to=""
+          style={{
+            borderRadius: '25px',
+          }}>
           <Button
             onMouseEnter={() => {
               setIsButtonHovered(true)
@@ -202,6 +207,7 @@ const AboutVaccine = () => {
           style={{
             position: 'absolute',
             bottom: '8%',
+            pointerEvents: 'none',
             left: '35%',
             ...animationForCovidPicOne,
             ...fadeInOutAnimation,
@@ -218,6 +224,7 @@ const AboutVaccine = () => {
           style={{
             position: 'absolute',
             bottom: '0',
+            pointerEvents: 'none',
             right: '36%',
             ...animationForCovidPicTwo,
             ...fadeInOutAnimation,
@@ -234,6 +241,7 @@ const AboutVaccine = () => {
           style={{
             position: 'absolute',
             bottom: '-5%',
+            pointerEvents: 'none',
             left: '43%',
             ...animationForCovidPicThree,
             ...fadeInOutAnimation,
