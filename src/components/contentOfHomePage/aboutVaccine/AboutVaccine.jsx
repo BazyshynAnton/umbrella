@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useSpring, animated } from '@react-spring/web'
+import { useSpring, animated, config } from '@react-spring/web'
 
 import umbrellaVaccinePic from '../../../pictures/umbrellaVaccinePic.png'
 import coronaVirusOne from '../../../pictures/coronaVirusOne.png'
@@ -12,6 +12,7 @@ const AboutVaccine = () => {
   const animationForAd = useSpring({
     from: { opacity: 0, x: 1000 },
     to: { opacity: 1, x: 0 },
+    config: config.slow,
   })
   const animationForCovidPicOne = useSpring({
     to: { transform: 'rotate(360deg)' },
