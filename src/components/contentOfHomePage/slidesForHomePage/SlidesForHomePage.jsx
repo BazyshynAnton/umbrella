@@ -1,11 +1,5 @@
-import {
-  useSpring,
-  animated,
-  config,
-  useSpringRef,
-  useChain,
-} from '@react-spring/web'
-import { useEffect, useState } from 'react'
+import { useSpring, animated, config } from '@react-spring/web'
+import { useState } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -19,6 +13,7 @@ import slideForHomePageOne from '../../../pictures/slideForHomePageOne.jpg'
 import slideForHomePageTwo from '../../../pictures/slideForHomePageTwo.jpg'
 import slideForHomePageThree from '../../../pictures/slideForHomePageThree.jpg'
 import slideForHomePageFour from '../../../pictures/slideForHomePageFour.jpg'
+import quote from '../../../pictures/quote.png'
 
 import 'swiper/css'
 import 'swiper/css/effect-creative'
@@ -31,6 +26,36 @@ const stylesForPictures = {
   width: '100%',
   height: '100%',
   transition: 'ease',
+}
+
+const stylesForQuotes = {
+  objectFit: 'cover',
+  width: '40px',
+  height: '30px',
+  position: 'absolute',
+  top: '0',
+  left: '-45px',
+}
+
+const stylesForTextInSlides = {
+  redText: {
+    color: 'red',
+    fontFamily: "'Tilt Warp', sans-serif",
+    fontSize: '1.5rem',
+    letterSpacing: '0.07em',
+    lineHeight: '1em',
+    textAlign: 'left',
+    textTransform: 'uppercase',
+    cursor: 'default',
+  },
+
+  yellowText: {
+    fontFamily: "'Figtree', sans-serif",
+    fontWeight: '600',
+    fontSize: '1.2rem',
+    color: '#DAA520',
+    cursor: 'default',
+  },
 }
 
 const SlidesForHomePage = () => {
@@ -95,10 +120,10 @@ const SlidesForHomePage = () => {
           translate: ['100%', 0, 0],
         },
       }}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // }}
       pagination={{
         clickable: true,
       }}
@@ -120,30 +145,11 @@ const SlidesForHomePage = () => {
             pointerEvents: 'none',
             ...textAnimation1,
           }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: 'red',
-
-              fontFamily: "'Tilt Warp', sans-serif",
-              fontSize: '1.5rem',
-              letterSpacing: '0.07em',
-              lineHeight: '1em',
-              textAlign: 'left',
-              textTransform: 'uppercase',
-              cursor: 'default',
-            }}>
+          <img style={stylesForQuotes} src={quote} alt="quotes" />
+          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
             Protect Yourself
             <br />
-            <Typography
-              variant="caption"
-              sx={{
-                fontFamily: "'Figtree', sans-serif",
-                fontWeight: '600',
-                fontSize: '1.2rem',
-                color: '#DAA520',
-                cursor: 'default',
-              }}>
+            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
               and Others:
             </Typography>
             <br />
@@ -168,32 +174,15 @@ const SlidesForHomePage = () => {
             pointerEvents: 'none',
             ...textAnimation2,
           }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: 'red',
-
-              fontFamily: "'Tilt Warp', sans-serif",
-              fontSize: '1.5rem',
-              letterSpacing: '0.07em',
-              lineHeight: '1em',
-              textAlign: 'left',
-              textTransform: 'uppercase',
-              cursor: 'default',
-            }}>
+          <img style={stylesForQuotes} src={quote} alt="quotes" />
+          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
             Together
-            <br /> we are stronger:
             <br />
-            protect yourself <br />
-            <Typography
-              variant="caption"
-              sx={{
-                fontFamily: "'Figtree', sans-serif",
-                fontWeight: '600',
-                fontSize: '1.2rem',
-                color: '#DAA520',
-                cursor: 'default',
-              }}>
+            we are stronger:
+            <br />
+            protect yourself
+            <br />
+            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
               and your loved
             </Typography>
             <br />
@@ -217,34 +206,15 @@ const SlidesForHomePage = () => {
             pointerEvents: 'none',
             ...textAnimation3,
           }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: 'red',
-
-              fontFamily: "'Tilt Warp', sans-serif",
-              fontSize: '1.5rem',
-              letterSpacing: '0.07em',
-              lineHeight: '1em',
-              textAlign: 'left',
-              textTransform: 'uppercase',
-              cursor: 'default',
-            }}>
+          <img style={stylesForQuotes} src={quote} alt="quotes" />
+          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
             Take
             <br />
             the Umbrella vaccine
             <br />
             to strengthen
             <br />
-            <Typography
-              variant="caption"
-              sx={{
-                fontFamily: "'Figtree', sans-serif",
-                fontWeight: '600',
-                fontSize: '1.2rem',
-                color: '#DAA520',
-                cursor: 'default',
-              }}>
+            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
               the immune system
             </Typography>
           </Typography>
@@ -266,31 +236,13 @@ const SlidesForHomePage = () => {
             pointerEvents: 'none',
             ...textAnimation4,
           }}>
-          <Typography
-            variant="body1"
-            sx={{
-              color: 'red',
-
-              fontFamily: "'Tilt Warp', sans-serif",
-              fontSize: '1.5rem',
-              letterSpacing: '0.07em',
-              lineHeight: '1em',
-              textAlign: 'left',
-              textTransform: 'uppercase',
-              cursor: 'default',
-            }}>
+          <img style={stylesForQuotes} src={quote} alt="quotes" />
+          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
             Umbrella:
             <br />
-            Innovations <br />
-            <Typography
-              variant="caption"
-              sx={{
-                fontFamily: "'Figtree', sans-serif",
-                fontWeight: '600',
-                fontSize: '1.2rem',
-                color: '#DAA520',
-                cursor: 'default',
-              }}>
+            Innovations
+            <br />
+            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
               with
             </Typography>
             <br />

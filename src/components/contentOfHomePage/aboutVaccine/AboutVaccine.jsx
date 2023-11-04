@@ -64,7 +64,6 @@ const AboutVaccine = () => {
             height: '70px',
             width: '100%',
             background: '#c3221c',
-
             '::before': {
               content: '""',
               position: 'absolute',
@@ -79,7 +78,6 @@ const AboutVaccine = () => {
               position: 'absolute',
               right: '100',
               background: '#c3221c',
-
               width: '100vw',
               height: '100%',
             },
@@ -100,6 +98,17 @@ const AboutVaccine = () => {
             }}>
             a new product from umbrella corporation
           </Typography>
+          <Box
+            sx={{
+              position: ' absolute',
+              left: '-70px',
+              bottom: '-0px',
+              width: '100vw',
+              height: '10px',
+              background: 'none',
+              boxShadow: '5px 3px 5px #000',
+            }}
+          />
         </Box>
       </animated.div>
       <Box
