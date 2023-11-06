@@ -1,9 +1,9 @@
-import React from 'react'
 import { Box, Container } from '@mui/material'
 import AboutVaccine from './aboutVaccine/AboutVaccine'
 import SlidesForHomePage from './slidesForHomePage/SlidesForHomePage'
 import CareersAtUmbrella from './careersAtUmbrella/CareersAtUmbrella'
 import ConnectWithUs from './connectWithUs/ConnectWithUs'
+import StayUpToDate from './stayUpToDate/StayUpToDate'
 
 const ContentOfHomePage = () => {
   return (
@@ -15,6 +15,7 @@ const ContentOfHomePage = () => {
         <SlidesForHomePage />
         <CareersAtUmbrella />
         <ConnectWithUs />
+        <StayUpToDate />
       </Container>
     </>
   )

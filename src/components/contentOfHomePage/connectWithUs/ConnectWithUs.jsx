@@ -1,4 +1,5 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import YellowButton from '../yellowButton/YellowButton'
 import chair from '../../../pictures/chair.jpg'
 const ConnectWithUs = () => {
   return (
@@ -49,30 +50,7 @@ const ConnectWithUs = () => {
           </Typography>
         </Box>
 
-        <Box
-          variant="body1"
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            cursor: 'pointer',
-            width: '145px',
-            justifyContent: 'space-between',
-          }}>
-          <Box
-            sx={{
-              background: '#FFFF00',
-              width: '50px',
-              height: '50px',
-              borderRadius: '100px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            {'>'}
-          </Box>
-          <Typography variant="body1">Contact Us</Typography>
-        </Box>
+        <YellowButton>Contact Us</YellowButton>
       </Box>
     </Box>
   )
