@@ -1,4 +1,5 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import YellowButton from '../yellowButton/YellowButton'
 import redbook from '../../../pictures/redbook.png'
 const CareersAtUmbrella = () => {
   return (
@@ -51,31 +52,7 @@ const CareersAtUmbrella = () => {
             professionals. Join us and be part of our unique pioneering spirit.
           </Typography>
         </Box>
-
-        <Box
-          variant="body1"
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            cursor: 'pointer',
-            width: '170px',
-            justifyContent: 'space-between',
-          }}>
-          <Box
-            sx={{
-              background: '#FFFF00',
-              width: '50px',
-              height: '50px',
-              borderRadius: '100px',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
-            {'>'}
-          </Box>
-          <Typography variant="body1">Careers Portal</Typography>
-        </Box>
+        <YellowButton>Careers Portal</YellowButton>
       </Box>
     </Box>
   )

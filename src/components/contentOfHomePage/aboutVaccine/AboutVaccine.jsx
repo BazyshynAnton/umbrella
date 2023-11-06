@@ -14,6 +14,7 @@ const AboutVaccine = () => {
     to: { opacity: 1, x: 0 },
     config: config.slow,
   })
+
   const animationForCovidPicOne = useSpring({
     to: { transform: 'rotate(360deg)' },
     from: { transform: 'rotate(0deg)' },
