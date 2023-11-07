@@ -4,6 +4,7 @@ import SlidesForHomePage from './slidesForHomePage/SlidesForHomePage'
 import CareersAtUmbrella from './careersAtUmbrella/CareersAtUmbrella'
 import ConnectWithUs from './connectWithUs/ConnectWithUs'
 import StayUpToDate from './stayUpToDate/StayUpToDate'
+import Footer from '../footer/Footer'
 
 const ContentOfHomePage = () => {
   return (
@@ -17,6 +18,7 @@ const ContentOfHomePage = () => {
         <ConnectWithUs />
         <StayUpToDate />
       </Container>
+      <Footer />
     </>
   )
 }
