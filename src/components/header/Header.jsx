@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <AppBar
       component="nav"
+      position="fixed"
       sx={{
-        position: 'fixed',
         background: '#fff',
       }}>
       <Container>

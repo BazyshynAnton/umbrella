@@ -5,10 +5,10 @@ import Header from '../components/header/Header'
 
 const HomePage = () => {
   return (
-    <Box className="wrapper">
+    <div className="wrapper">
       <Header />
       <ContentOfHomePage />
-    </Box>
+    </div>
   )
 }
 
