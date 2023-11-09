@@ -59,21 +59,40 @@ const stylesForTextInSlides = {
 }
 
 const SlidesForHomePage = () => {
-  const [isHovered, setHovered] = useState(false)
-
-  const handleMouseEnter = () => {
-    setHovered(true)
-  }
-
-  const handleMouseLeave = () => {
-    setHovered(false)
-  }
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const animatedStyles = useSpring({
-    transform: isHovered ? 'scale(1.2)' : 'scale(1)',
-  })
+    from: { transform: 'scale(1)' },
+    to: { transform: 'scale(2)' },
 
-  const [activeIndex, setActiveIndex] = useState(0)
+    config: { duration: 50000 },
+
+    reset: activeIndex !== 0,
+  })
+  const animatedStyles1 = useSpring({
+    from: { transform: 'scale(1)' },
+    to: { transform: 'scale(2)' },
+
+    config: { duration: 50000 },
+
+    reset: activeIndex !== 1,
+  })
+  const animatedStyles2 = useSpring({
+    from: { transform: 'scale(1)' },
+    to: { transform: 'scale(2)' },
+
+    config: { duration: 50000 },
+
+    reset: activeIndex !== 2,
+  })
+  const animatedStyles3 = useSpring({
+    from: { transform: 'scale(1)' },
+    to: { transform: 'scale(2)' },
+
+    config: { duration: 50000 },
+
+    reset: activeIndex !== 3,
+  })
 
   const textAnimation1 = useSpring({
     from: activeIndex === 0 ? { opacity: 0, x: -1000 } : { opacity: 0, x: 0 },
@@ -120,10 +139,10 @@ const SlidesForHomePage = () => {
           translate: ['100%', 0, 0],
         },
       }}
-      // autoplay={{
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
       pagination={{
         clickable: true,
       }}
@@ -131,11 +150,12 @@ const SlidesForHomePage = () => {
       modules={[EffectCreative, Pagination, Navigation, Autoplay]}>
       <SwiperSlide style={{ position: 'relative' }}>
         <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles }}
+          style={{
+            ...stylesForPictures,
+            ...animatedStyles,
+          }}
           src={slideForHomePageOne}
           alt="slide-1"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
         <animated.div
           style={{
@@ -160,11 +180,9 @@ const SlidesForHomePage = () => {
       </SwiperSlide>
       <SwiperSlide>
         <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles }}
+          style={{ ...stylesForPictures, ...animatedStyles1 }}
           src={slideForHomePageTwo}
           alt="slide-2"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
         <animated.div
           style={{
@@ -192,11 +210,9 @@ const SlidesForHomePage = () => {
       </SwiperSlide>
       <SwiperSlide>
         <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles }}
+          style={{ ...stylesForPictures, ...animatedStyles2 }}
           src={slideForHomePageThree}
           alt="slide-3"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
         <animated.div
           style={{
@@ -222,11 +238,9 @@ const SlidesForHomePage = () => {
       </SwiperSlide>
       <SwiperSlide>
         <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles }}
+          style={{ ...stylesForPictures, ...animatedStyles3 }}
           src={slideForHomePageFour}
           alt="slide-4"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         />
         <animated.div
           style={{

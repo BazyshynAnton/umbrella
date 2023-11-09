@@ -1,5 +1,5 @@
-import { Box, Button, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import { Box, Button, Hidden, Typography } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSpring, animated, config } from '@react-spring/web'
 
@@ -16,22 +16,22 @@ const AboutVaccine = () => {
   })
 
   const animationForCovidPicOne = useSpring({
-    to: { transform: 'rotate(360deg)' },
     from: { transform: 'rotate(0deg)' },
+    to: { transform: 'rotate(360deg)' },
     config: { duration: 5000 },
     reset: true,
     loop: true,
   })
   const animationForCovidPicTwo = useSpring({
-    to: { transform: 'rotate(360deg)' },
     from: { transform: 'rotate(0deg)' },
+    to: { transform: 'rotate(360deg)' },
     config: { duration: 5000 },
     reset: true,
     loop: true,
   })
   const animationForCovidPicThree = useSpring({
-    to: { transform: 'rotate(0deg)' },
     from: { transform: 'rotate(360deg)' },
+    to: { transform: 'rotate(0deg)' },
     config: { duration: 5000 },
     reset: true,
     loop: true,
@@ -42,8 +42,43 @@ const AboutVaccine = () => {
     config: { duration: 300 },
   })
 
+  const animationForStorageDiv = useSpring({
+    from: { opacity: 0, width: '0px', transformOrigin: 'left' },
+    to: { opacity: 1, width: '10px', transformOrigin: 'left' },
+    config: { duration: 500 },
+  })
+  const [animationHeight, setAnimationHeight] = useSpring(() => ({
+    from: { height: '80px' },
+    to: { height: '185px' },
+    config: { duration: 500 },
+    onRest: () => {
+      setTimeout(() => {
+        setAnimationHeight({ height: '80px' })
+      }, 2000)
+    },
+    delay: 800,
+  }))
+
+  const animationForUmbrellaVaccine = useSpring({
+    from: { opacity: 0, x: -280 },
+    to: { opacity: 1, x: 20 },
+    config: { duration: 1500 },
+    delay: 1600,
+  })
+  const animationForCovidText = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1500 },
+  })
+
   return (
-    <Box sx={{ width: '100%', display: 'flex', position: 'relative' }}>
+    <Box
+      sx={{
+        width: '100%',
+        height: '350px',
+        display: 'flex',
+        position: 'relative',
+      }}>
       <Box sx={{ width: '100%' }}>
         <img
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
@@ -121,6 +156,8 @@ const AboutVaccine = () => {
           gap: '1.5rem',
           top: '15%',
           left: '50%',
+          width: '620px',
+          height: '250px',
         }}>
         <Box
           sx={{
@@ -128,65 +165,106 @@ const AboutVaccine = () => {
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '1.5rem',
           }}>
-          <Typography
-            variant="h2"
-            sx={{
-              color: '#808080',
-              cursor: 'default',
-              fontFamily: "'Oswald', sans-serif",
-              fontWeight: '400',
-            }}>
-            Covid-19
-          </Typography>
           <Box
             sx={{
-              height: '80px',
-              position: 'relative',
-              width: '10px',
-              background: '#808080',
-              clipPath: 'polygon(0 0, 100% 10%, 100% 80%, 100% 89%, 0% 100%)',
-            }}
-          />
-          <Box
-            sx={{
+              width: '260px',
+              height: '184px',
+              background: '#fff',
+              zIndex: '10',
               display: 'flex',
+              flexDirection: 'row',
               alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              pr: '10px',
             }}>
-            <Typography
-              variant="h1"
-              sx={{
-                color: '#808080',
-                cursor: 'default',
-                fontFamily: "'Teko', sans-serif",
-                fontWeight: '500',
-              }}>
-              Umbrella
+            <animated.div style={{ ...animationForCovidText }}>
               <Typography
-                variant="body2"
+                variant="h2"
                 sx={{
-                  position: 'absolute',
-                  top: '0',
-                  right: '-15px',
+                  color: '#808080',
                   cursor: 'default',
+                  fontFamily: "'Oswald', sans-serif",
+                  fontWeight: '400',
                 }}>
-                TM
+                Covid-19
               </Typography>
-            </Typography>
-            <Typography
-              variant="h2"
-              sx={{
-                color: 'red',
-                cursor: 'default',
-                fontFamily: "'Teko', sans-serif",
-                fontWeight: '400',
-              }}>
-              Vaccine
-            </Typography>
+            </animated.div>
           </Box>
+          <Box
+            sx={{
+              width: '20px',
+              height: '184px',
+              background: '#fff',
+              zIndex: '10',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+            }}>
+            <animated.div
+              style={{
+                width: '10px',
+                background: '#808080',
+                clipPath: 'polygon(0 0, 100% 10%, 100% 80%, 100% 89%, 0% 100%)',
+                ...animationForStorageDiv,
+                ...animationHeight,
+              }}>
+              <Box
+                sx={{
+                  height: '80px',
+                  position: 'relative',
+                  width: '10px',
+                  background: '#808080',
+                  clipPath:
+                    'polygon(0 0, 100% 10%, 100% 80%, 100% 89%, 0% 100%)',
+                }}
+              />
+            </animated.div>
+          </Box>
+          <animated.div
+            style={{
+              ...animationForUmbrellaVaccine,
+            }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+              }}>
+              <Typography
+                variant="h1"
+                sx={{
+                  color: '#808080',
+                  cursor: 'default',
+                  fontFamily: "'Teko', sans-serif",
+                  fontWeight: '500',
+                }}>
+                Umbrella
+                <Typography
+                  variant="body2"
+                  sx={{
+                    position: 'absolute',
+                    top: '0',
+                    right: '-15px',
+                    cursor: 'default',
+                  }}>
+                  TM
+                </Typography>
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  color: 'red',
+                  cursor: 'default',
+                  fontFamily: "'Teko', sans-serif",
+                  fontWeight: '400',
+                }}>
+                Vaccine
+              </Typography>
+            </Box>
+          </animated.div>
         </Box>
         <NavLink
           to=""
@@ -236,7 +314,7 @@ const AboutVaccine = () => {
             position: 'absolute',
             bottom: '0',
             pointerEvents: 'none',
-            right: '36%',
+            right: '38%',
             ...animationForCovidPicTwo,
             ...fadeInOutAnimation,
           }}>
