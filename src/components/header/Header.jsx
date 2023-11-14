@@ -15,14 +15,20 @@ const Header = () => {
   return (
     <AppBar
       component="nav"
-      position="fixed"
+      position="sticky"
       sx={{
         background: '#fff',
       }}>
       <Container>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <NavLink to="/">
-            <img src={umbrellaHeaderLogo} alt="umbrella-logo" />
+            <Box sx={{ height: '100px' }}>
+              <img
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                src={umbrellaHeaderLogo}
+                alt="umbrella-logo"
+              />
+            </Box>
           </NavLink>
 
           <Box sx={{ display: 'flex', gap: '1.3rem' }}>

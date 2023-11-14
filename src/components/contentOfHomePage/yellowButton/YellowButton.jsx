@@ -50,7 +50,11 @@ const YellowButton = ({ children }) => {
             left: props.typographyOneLeft,
             position: 'absolute',
           }}>
-          <Typography variant="body1">{'>'}</Typography>
+          <Typography
+            variant="h6"
+            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '700' }}>
+            {'>'}
+          </Typography>
         </animated.div>
       </Box>
       <animated.div
@@ -58,7 +62,11 @@ const YellowButton = ({ children }) => {
           left: props.typographyTwoLeft,
           position: 'absolute',
         }}>
-        <Typography variant="body1">{children}</Typography>
+        <Typography
+          variant="body1"
+          sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '700' }}>
+          {children}
+        </Typography>
       </animated.div>
     </animated.div>
   )

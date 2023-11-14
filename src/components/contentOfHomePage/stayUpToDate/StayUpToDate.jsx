@@ -13,9 +13,15 @@ const StayUpToDate = () => {
         alignItems: 'flex-end',
       }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <Typography variant="h3">Stay up to date</Typography>
+        <Typography
+          variant="h3"
+          sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '600' }}>
+          Stay up to date
+        </Typography>
         <Box>
-          <Typography>
+          <Typography
+            variant="body1"
+            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '400' }}>
             Looking for our latest news?
             <br />
             Sign-up for our alerts here.

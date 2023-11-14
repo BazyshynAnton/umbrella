@@ -43,8 +43,14 @@ const ConnectWithUs = () => {
             justifyContent: 'center',
             gap: '2rem',
           }}>
-          <Typography variant="h3">Connect with us</Typography>
-          <Typography variant="body1">
+          <Typography
+            variant="h3"
+            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '600' }}>
+            Connect with us
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '400' }}>
             Questions about our products, services or clinical trials? Find the
             right contact person at our Service Center.
           </Typography>

@@ -10,9 +10,7 @@ const ContentOfHomePage = () => {
   return (
     <>
       <Container>
-        <Box sx={{ marginTop: '120px' }}>
-          <AboutVaccine />
-        </Box>
+        <AboutVaccine />
         <SlidesForHomePage />
         <CareersAtUmbrella />
         <ConnectWithUs />

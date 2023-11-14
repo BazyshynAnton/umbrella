@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;600&family=Oswald:wght@300;400;500&family=Teko:wght@300;400;500;600&family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;600&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@300;400;500&family=Teko:wght@300;400;500;600&family=Tilt+Warp&display=swap');
 *,
 *::before,
 *::after {
@@ -24,6 +24,7 @@ body {
 a {
   text-decoration: none;
 }
+
 /* swiper */
 .swiper .swiper-button-next:after,
 .swiper .swiper-button-prev:after {
