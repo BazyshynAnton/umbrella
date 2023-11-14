@@ -24,7 +24,7 @@ import { Typography } from '@mui/material'
 const stylesForPictures = {
   objectFit: 'cover',
   width: '100%',
-  height: '100%',
+  height: '545px',
   transition: 'ease',
 }
 

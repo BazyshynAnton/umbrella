@@ -43,8 +43,14 @@ const CareersAtUmbrella = () => {
             justifyContent: 'center',
             gap: '2rem',
           }}>
-          <Typography variant="h3">Careers at Umbrella</Typography>
-          <Typography variant="body1">
+          <Typography
+            variant="h3"
+            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '600' }}>
+            Careers at Umbrella
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '400' }}>
             Our mission is clear: translating science into survival to improve
             the health of people worldwide. We are always on the lookout for
             dedicated and curious new talents supporting our team of

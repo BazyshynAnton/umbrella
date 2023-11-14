@@ -9,17 +9,27 @@ const DATE = new Date().getFullYear()
 
 const stylesForText = {
   cursor: 'default',
+  fontFamily: "'Open Sans', sans-serif",
+  fontWeight: '400',
 }
 
 const styleForTextCompany = {
+  fontFamily: "'Open Sans', sans-serif",
+  fontWeight: '400',
   cursor: 'pointer',
   ':hover': {
     textDecoration: 'underline',
+    color: 'red',
   },
 }
 
 const stylesForTextBelowTheLine = {
+  fontFamily: "'Open Sans', sans-serif",
+  fontWeight: '400',
   cursor: 'pointer',
+  ':hover': {
+    color: 'red',
+  },
 }
 
 const Footer = () => {
@@ -89,7 +99,13 @@ const Footer = () => {
                 justifyContent: 'center',
                 gap: '0.5rem',
               }}>
-              <Typography variant="h5" sx={{ cursor: 'default' }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: '600',
+                  cursor: 'default',
+                }}>
                 Company
               </Typography>
               <Typography variant="body1" sx={styleForTextCompany}>
@@ -114,7 +130,15 @@ const Footer = () => {
                 flexDirection: 'column',
                 gap: '0.5rem',
               }}>
-              <Typography variant="h5">Quick Links</Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: '600',
+                  cursor: 'default',
+                }}>
+                Quick Links
+              </Typography>
               <Typography variant="body1" sx={styleForTextCompany}>
                 {'>'} Newsroom
               </Typography>
@@ -169,10 +193,22 @@ const Footer = () => {
           </Typography>
         </Box>
         <Box sx={{ mt: '40px' }}>
-          <Typography variant="body2" sx={{ cursor: 'default' }}>
+          <Typography
+            variant="body2"
+            sx={{
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: '600',
+              cursor: 'default',
+            }}>
             © {DATE} Umbrella.corp
           </Typography>
-          <Typography variant="body2" sx={{ cursor: 'default' }}>
+          <Typography
+            variant="body2"
+            sx={{
+              fontFamily: "'Open Sans', sans-serif",
+              fontWeight: '600',
+              cursor: 'default',
+            }}>
             All rights reserved
           </Typography>
         </Box>

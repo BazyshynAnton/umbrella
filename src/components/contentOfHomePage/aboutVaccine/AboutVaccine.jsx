@@ -1,5 +1,5 @@
-import { Box, Button, Hidden, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Box, Button, Typography } from '@mui/material'
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSpring, animated, config } from '@react-spring/web'
 
@@ -70,16 +70,23 @@ const AboutVaccine = () => {
     to: { opacity: 1 },
     config: { duration: 1500 },
   })
+  const animationLearnMoreBtn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1500 },
+    delay: 3600,
+  })
 
   return (
     <Box
       sx={{
+        mt: '10px',
         width: '100%',
         height: '350px',
         display: 'flex',
         position: 'relative',
       }}>
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: '100%', height: '350px' }}>
         <img
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           src={umbrellaVaccinePic}
@@ -266,82 +273,91 @@ const AboutVaccine = () => {
             </Box>
           </animated.div>
         </Box>
-        <NavLink
-          to=""
-          style={{
-            borderRadius: '25px',
-          }}>
-          <Button
-            onMouseEnter={() => {
-              setIsButtonHovered(true)
-            }}
-            onMouseLeave={() => setIsButtonHovered(false)}
-            variant="outlined"
-            sx={{
-              color: '#808080',
+        <animated.div style={{ ...animationLearnMoreBtn }}>
+          <NavLink
+            to=""
+            style={{
               borderRadius: '25px',
-              borderColor: '#DAA520',
-              borderWidth: '2px',
-              fontWeight: 'bold',
-              ':hover': {
-                borderColor: '#FF0000',
-                borderWidth: '2px',
-                color: '#000000',
-              },
             }}>
-            Learn More
-          </Button>
-        </NavLink>
-        <animated.div
-          style={{
-            position: 'absolute',
-            bottom: '8%',
-            pointerEvents: 'none',
-            left: '35%',
-            ...animationForCovidPicOne,
-            ...fadeInOutAnimation,
-          }}>
-          <Box sx={{ width: '40px', height: '40px' }}>
-            <img
-              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-              src={coronaVirusOne}
-              alt="covid-19"
-            />
-          </Box>
+            <Button
+              onMouseEnter={() => {
+                setIsButtonHovered(true)
+              }}
+              onMouseLeave={() => setIsButtonHovered(false)}
+              variant="outlined"
+              sx={{
+                color: '#808080',
+                borderRadius: '25px',
+                borderColor: '#DAA520',
+                borderWidth: '2px',
+                fontWeight: 'bold',
+                ':hover': {
+                  borderColor: '#FF0000',
+                  borderWidth: '2px',
+                  color: '#000000',
+                },
+              }}>
+              Learn More
+            </Button>
+          </NavLink>
         </animated.div>
-        <animated.div
-          style={{
-            position: 'absolute',
-            bottom: '0',
-            pointerEvents: 'none',
-            right: '38%',
-            ...animationForCovidPicTwo,
-            ...fadeInOutAnimation,
-          }}>
-          <Box sx={{ width: '20px', height: '20px' }}>
-            <img
-              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-              src={coronaVirusOne}
-              alt="covid-19"
-            />
-          </Box>
+        <animated.div style={{ ...animationLearnMoreBtn }}>
+          <animated.div
+            style={{
+              position: 'absolute',
+              bottom: '8%',
+              pointerEvents: 'none',
+              left: '35%',
+              ...animationForCovidPicOne,
+              ...fadeInOutAnimation,
+            }}>
+            <Box sx={{ width: '40px', height: '40px' }}>
+              <img
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                src={coronaVirusOne}
+                alt="covid-19"
+              />
+            </Box>
+          </animated.div>
         </animated.div>
-        <animated.div
-          style={{
-            position: 'absolute',
-            bottom: '-5%',
-            pointerEvents: 'none',
-            left: '43%',
-            ...animationForCovidPicThree,
-            ...fadeInOutAnimation,
-          }}>
-          <Box sx={{ width: '25px', height: '25px' }}>
-            <img
-              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-              src={coronaVirusOne}
-              alt="covid-19"
-            />
-          </Box>
+
+        <animated.div style={{ ...animationLearnMoreBtn }}>
+          <animated.div
+            style={{
+              position: 'absolute',
+              bottom: '0',
+              pointerEvents: 'none',
+              right: '38%',
+              ...animationForCovidPicTwo,
+              ...fadeInOutAnimation,
+            }}>
+            <Box sx={{ width: '20px', height: '20px' }}>
+              <img
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                src={coronaVirusOne}
+                alt="covid-19"
+              />
+            </Box>
+          </animated.div>
+        </animated.div>
+        <animated.div style={{ ...animationLearnMoreBtn }}>
+          <animated.div
+            style={{
+              position: 'absolute',
+              bottom: '-5%',
+              pointerEvents: 'none',
+              left: '43%',
+              ...animationForCovidPicThree,
+              ...fadeInOutAnimation,
+            }}>
+            <Box sx={{ width: '25px', height: '25px' }}>
+              <img
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                src={coronaVirusOne}
+                alt="covid-19"
+              />
+            </Box>
+          </animated.div>
         </animated.div>
       </Box>
     </Box>
