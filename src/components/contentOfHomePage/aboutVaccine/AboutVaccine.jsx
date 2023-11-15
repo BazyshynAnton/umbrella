@@ -1,12 +1,13 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Typography, useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSpring, animated, config } from '@react-spring/web'
 
-import umbrellaVaccinePic from '../../../pictures/umbrellaVaccinePic.png'
+import umbrellaVaccinePic from '../../../pictures/umbrellaVaccinePic.jpg'
 import coronaVirusOne from '../../../pictures/coronaVirusOne.png'
 
 const AboutVaccine = () => {
+  const isSmallScreen = useMediaQuery('(min-width: 600px)')
   const [isButtonHovered, setIsButtonHovered] = useState(false)
 
   const animationForAd = useSpring({
@@ -80,90 +81,137 @@ const AboutVaccine = () => {
   return (
     <Box
       sx={{
-        mt: '10px',
+        mt: { sm: '10px', xs: '20px' },
         width: '100%',
         height: '350px',
         display: 'flex',
         position: 'relative',
+        justifyContent: { md: 'unset', xs: 'center' },
       }}>
-      <Box sx={{ width: '100%', height: '350px' }}>
+      <Box
+        sx={{
+          display: {
+            md: 'block',
+            xs: 'none',
+          },
+          position: 'relative',
+          width: { lg: '420px', md: '340px' },
+          height: { lg: '350px', md: '300px' },
+          zIndex: '20',
+
+          '&::before': {
+            content: "''",
+            background: '#fff',
+            position: 'absolute',
+            top: '0',
+            right: '-40px',
+            width: '80px',
+            height: '80px',
+            transform: 'skewX(45deg)',
+          },
+          '&::after': {
+            content: "''",
+            background: '#fff',
+            position: 'absolute',
+            bottom: '0',
+            right: '-40px',
+            width: '80px',
+            height: '80px',
+            transform: 'skewX(-45deg)',
+          },
+        }}>
         <img
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           src={umbrellaVaccinePic}
           alt="umbrella-vaccine"
         />
       </Box>
-      <animated.div
-        style={{
-          position: 'absolute',
-          bottom: '-45px',
-          width: '58%',
-          right: '0',
-          zIndex: '99',
-          ...animationForAd,
-        }}>
-        <Box
-          sx={{
-            height: '70px',
-            width: '100%',
-            background: '#c3221c',
-            '::before': {
-              content: '""',
-              position: 'absolute',
-              left: '-35px',
-              background: '#c3221c',
-              transform: 'skewX(-45deg)',
-              width: '70px',
-              height: '100%',
-            },
-            '::after': {
-              content: '""',
-              position: 'absolute',
-              right: '100',
-              background: '#c3221c',
-              width: '100vw',
-              height: '100%',
-            },
-          }}>
-          <Typography
-            variant="h5"
-            style={{
-              position: 'absolute',
-              top: '18px',
-              left: '30px',
-              color: '#fff',
-              zIndex: '90',
-              fontStyle: 'italic',
-              textTransform: 'uppercase',
-              cursor: 'default',
-              fontFamily: "'Oswald', sans-serif",
-              fontWeight: '500',
-            }}>
-            a new product from umbrella corporation
-          </Typography>
-          <Box
-            sx={{
-              position: ' absolute',
-              left: '-70px',
-              bottom: '-0px',
-              width: '100vw',
-              height: '10px',
-              background: 'none',
-              boxShadow: '5px 3px 5px #000',
-            }}
-          />
-        </Box>
-      </animated.div>
       <Box
         sx={{
           position: 'absolute',
+          bottom: { lg: '-45px', sm: '0px', xs: '70px' },
+          width: { lg: '58%', md: '65%', sm: '80%', xs: '70%' },
+          right: '0',
+          zIndex: '99',
+        }}>
+        <animated.div
+          style={{
+            ...animationForAd,
+          }}>
+          <Box
+            sx={{
+              height: { sm: '70px', xs: '50px' },
+              width: '100%',
+              background: '#c3221c',
+              '::before': {
+                content: '""',
+                position: 'absolute',
+                top: '0px',
+                left: '-35px',
+                background: '#c3221c',
+                transform: 'skewX(-45deg)',
+                width: '70px',
+                height: { sm: '70px', xs: '49.8px' },
+                zIndex: { xs: '20' },
+              },
+              '::after': {
+                content: '""',
+                position: 'absolute',
+                right: '100',
+                background: '#c3221c',
+                width: '100vw',
+                height: '100%',
+              },
+            }}>
+            <Typography
+              variant="h5"
+              fontSize={{ md: '1.5rem', sm: '1.2rem', xs: '1.2rem' }}
+              sx={{
+                position: 'absolute',
+                top: { md: '18px', sm: '22px', xs: '13px' },
+                left: '10px',
+                color: '#fff',
+                zIndex: '90',
+                fontStyle: 'italic',
+                textTransform: 'uppercase',
+                cursor: 'default',
+                fontFamily: "'Oswald', sans-serif",
+                fontWeight: '500',
+              }}>
+              {!isSmallScreen
+                ? 'a new product'
+                : 'a new product from umbrella corporation'}
+            </Typography>
+            <Box
+              sx={{
+                position: ' absolute',
+                left: { sm: '-65px', xs: '-50px' },
+                bottom: '1px',
+                width: '100vw',
+                height: '10px',
+                background: 'none',
+                boxShadow: '5px 3px 5px #000',
+                transform: 'skewX(-45deg)',
+              }}
+            />
+          </Box>
+        </animated.div>
+      </Box>
+      <Box
+        sx={{
+          position: { md: 'absolute', xs: 'static' },
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '1.5rem',
+          gap: { lg: '1.5rem', md: '0rem' },
           top: '15%',
-          left: '50%',
-          width: '620px',
+          left: {
+            xl: '40%',
+            lg: '35%',
+            md: '35%',
+            sm: '-4%',
+          },
+          width: { lg: '620px', md: '500px', xs: '100%' },
           height: '250px',
         }}>
         <Box
@@ -175,8 +223,9 @@ const AboutVaccine = () => {
           }}>
           <Box
             sx={{
-              width: '260px',
-              height: '184px',
+              position: 'relative',
+              width: { lg: '260px', sm: '200px', xs: '100%' },
+              height: { lg: '184px', sm: '150px', xs: '150px' },
               background: '#fff',
               zIndex: '10',
               display: 'flex',
@@ -184,10 +233,25 @@ const AboutVaccine = () => {
               alignItems: 'center',
               justifyContent: 'flex-end',
               pr: '10px',
+
+              '::before': {
+                content: "''",
+                position: 'absolute',
+                left: '-100px',
+                display: {
+                  sm: 'none',
+                  xs: 'block',
+                },
+                background: '#fff',
+                width: '100px',
+                height: '100px',
+                zIndex: '-1',
+              },
             }}>
             <animated.div style={{ ...animationForCovidText }}>
               <Typography
                 variant="h2"
+                fontSize={{ lg: 65, sm: 50, xs: 30 }}
                 sx={{
                   color: '#808080',
                   cursor: 'default',
@@ -201,7 +265,7 @@ const AboutVaccine = () => {
           <Box
             sx={{
               width: '20px',
-              height: '184px',
+              height: { lg: '184px', sm: '150px', xs: '150px' },
               background: '#fff',
               zIndex: '10',
               display: 'flex',
@@ -242,6 +306,7 @@ const AboutVaccine = () => {
               }}>
               <Typography
                 variant="h1"
+                fontSize={{ lg: 80, sm: 60, xs: 40 }}
                 sx={{
                   color: '#808080',
                   cursor: 'default',
@@ -253,8 +318,8 @@ const AboutVaccine = () => {
                   variant="body2"
                   sx={{
                     position: 'absolute',
-                    top: '0',
-                    right: '-15px',
+                    top: { sm: '0', xs: '-10px' },
+                    right: { sm: '-15px', xs: '-10px' },
                     cursor: 'default',
                   }}>
                   TM
@@ -262,6 +327,7 @@ const AboutVaccine = () => {
               </Typography>
               <Typography
                 variant="h2"
+                fontSize={{ lg: 70, sm: 50, xs: 35 }}
                 sx={{
                   color: 'red',
                   cursor: 'default',
@@ -273,91 +339,118 @@ const AboutVaccine = () => {
             </Box>
           </animated.div>
         </Box>
-        <animated.div style={{ ...animationLearnMoreBtn }}>
-          <NavLink
-            to=""
-            style={{
-              borderRadius: '25px',
-            }}>
-            <Button
-              onMouseEnter={() => {
-                setIsButtonHovered(true)
-              }}
-              onMouseLeave={() => setIsButtonHovered(false)}
-              variant="outlined"
-              sx={{
-                color: '#808080',
+        <Box
+          sx={{
+            position: 'relative',
+            left: { lg: '25px', md: '20px', xs: '0px' },
+          }}>
+          <animated.div style={{ ...animationLearnMoreBtn }}>
+            <NavLink
+              to=""
+              style={{
                 borderRadius: '25px',
-                borderColor: '#DAA520',
-                borderWidth: '2px',
-                fontWeight: 'bold',
-                ':hover': {
-                  borderColor: '#FF0000',
-                  borderWidth: '2px',
-                  color: '#000000',
-                },
               }}>
-              Learn More
-            </Button>
-          </NavLink>
-        </animated.div>
-        <animated.div style={{ ...animationLearnMoreBtn }}>
-          <animated.div
-            style={{
-              position: 'absolute',
-              bottom: '8%',
-              pointerEvents: 'none',
-              left: '35%',
-              ...animationForCovidPicOne,
-              ...fadeInOutAnimation,
-            }}>
-            <Box sx={{ width: '40px', height: '40px' }}>
-              <img
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                src={coronaVirusOne}
-                alt="covid-19"
-              />
-            </Box>
+              <Button
+                onMouseEnter={() => {
+                  setIsButtonHovered(true)
+                }}
+                onMouseLeave={() => setIsButtonHovered(false)}
+                variant="outlined"
+                sx={{
+                  color: '#808080',
+                  borderRadius: '25px',
+                  borderColor: '#DAA520',
+                  borderWidth: '2px',
+                  fontWeight: 'bold',
+                  ':hover': {
+                    borderColor: '#FF0000',
+                    borderWidth: '2px',
+                    color: '#000000',
+                  },
+                }}>
+                Learn More
+              </Button>
+            </NavLink>
           </animated.div>
+        </Box>
+
+        <animated.div
+          style={{
+            position: 'relative',
+            zIndex: '20',
+            ...animationLearnMoreBtn,
+          }}>
+          <Box
+            sx={{
+              position: 'absolute',
+              pointerEvents: 'none',
+              top: { lg: '-80px', sm: '-55px', xs: '-55px' },
+              left: { md: '-65px', xs: '-85px' },
+              zIndex: '20',
+            }}>
+            <animated.div
+              style={{
+                ...animationForCovidPicOne,
+                ...fadeInOutAnimation,
+              }}>
+              <Box sx={{ width: '40px', height: '40px' }}>
+                <img
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  src={coronaVirusOne}
+                  alt="covid-19"
+                />
+              </Box>
+            </animated.div>
+          </Box>
         </animated.div>
 
-        <animated.div style={{ ...animationLearnMoreBtn }}>
-          <animated.div
-            style={{
+        <animated.div
+          style={{ position: 'relative', ...animationLearnMoreBtn }}>
+          <Box
+            sx={{
               position: 'absolute',
-              bottom: '0',
+              bottom: { lg: '40px', xs: '0px' },
+              right: { md: '-90px', xs: '-70px' },
               pointerEvents: 'none',
-              right: '38%',
-              ...animationForCovidPicTwo,
-              ...fadeInOutAnimation,
             }}>
-            <Box sx={{ width: '20px', height: '20px' }}>
-              <img
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                src={coronaVirusOne}
-                alt="covid-19"
-              />
-            </Box>
-          </animated.div>
+            <animated.div
+              style={{
+                ...animationForCovidPicTwo,
+                ...fadeInOutAnimation,
+              }}>
+              <Box sx={{ width: '20px', height: '20px' }}>
+                <img
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  src={coronaVirusOne}
+                  alt="covid-19"
+                />
+              </Box>
+            </animated.div>
+          </Box>
         </animated.div>
-        <animated.div style={{ ...animationLearnMoreBtn }}>
-          <animated.div
-            style={{
+        <animated.div
+          style={{ position: 'relative', ...animationLearnMoreBtn }}>
+          <Box
+            sx={{
               position: 'absolute',
-              bottom: '-5%',
+              bottom: { lg: '55px', xs: '-15px' },
+              left: { xs: '-35px' },
               pointerEvents: 'none',
-              left: '43%',
-              ...animationForCovidPicThree,
-              ...fadeInOutAnimation,
             }}>
-            <Box sx={{ width: '25px', height: '25px' }}>
-              <img
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                src={coronaVirusOne}
-                alt="covid-19"
-              />
-            </Box>
-          </animated.div>
+            <animated.div
+              style={{
+                ...animationForCovidPicThree,
+                ...fadeInOutAnimation,
+              }}>
+              <Box sx={{ width: '25px', height: '25px' }}>
+                <img
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  src={coronaVirusOne}
+                  alt="covid-19"
+                />
+              </Box>
+            </animated.div>
+          </Box>
         </animated.div>
       </Box>
     </Box>
