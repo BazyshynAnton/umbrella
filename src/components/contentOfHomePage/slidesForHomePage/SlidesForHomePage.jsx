@@ -1,5 +1,6 @@
 import { useSpring, animated, config } from '@react-spring/web'
 import { useState } from 'react'
+import { Box, Typography } from '@mui/material'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -19,12 +20,11 @@ import 'swiper/css'
 import 'swiper/css/effect-creative'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import { Typography } from '@mui/material'
 
 const stylesForPictures = {
-  objectFit: 'cover',
+  objectFit: 'contain',
   width: '100%',
-  height: '545px',
+  height: '100%',
   transition: 'ease',
 }
 
@@ -41,7 +41,7 @@ const stylesForTextInSlides = {
   redText: {
     color: 'red',
     fontFamily: "'Tilt Warp', sans-serif",
-    fontSize: '1.5rem',
+    fontSize: { md: '1.5rem', sm: '1rem', xs: '0.8rem' },
     letterSpacing: '0.07em',
     lineHeight: '1em',
     textAlign: 'left',
@@ -52,7 +52,7 @@ const stylesForTextInSlides = {
   yellowText: {
     fontFamily: "'Figtree', sans-serif",
     fontWeight: '600',
-    fontSize: '1.2rem',
+    fontSize: { md: '1.2rem', sm: '1rem', xs: '0.8rem' },
     color: '#DAA520',
     cursor: 'default',
   },
@@ -124,6 +124,7 @@ const SlidesForHomePage = () => {
 
   return (
     <Swiper
+      className="my-swiper"
       onSlideChange={handleSlideChange}
       spaceBetween={50}
       slidesPerView={1}
@@ -157,26 +158,32 @@ const SlidesForHomePage = () => {
           src={slideForHomePageOne}
           alt="slide-1"
         />
-        <animated.div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
-            top: '150px',
+            top: { lg: '150px', md: '100px', xs: '30px' },
             left: '85px',
             pointerEvents: 'none',
-            ...textAnimation1,
           }}>
-          <img style={stylesForQuotes} src={quote} alt="quotes" />
-          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-            Protect Yourself
-            <br />
-            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
-              and Others:
+          <animated.div
+            style={{
+              ...textAnimation1,
+            }}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              Protect Yourself
+              <br />
+              <Typography
+                variant="caption"
+                sx={stylesForTextInSlides.yellowText}>
+                and Others:
+              </Typography>
+              <br />
+              Vaccination - the key
+              <br /> to a safer tomorrow!
             </Typography>
-            <br />
-            Vaccination - the key
-            <br /> to a safer tomorrow!
-          </Typography>
-        </animated.div>
+          </animated.div>
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
         <animated.img
@@ -184,29 +191,35 @@ const SlidesForHomePage = () => {
           src={slideForHomePageTwo}
           alt="slide-2"
         />
-        <animated.div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
-            top: '150px',
+            top: { lg: '150px', md: '100px', xs: '30px' },
             left: '85px',
             pointerEvents: 'none',
-            ...textAnimation2,
           }}>
-          <img style={stylesForQuotes} src={quote} alt="quotes" />
-          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-            Together
-            <br />
-            we are stronger:
-            <br />
-            protect yourself
-            <br />
-            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
-              and your loved
+          <animated.div
+            style={{
+              ...textAnimation2,
+            }}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              Together
+              <br />
+              we are stronger:
+              <br />
+              protect yourself
+              <br />
+              <Typography
+                variant="caption"
+                sx={stylesForTextInSlides.yellowText}>
+                and your loved
+              </Typography>
+              <br />
+              ones with the vaccine!
             </Typography>
-            <br />
-            ones with the vaccine!
-          </Typography>
-        </animated.div>
+          </animated.div>
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
         <animated.img
@@ -214,27 +227,33 @@ const SlidesForHomePage = () => {
           src={slideForHomePageThree}
           alt="slide-3"
         />
-        <animated.div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
-            top: '150px',
+            top: { lg: '150px', md: '100px', xs: '30px' },
             left: '85px',
             pointerEvents: 'none',
-            ...textAnimation3,
           }}>
-          <img style={stylesForQuotes} src={quote} alt="quotes" />
-          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-            Take
-            <br />
-            the Umbrella vaccine
-            <br />
-            to strengthen
-            <br />
-            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
-              the immune system
+          <animated.div
+            style={{
+              ...textAnimation3,
+            }}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              Take
+              <br />
+              the Umbrella vaccine
+              <br />
+              to strengthen
+              <br />
+              <Typography
+                variant="caption"
+                sx={stylesForTextInSlides.yellowText}>
+                the immune system
+              </Typography>
             </Typography>
-          </Typography>
-        </animated.div>
+          </animated.div>
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
         <animated.img
@@ -242,27 +261,33 @@ const SlidesForHomePage = () => {
           src={slideForHomePageFour}
           alt="slide-4"
         />
-        <animated.div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
-            top: '150px',
+            top: { lg: '150px', md: '100px', xs: '30px' },
             left: '85px',
             pointerEvents: 'none',
-            ...textAnimation4,
           }}>
-          <img style={stylesForQuotes} src={quote} alt="quotes" />
-          <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-            Umbrella:
-            <br />
-            Innovations
-            <br />
-            <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
-              with
+          <animated.div
+            style={{
+              ...textAnimation4,
+            }}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              Umbrella:
+              <br />
+              Innovations
+              <br />
+              <Typography
+                variant="caption"
+                sx={stylesForTextInSlides.yellowText}>
+                with
+              </Typography>
+              <br />
+              Responsibility
             </Typography>
-            <br />
-            Responsibility
-          </Typography>
-        </animated.div>
+          </animated.div>
+        </Box>
       </SwiperSlide>
     </Swiper>
   )

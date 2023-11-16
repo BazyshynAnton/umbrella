@@ -56,6 +56,12 @@ a {
   --swiper-pagination-bullet-horizontal-gap: 0.35em;
 }
 
+@media screen and (max-width: 450px) {
+  .my-swiper {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px; /* Ширина скроллбара */
 }
