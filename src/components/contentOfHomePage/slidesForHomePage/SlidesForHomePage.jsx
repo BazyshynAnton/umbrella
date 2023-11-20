@@ -118,178 +118,186 @@ const SlidesForHomePage = () => {
     config: config.slow,
   })
 
+  const animationForAllSwiper = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 3600 },
+  })
+
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex)
   }
 
   return (
-    <Swiper
-      className="my-swiper"
-      onSlideChange={handleSlideChange}
-      spaceBetween={50}
-      slidesPerView={1}
-      loop={false}
-      effect={'creative'}
-      speed={600}
-      creativeEffect={{
-        prev: {
-          shadow: true,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[EffectCreative, Pagination, Navigation, Autoplay]}>
-      <SwiperSlide style={{ position: 'relative' }}>
-        <animated.img
-          style={{
-            ...stylesForPictures,
-            ...animatedStyles,
-          }}
-          src={slideForHomePageOne}
-          alt="slide-1"
-        />
-        <Box
-          sx={{
-            position: 'absolute',
-            top: { lg: '150px', md: '100px', xs: '30px' },
-            left: '85px',
-            pointerEvents: 'none',
-          }}>
-          <animated.div
+    <animated.div style={{ ...animationForAllSwiper }}>
+      <Swiper
+        className="my-swiper"
+        onSlideChange={handleSlideChange}
+        spaceBetween={50}
+        slidesPerView={1}
+        loop={false}
+        effect={'creative'}
+        speed={600}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[EffectCreative, Pagination, Navigation, Autoplay]}>
+        <SwiperSlide style={{ position: 'relative' }}>
+          <animated.img
             style={{
-              ...textAnimation1,
+              ...stylesForPictures,
+              ...animatedStyles,
+            }}
+            src={slideForHomePageOne}
+            alt="slide-1"
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              top: { lg: '150px', md: '100px', xs: '30px' },
+              left: '85px',
+              pointerEvents: 'none',
             }}>
-            <img style={stylesForQuotes} src={quote} alt="quotes" />
-            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-              Protect Yourself
-              <br />
-              <Typography
-                variant="caption"
-                sx={stylesForTextInSlides.yellowText}>
-                and Others:
+            <animated.div
+              style={{
+                ...textAnimation1,
+              }}>
+              <img style={stylesForQuotes} src={quote} alt="quotes" />
+              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+                Protect Yourself
+                <br />
+                <Typography
+                  variant="caption"
+                  sx={stylesForTextInSlides.yellowText}>
+                  and Others:
+                </Typography>
+                <br />
+                Vaccination - the key
+                <br /> to a safer tomorrow!
               </Typography>
-              <br />
-              Vaccination - the key
-              <br /> to a safer tomorrow!
-            </Typography>
-          </animated.div>
-        </Box>
-      </SwiperSlide>
-      <SwiperSlide>
-        <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles1 }}
-          src={slideForHomePageTwo}
-          alt="slide-2"
-        />
-        <Box
-          sx={{
-            position: 'absolute',
-            top: { lg: '150px', md: '100px', xs: '30px' },
-            left: '85px',
-            pointerEvents: 'none',
-          }}>
-          <animated.div
-            style={{
-              ...textAnimation2,
+            </animated.div>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <animated.img
+            style={{ ...stylesForPictures, ...animatedStyles1 }}
+            src={slideForHomePageTwo}
+            alt="slide-2"
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              top: { lg: '150px', md: '100px', xs: '30px' },
+              left: '85px',
+              pointerEvents: 'none',
             }}>
-            <img style={stylesForQuotes} src={quote} alt="quotes" />
-            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-              Together
-              <br />
-              we are stronger:
-              <br />
-              protect yourself
-              <br />
-              <Typography
-                variant="caption"
-                sx={stylesForTextInSlides.yellowText}>
-                and your loved
+            <animated.div
+              style={{
+                ...textAnimation2,
+              }}>
+              <img style={stylesForQuotes} src={quote} alt="quotes" />
+              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+                Together
+                <br />
+                we are stronger:
+                <br />
+                protect yourself
+                <br />
+                <Typography
+                  variant="caption"
+                  sx={stylesForTextInSlides.yellowText}>
+                  and your loved
+                </Typography>
+                <br />
+                ones with the vaccine!
               </Typography>
-              <br />
-              ones with the vaccine!
-            </Typography>
-          </animated.div>
-        </Box>
-      </SwiperSlide>
-      <SwiperSlide>
-        <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles2 }}
-          src={slideForHomePageThree}
-          alt="slide-3"
-        />
-        <Box
-          sx={{
-            position: 'absolute',
-            top: { lg: '150px', md: '100px', xs: '30px' },
-            left: '85px',
-            pointerEvents: 'none',
-          }}>
-          <animated.div
-            style={{
-              ...textAnimation3,
+            </animated.div>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <animated.img
+            style={{ ...stylesForPictures, ...animatedStyles2 }}
+            src={slideForHomePageThree}
+            alt="slide-3"
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              top: { lg: '150px', md: '100px', xs: '30px' },
+              left: '85px',
+              pointerEvents: 'none',
             }}>
-            <img style={stylesForQuotes} src={quote} alt="quotes" />
-            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-              Take
-              <br />
-              the Umbrella vaccine
-              <br />
-              to strengthen
-              <br />
-              <Typography
-                variant="caption"
-                sx={stylesForTextInSlides.yellowText}>
-                the immune system
+            <animated.div
+              style={{
+                ...textAnimation3,
+              }}>
+              <img style={stylesForQuotes} src={quote} alt="quotes" />
+              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+                Take
+                <br />
+                the Umbrella vaccine
+                <br />
+                to strengthen
+                <br />
+                <Typography
+                  variant="caption"
+                  sx={stylesForTextInSlides.yellowText}>
+                  the immune system
+                </Typography>
               </Typography>
-            </Typography>
-          </animated.div>
-        </Box>
-      </SwiperSlide>
-      <SwiperSlide>
-        <animated.img
-          style={{ ...stylesForPictures, ...animatedStyles3 }}
-          src={slideForHomePageFour}
-          alt="slide-4"
-        />
-        <Box
-          sx={{
-            position: 'absolute',
-            top: { lg: '150px', md: '100px', xs: '30px' },
-            left: '85px',
-            pointerEvents: 'none',
-          }}>
-          <animated.div
-            style={{
-              ...textAnimation4,
+            </animated.div>
+          </Box>
+        </SwiperSlide>
+        <SwiperSlide>
+          <animated.img
+            style={{ ...stylesForPictures, ...animatedStyles3 }}
+            src={slideForHomePageFour}
+            alt="slide-4"
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              top: { lg: '150px', md: '100px', xs: '30px' },
+              left: '85px',
+              pointerEvents: 'none',
             }}>
-            <img style={stylesForQuotes} src={quote} alt="quotes" />
-            <Typography variant="body1" sx={stylesForTextInSlides.redText}>
-              Umbrella:
-              <br />
-              Innovations
-              <br />
-              <Typography
-                variant="caption"
-                sx={stylesForTextInSlides.yellowText}>
-                with
+            <animated.div
+              style={{
+                ...textAnimation4,
+              }}>
+              <img style={stylesForQuotes} src={quote} alt="quotes" />
+              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+                Umbrella:
+                <br />
+                Innovations
+                <br />
+                <Typography
+                  variant="caption"
+                  sx={stylesForTextInSlides.yellowText}>
+                  with
+                </Typography>
+                <br />
+                Responsibility
               </Typography>
-              <br />
-              Responsibility
-            </Typography>
-          </animated.div>
-        </Box>
-      </SwiperSlide>
-    </Swiper>
+            </animated.div>
+          </Box>
+        </SwiperSlide>
+      </Swiper>
+    </animated.div>
   )
 }
 
