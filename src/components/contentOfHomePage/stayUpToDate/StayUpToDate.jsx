@@ -39,6 +39,8 @@ const StayUpToDate = () => {
       ) : (
         <Box
           sx={{
+            mt: { sm: '20px', xs: '80px' },
+            mb: { sm: '20px', xs: '80px' },
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -47,15 +49,22 @@ const StayUpToDate = () => {
           }}>
           <Box
             sx={{
+              width: { sm: '450px', xs: '300px' },
+              height: { xs: '300px' },
               border: '1px solid black',
               padding: '2pc',
               display: 'flex',
               flexDirection: 'column',
               gap: '1rem',
+              justifyContent: 'center',
             }}>
             <Typography
               variant="h3"
-              sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '600' }}>
+              sx={{
+                fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
+                fontFamily: "'Open Sans', sans-serif",
+                fontWeight: '600',
+              }}>
               Stay up to date
             </Typography>
             <Box>

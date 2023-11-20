@@ -77,6 +77,11 @@ const AboutVaccine = () => {
     config: { duration: 1500 },
     delay: 3600,
   })
+  const animationImg = useSpring({
+    from: { opacity: 0, x: -10 },
+    to: { opacity: 1, x: 0 },
+    config: { duration: 1500 },
+  })
 
   return (
     <Box
@@ -88,44 +93,46 @@ const AboutVaccine = () => {
         position: 'relative',
         justifyContent: { md: 'unset', xs: 'center' },
       }}>
-      <Box
-        sx={{
-          display: {
-            md: 'block',
-            xs: 'none',
-          },
-          position: 'relative',
-          width: { lg: '420px', md: '340px' },
-          height: { lg: '350px', md: '300px' },
-          zIndex: '20',
+      <animated.div style={animationImg}>
+        <Box
+          sx={{
+            display: {
+              md: 'block',
+              xs: 'none',
+            },
+            position: 'relative',
+            width: { lg: '420px', md: '340px' },
+            height: { lg: '350px', md: '300px' },
+            zIndex: '20',
 
-          '&::before': {
-            content: "''",
-            background: '#fff',
-            position: 'absolute',
-            top: '0',
-            right: '-40px',
-            width: '80px',
-            height: '80px',
-            transform: 'skewX(45deg)',
-          },
-          '&::after': {
-            content: "''",
-            background: '#fff',
-            position: 'absolute',
-            bottom: '0',
-            right: '-40px',
-            width: '80px',
-            height: '80px',
-            transform: 'skewX(-45deg)',
-          },
-        }}>
-        <img
-          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-          src={umbrellaVaccinePic}
-          alt="umbrella-vaccine"
-        />
-      </Box>
+            '&::before': {
+              content: "''",
+              background: '#fff',
+              position: 'absolute',
+              top: '0',
+              right: '-40px',
+              width: '80px',
+              height: '80px',
+              transform: 'skewX(45deg)',
+            },
+            '&::after': {
+              content: "''",
+              background: '#fff',
+              position: 'absolute',
+              bottom: '0',
+              right: '-40px',
+              width: '80px',
+              height: '80px',
+              transform: 'skewX(-45deg)',
+            },
+          }}>
+          <img
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            src={umbrellaVaccinePic}
+            alt="umbrella-vaccine"
+          />
+        </Box>
+      </animated.div>
       <Box
         sx={{
           position: 'absolute',

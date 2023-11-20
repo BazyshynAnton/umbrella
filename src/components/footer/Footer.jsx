@@ -37,16 +37,16 @@ const Footer = () => {
     <Box
       sx={{
         width: '100%',
-        height: '600px',
+        height: '100%',
         background: '#A9A9A9',
       }}>
       <Container>
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
+            flexDirection: { md: 'row', xs: 'column' },
+            justifyContent: { xs: 'space-between' },
+            alignItems: { md: 'center', xs: 'flex-start' },
             mt: '30px',
             height: '100%',
           }}>
@@ -91,7 +91,12 @@ const Footer = () => {
               />
             </Box>
           </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'row', gap: '1.5rem' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { sm: 'row', xs: 'column' },
+              gap: '1.5rem',
+            }}>
             <Box
               sx={{
                 display: 'flex',
@@ -169,6 +174,7 @@ const Footer = () => {
             display: 'flex',
             flexDirection: 'row',
             gap: '1rem',
+            flexWrap: 'wrap',
           }}>
           <Typography variant="body2" sx={stylesForTextBelowTheLine}>
             Terms of Use
@@ -192,7 +198,7 @@ const Footer = () => {
             Cookie Settings
           </Typography>
         </Box>
-        <Box sx={{ mt: '40px' }}>
+        <Box sx={{ mt: '40px', mb: '10px' }}>
           <Typography
             variant="body2"
             sx={{
