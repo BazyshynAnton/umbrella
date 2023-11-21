@@ -198,7 +198,7 @@ const Footer = () => {
             Cookie Settings
           </Typography>
         </Box>
-        <Box sx={{ mt: '40px', mb: '10px' }}>
+        <Box sx={{ mt: '40px', pb: '10px' }}>
           <Typography
             variant="body2"
             sx={{

@@ -4,33 +4,9 @@ import YellowButton from '../yellowButton/YellowButton'
 import redbook from '../../../pictures/redbook.png'
 import books from '../../../pictures/books.png'
 import flask from '../../../pictures/flask.png'
-import { config, useSpring, animated, useInView } from '@react-spring/web'
-import { useState } from 'react'
 
 const CareersAtUmbrella = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
-
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  })
-  //
-  const [playedOnce, setPlayedOnce] = useState(false)
-
-  const animationForImg1 = useSpring({
-    opacity: playedOnce ? 1 : 0,
-    transform: playedOnce ? 'translateX(0)' : 'translateX(-100px)',
-    config: { duration: 1000 },
-    delay: 1000,
-  })
-
-  const animationForTextBlock = useSpring({
-    opacity: playedOnce ? 1 : 0,
-    transform: playedOnce ? 'translateX(0)' : 'translateX(100px)',
-    config: { duration: 1000 },
-  })
-  if (inView && !playedOnce) {
-    setPlayedOnce(true)
-  }
 
   return (
     <>
@@ -42,74 +18,68 @@ const CareersAtUmbrella = () => {
             width: '100%',
             height: '600px',
           }}>
-          <animated.div ref={ref} style={animationForImg1}>
-            <Box
-              sx={{
-                position: 'absolute',
-                left: { xl: '-150px', lg: '-100px' },
+          <Box
+            sx={{
+              position: 'absolute',
+              left: { xl: '-150px', lg: '-100px' },
+              width: '100%',
+            }}>
+            <img
+              style={{
+                objectFit: 'cover',
+                height: '100%',
                 width: '100%',
-              }}>
-              <img
-                style={{
-                  objectFit: 'cover',
-                  height: '100%',
-                  width: '100%',
-                }}
-                src={redbook}
-                alt="pic"
-              />
-            </Box>
-          </animated.div>
-          <animated.div
-            style={{
+              }}
+              src={redbook}
+              alt="pic"
+            />
+          </Box>
+
+          <Box
+            sx={{
               position: 'absolute',
               top: '18%',
               right: '0',
-              ...animationForTextBlock,
+              background: '#fff',
+              width: '600px',
+              height: '400px',
+              padding: '2pc',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              gap: '1rem',
             }}>
             <Box
               sx={{
-                background: '#fff',
-                width: '600px',
-                height: '400px',
-                padding: '2pc',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                gap: '1rem',
+                gap: '2rem',
               }}>
-              <Box
+              <Typography
+                variant="h3"
                 sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  gap: '2rem',
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: '600',
                 }}>
-                <Typography
-                  variant="h3"
-                  sx={{
-                    fontFamily: "'Open Sans', sans-serif",
-                    fontWeight: '600',
-                  }}>
-                  Careers at Umbrella
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontFamily: "'Open Sans', sans-serif",
-                    fontWeight: '400',
-                  }}>
-                  Our mission is clear: translating science into survival to
-                  improve the health of people worldwide. We are always on the
-                  lookout for dedicated and curious new talents supporting our
-                  team of visionaries, entrepreneurs, scientists, engineers and
-                  business professionals. Join us and be part of our unique
-                  pioneering spirit.
-                </Typography>
-              </Box>
-              <YellowButton>Careers Portal</YellowButton>
+                Careers at Umbrella
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: '400',
+                }}>
+                Our mission is clear: translating science into survival to
+                improve the health of people worldwide. We are always on the
+                lookout for dedicated and curious new talents supporting our
+                team of visionaries, entrepreneurs, scientists, engineers and
+                business professionals. Join us and be part of our unique
+                pioneering spirit.
+              </Typography>
             </Box>
-          </animated.div>
+            <YellowButton>Careers Portal</YellowButton>
+          </Box>
         </Box>
       ) : (
         <Box
