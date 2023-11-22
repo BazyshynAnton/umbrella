@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import HeaderBurgerMenu from './HeaderBurgerMenu'
 
 const stylesForLinks = {
-  color: '#363435',
+  color: '#000',
   ':hover': {
     textDecoration: 'underline',
   },
@@ -39,7 +39,10 @@ const Header = () => {
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <NavLink to="/">
             {isSmallScreen ? (
-              <Box sx={{ height: { md: '100px', sm: '70px', xs: '60px' } }}>
+              <Box
+                sx={{
+                  height: { md: '100px', sm: '70px', xs: '60px' },
+                }}>
                 <img
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                   src={umbrellaHeaderLogo}
@@ -67,7 +70,7 @@ const Header = () => {
                   Main
                 </Typography>
               </NavLink>
-              <NavLink to="">
+              <NavLink to="/vaccine/science-of-mrna">
                 <Typography
                   variant="h5"
                   fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
