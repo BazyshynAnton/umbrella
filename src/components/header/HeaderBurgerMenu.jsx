@@ -35,7 +35,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
             Main
           </Typography>
         </NavLink>
-        <NavLink to="">
+        <NavLink to="/vaccine/science-of-mrna">
           <Typography
             variant="h5"
             fontSize={{ sm: '1.5rem', xs: '1.3rem' }}

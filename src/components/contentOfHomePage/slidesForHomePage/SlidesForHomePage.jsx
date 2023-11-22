@@ -121,7 +121,7 @@ const SlidesForHomePage = () => {
   const animationForAllSwiper = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 3600 },
+    config: { duration: 1000 },
   })
 
   const handleSlideChange = (swiper) => {

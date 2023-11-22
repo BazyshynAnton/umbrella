@@ -353,7 +353,7 @@ const AboutVaccine = () => {
           }}>
           <animated.div style={{ ...animationLearnMoreBtn }}>
             <NavLink
-              to=""
+              to="/vaccine/science-of-mrna"
               style={{
                 borderRadius: '25px',
               }}>
