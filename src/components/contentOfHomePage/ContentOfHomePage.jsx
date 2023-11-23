@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { Container } from '@mui/material'
 import AboutVaccine from './aboutVaccine/AboutVaccine'
 import SlidesForHomePage from './slidesForHomePage/SlidesForHomePage'
 import CareersAtUmbrella from './careersAtUmbrella/CareersAtUmbrella'
