@@ -40,7 +40,7 @@ const SwiperProteinFactories = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: '3rem',
+              gap: { lg: '3rem', md: '2rem' },
             }}>
             <img
               style={styleForImage}

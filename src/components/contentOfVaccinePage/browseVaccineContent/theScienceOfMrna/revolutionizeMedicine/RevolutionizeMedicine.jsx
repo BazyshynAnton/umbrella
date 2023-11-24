@@ -6,10 +6,23 @@ const colorForImportant = { color: '#FF0000' }
 
 const RevolutionizeMedicine = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-      <Box sx={{ width: '100%' }}>
+    <Box
+      sx={{
+        mt: { md: '0px', sm: '70px' },
+        display: 'flex',
+
+        flexDirection: {
+          md: 'row',
+          xs: 'column',
+        },
+      }}>
+      <Box
+        sx={{
+          width: '100%',
+        }}>
         <Box
           sx={{
+            width: '100%',
             height: '300px',
           }}>
           <img
@@ -25,7 +38,12 @@ const RevolutionizeMedicine = () => {
         </Box>
         <Typography
           variant="h5"
-          sx={{ mt: '20px', fontWeight: '600', ...fontStyle }}>
+          sx={{
+            mt: '20px',
+            fontSize: { sm: '1.5rem', xs: '1.3rem' },
+            fontWeight: '600',
+            ...fontStyle,
+          }}>
           mRNA could revolutionize medicine
         </Typography>
         <Typography variant="body1" sx={{ ...fontStyle }}>
@@ -37,12 +55,19 @@ const RevolutionizeMedicine = () => {
       <Box
         sx={{
           width: '100%',
-          pl: '30px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          mt: { md: '0px', xs: '30px' },
+          pl: { md: '30px' },
+          display: { xs: 'flex' },
+          flexDirection: { xs: 'column' },
+          justifyContent: { md: 'center', xs: 'flex-start' },
         }}>
-        <Typography variant="h5" sx={{ fontWeight: '600', ...fontStyle }}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontSize: { sm: '1.5rem', xs: '1.3rem' },
+            fontWeight: '600',
+            ...fontStyle,
+          }}>
           It's all about proteins
         </Typography>
         <Typography variant="body1" sx={{ ...fontStyle }}>
