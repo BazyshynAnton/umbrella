@@ -7,7 +7,7 @@ const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
 
 const IntroduceToMrna = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+    <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
       <Typography variant="body1" sx={{ width: '100%', ...fontStyle }}>
         At Umbrella, we are delivering on the promise of mRNA science to create
         a new generation of transformative medicines for patients.
@@ -15,10 +15,10 @@ const IntroduceToMrna = () => {
       <Box sx={{ width: '100%', height: '350px', position: 'relative' }}>
         <Box
           sx={{
-            width: '350px',
-            height: '450px',
+            width: { lg: '350px', md: '280px', sm: '250px', xs: '200px' },
+            height: { lg: '450px', md: '400px', sm: '350px', xs: '300px' },
             position: 'absolute',
-            top: '-180px',
+            top: { lg: '-180px', md: '-220px', sm: '20px', xs: '20px' },
             right: '0',
           }}>
           <img
@@ -34,11 +34,11 @@ const IntroduceToMrna = () => {
         </Box>
         <Box
           sx={{
-            width: '200px',
-            height: '250px',
+            width: { lg: '200px', md: '160px', sm: '160px', xs: '120px' },
+            height: { lg: '250px', md: '200px', sm: '190px', xs: '150px' },
             position: 'absolute',
-            bottom: '90px',
-            left: '80px',
+            bottom: { lg: '90px', md: '180px', sm: '0px', xs: '40px' },
+            right: { lg: '250px', md: '200px', sm: '150px', xs: '120px' },
           }}>
           <img
             style={{

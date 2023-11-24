@@ -12,7 +12,12 @@ const YouAreMadeOfProteins = () => {
     <>
       <Typography
         variant="h4"
-        sx={{ mt: '150px', fontWeight: '600', ...fontStyle }}>
+        sx={{
+          mt: '150px',
+          fontSize: { sm: '2.1rem', xs: '1.5rem' },
+          fontWeight: '600',
+          ...fontStyle,
+        }}>
         You are made of proteins
       </Typography>
       <Typography sx={{ ...fontStyle }}>
@@ -25,26 +30,28 @@ const YouAreMadeOfProteins = () => {
           mt: '40px',
           display: 'flex',
           flexDirection: 'column',
-          height: '300px',
+          height: { md: '300px', xs: '100%' },
+          gap: { sm: '0px', xs: '1rem' },
         }}>
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: { md: 'row', xs: 'column' },
+            gap: { sm: '0rem', xs: '1rem' },
           }}>
           <Box
             sx={{
               width: '100%',
               display: 'flex',
               flexDirection: 'row',
-              alignItems: 'center',
-              gap: '0.5rem',
+              alignItems: { sm: 'center', xs: 'initial' },
+              justifyContent: 'flex-start',
             }}>
             <Box sx={{ width: '150px', height: '150px' }}>
               <img
                 style={{
                   objectFit: 'cover',
-                  width: '100%',
+                  width: '150px',
                   height: '100%',
                 }}
                 src={picOfProteins}
@@ -53,11 +60,17 @@ const YouAreMadeOfProteins = () => {
             </Box>
             <Box
               sx={{
-                height: '130px',
+                height: { sm: '130px', xs: '100%' },
                 display: 'flex',
                 flexDirection: 'column',
               }}>
-              <Typography variant="h5" sx={{ ...fontStyle }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
+                  fontWeight: { sm: '400', xs: '600' },
+                  ...fontStyle,
+                }}>
                 What proteins do
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyle }}>
@@ -74,14 +87,14 @@ const YouAreMadeOfProteins = () => {
               width: '100%',
               display: 'flex',
               flexDirection: 'row',
-              alignItems: 'center',
-              gap: '1rem',
+              alignItems: { sm: 'center', xs: 'initial' },
+              justifyContent: 'flex-start',
             }}>
             <Box sx={{ width: '150px', height: '150px' }}>
               <img
                 style={{
                   objectFit: 'cover',
-                  width: '100%',
+                  width: '150px',
                   height: '100%',
                 }}
                 src={picOfResearch}
@@ -92,8 +105,15 @@ const YouAreMadeOfProteins = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                height: { sm: '130px', xs: '100%' },
               }}>
-              <Typography variant="h5" sx={{ ...fontStyle }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
+                  fontWeight: { sm: '400', xs: '600' },
+                  ...fontStyle,
+                }}>
                 How proteins work
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyle }}>
@@ -108,21 +128,21 @@ const YouAreMadeOfProteins = () => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: { md: 'row', xs: 'column' },
+            gap: { sm: '0rem', xs: '1rem' },
           }}>
           <Box
             sx={{
               width: '100%',
               display: 'flex',
               flexDirection: 'row',
-              alignItems: 'center',
-              gap: '0.5rem',
+              alignItems: { sm: 'center', xs: 'initial' },
             }}>
             <Box sx={{ width: '150px', height: '150px' }}>
               <img
                 style={{
                   objectFit: 'cover',
-                  width: '100%',
+                  width: '150px',
                   height: '100%',
                 }}
                 src={picOfImportant}
@@ -134,8 +154,15 @@ const YouAreMadeOfProteins = () => {
                 height: '130px',
                 display: 'flex',
                 flexDirection: 'column',
+                height: { sm: '130px', xs: '100%' },
               }}>
-              <Typography variant="h5" sx={{ ...fontStyle }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
+                  fontWeight: { sm: '400', xs: '600' },
+                  ...fontStyle,
+                }}>
                 Why proteins are important
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyle }}>
@@ -151,14 +178,13 @@ const YouAreMadeOfProteins = () => {
               width: '100%',
               display: 'flex',
               flexDirection: 'row',
-              alignItems: 'center',
-              gap: '1rem',
+              alignItems: { sm: 'center', xs: 'initial' },
             }}>
             <Box sx={{ width: '150px', height: '150px' }}>
               <img
                 style={{
                   objectFit: 'cover',
-                  width: '100%',
+                  width: '150px',
                   height: '100%',
                 }}
                 src={picOfMed}
@@ -170,7 +196,13 @@ const YouAreMadeOfProteins = () => {
                 display: 'flex',
                 flexDirection: 'column',
               }}>
-              <Typography variant="h5" sx={{ ...fontStyle }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
+                  fontWeight: { sm: '400', xs: '600' },
+                  ...fontStyle,
+                }}>
                 Why we focus on proteins
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyle }}>

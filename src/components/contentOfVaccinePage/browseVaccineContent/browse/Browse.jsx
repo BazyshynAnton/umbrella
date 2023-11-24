@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -6,6 +6,7 @@ const styleForPoint = {
   width: '5px',
   height: '5px',
   borderRadius: '5px',
+  background: '#000',
 }
 const styleForLinks = ({ isActive }) =>
   isActive
@@ -15,34 +16,43 @@ const styleForLinks = ({ isActive }) =>
       }
 
 const styleForTypography = {
+  fontWeight: { sm: '400' },
+  fontSize: { sm: '1.5rem', xs: '1.2rem' },
+  fontFamily: "'Open Sans', sans-serif",
   cursor: 'pointer',
   ':hover': { textDecoration: 'underline' },
 }
 
+const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
+
 const Browse = () => {
+  const isSmallScreen = useMediaQuery('(min-width: 1200px)')
+
   return (
     <div>
-      <Typography variant="body1">browse:</Typography>
+      <Typography variant="body1" sx={fontStyle}>
+        browse:
+      </Typography>
       <Box
         sx={{
           display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'flex-start',
-          gap: '1rem',
-          alignItems: 'center',
+          flexDirection: { lg: 'row', xs: 'column' },
+          justifyContent: { lg: 'flex-start' },
+          gap: { lg: '1rem', sm: '0.3rem', xs: '0.2rem' },
+          alignItems: { lg: 'center', xs: 'flex-start' },
         }}>
         <NavLink to="/vaccine/science-of-mrna" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
             The Science of mRNA
           </Typography>
         </NavLink>
-        <hr style={styleForPoint} />
+        {isSmallScreen && <hr style={styleForPoint} />}
         <NavLink to="/vaccine/umbrellas-mrna-platform" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
             Umbrella's mRNA platform
           </Typography>
         </NavLink>
-        <hr style={styleForPoint} />
+        {isSmallScreen && <hr style={styleForPoint} />}
         <NavLink to="/vaccine/about-mrna" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
             About mRNA
