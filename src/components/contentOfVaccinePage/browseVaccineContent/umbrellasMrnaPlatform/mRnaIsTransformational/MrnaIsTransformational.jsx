@@ -3,13 +3,13 @@ import { Box, Typography } from '@mui/material'
 import { colorForImportant } from '../../../../../context/variables'
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
-import scienceInTheLab from '../../../../../pictures/scienceInTheLab.jpeg'
+import femaleScientist from '../../../../../pictures/femaleScientist.jpg'
 
-const RevolutionizeMedicine = () => {
+const MrnaIsTransformational = () => {
   return (
     <Box
       sx={{
-        mt: { md: '0px', sm: '70px' },
+        mt: { md: '100px', sm: '70px' },
         display: 'flex',
 
         flexDirection: {
@@ -33,7 +33,7 @@ const RevolutionizeMedicine = () => {
               height: '100%',
               borderRadius: '20px',
             }}
-            src={scienceInTheLab}
+            src={femaleScientist}
             alt="scientists"
           />
         </Box>
@@ -45,12 +45,14 @@ const RevolutionizeMedicine = () => {
             fontWeight: '600',
             ...fontStyleOpenSans,
           }}>
-          mRNA could revolutionize medicine
+          mRNA is transformational
         </Typography>
         <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-          Scientists have been studying mRNA{' '}
-          <b style={colorForImportant}>for decades</b>. And mRNA vaccines are
-          <b style={colorForImportant}> just the start</b>.
+          With our technology, we are{' '}
+          <b style={colorForImportant}>revolutionizing</b> medicine and
+          developing potential mRNA treatments in shorter periods of time for
+          previously{' '}
+          <b style={colorForImportant}>untreatable and emerging diseases</b>.
         </Typography>
       </Box>
       <Box
@@ -69,17 +71,17 @@ const RevolutionizeMedicine = () => {
             fontWeight: '600',
             ...fontStyleOpenSans,
           }}>
-          It's all about proteins
+          We can positively impact the lives of millions of people
         </Typography>
         <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-          An mRNA can <b style={colorForImportant}>teach the body</b> how to
-          make a specific protein that can help your immune system prevent or
-          treat certain
-          <b style={colorForImportant}>diseases</b>.
+          Our mRNA platform, with its{' '}
+          <b style={colorForImportant}>speed, scale, and flexibility</b>, is
+          uniquely suited to tackle current and emerging pathogens that threaten
+          global health.
         </Typography>
       </Box>
     </Box>
   )
 }
 
-export default RevolutionizeMedicine
+export default MrnaIsTransformational

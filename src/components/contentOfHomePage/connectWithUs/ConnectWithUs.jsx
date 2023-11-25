@@ -5,6 +5,8 @@ import chair from '../../../pictures/chair.jpg'
 import phoneIcon from '../../../pictures/phoneIcon.png'
 import mailIcon from '../../../pictures/mailIcon.png'
 
+import { fontStyleOpenSans } from '../../../context/variables'
+
 const ConnectWithUs = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
   return (
@@ -53,16 +55,16 @@ const ConnectWithUs = () => {
               <Typography
                 variant="h3"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '600',
+                  ...fontStyleOpenSans,
                 }}>
                 Connect with us
               </Typography>
               <Typography
                 variant="body1"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '400',
+                  ...fontStyleOpenSans,
                 }}>
                 Questions about our products, services or clinical trials? Find
                 the right contact person at our Service Center.
@@ -106,16 +108,16 @@ const ConnectWithUs = () => {
                 variant="h3"
                 sx={{
                   fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '600',
+                  ...fontStyleOpenSans,
                 }}>
                 Connect with us
               </Typography>
               <Typography
                 variant="body1"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '400',
+                  ...fontStyleOpenSans,
                 }}>
                 Questions about our products, services or clinical trials? Find
                 the right contact person at our Service Center.

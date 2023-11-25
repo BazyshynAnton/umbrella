@@ -56,6 +56,9 @@ a {
   --swiper-pagination-bullet-horizontal-gap: 0.35em;
 }
 
+.my-swiper {
+  height: 560px;
+}
 @media screen and (max-width: 450px) {
   .my-swiper {
     display: none;
@@ -63,16 +66,16 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 8px; /* Ширина скроллбара */
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #b22222; /* Цвет ползунка скроллбара */
-  border-radius: 6px; /* Закругление углов ползунка */
+  background-color: #b22222;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Цвет трека (фона) скроллбара */
+  background-color: #f1f1f1;
 }
 
 /* Для Internet Explorer */

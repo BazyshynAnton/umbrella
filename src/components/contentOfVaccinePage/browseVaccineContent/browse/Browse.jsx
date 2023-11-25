@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
-import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { fontStyleOpenSans } from '../../../../context/variables'
 
 const styleForPoint = {
   width: '5px',
@@ -23,14 +23,12 @@ const styleForTypography = {
   ':hover': { textDecoration: 'underline' },
 }
 
-const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
-
 const Browse = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
 
   return (
     <div>
-      <Typography variant="body1" sx={fontStyle}>
+      <Typography variant="body1" sx={fontStyleOpenSans}>
         browse:
       </Typography>
       <Box

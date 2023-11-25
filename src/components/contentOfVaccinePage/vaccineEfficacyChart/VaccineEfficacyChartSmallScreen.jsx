@@ -43,30 +43,6 @@ const options = {
       color: 'black',
     },
   },
-  scales: {
-    x: {
-      title: {
-        display: true,
-        text: 'Time from Randomization (Day)',
-        font: {
-          family: "'Open Sans', sans-serif",
-          size: window.innerWidth > 930 ? 20 : 10,
-        },
-        color: 'black',
-      },
-    },
-    y: {
-      title: {
-        display: true,
-        text: 'Cumulative Incidence Rate (%)',
-        font: {
-          family: "'Open Sans', sans-serif",
-          size: window.innerWidth > 930 ? 20 : 10,
-        },
-        color: 'black',
-      },
-    },
-  },
 }
 
 const labels = [

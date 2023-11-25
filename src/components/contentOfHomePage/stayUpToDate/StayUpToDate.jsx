@@ -1,6 +1,8 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import YellowButton from '../yellowButton/YellowButton'
 
+import { fontStyleOpenSans } from '../../../context/variables'
+
 const StayUpToDate = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
   return (
@@ -18,15 +20,15 @@ const StayUpToDate = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Typography
               variant="h3"
-              sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '600' }}>
+              sx={{ fontWeight: '600', ...fontStyleOpenSans }}>
               Stay up to date
             </Typography>
             <Box>
               <Typography
                 variant="body1"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '400',
+                  ...fontStyleOpenSans,
                 }}>
                 Looking for our latest news?
                 <br />
@@ -55,15 +57,15 @@ const StayUpToDate = () => {
               padding: '2pc',
               display: 'flex',
               flexDirection: 'column',
-              gap: '1rem',
               justifyContent: 'center',
+              gap: '1rem',
             }}>
             <Typography
               variant="h3"
               sx={{
                 fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
-                fontFamily: "'Open Sans', sans-serif",
                 fontWeight: '600',
+                ...fontStyleOpenSans,
               }}>
               Stay up to date
             </Typography>
@@ -71,8 +73,8 @@ const StayUpToDate = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '400',
+                  ...fontStyleOpenSans,
                 }}>
                 Looking for our latest news?
                 <br />

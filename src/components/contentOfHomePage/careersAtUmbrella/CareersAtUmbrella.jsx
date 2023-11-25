@@ -1,6 +1,8 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import YellowButton from '../yellowButton/YellowButton'
 
+import { fontStyleOpenSans } from '../../../context/variables'
+
 import redbook from '../../../pictures/redbook.png'
 import books from '../../../pictures/books.png'
 import flask from '../../../pictures/flask.png'
@@ -59,16 +61,16 @@ const CareersAtUmbrella = () => {
               <Typography
                 variant="h3"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '600',
+                  ...fontStyleOpenSans,
                 }}>
                 Careers at Umbrella
               </Typography>
               <Typography
                 variant="body1"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '400',
+                  ...fontStyleOpenSans,
                 }}>
                 Our mission is clear: translating science into survival to
                 improve the health of people worldwide. We are always on the
@@ -115,16 +117,16 @@ const CareersAtUmbrella = () => {
                 variant="h3"
                 sx={{
                   fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '600',
+                  ...fontStyleOpenSans,
                 }}>
                 Careers at Umbrella
               </Typography>
               <Typography
                 variant="body1"
                 sx={{
-                  fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '400',
+                  ...fontStyleOpenSans,
                 }}>
                 Our mission is clear: translating science into survival to
                 improve the health of people worldwide. We are always on the

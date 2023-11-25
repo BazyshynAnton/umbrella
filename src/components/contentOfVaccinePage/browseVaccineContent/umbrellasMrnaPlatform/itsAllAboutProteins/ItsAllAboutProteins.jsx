@@ -1,29 +1,30 @@
 import { Box, Typography } from '@mui/material'
-
 import { colorForImportant } from '../../../../../context/variables'
-import { fontStyleOpenSans } from '../../../../../context/variables'
 
-import picOfProteins from '../../../../../pictures/picOfProteins.jpg'
 import picOfResearch from '../../../../../pictures/picOfResearch.jpg'
 import picOfMed from '../../../../../pictures/picOfMed.jpg'
-import picOfImportant from '../../../../../pictures/picOfImportant.jpg'
+import picOfHuman from '../../../../../pictures/picOfHuman.jpg'
+import picOfMrnaSmall from '../../../../../pictures/picOfMrnaSmall.jpg'
 
-const YouAreMadeOfProteins = () => {
+const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
+
+const ItsAllAboutProteins = () => {
   return (
     <>
       <Typography
         variant="h4"
         sx={{
-          mt: '150px',
+          mt: '100px',
           fontSize: { sm: '2.1rem', xs: '1.5rem' },
           fontWeight: '600',
-          ...fontStyleOpenSans,
+          ...fontStyle,
         }}>
-        You are made of proteins
+        It’s all about proteins
       </Typography>
-      <Typography sx={{ ...fontStyleOpenSans }}>
-        Your body contains <b style={colorForImportant}>trillions of cells</b>,
-        the basic units of life. And every cell contains proteins.
+      <Typography sx={{ ...fontStyle }}>
+        At Moderna, we are working on developing and testing
+        <b style={colorForImportant}> new mRNA medicines </b>
+        for a wide range of diseases.
       </Typography>
       {/*  */}
       <Box
@@ -55,7 +56,7 @@ const YouAreMadeOfProteins = () => {
                   width: '150px',
                   height: '100%',
                 }}
-                src={picOfProteins}
+                src={picOfResearch}
                 alt="pic1"
               />
             </Box>
@@ -70,16 +71,13 @@ const YouAreMadeOfProteins = () => {
                 sx={{
                   fontSize: { sm: '1.5rem', xs: '1.2rem' },
                   fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
+                  ...fontStyle,
                 }}>
-                What proteins do
+                We start with a protein
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Proteins are the <b style={colorForImportant}>"workhorses"</b>{' '}
-                of your cells. <br /> And your body makes
-                <br />
-                <b style={colorForImportant}>{'>'}100,000</b> different kinds of
-                proteins.
+              <Typography variant="body1" sx={{ ...fontStyle }}>
+                All mRNA medicines start with identifying a protein that is
+                designed to prevent or treat a certain disease.
               </Typography>
             </Box>
           </Box>
@@ -98,7 +96,7 @@ const YouAreMadeOfProteins = () => {
                   width: '150px',
                   height: '100%',
                 }}
-                src={picOfResearch}
+                src={picOfHuman}
                 alt="pic2"
               />
             </Box>
@@ -113,15 +111,13 @@ const YouAreMadeOfProteins = () => {
                 sx={{
                   fontSize: { sm: '1.5rem', xs: '1.2rem' },
                   fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
+                  ...fontStyle,
                 }}>
-                How proteins work
+                Then we design the mRNA
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                For example, insulin is a protein that helps the body
-                <br /> control sugar levels in the blood.
-                <br /> In people with Type I diabetes, their body doesn't make
-                enough <b style={colorForImportant}>insulin</b>.
+              <Typography variant="body1" sx={{ ...fontStyle }}>
+                Our scientists design an mRNA that carries instructions for this
+                protein.
               </Typography>
             </Box>
           </Box>
@@ -146,7 +142,7 @@ const YouAreMadeOfProteins = () => {
                   width: '150px',
                   height: '100%',
                 }}
-                src={picOfImportant}
+                src={picOfMed}
                 alt="pic3"
               />
             </Box>
@@ -161,15 +157,14 @@ const YouAreMadeOfProteins = () => {
                 sx={{
                   fontSize: { sm: '1.5rem', xs: '1.2rem' },
                   fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
+                  ...fontStyle,
                 }}>
-                Why proteins are important
+                And repeat this process to create other medicines
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                When the body doesn’t make the right amount
-                <br /> or type of protein, it can cause conditions
-                <br /> like{' '}
-                <b style={colorForImportant}>cancer or metabolic diseases</b>.
+              <Typography variant="body1" sx={{ ...fontStyle }}>
+                To make mRNA vaccines or therapeutics, our scientists create
+                instructions to make different proteins that could help our body
+                fight infections or prevent diseases.
               </Typography>
             </Box>
           </Box>
@@ -187,7 +182,7 @@ const YouAreMadeOfProteins = () => {
                   width: '150px',
                   height: '100%',
                 }}
-                src={picOfMed}
+                src={picOfMrnaSmall}
                 alt="pic4"
               />
             </Box>
@@ -201,17 +196,14 @@ const YouAreMadeOfProteins = () => {
                 sx={{
                   fontSize: { sm: '1.5rem', xs: '1.2rem' },
                   fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
+                  ...fontStyle,
                 }}>
-                Why we focus on proteins
+                We have an extensive pipeline
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Proteins are essential for
-                <b style={colorForImportant}>
-                  {' '}
-                  maintaining health and preventing disease
-                </b>
-                .
+              <Typography variant="body1" sx={{ ...fontStyle }}>
+                In addition to mRNA vaccines, Moderna is working on other
+                applications of potential mRNA therapeutics that could help
+                people with cancer, metabolic diseases and more.
               </Typography>
             </Box>
           </Box>
@@ -221,4 +213,4 @@ const YouAreMadeOfProteins = () => {
   )
 }
 
-export default YouAreMadeOfProteins
+export default ItsAllAboutProteins
