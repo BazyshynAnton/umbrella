@@ -1,6 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import { useSpring, animated } from '@react-spring/web'
 
+import { fontStyleOpenSans } from '../../../context/variables'
+
 const YellowButton = ({ children }) => {
   const [props, set] = useSpring(() => ({
     background: 'linear-gradient(to left, #fff 50%, #fff 50%)',
@@ -52,7 +54,7 @@ const YellowButton = ({ children }) => {
           }}>
           <Typography
             variant="h6"
-            sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '700' }}>
+            sx={{ fontWeight: '700', ...fontStyleOpenSans }}>
             {'>'}
           </Typography>
         </animated.div>
@@ -64,7 +66,7 @@ const YellowButton = ({ children }) => {
         }}>
         <Typography
           variant="body1"
-          sx={{ fontFamily: "'Open Sans', sans-serif", fontWeight: '700' }}>
+          sx={{ fontWeight: '700', ...fontStyleOpenSans }}>
           {children}
         </Typography>
       </animated.div>

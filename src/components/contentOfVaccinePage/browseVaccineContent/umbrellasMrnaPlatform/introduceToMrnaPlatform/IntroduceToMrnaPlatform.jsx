@@ -1,16 +1,16 @@
 import { Box, Typography } from '@mui/material'
 
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import demoImgThree from '../../../../../pictures/demoImgThree.jpeg'
+import demoImgFour from '../../../../../pictures/demoImgFour.jfif'
 
-import demoImgOne from '../../../../../pictures/demoImgOne.jfif'
-import demoImgTwo from '../../../../../pictures/demoImgTwo.jfif'
+const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
 
-const IntroduceToMrna = () => {
+const IntroduceToMrnaPlatform = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
-      <Typography variant="body1" sx={{ width: '100%', ...fontStyleOpenSans }}>
-        At Umbrella, we are delivering on the promise of mRNA science to create
-        a new generation of transformative medicines for patients.
+      <Typography variant="body1" sx={{ width: '100%', ...fontStyle }}>
+        Our scientists are developing mRNA medicines to help prevent or treat
+        disease.
       </Typography>
       <Box sx={{ width: '100%', height: '350px', position: 'relative' }}>
         <Box
@@ -28,7 +28,7 @@ const IntroduceToMrna = () => {
               height: '100%',
               borderRadius: '20px',
             }}
-            src={demoImgOne}
+            src={demoImgThree}
             alt="demo-img1"
           />
         </Box>
@@ -47,7 +47,7 @@ const IntroduceToMrna = () => {
               height: '100%',
               borderRadius: '20px',
             }}
-            src={demoImgTwo}
+            src={demoImgFour}
             alt="demo-img2"
           />
         </Box>
@@ -56,4 +56,4 @@ const IntroduceToMrna = () => {
   )
 }
 
-export default IntroduceToMrna
+export default IntroduceToMrnaPlatform
