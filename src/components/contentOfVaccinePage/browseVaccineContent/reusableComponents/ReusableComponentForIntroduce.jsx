@@ -1,16 +1,12 @@
 import { Box, Typography } from '@mui/material'
 
-import demoImgThree from '../../../../../pictures/demoImgThree.jpeg'
-import demoImgFour from '../../../../../pictures/demoImgFour.jfif'
-
 const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
 
-const IntroduceToMrnaPlatform = () => {
+const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
       <Typography variant="body1" sx={{ width: '100%', ...fontStyle }}>
-        Our scientists are developing mRNA medicines to help prevent or treat
-        disease.
+        {text}
       </Typography>
       <Box sx={{ width: '100%', height: '350px', position: 'relative' }}>
         <Box
@@ -28,7 +24,7 @@ const IntroduceToMrnaPlatform = () => {
               height: '100%',
               borderRadius: '20px',
             }}
-            src={demoImgThree}
+            src={img1}
             alt="demo-img1"
           />
         </Box>
@@ -47,7 +43,7 @@ const IntroduceToMrnaPlatform = () => {
               height: '100%',
               borderRadius: '20px',
             }}
-            src={demoImgFour}
+            src={img2}
             alt="demo-img2"
           />
         </Box>
@@ -56,4 +52,4 @@ const IntroduceToMrnaPlatform = () => {
   )
 }
 
-export default IntroduceToMrnaPlatform
+export default ReusableComponentForIntroduce

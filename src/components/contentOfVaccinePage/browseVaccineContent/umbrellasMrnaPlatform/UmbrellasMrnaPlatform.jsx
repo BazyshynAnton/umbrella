@@ -1,8 +1,14 @@
 import { Box } from '@mui/material'
-import IntroduceToMrnaPlatform from './introduceToMrnaPlatform/IntroduceToMrnaPlatform'
-import ReusableComponentMrnaPicture from '../reusableComponentMrnaPicture/ReusableComponentMrnaPicture'
+import ReusableComponentMrnaPicture from '../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../reusableComponents/ReusableComponentForIntroduce'
 import ItsAllAboutProteins from './itsAllAboutProteins/ItsAllAboutProteins'
 import MrnaIsTransformational from './mRnaIsTransformational/MrnaIsTransformational'
+
+import demoImgThree from '../../../../pictures/demoImgThree.jpeg'
+import demoImgFour from '../../../../pictures/demoImgFour.jfif'
+
+const text =
+  'Our scientists are developing mRNA medicines to help prevent or treat disease.'
 
 const UmbrellasMrnaPlatform = () => {
   return (
@@ -13,7 +19,11 @@ const UmbrellasMrnaPlatform = () => {
         flexDirection: 'column',
         position: 'relative',
       }}>
-      <IntroduceToMrnaPlatform />
+      <ReusableComponentForIntroduce
+        text={text}
+        img1={demoImgThree}
+        img2={demoImgFour}
+      />
       <ReusableComponentMrnaPicture />
       <ItsAllAboutProteins />
       <MrnaIsTransformational />
