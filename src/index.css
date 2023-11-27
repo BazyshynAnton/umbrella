@@ -59,6 +59,7 @@ a {
 .my-swiper {
   height: 560px;
 }
+
 @media screen and (max-width: 450px) {
   .my-swiper {
     display: none;

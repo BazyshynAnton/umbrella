@@ -9,6 +9,7 @@ const MrnaIsTransformational = () => {
   return (
     <Box
       sx={{
+        mb: '50px',
         mt: { md: '100px', sm: '70px' },
         display: 'flex',
 

@@ -51,7 +51,8 @@ const Footer = () => {
             height: '100%',
           }}>
           <Box>
-            <Box sx={{ width: '200px', height: '104px', mb: '20px' }}>
+            <Box
+              sx={{ width: '200px', height: '104px', mb: '20px', mt: '20px' }}>
               <img
                 style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 src={umbrellaFooterLogo}

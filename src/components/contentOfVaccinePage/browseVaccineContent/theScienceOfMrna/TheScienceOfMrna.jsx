@@ -3,12 +3,17 @@ import { Box, Typography, useMediaQuery } from '@mui/material'
 import { colorForImportant } from '../../../../context/variables'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
+import ReusableComponentForIntroduce from '../reusableComponents/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../reusableComponents/ReusableComponentMrnaPicture'
 import RevolutionizeMedicine from './revolutionizeMedicine/RevolutionizeMedicine'
-import IntroduceToMrna from './introduceToMrna/IntroduceToMrna'
 import YouAreMadeOfProteins from './youAreMadeOfProteins/YouAreMadeOfProteins'
 import SwiperProteinFactories from './swiperProteinFactories/SwiperProteinFactories'
 
-import ReusableComponentMrnaPicture from '../reusableComponentMrnaPicture/ReusableComponentMrnaPicture'
+import demoImgOne from '../../../../pictures/demoImgOne.jfif'
+import demoImgTwo from '../../../../pictures/demoImgTwo.jfif'
+
+const text =
+  'At Umbrella, we are delivering on the promise of mRNA science to create a new generation of transformative medicines for patients.'
 
 const TheScienceOfMrna = () => {
   const isSmallScreen = useMediaQuery('(min-width: 900px)')
@@ -20,7 +25,11 @@ const TheScienceOfMrna = () => {
         flexDirection: 'column',
         position: 'relative',
       }}>
-      <IntroduceToMrna />
+      <ReusableComponentForIntroduce
+        text={text}
+        img1={demoImgOne}
+        img2={demoImgTwo}
+      />
       <ReusableComponentMrnaPicture />
       <RevolutionizeMedicine />
       <YouAreMadeOfProteins />
