@@ -5,7 +5,6 @@ import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
 import firstSlideSwiperProtein from '../../../../../pictures/firstSlideSwiperProtein.jfif'
-import { colorForImportant } from '../../../../../context/variables'
 
 import secondSlideSwiperProtein from '../../../../../pictures/secondSlideSwiperProtein.jfif'
 import thirdSlideSwiperProtein from '../../../../../pictures/thirdSlideSwiperProtein.jfif'
@@ -50,17 +49,19 @@ const SwiperProteinFactories = () => {
               alt="first-slide"
             />
             <Box sx={{ width: '50%' }}>
-              <Typography variant="h5" sx={{ ...fontStyleOpenSans }}>
+              <Typography
+                variant="h5"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
                 What is mRNA?
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                <b style={colorForImportant}>Messenger RNA–or mRNA</b>–exists in
-                all of the cells in your
+              <Typography
+                variant="body1"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                <b>Messenger RNA–or mRNA</b>–exists in all of the cells in your
                 <br /> body. It is an essential component of all living
                 organisms and
                 <br />
-                has been in cells for{' '}
-                <b style={colorForImportant}>billions of years</b>.
+                has been in cells for <b>billions of years</b>.
               </Typography>
             </Box>
           </Box>
@@ -81,12 +82,15 @@ const SwiperProteinFactories = () => {
               alt="second-slide"
             />
             <Box sx={{ width: '50%' }}>
-              <Typography variant="h5" sx={{ ...fontStyleOpenSans }}>
+              <Typography
+                variant="h5"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
                 What does it do?
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Just like its name suggests, mRNA is a{' '}
-                <b style={colorForImportant}>messenger</b>.
+              <Typography
+                variant="body1"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                Just like its name suggests, mRNA is a <b>messenger</b>.
                 <br /> It interacts with other components in cells that help
                 create proteins.
               </Typography>
@@ -109,13 +113,16 @@ const SwiperProteinFactories = () => {
               alt="third-slide"
             />
             <Box sx={{ width: '50%' }}>
-              <Typography variant="h5" sx={{ ...fontStyleOpenSans }}>
+              <Typography
+                variant="h5"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
                 How does it help make a protein?
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
+              <Typography
+                variant="body1"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
                 Each mRNA carries instructions to make a specific protein.
-                <br /> These instructions are like a{' '}
-                <b style={colorForImportant}>“blueprint.”</b>
+                <br /> These instructions are like a <b>“blueprint.”</b>
                 <br /> mRNA delivers these instructions, and cells put the
                 protein together.
               </Typography>
@@ -138,12 +145,15 @@ const SwiperProteinFactories = () => {
               alt="last-slide"
             />
             <Box sx={{ width: '50%' }}>
-              <Typography variant="h5" sx={{ ...fontStyleOpenSans }}>
+              <Typography
+                variant="h5"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
                 What happens after a protein is made?
               </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Once its job is done, an mRNA is{' '}
-                <b style={colorForImportant}>broken down</b> by the body.
+              <Typography
+                variant="body1"
+                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                Once its job is done, an mRNA is <b>broken down</b> by the body.
                 <br /> It doesn’t stick around for very long.
               </Typography>
             </Box>

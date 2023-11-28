@@ -32,10 +32,17 @@ const AboutMrna = () => {
 
       <Typography
         variant="h4"
-        sx={{ mt: '100px', fontWeight: '600px', ...fontStyleOpenSans }}>
+        sx={{
+          mt: '100px',
+          fontWeight: '600px',
+          color: '#376586',
+          ...fontStyleOpenSans,
+        }}>
         Q&mRNA
       </Typography>
-      <Typography variant="body1" sx={fontStyleOpenSans}>
+      <Typography
+        variant="body1"
+        sx={{ color: '#376586', ...fontStyleOpenSans }}>
         Tune into our Q&mRNA video series to learn more about the power and
         potential of mRNA
         <br /> and how Umbrella is researching and developing mRNA medicines

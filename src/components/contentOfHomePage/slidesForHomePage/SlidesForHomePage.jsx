@@ -22,7 +22,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 const stylesForPictures = {
-  objectFit: 'contain',
+  objectFit: 'cover',
   width: '100%',
   height: '100%',
   transition: 'ease',
@@ -38,8 +38,8 @@ const stylesForQuotes = {
 }
 
 const stylesForTextInSlides = {
-  redText: {
-    color: 'red',
+  blueText: {
+    color: '#376586',
     fontFamily: "'Tilt Warp', sans-serif",
     fontSize: { md: '1.5rem', sm: '1rem', xs: '0.8rem' },
     letterSpacing: '0.07em',
@@ -177,7 +177,7 @@ const SlidesForHomePage = () => {
                 ...textAnimation1,
               }}>
               <img style={stylesForQuotes} src={quote} alt="quotes" />
-              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
                 Protect Yourself
                 <br />
                 <Typography
@@ -210,7 +210,7 @@ const SlidesForHomePage = () => {
                 ...textAnimation2,
               }}>
               <img style={stylesForQuotes} src={quote} alt="quotes" />
-              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
                 Together
                 <br />
                 we are stronger:
@@ -246,7 +246,7 @@ const SlidesForHomePage = () => {
                 ...textAnimation3,
               }}>
               <img style={stylesForQuotes} src={quote} alt="quotes" />
-              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
                 Take
                 <br />
                 the Umbrella vaccine
@@ -280,7 +280,7 @@ const SlidesForHomePage = () => {
                 ...textAnimation4,
               }}>
               <img style={stylesForQuotes} src={quote} alt="quotes" />
-              <Typography variant="body1" sx={stylesForTextInSlides.redText}>
+              <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
                 Umbrella:
                 <br />
                 Innovations

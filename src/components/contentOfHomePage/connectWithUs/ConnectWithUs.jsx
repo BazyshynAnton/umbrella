@@ -55,6 +55,7 @@ const ConnectWithUs = () => {
               <Typography
                 variant="h3"
                 sx={{
+                  color: '#376586',
                   fontWeight: '600',
                   ...fontStyleOpenSans,
                 }}>
@@ -63,6 +64,7 @@ const ConnectWithUs = () => {
               <Typography
                 variant="body1"
                 sx={{
+                  color: '#376586',
                   fontWeight: '400',
                   ...fontStyleOpenSans,
                 }}>
@@ -109,6 +111,7 @@ const ConnectWithUs = () => {
                 sx={{
                   fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
                   fontWeight: '600',
+                  color: '#376586',
                   ...fontStyleOpenSans,
                 }}>
                 Connect with us
@@ -117,6 +120,7 @@ const ConnectWithUs = () => {
                 variant="body1"
                 sx={{
                   fontWeight: '400',
+                  color: '#376586',
                   ...fontStyleOpenSans,
                 }}>
                 Questions about our products, services or clinical trials? Find

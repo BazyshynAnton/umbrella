@@ -149,13 +149,13 @@ const AboutVaccine = () => {
             sx={{
               height: { sm: '70px', xs: '50px' },
               width: '100%',
-              background: '#c3221c',
+              background: '#376586',
               '::before': {
                 content: '""',
                 position: 'absolute',
                 top: '0px',
                 left: '-35px',
-                background: '#c3221c',
+                background: '#376586',
                 transform: 'skewX(-45deg)',
                 width: '70px',
                 height: { sm: '70px', xs: '49.8px' },
@@ -165,7 +165,7 @@ const AboutVaccine = () => {
                 content: '""',
                 position: 'absolute',
                 right: '100',
-                background: '#c3221c',
+                background: '#376586',
                 width: '100vw',
                 height: '100%',
               },
@@ -260,7 +260,7 @@ const AboutVaccine = () => {
                 variant="h2"
                 fontSize={{ lg: 65, sm: 50, xs: 30 }}
                 sx={{
-                  color: '#808080',
+                  color: '#376586',
                   cursor: 'default',
                   fontFamily: "'Oswald', sans-serif",
                   fontWeight: '400',
@@ -283,7 +283,7 @@ const AboutVaccine = () => {
             <animated.div
               style={{
                 width: '10px',
-                background: '#808080',
+                background: '#376586',
                 clipPath: 'polygon(0 0, 100% 10%, 100% 80%, 100% 89%, 0% 100%)',
                 ...animationForStorageDiv,
                 ...animationHeight,
@@ -293,7 +293,7 @@ const AboutVaccine = () => {
                   height: '80px',
                   position: 'relative',
                   width: '10px',
-                  background: '#808080',
+                  background: '#376586',
                   clipPath:
                     'polygon(0 0, 100% 10%, 100% 80%, 100% 89%, 0% 100%)',
                 }}
@@ -315,7 +315,7 @@ const AboutVaccine = () => {
                 variant="h1"
                 fontSize={{ lg: 80, sm: 60, xs: 40 }}
                 sx={{
-                  color: '#808080',
+                  color: '#376586',
                   cursor: 'default',
                   fontFamily: "'Teko', sans-serif",
                   fontWeight: '500',
@@ -336,7 +336,7 @@ const AboutVaccine = () => {
                 variant="h2"
                 fontSize={{ lg: 70, sm: 50, xs: 35 }}
                 sx={{
-                  color: 'red',
+                  color: '#e31837',
                   cursor: 'default',
                   fontFamily: "'Teko', sans-serif",
                   fontWeight: '400',
@@ -364,15 +364,15 @@ const AboutVaccine = () => {
                 onMouseLeave={() => setIsButtonHovered(false)}
                 variant="outlined"
                 sx={{
-                  color: '#808080',
+                  color: '#376586',
                   borderRadius: '25px',
-                  borderColor: '#DAA520',
+                  borderColor: '#376586',
                   borderWidth: '2px',
                   fontWeight: 'bold',
                   ':hover': {
-                    borderColor: '#FF0000',
+                    background: '#376586',
                     borderWidth: '2px',
-                    color: '#000000',
+                    color: '#fff',
                   },
                 }}>
                 Learn More

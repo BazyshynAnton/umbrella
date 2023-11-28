@@ -1,10 +1,9 @@
 import { Box, Typography } from '@mui/material'
-import { colorForImportant } from '../../../../../context/variables'
 
-import picOfResearch from '../../../../../pictures/picOfResearch.jpg'
-import picOfMed from '../../../../../pictures/picOfMed.jpg'
-import picOfHuman from '../../../../../pictures/picOfHuman.jpg'
-import picOfMrnaSmall from '../../../../../pictures/picOfMrnaSmall.jpg'
+import picOfResearch from '../../../../../pictures/picOfResearch.png'
+import picOfMed from '../../../../../pictures/picOfMed.png'
+import picOfHuman from '../../../../../pictures/picOfHuman.png'
+import picOfMrnaSmall from '../../../../../pictures/picOfMrnaSmall.png'
 
 const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
 
@@ -15,15 +14,16 @@ const ItsAllAboutProteins = () => {
         variant="h4"
         sx={{
           mt: '100px',
+          color: '#376586',
           fontSize: { sm: '2.1rem', xs: '1.5rem' },
           fontWeight: '600',
           ...fontStyle,
         }}>
         It’s all about proteins
       </Typography>
-      <Typography sx={{ ...fontStyle }}>
+      <Typography sx={{ color: '#376586', ...fontStyle }}>
         At Moderna, we are working on developing and testing
-        <b style={colorForImportant}> new mRNA medicines </b>
+        <b> new mRNA medicines </b>
         for a wide range of diseases.
       </Typography>
       {/*  */}
@@ -34,6 +34,7 @@ const ItsAllAboutProteins = () => {
           flexDirection: 'column',
           height: { md: '300px', xs: '100%' },
           gap: { sm: '0px', xs: '1rem' },
+          color: '#376586',
         }}>
         <Box
           sx={{

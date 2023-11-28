@@ -3,10 +3,10 @@ import { Box, Typography } from '@mui/material'
 import { colorForImportant } from '../../../../../context/variables'
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
-import picOfProteins from '../../../../../pictures/picOfProteins.jpg'
-import picOfResearch from '../../../../../pictures/picOfResearch.jpg'
-import picOfMed from '../../../../../pictures/picOfMed.jpg'
-import picOfImportant from '../../../../../pictures/picOfImportant.jpg'
+import picOfProteins from '../../../../../pictures/picOfProteins.png'
+import picOfResearch from '../../../../../pictures/picOfResearch.png'
+import picOfMed from '../../../../../pictures/picOfMed.png'
+import picOfImportant from '../../../../../pictures/picOfImportant.png'
 
 const YouAreMadeOfProteins = () => {
   return (
@@ -15,15 +15,16 @@ const YouAreMadeOfProteins = () => {
         variant="h4"
         sx={{
           mt: '150px',
+          color: '#376586',
           fontSize: { sm: '2.1rem', xs: '1.5rem' },
           fontWeight: '600',
           ...fontStyleOpenSans,
         }}>
         You are made of proteins
       </Typography>
-      <Typography sx={{ ...fontStyleOpenSans }}>
-        Your body contains <b style={colorForImportant}>trillions of cells</b>,
-        the basic units of life. And every cell contains proteins.
+      <Typography sx={{ color: '#376586', ...fontStyleOpenSans }}>
+        Your body contains <b>trillions of cells</b>, the basic units of life.
+        And every cell contains proteins.
       </Typography>
       {/*  */}
       <Box
@@ -33,6 +34,7 @@ const YouAreMadeOfProteins = () => {
           flexDirection: 'column',
           height: { md: '300px', xs: '100%' },
           gap: { sm: '0px', xs: '1rem' },
+          color: '#376586',
         }}>
         <Box
           sx={{
@@ -75,11 +77,10 @@ const YouAreMadeOfProteins = () => {
                 What proteins do
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Proteins are the <b style={colorForImportant}>"workhorses"</b>{' '}
-                of your cells. <br /> And your body makes
+                Proteins are the <b>"workhorses"</b> of your cells. <br /> And
+                your body makes
                 <br />
-                <b style={colorForImportant}>{'>'}100,000</b> different kinds of
-                proteins.
+                <b>{'>'}100,000</b> different kinds of proteins.
               </Typography>
             </Box>
           </Box>
@@ -121,7 +122,7 @@ const YouAreMadeOfProteins = () => {
                 For example, insulin is a protein that helps the body
                 <br /> control sugar levels in the blood.
                 <br /> In people with Type I diabetes, their body doesn't make
-                enough <b style={colorForImportant}>insulin</b>.
+                enough <b>insulin</b>.
               </Typography>
             </Box>
           </Box>
@@ -168,8 +169,7 @@ const YouAreMadeOfProteins = () => {
               <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
                 When the body doesn’t make the right amount
                 <br /> or type of protein, it can cause conditions
-                <br /> like{' '}
-                <b style={colorForImportant}>cancer or metabolic diseases</b>.
+                <br /> like <b>cancer or metabolic diseases</b>.
               </Typography>
             </Box>
           </Box>
@@ -207,11 +207,7 @@ const YouAreMadeOfProteins = () => {
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
                 Proteins are essential for
-                <b style={colorForImportant}>
-                  {' '}
-                  maintaining health and preventing disease
-                </b>
-                .
+                <b> maintaining health and preventing disease</b>.
               </Typography>
             </Box>
           </Box>

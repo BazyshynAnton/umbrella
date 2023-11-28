@@ -40,7 +40,7 @@ const options = {
         family: "'Open Sans', sans-serif",
         size: window.innerWidth > 930 ? 30 : 20,
       },
-      color: 'black',
+      color: '#376586',
     },
   },
   scales: {
@@ -52,7 +52,7 @@ const options = {
           family: "'Open Sans', sans-serif",
           size: window.innerWidth > 930 ? 20 : 10,
         },
-        color: 'black',
+        color: '#376586',
       },
     },
     y: {
@@ -63,7 +63,7 @@ const options = {
           family: "'Open Sans', sans-serif",
           size: window.innerWidth > 930 ? 20 : 10,
         },
-        color: 'black',
+        color: '#376586',
       },
     },
   },

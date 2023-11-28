@@ -9,17 +9,42 @@ import CardForQuestionsSwiper from './CardForQuestionsSwiper'
 import SwiperNavBtns from './SwiperNavBtns'
 
 import { Autoplay } from 'swiper/modules'
+import { useEffect, useState } from 'react'
 
 const QuestionsSwiper = () => {
+  const [slidesPerView, setSlidesPerView] = useState(3)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 380) {
+        setSlidesPerView(1)
+      } else if (window.innerWidth <= 680) {
+        setSlidesPerView(1)
+      } else if (window.innerWidth <= 1000) {
+        setSlidesPerView(2)
+      } else {
+        setSlidesPerView(3)
+      }
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
     <Box sx={{ width: '100%', height: '300px', margin: ' 50px 0px' }}>
       <Swiper
+        spaceBetween={60}
         loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        slidesPerView={3}
+        slidesPerView={slidesPerView}
         modules={[Autoplay]}
         style={{ height: '330px', position: 'relative' }}>
         {inforForQuestionsSwiper.map((cardInfo) => (

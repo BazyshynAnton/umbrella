@@ -61,6 +61,7 @@ const CareersAtUmbrella = () => {
               <Typography
                 variant="h3"
                 sx={{
+                  color: '#376586',
                   fontWeight: '600',
                   ...fontStyleOpenSans,
                 }}>
@@ -69,6 +70,7 @@ const CareersAtUmbrella = () => {
               <Typography
                 variant="body1"
                 sx={{
+                  color: '#376586',
                   fontWeight: '400',
                   ...fontStyleOpenSans,
                 }}>
@@ -118,6 +120,7 @@ const CareersAtUmbrella = () => {
                 sx={{
                   fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
                   fontWeight: '600',
+                  color: '#376586',
                   ...fontStyleOpenSans,
                 }}>
                 Careers at Umbrella
@@ -126,6 +129,7 @@ const CareersAtUmbrella = () => {
                 variant="body1"
                 sx={{
                   fontWeight: '400',
+                  color: '#376586',
                   ...fontStyleOpenSans,
                 }}>
                 Our mission is clear: translating science into survival to

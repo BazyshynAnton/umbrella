@@ -38,7 +38,8 @@ const Footer = () => {
       sx={{
         width: '100%',
         height: '100%',
-        background: '#A9A9A9',
+        background: '#083952',
+        color: '#fff',
       }}>
       <Container>
         <Box
@@ -85,10 +86,21 @@ const Footer = () => {
                 mt: '20px',
               }}>
               <TwitterIcon
-                sx={{ color: '#1E90FF', cursor: 'pointer', fontSize: '2.5rem' }}
+                sx={{
+                  background: '#fff',
+                  borderRadius: '20px',
+                  padding: '5px',
+                  color: '#1E90FF',
+                  cursor: 'pointer',
+                  fontSize: '2rem',
+                }}
               />
               <LinkedInIcon
-                sx={{ color: '#00008B', cursor: 'pointer', fontSize: '2.5rem' }}
+                sx={{
+                  color: '#fff',
+                  cursor: 'pointer',
+                  fontSize: '2.5rem',
+                }}
               />
             </Box>
           </Box>
@@ -164,7 +176,7 @@ const Footer = () => {
           style={{
             width: '100%',
             height: '1px',
-            background: '#000',
+            background: '#fff',
             marginTop: '40px',
             marginBottom: '40px',
             borderRadius: '5px',
