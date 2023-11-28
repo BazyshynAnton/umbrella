@@ -40,6 +40,7 @@ const RevolutionizeMedicine = () => {
         <Typography
           variant="h5"
           sx={{
+            color: '#376586',
             mt: '20px',
             fontSize: { sm: '1.5rem', xs: '1.3rem' },
             fontWeight: '600',
@@ -47,10 +48,12 @@ const RevolutionizeMedicine = () => {
           }}>
           mRNA could revolutionize medicine
         </Typography>
-        <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-          Scientists have been studying mRNA{' '}
-          <b style={colorForImportant}>for decades</b>. And mRNA vaccines are
-          <b style={colorForImportant}> just the start</b>.
+        <Typography
+          variant="body1"
+          sx={{ color: '#376586', ...fontStyleOpenSans }}>
+          Scientists have been studying mRNA <b>for decades</b>. And mRNA
+          vaccines are
+          <b> just the start</b>.
         </Typography>
       </Box>
       <Box
@@ -65,17 +68,19 @@ const RevolutionizeMedicine = () => {
         <Typography
           variant="h5"
           sx={{
+            color: '#376586',
             fontSize: { sm: '1.5rem', xs: '1.3rem' },
             fontWeight: '600',
             ...fontStyleOpenSans,
           }}>
           It's all about proteins
         </Typography>
-        <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-          An mRNA can <b style={colorForImportant}>teach the body</b> how to
-          make a specific protein that can help your immune system prevent or
-          treat certain
-          <b style={colorForImportant}>diseases</b>.
+        <Typography
+          variant="body1"
+          sx={{ color: '#376586', ...fontStyleOpenSans }}>
+          An mRNA can <b>teach the body</b> how to make a specific protein that
+          can help your immune system prevent or treat certain
+          <b>diseases</b>.
         </Typography>
       </Box>
     </Box>

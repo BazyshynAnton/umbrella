@@ -5,7 +5,9 @@ const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
 const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
-      <Typography variant="body1" sx={{ width: '100%', ...fontStyle }}>
+      <Typography
+        variant="body1"
+        sx={{ color: '#376586', width: '100%', ...fontStyle }}>
         {text}
       </Typography>
       <Box sx={{ width: '100%', height: '350px', position: 'relative' }}>

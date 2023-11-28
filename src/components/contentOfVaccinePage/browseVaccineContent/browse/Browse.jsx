@@ -10,13 +10,13 @@ const styleForPoint = {
 }
 const styleForLinks = ({ isActive }) =>
   isActive
-    ? { color: '#FF0000', textDecoration: 'underline' }
+    ? { color: '#D1343E', textDecoration: 'underline' }
     : {
-        color: '#000',
+        color: '#376586',
       }
 
 const styleForTypography = {
-  fontWeight: { sm: '400' },
+  fontWeight: { sm: '600' },
   fontSize: { sm: '1.5rem', xs: '1.2rem' },
   fontFamily: "'Open Sans', sans-serif",
   cursor: 'pointer',
@@ -28,7 +28,9 @@ const Browse = () => {
 
   return (
     <div>
-      <Typography variant="body1" sx={fontStyleOpenSans}>
+      <Typography
+        variant="body1"
+        sx={{ color: '#376586', ...fontStyleOpenSans }}>
         browse:
       </Typography>
       <Box

@@ -1,6 +1,5 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
 
-import { colorForImportant } from '../../../../context/variables'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
 import ReusableComponentForIntroduce from '../reusableComponents/ReusableComponentForIntroduce'
@@ -45,6 +44,7 @@ const TheScienceOfMrna = () => {
           <Typography
             variant="h3"
             sx={{
+              color: '#376586',
               fontSize: '3rem',
               fontWeight: '600',
               ...fontStyleOpenSans,
@@ -53,9 +53,12 @@ const TheScienceOfMrna = () => {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ textAlign: 'center', ...fontStyleOpenSans }}>
-            Proteins are made in a process called{' '}
-            <b style={colorForImportant}>protein synthesis</b>.
+            sx={{
+              color: '#376586',
+              textAlign: 'center',
+              ...fontStyleOpenSans,
+            }}>
+            Proteins are made in a process called <b>protein synthesis</b>.
             <br /> And that's where mRNA comes in.
           </Typography>
 

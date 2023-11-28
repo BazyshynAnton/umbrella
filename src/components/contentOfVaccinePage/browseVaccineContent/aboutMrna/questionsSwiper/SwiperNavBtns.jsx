@@ -1,6 +1,9 @@
 import { Box, Button } from '@mui/material'
 import { useSwiper } from 'swiper/react'
 
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
+
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
 const SwiperNavBtns = () => {
@@ -9,8 +12,8 @@ const SwiperNavBtns = () => {
   return (
     <Box
       sx={{
-        width: '65px',
-        height: '20px',
+        width: '80px',
+        height: '30px',
         position: 'absolute',
         bottom: '0px',
         left: '10px',
@@ -26,37 +29,35 @@ const SwiperNavBtns = () => {
         onClick={() => swiper.slidePrev()}
         sx={{
           minWidth: '20px',
-          border: ' 2px solid #FF0000',
+          padding: '2px',
           borderRadius: '8px',
-          color: '#FF0000',
+          color: '#376586',
           fontWeight: '600',
           lineHeight: '0',
 
           ':hover': {
-            background: 'rgba(255, 0, 0, 0.5)',
-            color: '#000',
+            background: '#d6e5eb',
           },
           ...fontStyleOpenSans,
         }}>
-        {'<'}
+        <KeyboardArrowLeftIcon sx={{ fontSize: '30px' }} />
       </Button>
       <Button
         onClick={() => swiper.slideNext()}
         sx={{
           minWidth: '20px',
-          border: ' 2px solid #FF0000',
+          padding: '2px',
           borderRadius: '8px',
-          color: '#FF0000',
+          color: '#376586',
           fontWeight: '600',
           lineHeight: '0',
 
           ':hover': {
-            background: 'rgba(255, 0, 0, 0.5)',
-            color: '#000',
+            background: '#d6e5eb',
           },
           ...fontStyleOpenSans,
         }}>
-        {'>'}
+        <KeyboardArrowRightIcon sx={{ fontSize: '30px' }} />
       </Button>
     </Box>
   )

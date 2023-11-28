@@ -20,13 +20,18 @@ const StayUpToDate = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Typography
               variant="h3"
-              sx={{ fontWeight: '600', ...fontStyleOpenSans }}>
+              sx={{
+                color: '#376586',
+                fontWeight: '600',
+                ...fontStyleOpenSans,
+              }}>
               Stay up to date
             </Typography>
             <Box>
               <Typography
                 variant="body1"
                 sx={{
+                  color: '#376586',
                   fontWeight: '400',
                   ...fontStyleOpenSans,
                 }}>
