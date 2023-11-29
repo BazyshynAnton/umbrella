@@ -6,7 +6,7 @@ const styleForPoint = {
   width: '5px',
   height: '5px',
   borderRadius: '5px',
-  background: '#000',
+  background: 'rgba(55, 101, 134, 0.5)',
 }
 const styleForLinks = ({ isActive }) =>
   isActive

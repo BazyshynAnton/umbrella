@@ -60,6 +60,28 @@ a {
   height: 560px;
 }
 
+/* swiper two */
+
+.swiper-pagination-bullet-two {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  width: 100%;
+  height: 30px;
+  border-left: 2px solid #fff;
+  transition: all 0.2s ease-in-out;
+}
+.swiper-pagination-bullet-two:hover {
+  border-left: 2px solid rgba(55, 101, 134, 0.6);
+}
+
+.swiper-pagination-bullet-active-two {
+  border-left: 2px solid #d1343e;
+}
+.swiper-pagination-bullet-active-two:hover {
+  border-left: 2px solid #d1343e;
+}
+
 @media screen and (max-width: 450px) {
   .my-swiper {
     display: none;
