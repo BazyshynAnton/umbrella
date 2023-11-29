@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Box, Button, Typography } from '@mui/material'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules'
+import SwiperCore from 'swiper/core'
 
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
@@ -13,8 +14,17 @@ import lastSlideSwiperProtein from '../../../../../pictures/lastSlideSwiperProte
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
+import CustomPaginationForSwiper from './CustomPaginationForSwiper'
+import { useState } from 'react'
 
-const styleForImage = { objectFit: 'cover', width: '350px', height: '350px' }
+SwiperCore.use([Pagination])
+
+const styleForImage = {
+  objectFit: 'cover',
+  width: '350px',
+  height: '350px',
+  borderRadius: '20px',
+}
 
 const SwiperProteinFactories = () => {
   return (
@@ -26,13 +36,23 @@ const SwiperProteinFactories = () => {
         loop={false}
         pagination={{
           clickable: true,
+          el: '.swiper-pagination',
         }}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
-        style={{ width: '100%', height: '350px', marginTop: '20px' }}>
+        style={{
+          width: '100%',
+          height: '350px',
+          marginTop: '20px',
+          display: 'flex',
+          flexDirection: 'row-reverse',
+          position: 'relative',
+        }}>
+        <CustomPaginationForSwiper />
+
         <SwiperSlide>
           <Box
             sx={{
