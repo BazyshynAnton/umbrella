@@ -15,7 +15,7 @@ const SwiperNavBtns = () => {
         width: '80px',
         height: '30px',
         position: 'absolute',
-        bottom: '0px',
+        bottom: { sm: '20px', xs: '17px' },
         left: '10px',
         display: 'flex',
         flexDirection: 'row',

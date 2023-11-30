@@ -40,7 +40,7 @@ const options = {
         family: "'Open Sans', sans-serif",
         size: window.innerWidth > 930 ? 30 : 20,
       },
-      color: 'black',
+      color: '#376586',
     },
   },
 }

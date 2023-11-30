@@ -22,7 +22,7 @@ const ItsAllAboutProteins = () => {
         It’s all about proteins
       </Typography>
       <Typography sx={{ color: '#376586', ...fontStyle }}>
-        At Moderna, we are working on developing and testing
+        At Umbrella, we are working on developing and testing
         <b> new mRNA medicines </b>
         for a wide range of diseases.
       </Typography>
@@ -202,7 +202,7 @@ const ItsAllAboutProteins = () => {
                 We have an extensive pipeline
               </Typography>
               <Typography variant="body1" sx={{ ...fontStyle }}>
-                In addition to mRNA vaccines, Moderna is working on other
+                In addition to mRNA vaccines, Umbrella is working on other
                 applications of potential mRNA therapeutics that could help
                 people with cancer, metabolic diseases and more.
               </Typography>

@@ -15,7 +15,7 @@ const text =
   'At Umbrella, we are delivering on the promise of mRNA science to create a new generation of transformative medicines for patients.'
 
 const TheScienceOfMrna = () => {
-  const isSmallScreen = useMediaQuery('(min-width: 900px)')
+  const isSmallScreen = useMediaQuery('(min-width: 325px)')
   return (
     <Box
       sx={{
@@ -32,38 +32,39 @@ const TheScienceOfMrna = () => {
       <ReusableComponentMrnaPicture />
       <RevolutionizeMedicine />
       <YouAreMadeOfProteins />
-
       {isSmallScreen && (
-        <Box
-          sx={{
-            mt: '100px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}>
-          <Typography
-            variant="h3"
+        <>
+          <Box
             sx={{
-              color: '#376586',
-              fontSize: '3rem',
-              fontWeight: '600',
-              ...fontStyleOpenSans,
+              mt: '100px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}>
-            Your cells are protein factories
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              color: '#376586',
-              textAlign: 'center',
-              ...fontStyleOpenSans,
-            }}>
-            Proteins are made in a process called <b>protein synthesis</b>.
-            <br /> And that's where mRNA comes in.
-          </Typography>
-
+            <Typography
+              variant="h3"
+              sx={{
+                color: '#376586',
+                fontSize: { md: '3rem', sm: '2rem', xs: '1.5rem' },
+                textAlign: 'center',
+                fontWeight: '600',
+                ...fontStyleOpenSans,
+              }}>
+              Your cells are protein factories
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                color: '#376586',
+                textAlign: 'center',
+                ...fontStyleOpenSans,
+              }}>
+              Proteins are made in a process called <b>protein synthesis</b>.
+              <br /> And that's where mRNA comes in.
+            </Typography>
+          </Box>
           <SwiperProteinFactories />
-        </Box>
+        </>
       )}
     </Box>
   )

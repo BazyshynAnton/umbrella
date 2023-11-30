@@ -27,7 +27,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
           gap: '1.3rem',
           height: '200px',
         }}>
-        <NavLink to="/">
+        <NavLink to="/" onClick={() => setOpen(false)}>
           <Typography
             variant="h5"
             fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
@@ -35,7 +35,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
             Main
           </Typography>
         </NavLink>
-        <NavLink to="/vaccine/science-of-mrna">
+        <NavLink to="/vaccine/science-of-mrna" onClick={() => setOpen(false)}>
           <Typography
             variant="h5"
             fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
@@ -43,7 +43,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
             Vaccine
           </Typography>
         </NavLink>
-        <NavLink to="">
+        <NavLink to="" onClick={() => setOpen(false)}>
           <Typography
             variant="h5"
             fontSize={{ sm: '1.5rem', xs: '1.3rem' }}

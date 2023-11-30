@@ -1,10 +1,9 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { useSwiper } from 'swiper/react'
 import { fontStyleOpenSans } from '../../../../../context/variables'
 import { useEffect, useState } from 'react'
 
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import PauseIcon from '@mui/icons-material/Pause'
+import CustomAutoPlay from './CustomAutoPlay'
 
 const CustomPaginationForSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -26,20 +25,10 @@ const CustomPaginationForSwiper = () => {
     swiper.slideTo(index)
   }
 
-  const [isPlayTrue, setIsPlayTrue] = useState(true)
-  const handlePauseClick = () => {
-    swiper.autoplay.stop()
-    setIsPlayTrue(false)
-  }
-  const handlePLayClick = () => {
-    swiper.autoplay.start()
-    setIsPlayTrue(true)
-  }
-
   return (
     <Box
       sx={{
-        width: '54%',
+        minWidth: '32%',
         height: '100%',
         color: '#376586',
         display: 'flex',
@@ -91,35 +80,7 @@ const CustomPaginationForSwiper = () => {
           What happens after a protein is made?
         </Typography>
       </Box>
-      {isPlayTrue ? (
-        <Button
-          onClick={handlePauseClick}
-          sx={{
-            width: '35px',
-            minWidth: '35px',
-            height: '35px',
-
-            ':hover': {
-              background: '#d6e5eb',
-            },
-          }}>
-          <PauseIcon sx={{ fontSize: '2.5rem' }} />
-        </Button>
-      ) : (
-        <Button
-          onClick={handlePLayClick}
-          sx={{
-            width: '35px',
-            minWidth: '35px',
-            height: '35px',
-
-            ':hover': {
-              background: '#d6e5eb',
-            },
-          }}>
-          <PlayArrowIcon sx={{ fontSize: '2.5rem' }} />
-        </Button>
-      )}
+      <CustomAutoPlay />
     </Box>
   )
 }

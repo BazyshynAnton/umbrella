@@ -36,7 +36,12 @@ const QuestionsSwiper = () => {
   }, [])
 
   return (
-    <Box sx={{ width: '100%', height: '300px', margin: ' 50px 0px' }}>
+    <Box
+      sx={{
+        width: '100%',
+        height: '300px',
+        margin: ' 50px 0px',
+      }}>
       <Swiper
         spaceBetween={60}
         loop={true}
@@ -46,7 +51,7 @@ const QuestionsSwiper = () => {
         }}
         slidesPerView={slidesPerView}
         modules={[Autoplay]}
-        style={{ height: '330px', position: 'relative' }}>
+        style={{ height: '380px', position: 'relative' }}>
         {inforForQuestionsSwiper.map((cardInfo) => (
           <SwiperSlide
             key={cardInfo.id}

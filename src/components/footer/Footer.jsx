@@ -83,7 +83,8 @@ const Footer = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                mt: '20px',
+                mt: '15px',
+                mb: '20px',
               }}>
               <TwitterIcon
                 sx={{

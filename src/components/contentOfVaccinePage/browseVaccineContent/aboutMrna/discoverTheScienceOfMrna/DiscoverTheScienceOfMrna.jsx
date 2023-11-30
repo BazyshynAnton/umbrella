@@ -40,12 +40,12 @@ const DiscoverTheScienceOfMrna = () => {
             Transforming medicine with mRNA
           </Typography>
           <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-            At Moderna, we believe the future of medicine is mRNA, the language
+            At Umbrella, we believe the future of medicine is mRNA, the language
             of life inside every cell in our bodies. With our technology, we are
             researching and developing investigational mRNA vaccines and
             therapeutic approaches for infectious diseases, cancers, rare
             diseases, cardiovascular diseases, and autoimmune diseases. Learn
-            more about the science of mRNA and how Moderna is developing
+            more about the science of mRNA and how Umbrella is developing
             investigational mRNA medicines.
           </Typography>
         </Box>
