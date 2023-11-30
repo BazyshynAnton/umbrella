@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material'
 
-import { colorForImportant } from '../../../../../context/variables'
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
 import scienceInTheLab from '../../../../../pictures/scienceInTheLab.jpeg'

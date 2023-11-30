@@ -16,7 +16,7 @@ const styleForLinks = ({ isActive }) =>
       }
 
 const styleForTypography = {
-  fontWeight: { sm: '600' },
+  fontWeight: '600',
   fontSize: { sm: '1.5rem', xs: '1.2rem' },
   fontFamily: "'Open Sans', sans-serif",
   cursor: 'pointer',

@@ -6,12 +6,12 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
   return (
     <Box
       sx={{
+        marginTop: '45px',
         width: { sm: '300px', xs: '240px' },
-        height: { sm: '260px', xs: '240px' },
+        height: { sm: '260px', xs: '100%' },
         borderRadius: '8px',
         cursor: 'pointer',
         transition: '0.3s ease-out',
-        zIndex: '99999',
         ':hover': {
           boxShadow: ' 0px 0px 30px black',
           img: {
@@ -45,11 +45,12 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
           display: 'flex',
           flexDirection: 'column',
           padding: '8px',
+          height: '100%',
         }}>
         <Typography
           variant="h7"
           sx={{
-            fontSize: '16px',
+            fontSize: { sm: '16px', xs: '15px' },
             fontWeight: '600',
             height: '45px',
             color: '#376586',
