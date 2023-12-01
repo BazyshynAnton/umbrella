@@ -15,9 +15,9 @@ const ThePowerOfMrna = () => {
       <Typography
         variant="h2"
         sx={{
-          color: '#376586',
+          color: '#053f68',
           fontSize: { md: '3rem', sm: '2.5rem', xs: '1.7rem' },
-          fontWeight: { sm: '600', xs: '600' },
+          fontWeight: '600',
           ...fontStyle,
         }}>
         The power of mRNA

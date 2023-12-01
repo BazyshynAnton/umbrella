@@ -14,7 +14,7 @@ const ItsAllAboutProteins = () => {
         variant="h4"
         sx={{
           mt: '100px',
-          color: '#376586',
+          color: '#053f68',
           fontSize: { sm: '2.1rem', xs: '1.5rem' },
           fontWeight: '600',
           ...fontStyle,
@@ -26,7 +26,6 @@ const ItsAllAboutProteins = () => {
         <b> new mRNA medicines </b>
         for a wide range of diseases.
       </Typography>
-      {/*  */}
       <Box
         sx={{
           mt: '40px',

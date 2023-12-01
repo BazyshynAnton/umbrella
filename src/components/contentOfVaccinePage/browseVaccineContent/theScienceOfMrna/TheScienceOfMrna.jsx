@@ -44,7 +44,7 @@ const TheScienceOfMrna = () => {
             <Typography
               variant="h3"
               sx={{
-                color: '#376586',
+                color: '#053f68',
                 fontSize: { md: '3rem', sm: '2rem', xs: '1.5rem' },
                 textAlign: 'center',
                 fontWeight: '600',

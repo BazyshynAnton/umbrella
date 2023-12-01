@@ -17,7 +17,9 @@ import MenuIcon from '@mui/icons-material/Menu'
 import HeaderBurgerMenu from './HeaderBurgerMenu'
 
 const stylesForLinks = {
-  color: '#000',
+  fontWeight: '600',
+  fontSize: { sm: '1.5rem', xs: '1.3rem' },
+  color: '#053f68',
   ':hover': {
     textDecoration: 'underline',
   },
@@ -63,33 +65,24 @@ const Header = () => {
           {isSmallScreen ? (
             <Box sx={{ display: 'flex', gap: '1.3rem' }}>
               <NavLink to="/">
-                <Typography
-                  variant="h5"
-                  fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-                  sx={stylesForLinks}>
+                <Typography variant="h5" sx={stylesForLinks}>
                   Main
                 </Typography>
               </NavLink>
               <NavLink to="/vaccine/science-of-mrna">
-                <Typography
-                  variant="h5"
-                  fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-                  sx={stylesForLinks}>
+                <Typography variant="h5" sx={stylesForLinks}>
                   Vaccine
                 </Typography>
               </NavLink>
               <NavLink to="">
-                <Typography
-                  variant="h5"
-                  fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-                  sx={stylesForLinks}>
+                <Typography variant="h5" sx={stylesForLinks}>
                   About
                 </Typography>
               </NavLink>
             </Box>
           ) : (
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon />
+              <MenuIcon sx={{ color: '#053f68' }} />
             </IconButton>
           )}
         </Toolbar>
