@@ -35,7 +35,7 @@ const AboutMrna = () => {
         sx={{
           mt: '100px',
           fontWeight: '600px',
-          color: '#376586',
+          color: '#053f68',
           ...fontStyleOpenSans,
         }}>
         Q&mRNA

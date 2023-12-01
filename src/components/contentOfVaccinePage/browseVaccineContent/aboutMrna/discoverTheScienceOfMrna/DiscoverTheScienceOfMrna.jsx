@@ -36,7 +36,7 @@ const DiscoverTheScienceOfMrna = () => {
         <Box sx={{ width: { md: '540px', xs: '100%' } }}>
           <Typography
             variant="h5"
-            sx={{ fontWeight: '600', ...fontStyleOpenSans }}>
+            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}>
             Transforming medicine with mRNA
           </Typography>
           <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>

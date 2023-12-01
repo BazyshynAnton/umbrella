@@ -1,6 +1,6 @@
-import { useSpring, animated, config } from '@react-spring/web'
-import { useState } from 'react'
+import { animated } from '@react-spring/web'
 import { Box, Typography } from '@mui/material'
+import { useSlidesForHomePageContext } from '../../../context/SlidesForHomePageContext'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -21,112 +21,22 @@ import 'swiper/css/effect-creative'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-const stylesForPictures = {
-  objectFit: 'cover',
-  width: '100%',
-  height: '100%',
-  transition: 'ease',
-}
-
-const stylesForQuotes = {
-  objectFit: 'cover',
-  width: '40px',
-  height: '30px',
-  position: 'absolute',
-  top: '0',
-  left: '-45px',
-}
-
-const stylesForTextInSlides = {
-  blueText: {
-    color: '#376586',
-    fontFamily: "'Tilt Warp', sans-serif",
-    fontSize: { md: '1.5rem', sm: '1rem', xs: '0.8rem' },
-    letterSpacing: '0.07em',
-    lineHeight: '1em',
-    textAlign: 'left',
-    textTransform: 'uppercase',
-    cursor: 'default',
-  },
-
-  yellowText: {
-    fontFamily: "'Figtree', sans-serif",
-    fontWeight: '600',
-    fontSize: { md: '1.2rem', sm: '1rem', xs: '0.8rem' },
-    color: '#DAA520',
-    cursor: 'default',
-  },
-}
-
 const SlidesForHomePage = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  const animatedStyles = useSpring({
-    from: { transform: 'scale(1)' },
-    to: { transform: 'scale(2)' },
-
-    config: { duration: 50000 },
-
-    reset: activeIndex !== 0,
-  })
-  const animatedStyles1 = useSpring({
-    from: { transform: 'scale(1)' },
-    to: { transform: 'scale(2)' },
-
-    config: { duration: 50000 },
-
-    reset: activeIndex !== 1,
-  })
-  const animatedStyles2 = useSpring({
-    from: { transform: 'scale(1)' },
-    to: { transform: 'scale(2)' },
-
-    config: { duration: 50000 },
-
-    reset: activeIndex !== 2,
-  })
-  const animatedStyles3 = useSpring({
-    from: { transform: 'scale(1)' },
-    to: { transform: 'scale(2)' },
-
-    config: { duration: 50000 },
-
-    reset: activeIndex !== 3,
-  })
-
-  const textAnimation1 = useSpring({
-    from: activeIndex === 0 ? { opacity: 0, x: -1000 } : { opacity: 0, x: 0 },
-    to: activeIndex === 0 ? { opacity: 1, x: 0 } : { opacity: 0, x: -1000 },
-    config: config.slow,
-  })
-
-  const textAnimation2 = useSpring({
-    opacity: activeIndex === 1 ? 1 : 0,
-    transform: activeIndex === 1 ? 'translateX(0px)' : 'translateX(-1000px)',
-    config: config.slow,
-  })
-
-  const textAnimation3 = useSpring({
-    opacity: activeIndex === 2 ? 1 : 0,
-    transform: activeIndex === 2 ? 'translateX(0px)' : 'translateX(-1000px)',
-    config: config.slow,
-  })
-
-  const textAnimation4 = useSpring({
-    opacity: activeIndex === 3 ? 1 : 0,
-    transform: activeIndex === 3 ? 'translateX(0px)' : 'translateX(-1000px)',
-    config: config.slow,
-  })
-
-  const animationForAllSwiper = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 1000 },
-  })
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex)
-  }
+  const {
+    stylesForPictures,
+    stylesForQuotes,
+    stylesForTextInSlides,
+    animatedStyles,
+    animatedStyles1,
+    animatedStyles2,
+    animatedStyles3,
+    textAnimation1,
+    textAnimation2,
+    textAnimation3,
+    textAnimation4,
+    animationForAllSwiper,
+    handleSlideChange,
+  } = useSlidesForHomePageContext()
 
   return (
     <animated.div style={{ ...animationForAllSwiper }}>
@@ -155,8 +65,9 @@ const SlidesForHomePage = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[EffectCreative, Pagination, Navigation, Autoplay]}>
-        <SwiperSlide style={{ position: 'relative' }}>
+        modules={[EffectCreative, Pagination, Navigation, Autoplay]}
+        style={{ height: '100%' }}>
+        <SwiperSlide style={{ position: 'relative', background: '#fff' }}>
           <animated.img
             style={{
               ...stylesForPictures,
@@ -192,7 +103,7 @@ const SlidesForHomePage = () => {
             </animated.div>
           </Box>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ position: 'relative', background: '#fff' }}>
           <animated.img
             style={{ ...stylesForPictures, ...animatedStyles1 }}
             src={slideForHomePageTwo}
@@ -228,7 +139,7 @@ const SlidesForHomePage = () => {
             </animated.div>
           </Box>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ position: 'relative', background: '#fff' }}>
           <animated.img
             style={{ ...stylesForPictures, ...animatedStyles2 }}
             src={slideForHomePageThree}
@@ -262,7 +173,7 @@ const SlidesForHomePage = () => {
             </animated.div>
           </Box>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ position: 'relative', background: '#fff' }}>
           <animated.img
             style={{ ...stylesForPictures, ...animatedStyles3 }}
             src={slideForHomePageFour}

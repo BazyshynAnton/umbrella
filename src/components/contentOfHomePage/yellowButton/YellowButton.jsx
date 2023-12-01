@@ -54,7 +54,7 @@ const YellowButton = ({ children }) => {
           }}>
           <Typography
             variant="h6"
-            sx={{ color: '#000080', fontWeight: '700', ...fontStyleOpenSans }}>
+            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}>
             {'>'}
           </Typography>
         </animated.div>
@@ -66,7 +66,7 @@ const YellowButton = ({ children }) => {
         }}>
         <Typography
           variant="body1"
-          sx={{ color: '#000080', fontWeight: '700', ...fontStyleOpenSans }}>
+          sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}>
           {children}
         </Typography>
       </animated.div>

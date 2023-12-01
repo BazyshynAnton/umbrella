@@ -15,9 +15,9 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
       onClose={() => setOpen(false)}
       anchor="top">
       <IconButton onClick={() => setOpen(false)}>
-        <MenuOpenIcon />
+        <MenuOpenIcon sx={{ color: '#053f68' }} />
       </IconButton>
-      <Divider />
+      <Divider sx={{ background: 'rgba(5, 63, 104, 0.5)' }} />
       <Box
         sx={{
           display: 'flex',
@@ -28,10 +28,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
           height: '200px',
         }}>
         <NavLink to="/" onClick={() => setOpen(false)}>
-          <Typography
-            variant="h5"
-            fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-            sx={stylesForLinks}>
+          <Typography variant="h5" sx={stylesForLinks}>
             Main
           </Typography>
         </NavLink>
@@ -44,10 +41,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
           </Typography>
         </NavLink>
         <NavLink to="" onClick={() => setOpen(false)}>
-          <Typography
-            variant="h5"
-            fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-            sx={stylesForLinks}>
+          <Typography variant="h5" sx={stylesForLinks}>
             About
           </Typography>
         </NavLink>
