@@ -1,11 +1,24 @@
 import { Box, Typography } from '@mui/material'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import ReusableInformationBlock from '../../reusableComponents/ReusableInformationBlock'
 
 import picOfProteins from '../../../../../pictures/picOfProteins.png'
 import picOfResearch from '../../../../../pictures/picOfResearch.png'
 import picOfMed from '../../../../../pictures/picOfMed.png'
 import picOfImportant from '../../../../../pictures/picOfImportant.png'
+
+import { fontStyleOpenSans } from '../../../../../context/variables'
+import {
+  headerTextOne,
+  headerTextTwo,
+  headerTextThree,
+  headerTextFour,
+} from './VariablesForYouAreMadeOfProteins'
+import {
+  informationTextOne,
+  informationTextTwo,
+  informationTextThree,
+  informationTextFour,
+} from './VariablesForYouAreMadeOfProteins'
 
 const YouAreMadeOfProteins = () => {
   return (
@@ -41,90 +54,16 @@ const YouAreMadeOfProteins = () => {
             flexDirection: { md: 'row', xs: 'column' },
             gap: { sm: '0rem', xs: '1rem' },
           }}>
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: { sm: 'center', xs: 'initial' },
-              justifyContent: 'flex-start',
-            }}>
-            <Box sx={{ width: '150px', height: '150px' }}>
-              <img
-                style={{
-                  objectFit: 'cover',
-                  width: '150px',
-                  height: '100%',
-                }}
-                src={picOfProteins}
-                alt="pic1"
-              />
-            </Box>
-            <Box
-              sx={{
-                height: { sm: '130px', xs: '100%' },
-                display: 'flex',
-                flexDirection: 'column',
-              }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
-                  fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
-                }}>
-                What proteins do
-              </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Proteins are the <b>"workhorses"</b> of your cells. <br /> And
-                your body makes
-                <br />
-                <b>{'>'}100,000</b> different kinds of proteins.
-              </Typography>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: { sm: 'center', xs: 'initial' },
-              justifyContent: 'flex-start',
-            }}>
-            <Box sx={{ width: '150px', height: '150px' }}>
-              <img
-                style={{
-                  objectFit: 'cover',
-                  width: '150px',
-                  height: '100%',
-                }}
-                src={picOfResearch}
-                alt="pic2"
-              />
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                height: { sm: '130px', xs: '100%' },
-              }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
-                  fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
-                }}>
-                How proteins work
-              </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                For example, insulin is a protein that helps the body
-                <br /> control sugar levels in the blood.
-                <br /> In people with Type I diabetes, their body doesn't make
-                enough <b>insulin</b>.
-              </Typography>
-            </Box>
-          </Box>
+          <ReusableInformationBlock
+            picture={picOfProteins}
+            headerText={headerTextOne}
+            informationText={informationTextOne}
+          />
+          <ReusableInformationBlock
+            picture={picOfResearch}
+            headerText={headerTextTwo}
+            informationText={informationTextTwo}
+          />
         </Box>
         <Box
           sx={{
@@ -132,84 +71,16 @@ const YouAreMadeOfProteins = () => {
             flexDirection: { md: 'row', xs: 'column' },
             gap: { sm: '0rem', xs: '1rem' },
           }}>
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: { sm: 'center', xs: 'initial' },
-            }}>
-            <Box sx={{ width: '150px', height: '150px' }}>
-              <img
-                style={{
-                  objectFit: 'cover',
-                  width: '150px',
-                  height: '100%',
-                }}
-                src={picOfImportant}
-                alt="pic3"
-              />
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                height: { sm: '130px', xs: '100%' },
-              }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
-                  fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
-                }}>
-                Why proteins are important
-              </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                When the body doesn’t make the right amount
-                <br /> or type of protein, it can cause conditions
-                <br /> like <b>cancer or metabolic diseases</b>.
-              </Typography>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: { sm: 'center', xs: 'initial' },
-            }}>
-            <Box sx={{ width: '150px', height: '150px' }}>
-              <img
-                style={{
-                  objectFit: 'cover',
-                  width: '150px',
-                  height: '100%',
-                }}
-                src={picOfMed}
-                alt="pic4"
-              />
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontSize: { sm: '1.5rem', xs: '1.2rem' },
-                  fontWeight: { sm: '400', xs: '600' },
-                  ...fontStyleOpenSans,
-                }}>
-                Why we focus on proteins
-              </Typography>
-              <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-                Proteins are essential for
-                <b> maintaining health and preventing disease</b>.
-              </Typography>
-            </Box>
-          </Box>
+          <ReusableInformationBlock
+            picture={picOfImportant}
+            headerText={headerTextThree}
+            informationText={informationTextThree}
+          />
+          <ReusableInformationBlock
+            picture={picOfMed}
+            headerText={headerTextFour}
+            informationText={informationTextFour}
+          />
         </Box>
       </Box>
     </>
