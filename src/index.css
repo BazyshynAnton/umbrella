@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-/* swiper */
+/* swiper main page*/
 .swiper .swiper-button-next:after,
 .swiper .swiper-button-prev:after {
   background: #376586;
@@ -60,8 +60,7 @@ a {
   height: 560px;
 }
 
-/* swiper two */
-
+/* swiper vaccine page the science of mRNA */
 .swiper-pagination-bullet-two {
   display: flex;
   align-items: center;
