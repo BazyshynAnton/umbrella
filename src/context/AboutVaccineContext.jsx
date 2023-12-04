@@ -17,9 +17,9 @@ export const AboutVaccineProvider = ({ children }) => {
   const [isButtonHovered, setIsButtonHovered] = useState(false)
 
   const animationForAd = useSpring({
-    from: { opacity: 0, x: 1000 },
+    from: { opacity: 0, x: 10 },
     to: { opacity: 1, x: 0 },
-    config: config.slow,
+    config: { duration: 1500 },
   })
 
   const animationForCovidPicOne = useSpring({

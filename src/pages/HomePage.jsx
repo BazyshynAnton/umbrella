@@ -1,4 +1,3 @@
-import React from 'react'
 import ContentOfHomePage from '../components/contentOfHomePage/ContentOfHomePage'
 
 const HomePage = () => {

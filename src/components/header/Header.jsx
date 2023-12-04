@@ -31,71 +31,83 @@ const Header = () => {
   const isSmallScreen = useMediaQuery('(min-width: 600px)')
 
   return (
-    <AppBar
-      component="nav"
-      position="sticky"
-      sx={{
-        background: '#fff',
-      }}>
-      <Container>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <NavLink to="/">
+    <>
+      <AppBar
+        component="nav"
+        position="sticky"
+        sx={{
+          background: '#fff',
+        }}>
+        <Container>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <NavLink to="/">
+              {isSmallScreen ? (
+                <Box
+                  sx={{
+                    height: { md: '100px', sm: '70px', xs: '60px' },
+                  }}>
+                  <img
+                    style={{
+                      objectFit: 'cover',
+                      width: '100%',
+                      height: '100%',
+                    }}
+                    src={umbrellaHeaderLogo}
+                    alt="umbrella-logo"
+                  />
+                </Box>
+              ) : (
+                <Box sx={{ height: { md: '100px', sm: '70px', xs: '60px' } }}>
+                  <img
+                    style={{
+                      objectFit: 'cover',
+                      width: '100%',
+                      height: '100%',
+                    }}
+                    src={umbrellaHeaderLogoSmall}
+                    alt="umbrella-logo"
+                  />
+                </Box>
+              )}
+            </NavLink>
+
             {isSmallScreen ? (
-              <Box
-                sx={{
-                  height: { md: '100px', sm: '70px', xs: '60px' },
-                }}>
-                <img
-                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                  src={umbrellaHeaderLogo}
-                  alt="umbrella-logo"
-                />
+              <Box sx={{ display: 'flex', gap: '1.3rem' }}>
+                <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
+                  <Typography variant="h5" sx={stylesForLinks}>
+                    Main
+                  </Typography>
+                </NavLink>
+                <NavLink
+                  to="/vaccine/science-of-mrna"
+                  onClick={() => window.scrollTo(0, 0)}>
+                  <Typography variant="h5" sx={stylesForLinks}>
+                    Vaccine
+                  </Typography>
+                </NavLink>
+                <NavLink to="" onClick={() => window.scrollTo(0, 0)}>
+                  <Typography variant="h5" sx={stylesForLinks}>
+                    About
+                  </Typography>
+                </NavLink>
               </Box>
             ) : (
-              <Box sx={{ height: { md: '100px', sm: '70px', xs: '60px' } }}>
-                <img
-                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                  src={umbrellaHeaderLogoSmall}
-                  alt="umbrella-logo"
-                />
-              </Box>
+              <IconButton onClick={() => setOpen(true)}>
+                <MenuIcon sx={{ color: '#053f68' }} />
+              </IconButton>
             )}
-          </NavLink>
+          </Toolbar>
 
-          {isSmallScreen ? (
-            <Box sx={{ display: 'flex', gap: '1.3rem' }}>
-              <NavLink to="/">
-                <Typography variant="h5" sx={stylesForLinks}>
-                  Main
-                </Typography>
-              </NavLink>
-              <NavLink to="/vaccine/science-of-mrna">
-                <Typography variant="h5" sx={stylesForLinks}>
-                  Vaccine
-                </Typography>
-              </NavLink>
-              <NavLink to="">
-                <Typography variant="h5" sx={stylesForLinks}>
-                  About
-                </Typography>
-              </NavLink>
-            </Box>
-          ) : (
-            <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon sx={{ color: '#053f68' }} />
-            </IconButton>
+          {!isSmallScreen && (
+            <HeaderBurgerMenu
+              open={open}
+              setOpen={setOpen}
+              stylesForLinks={stylesForLinks}
+            />
           )}
-        </Toolbar>
-
-        {!isSmallScreen && (
-          <HeaderBurgerMenu
-            open={open}
-            setOpen={setOpen}
-            stylesForLinks={stylesForLinks}
-          />
-        )}
-      </Container>
-    </AppBar>
+        </Container>
+      </AppBar>
+    </>
   )
 }
 
