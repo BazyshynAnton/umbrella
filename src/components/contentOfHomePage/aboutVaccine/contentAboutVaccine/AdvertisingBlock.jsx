@@ -35,14 +35,6 @@ const AdvertisingBlock = () => {
               height: { sm: '70px', xs: '49.8px' },
               zIndex: { xs: '20' },
             },
-            '::after': {
-              content: '""',
-              position: 'absolute',
-              right: '100',
-              background: '#376586',
-              width: '100vw',
-              height: '100%',
-            },
           }}>
           <Typography
             variant="h5"
@@ -63,18 +55,6 @@ const AdvertisingBlock = () => {
               ? 'a new product'
               : 'a new product from umbrella corporation'}
           </Typography>
-          <Box
-            sx={{
-              position: ' absolute',
-              left: { sm: '-65px', xs: '-50px' },
-              bottom: '1px',
-              width: '100vw',
-              height: '10px',
-              background: 'none',
-              boxShadow: '5px 3px 5px #000',
-              transform: 'skewX(-45deg)',
-            }}
-          />
         </Box>
       </animated.div>
     </Box>

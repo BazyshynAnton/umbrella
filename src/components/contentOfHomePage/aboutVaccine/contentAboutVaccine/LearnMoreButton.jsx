@@ -15,6 +15,7 @@ const LearnMoreButton = () => {
       }}>
       <animated.div style={{ ...animationLearnMoreBtn }}>
         <NavLink
+          onClick={() => window.scrollTo(0)}
           to="/vaccine/science-of-mrna"
           style={{
             borderRadius: '25px',
