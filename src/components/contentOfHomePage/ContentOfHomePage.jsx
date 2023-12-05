@@ -7,13 +7,17 @@ import StayUpToDate from './stayUpToDate/StayUpToDate'
 
 import { AboutVaccineProvider } from '../../context/AboutVaccineContext'
 import { SlidesForHomePageProvider } from '../../context/SlidesForHomePageContext'
+import IntroVaccineSwiper from './introVaccineSwiper/IntroVaccineSwiper'
+import NewsSwiper from './newsJobBlogsSwipers/NewsSwiper'
 
 const ContentOfHomePage = () => {
   return (
     <AboutVaccineProvider>
       <SlidesForHomePageProvider>
         <Container>
-          <AboutVaccine />
+          <IntroVaccineSwiper />
+          <NewsSwiper />
+          {/* <AboutVaccine /> */}
           <SlidesForHomePage />
           <CareersAtUmbrella />
           <ConnectWithUs />

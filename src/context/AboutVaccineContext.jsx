@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-import { useSpring, config } from '@react-spring/web'
+import { useSpring } from '@react-spring/web'
 
 const AboutVaccineContext = createContext()
 
