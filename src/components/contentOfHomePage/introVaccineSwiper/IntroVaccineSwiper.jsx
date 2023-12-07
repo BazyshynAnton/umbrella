@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import ReusableSlide from './contentOfIntroVaccineSlider/reusableSlide'
 
@@ -20,6 +21,9 @@ import {
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
+import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
+
+import CustomAutoplay from '../../contentOfVaccinePage/browseVaccineContent/theScienceOfMrna/swiperProteinFactories/CustomAutoPlay'
 
 const stylesForArrowBtn = {
   left: {
@@ -38,8 +42,18 @@ const IntroVaccineSlider = () => {
   return (
     <Swiper
       spaceBetween={30}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay]}
       className="mySwiper"
-      style={{ margin: '30px 0px' }}>
+      style={{
+        margin: '30px 0px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}>
       <SwiperSlide>
         <ReusableSlide
           img={umbrellaVaccineSlide1}
@@ -71,6 +85,8 @@ const IntroVaccineSlider = () => {
         id={10}>
         <ArrowForwardIosIcon />
       </LeftRightNavigationForIntroSwiper>
+      <CustomAutoplay />
+      <CustomPaginationForIntroSwiper />
     </Swiper>
   )
 }
