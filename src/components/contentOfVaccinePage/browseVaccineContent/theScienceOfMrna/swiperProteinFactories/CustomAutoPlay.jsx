@@ -29,7 +29,8 @@ const CustomAutoPlay = () => {
             ':hover': {
               background: '#d6e5eb',
             },
-          }}>
+          }}
+        >
           <PauseIcon sx={{ fontSize: '2.5rem' }} />
         </Button>
       ) : (
@@ -43,7 +44,8 @@ const CustomAutoPlay = () => {
             ':hover': {
               background: '#d6e5eb',
             },
-          }}>
+          }}
+        >
           <PlayArrowIcon sx={{ fontSize: '2.5rem' }} />
         </Button>
       )}
