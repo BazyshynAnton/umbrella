@@ -19,7 +19,7 @@ const styleForBtn = {
   ...fontStyleOpenSans,
 }
 
-const NavigarionButtonForNewsJobBlogsSwiper = () => {
+const NavigationButtonForNewsJobBlogsSwiper = () => {
   const swiper = useSwiper()
   return (
     <Box
@@ -28,7 +28,8 @@ const NavigarionButtonForNewsJobBlogsSwiper = () => {
         justifyContent: 'space-between',
         width: '80px',
         mt: '15px',
-      }}>
+      }}
+    >
       <Button sx={styleForBtn} onClick={() => swiper.slidePrev()}>
         <ArrowBackIosNewIcon />
       </Button>
@@ -39,4 +40,4 @@ const NavigarionButtonForNewsJobBlogsSwiper = () => {
   )
 }
 
-export default NavigarionButtonForNewsJobBlogsSwiper
+export default NavigationButtonForNewsJobBlogsSwiper

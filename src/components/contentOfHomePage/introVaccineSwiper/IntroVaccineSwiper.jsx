@@ -1,29 +1,17 @@
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
 import { Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import ReusableSlide from './contentOfIntroVaccineSlider/reusableSlide'
-
-import umbrellaVaccineSlide1 from '../../../pictures/umbrellaVaccineSlide1.png'
-import getVaccinatedThisSeasonSlide2 from '../../../pictures/getVaccinatedThisSeasonSlide2.png'
-import holidaysVaccineSlide3 from '../../../pictures/holidaysVaccineSlide3.png'
 
 import LeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/LeftRightNavigationForIntroSwiper'
-
-import {
-  buttonText1,
-  buttonText2,
-  buttonText3,
-  textForSlide1,
-  textForSlide2,
-  textForSlide3,
-} from './contentOfIntroVaccineSlider/textForSlides'
+import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
+import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
 
-import CustomAutoplay from '../../contentOfVaccinePage/browseVaccineContent/theScienceOfMrna/swiperProteinFactories/CustomAutoPlay'
+import { introVaccineSwiperData } from '../../../data/introVaccineSwiperData'
+
+import 'swiper/css'
 
 const stylesForArrowBtn = {
   left: {
@@ -39,6 +27,8 @@ const stylesForArrowBtn = {
 }
 
 const IntroVaccineSlider = () => {
+  const [pausedSwiper, setPausedSwiper] = useState(true)
+
   return (
     <Swiper
       spaceBetween={30}
@@ -47,46 +37,41 @@ const IntroVaccineSlider = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className="mySwiper"
+      className='mySwiper'
       style={{
         margin: '30px 0px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-      }}>
-      <SwiperSlide>
-        <ReusableSlide
-          img={umbrellaVaccineSlide1}
-          text={textForSlide1}
-          buttonText={buttonText1}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ReusableSlide
-          img={getVaccinatedThisSeasonSlide2}
-          text={textForSlide2}
-          buttonText={buttonText2}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ReusableSlide
-          img={holidaysVaccineSlide3}
-          text={textForSlide3}
-          buttonText={buttonText3}
-        />
-      </SwiperSlide>
+      }}
+    >
+      {introVaccineSwiperData.map((el) => (
+        <SwiperSlide key={el.id}>
+          <ReusableSlide
+            img={el.img}
+            text={el.text}
+            buttonText={el.buttonText}
+          />
+        </SwiperSlide>
+      ))}
+
       <LeftRightNavigationForIntroSwiper
         stylesForBtn={stylesForArrowBtn.left}
-        id={20}>
+        id={20}
+      >
         <ArrowBackIosNewIcon />
       </LeftRightNavigationForIntroSwiper>
       <LeftRightNavigationForIntroSwiper
         stylesForBtn={stylesForArrowBtn.right}
-        id={10}>
+        id={10}
+      >
         <ArrowForwardIosIcon />
       </LeftRightNavigationForIntroSwiper>
-      <CustomAutoplay />
-      <CustomPaginationForIntroSwiper />
+
+      <CustomPaginationForIntroSwiper
+        pausedSwiper={pausedSwiper}
+        setPausedSwiper={setPausedSwiper}
+      />
     </Swiper>
   )
 }

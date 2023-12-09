@@ -3,6 +3,8 @@ import { useSpring, animated } from '@react-spring/web'
 import { useEffect, useState } from 'react'
 import { useSwiper } from 'swiper/react'
 
+import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccineSwiper'
+
 const stylesForBlocksWithAnimatedLine = {
   position: 'relative',
 
@@ -16,20 +18,19 @@ const stylesForBlocksWithAnimatedLine = {
 const qqq = {
   width: '40px',
   height: '2px',
-  background: 'red',
+  background: 'rgb(55, 101, 134)',
 }
 
-const CustomPaginationForIntroSwiper = () => {
+const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
   const swiper = useSwiper()
 
-  const allSlides = swiper.slides
+  const allSlidesNavigation = swiper.slides
+
   const [activeIndex, setActiveIndex] = useState(swiper.activeIndex)
-  const [isPaused, setIsPaused] = useState(false)
 
   useEffect(() => {
     const handleSlideChange = () => {
       setActiveIndex(swiper.activeIndex)
-      setIsPaused(swiper.autoplay && swiper.autoplay.running ? false : true)
     }
 
     swiper.on('slideChange', handleSlideChange)
@@ -41,7 +42,7 @@ const CustomPaginationForIntroSwiper = () => {
 
   const animationWidth = useSpring({
     from: { width: '0px' },
-    to: { width: isPaused ? '0px' : '40px' },
+    to: { width: '40px' },
     reset: true,
     config: { duration: 5000 },
   })
@@ -49,24 +50,33 @@ const CustomPaginationForIntroSwiper = () => {
   return (
     <Box
       sx={{
+        mt: '12px',
+
         display: 'flex',
         flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
         gap: '0.5rem',
-      }}>
-      {allSlides.map((_, index) => (
+      }}
+    >
+      <CustomAutoPlayForIntroVaccineSwiper setPausedSwiper={setPausedSwiper} />
+      {allSlidesNavigation.map((_, index) => (
         <Box
           key={index}
           sx={stylesForBlocksWithAnimatedLine}
-          onClick={() => swiper.slideTo(index)}>
+          onClick={() => swiper.slideTo(index)}
+        >
           <animated.div
             style={
-              activeIndex === index && !isPaused
+              activeIndex === index && pausedSwiper
                 ? {
                     height: '2px',
                     background: 'rgb(55, 101, 134)',
                     ...animationWidth,
                   }
-                : { qqq }
+                : activeIndex === index && !pausedSwiper
+                ? qqq
+                : {}
             }
           />
           <Box
