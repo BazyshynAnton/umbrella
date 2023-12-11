@@ -1,19 +1,16 @@
 import { createContext, useContext, useState } from 'react'
 import { useSpring, config } from '@react-spring/web'
+import { useSwiper } from 'swiper/react'
 
-const SlidesForHomePageContext = createContext()
+const PropagandaSwiperContext = createContext()
 
-export const useSlidesForHomePageContext = () => {
-  const context = useContext(SlidesForHomePageContext)
-  if (!context) {
-    throw new Error(
-      'useSlidesForHomePageContext must be used within an SlidesForHomePageProvider'
-    )
-  }
+export const usePropagandaSwiperContext = () => {
+  const context = useContext(PropagandaSwiperContext)
+
   return context
 }
 
-export const SlidesForHomePageProvider = ({ children }) => {
+export const PropagandaSwiperProvider = ({ children }) => {
   const stylesForPictures = {
     objectFit: 'contain',
     width: '100%',
@@ -64,30 +61,6 @@ export const SlidesForHomePageProvider = ({ children }) => {
 
     reset: activeIndex !== 0,
   })
-  const animatedStyles1 = useSpring({
-    from: { transform: scaleFrom },
-    to: { transform: scaleTo },
-
-    config: { duration: animationDuration },
-
-    reset: activeIndex !== 1,
-  })
-  const animatedStyles2 = useSpring({
-    from: { transform: scaleFrom },
-    to: { transform: scaleTo },
-
-    config: { duration: animationDuration },
-
-    reset: activeIndex !== 2,
-  })
-  const animatedStyles3 = useSpring({
-    from: { transform: scaleFrom },
-    to: { transform: scaleTo },
-
-    config: { duration: animationDuration },
-
-    reset: activeIndex !== 3,
-  })
 
   const textAnimation1 = useSpring({
     from: activeIndex === 0 ? { opacity: 0, x: -1000 } : { opacity: 0, x: 0 },
@@ -113,12 +86,6 @@ export const SlidesForHomePageProvider = ({ children }) => {
     config: config.slow,
   })
 
-  const animationForAllSwiper = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 1000 },
-  })
-
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex)
   }
@@ -128,20 +95,16 @@ export const SlidesForHomePageProvider = ({ children }) => {
     stylesForQuotes,
     stylesForTextInSlides,
     animatedStyles,
-    animatedStyles1,
-    animatedStyles2,
-    animatedStyles3,
     textAnimation1,
     textAnimation2,
     textAnimation3,
     textAnimation4,
-    animationForAllSwiper,
     handleSlideChange,
   }
 
   return (
-    <SlidesForHomePageContext.Provider value={contextValue}>
+    <PropagandaSwiperContext.Provider value={contextValue}>
       {children}
-    </SlidesForHomePageContext.Provider>
+    </PropagandaSwiperContext.Provider>
   )
 }

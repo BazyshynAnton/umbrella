@@ -10,8 +10,8 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        gap: '1rem',
-        padding: '10px 14px',
+        gap: '2rem',
+        padding: '10px 20px',
 
         ':before': {
           content: '""',
@@ -25,24 +25,27 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
           borderTopLeftRadius: '12px',
           borderBottomLeftRadius: '12px',
         },
-      }}>
+      }}
+    >
       <Typography
-        variant="body1"
+        variant='body1'
         sx={{
           fontSize: '17px',
           fontWeight: '600',
           color: 'rgb(5, 63, 104)',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         {text}
       </Typography>
       <Typography
-        variant="body1"
+        variant='body1'
         sx={{
           fontSize: '14px',
           color: 'rgb(80, 121, 149)',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         {date}
       </Typography>
     </Box>

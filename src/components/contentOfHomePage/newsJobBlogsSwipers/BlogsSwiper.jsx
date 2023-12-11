@@ -2,21 +2,20 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 import ReusableSlideForNewsJobBlogsSwipers from './ReusableSlideForNewsJobBlogsSwipers'
-import { newsData } from '../../../data/newsData'
+import { blogsData } from '../../../data/blogsData'
 import NavigationButtonForNewsJobBlogsSwiper from './NavigationButtonForNewsJobBlogsSwiper'
-import ReusableButtonWithAnimation from '../reusableButtonWithAnimation/ReusableButtonWithAnimation'
 import { Box } from '@mui/material'
-
+import ReusableButtonWithAnimation from '../reusableButtonWithAnimation/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
-
-const NewsSwiper = () => {
+const JobSwiper = () => {
   return (
     <Swiper
       spaceBetween={30}
       slidesPerView={3}
+      className='mySwiper'
       style={{ marginBottom: '50px' }}
     >
-      {newsData.map((el) => (
+      {blogsData.map((el) => (
         <SwiperSlide key={el.id} style={{ cursor: 'pointer' }}>
           <ReusableSlideForNewsJobBlogsSwipers text={el.text} date={el.date} />
         </SwiperSlide>
@@ -33,7 +32,7 @@ const NewsSwiper = () => {
       >
         <NavigationButtonForNewsJobBlogsSwiper />
         <ReusableButtonWithAnimation
-          buttonText={'View all news'}
+          buttonText={'View blog posts'}
           icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
         />
       </Box>
@@ -41,4 +40,4 @@ const NewsSwiper = () => {
   )
 }
 
-export default NewsSwiper
+export default JobSwiper

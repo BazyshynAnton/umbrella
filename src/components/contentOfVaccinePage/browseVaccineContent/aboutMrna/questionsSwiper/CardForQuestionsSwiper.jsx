@@ -18,7 +18,8 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
             transform: 'scale(1.1)',
           },
         },
-      }}>
+      }}
+    >
       <Box
         sx={{
           width: { sm: '300px', xs: '240px' },
@@ -26,7 +27,8 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
           overflow: 'hidden',
           borderTopRightRadius: '8px',
           borderTopLeftRadius: '8px',
-        }}>
+        }}
+      >
         <img
           style={{
             objectFit: 'cover',
@@ -45,22 +47,24 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
           display: 'flex',
           flexDirection: 'column',
           padding: '8px',
-          height: '100%',
-        }}>
+        }}
+      >
         <Typography
-          variant="h7"
+          variant='h7'
           sx={{
             fontSize: { sm: '16px', xs: '15px' },
             fontWeight: '600',
             height: '45px',
             color: '#376586',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {header}
         </Typography>
         <Typography
-          variant="body2"
-          sx={{ fontSize: '14', color: '#376586', ...fontStyleOpenSans }}>
+          variant='body2'
+          sx={{ fontSize: '14', color: '#376586', ...fontStyleOpenSans }}
+        >
           {text}
         </Typography>
       </Box>

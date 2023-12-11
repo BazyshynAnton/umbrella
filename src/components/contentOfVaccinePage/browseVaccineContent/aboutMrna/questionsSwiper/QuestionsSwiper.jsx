@@ -4,7 +4,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 import { Box } from '@mui/material'
-import { inforForQuestionsSwiper } from '../../../../../data/inforForQuestionsSwiper'
+import { infoForQuestionsSwiper } from '../../../../../data/infoForQuestionsSwiper'
 import CardForQuestionsSwiper from './CardForQuestionsSwiper'
 import SwiperNavBtns from './SwiperNavBtns'
 
@@ -41,7 +41,8 @@ const QuestionsSwiper = () => {
         width: '100%',
         height: '300px',
         margin: ' 50px 0px',
-      }}>
+      }}
+    >
       <Swiper
         spaceBetween={60}
         loop={true}
@@ -51,8 +52,9 @@ const QuestionsSwiper = () => {
         }}
         slidesPerView={slidesPerView}
         modules={[Autoplay]}
-        style={{ height: '380px', position: 'relative' }}>
-        {inforForQuestionsSwiper.map((cardInfo) => (
+        style={{ height: '380px', position: 'relative' }}
+      >
+        {infoForQuestionsSwiper.map((cardInfo) => (
           <SwiperSlide
             key={cardInfo.id}
             style={{
@@ -61,7 +63,8 @@ const QuestionsSwiper = () => {
               alignItems: 'center',
               height: '300px',
               position: 'relative',
-            }}>
+            }}
+          >
             <CardForQuestionsSwiper
               img={cardInfo.img}
               header={cardInfo.header}

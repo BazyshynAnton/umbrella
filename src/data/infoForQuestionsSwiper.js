@@ -4,7 +4,7 @@ import questionsImg3 from '../pictures/questionsImg3.png'
 import questionsImg4 from '../pictures/questionsImg4.png'
 import questionsImg5 from '../pictures/questionsImg5.png'
 
-export const inforForQuestionsSwiper = [
+export const infoForQuestionsSwiper = [
   {
     img: questionsImg1,
     header: 'mRNA has huge potential',

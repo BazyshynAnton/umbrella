@@ -25,9 +25,9 @@ const NavigationButtonForNewsJobBlogsSwiper = () => {
     <Box
       sx={{
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'space-between',
         width: '80px',
-        mt: '15px',
       }}
     >
       <Button sx={styleForBtn} onClick={() => swiper.slidePrev()}>
