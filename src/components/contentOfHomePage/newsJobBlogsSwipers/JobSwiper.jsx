@@ -9,7 +9,12 @@ import { Box } from '@mui/material'
 
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined'
 
+import { useButtonContext } from '../../../context/ButtonContext'
+
 const JobSwiper = () => {
+  const { handleMouseEnterTwo, handleMouseLeaveTwo, animationForUnderLineTwo } =
+    useButtonContext()
+
   return (
     <Swiper
       spaceBetween={30}
@@ -33,10 +38,16 @@ const JobSwiper = () => {
         }}
       >
         <NavigationButtonForNewsJobBlogsSwiper />
-        <ReusableButtonWithAnimation
-          buttonText={'View all job opportunities'}
-          icon={<OpenInNewOutlinedIcon sx={{ color: '#d1343e' }} />}
-        />
+        <Box
+          onMouseEnter={handleMouseEnterTwo}
+          onMouseLeave={handleMouseLeaveTwo}
+        >
+          <ReusableButtonWithAnimation
+            animation={animationForUnderLineTwo}
+            buttonText={'View all job opportunities'}
+            icon={<OpenInNewOutlinedIcon sx={{ color: '#d1343e' }} />}
+          />
+        </Box>
       </Box>
     </Swiper>
   )

@@ -9,7 +9,11 @@ import { Box } from '@mui/material'
 
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 
+import { useButtonContext } from '../../../context/ButtonContext'
+
 const NewsSwiper = () => {
+  const { handleMouseEnterOne, handleMouseLeaveOne, animationForUnderLineOne } =
+    useButtonContext()
   return (
     <Swiper
       spaceBetween={30}
@@ -32,10 +36,16 @@ const NewsSwiper = () => {
         }}
       >
         <NavigationButtonForNewsJobBlogsSwiper />
-        <ReusableButtonWithAnimation
-          buttonText={'View all news'}
-          icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
-        />
+        <Box
+          onMouseEnter={handleMouseEnterOne}
+          onMouseLeave={handleMouseLeaveOne}
+        >
+          <ReusableButtonWithAnimation
+            animation={animationForUnderLineOne}
+            buttonText={'View all news'}
+            icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
+          />
+        </Box>
       </Box>
     </Swiper>
   )

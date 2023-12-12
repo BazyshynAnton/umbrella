@@ -22,7 +22,8 @@ const DiscoverTheScienceOfMrna = () => {
             transform: 'scale(1.1)',
           },
         },
-      }}>
+      }}
+    >
       <Box
         sx={{
           width: { md: '1150px', xs: '100%' },
@@ -32,14 +33,16 @@ const DiscoverTheScienceOfMrna = () => {
           alignItems: 'flex-start',
           gap: '2rem',
           padding: '1.5rem',
-        }}>
+        }}
+      >
         <Box sx={{ width: { md: '540px', xs: '100%' } }}>
           <Typography
-            variant="h5"
-            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}>
+            variant='h5'
+            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}
+          >
             Transforming medicine with mRNA
           </Typography>
-          <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
+          <Typography variant='body1' sx={{ ...fontStyleOpenSans }}>
             At Umbrella, we believe the future of medicine is mRNA, the language
             of life inside every cell in our bodies. With our technology, we are
             researching and developing investigational mRNA vaccines and
@@ -64,8 +67,9 @@ const DiscoverTheScienceOfMrna = () => {
               color: '#fff',
             },
             ...fontStyleOpenSans,
-          }}>
-          dicover the science of mrna {'>'}
+          }}
+        >
+          discover the science of mrna {'>'}
         </Button>
       </Box>
       <Box
@@ -75,7 +79,8 @@ const DiscoverTheScienceOfMrna = () => {
           display: 'flex',
           overflow: 'hidden',
           borderRadius: '8px',
-        }}>
+        }}
+      >
         <img
           style={{
             objectFit: 'cover',
@@ -85,7 +90,7 @@ const DiscoverTheScienceOfMrna = () => {
             borderRadius: '8px',
           }}
           src={discoverTheScienceOfMrnaPicture}
-          alt="discoverTheScienceOfMrnaPicture"
+          alt='discoverTheScienceOfMrna'
         />
       </Box>
     </Box>

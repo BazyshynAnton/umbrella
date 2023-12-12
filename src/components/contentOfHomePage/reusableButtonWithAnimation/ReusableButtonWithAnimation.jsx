@@ -4,27 +4,17 @@ import { fontStyleOpenSans } from '../../../context/variables'
 import { useState } from 'react'
 import { useButtonContext } from '../../../context/ButtonContext'
 
-const ReusableButtonWithAnimation = ({ buttonText, icon }) => {
-  const {
-    handleMouseEnter,
-    handleMouseLeave,
-    animationForUnderLine,
-    animationForUnderLineTwo,
-    animationForUnderLineThree,
-  } = useButtonContext()
-
+const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
   return (
-    <Box>
+    <>
       <Button
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         sx={{
           p: '6px 0px',
           display: 'flex',
           gap: '0.3rem',
           fontSize: '16px',
-          fontWeight: '600',
-          color: '#376586',
+          fontWeight: '700',
+          color: '#053f68',
           ...fontStyleOpenSans,
         }}
       >
@@ -34,11 +24,10 @@ const ReusableButtonWithAnimation = ({ buttonText, icon }) => {
         style={{
           height: '1px',
           background: '#376586',
-          ...animationForUnderLine,
-          ...animationForUnderLineTwo,
+          ...animation,
         }}
       />
-    </Box>
+    </>
   )
 }
 

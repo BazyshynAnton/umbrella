@@ -2,15 +2,28 @@ import { Box, Typography } from '@mui/material'
 import DateBlock from './DateBlock'
 import ReusableButtonWithAnimation from '../../reusableButtonWithAnimation/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
+
 import { useButtonContext } from '../../../../context/ButtonContext'
+
 const OurMission = () => {
-  const { handleMouseEnterTwo, handleMouseLeaveTwo } = useButtonContext()
+  const {
+    handleMouseEnterFour,
+    handleMouseLeaveFour,
+    animationForUnderLineFour,
+  } = useButtonContext()
 
   return (
     <Box
-      onMouseEnter={handleMouseEnterTwo}
-      onMouseLeave={handleMouseLeaveTwo}
-      sx={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}
+      onMouseEnter={handleMouseEnterFour}
+      onMouseLeave={handleMouseLeaveFour}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '2.5rem',
+        cursor: 'pointer',
+        width: '100%',
+        p: '15px',
+      }}
     >
       <Box sx={{ display: 'flex', gap: '2rem' }}>
         <DateBlock integer={43} text={'Years of progress'} />
@@ -19,7 +32,7 @@ const OurMission = () => {
       </Box>
       <Box>
         <Typography
-          sx={{ fontWeight: '700', fontSize: '2rem', color: '#053f68' }}
+          sx={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}
         >
           Meet Umbrella
         </Typography>
@@ -27,8 +40,13 @@ const OurMission = () => {
           Umbrella’s goal is to deliver on the promise of mRNA science to create
           a new generation of transformative medicines for patients.
         </Typography>
-        <Box sx={{ width: '172.55px', mt: '10px' }}>
+        <Box
+          onMouseEnter={handleMouseEnterFour}
+          onMouseLeave={handleMouseLeaveFour}
+          sx={{ width: '175.14px', mt: '10px' }}
+        >
           <ReusableButtonWithAnimation
+            animation={animationForUnderLineFour}
             buttonText={'See our mission'}
             icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
           />

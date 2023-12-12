@@ -7,7 +7,16 @@ import NavigationButtonForNewsJobBlogsSwiper from './NavigationButtonForNewsJobB
 import { Box } from '@mui/material'
 import ReusableButtonWithAnimation from '../reusableButtonWithAnimation/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
+
+import { useButtonContext } from '../../../context/ButtonContext'
+
 const JobSwiper = () => {
+  const {
+    handleMouseEnterThree,
+    handleMouseLeaveThree,
+    animationForUnderLineThree,
+  } = useButtonContext()
+
   return (
     <Swiper
       spaceBetween={30}
@@ -31,10 +40,16 @@ const JobSwiper = () => {
         }}
       >
         <NavigationButtonForNewsJobBlogsSwiper />
-        <ReusableButtonWithAnimation
-          buttonText={'View blog posts'}
-          icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
-        />
+        <Box
+          onMouseEnter={handleMouseEnterThree}
+          onMouseLeave={handleMouseLeaveThree}
+        >
+          <ReusableButtonWithAnimation
+            animation={animationForUnderLineThree}
+            buttonText={'View blog posts'}
+            icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
+          />
+        </Box>
       </Box>
     </Swiper>
   )
