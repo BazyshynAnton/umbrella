@@ -25,7 +25,7 @@ const OurMission = () => {
         p: '15px',
       }}
     >
-      <Box sx={{ display: 'flex', gap: '2rem' }}>
+      <Box sx={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
         <DateBlock integer={43} text={'Years of progress'} />
         <DateBlock integer={48} text={'Products in pipeline'} />
         <DateBlock integer={35} text={'Ongoing clinical trials'} />
@@ -43,7 +43,7 @@ const OurMission = () => {
         <Box
           onMouseEnter={handleMouseEnterFour}
           onMouseLeave={handleMouseLeaveFour}
-          sx={{ width: '175.14px', mt: '10px' }}
+          sx={{ width: '177.14px', mt: '10px' }}
         >
           <ReusableButtonWithAnimation
             animation={animationForUnderLineFour}

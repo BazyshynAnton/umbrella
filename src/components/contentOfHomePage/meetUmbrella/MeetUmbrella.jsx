@@ -4,7 +4,7 @@ import JoinUs from './contentOfMeetUmbrella/JoinUs'
 
 const MeetUmbrella = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+    <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
       <OurMission />
       <JoinUs />
     </Box>

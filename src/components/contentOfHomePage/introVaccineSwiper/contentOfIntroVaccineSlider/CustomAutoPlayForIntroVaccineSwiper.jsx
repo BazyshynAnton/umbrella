@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Button } from '@mui/material'
 import { useSwiper } from 'swiper/react'
 
-import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined'
+import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
 import PauseIcon from '@mui/icons-material/Pause'
 
 const stylesForPauseAndPlayBtn = {
@@ -41,7 +41,7 @@ const CustomAutoPlayForIntroVaccineSwiper = ({ setPausedSwiper }) => {
         </Button>
       ) : (
         <Button onClick={handlePLayClick} sx={stylesForPauseAndPlayBtn.blocks}>
-          <PlayArrowOutlinedIcon sx={stylesForPauseAndPlayBtn.icons} />
+          <PlayArrowRoundedIcon sx={stylesForPauseAndPlayBtn.icons} />
         </Button>
       )}
     </>

@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { useMediaQuery } from '@mui/material'
 import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import LeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/LeftRightNavigationForIntroSwiper'
 import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
+import SmallScreensLeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/SmallScreensLeftRightNavigationForIntroSwiper'
 import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
@@ -28,6 +30,7 @@ const stylesForArrowBtn = {
 
 const IntroVaccineSlider = () => {
   const [pausedSwiper, setPausedSwiper] = useState(true)
+  const isSmallScreen = useMediaQuery('(min-width: 900px)')
 
   return (
     <Swiper
@@ -39,7 +42,7 @@ const IntroVaccineSlider = () => {
       modules={[Autoplay]}
       className='mySwiper'
       style={{
-        margin: '30px 0px',
+        margin: '0px 0px 30px 0px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -54,24 +57,29 @@ const IntroVaccineSlider = () => {
           />
         </SwiperSlide>
       ))}
+      {isSmallScreen ? (
+        <>
+          <LeftRightNavigationForIntroSwiper
+            stylesForBtn={stylesForArrowBtn.left}
+            id={20}
+          >
+            <ArrowBackIosNewIcon />
+          </LeftRightNavigationForIntroSwiper>
+          <LeftRightNavigationForIntroSwiper
+            stylesForBtn={stylesForArrowBtn.right}
+            id={10}
+          >
+            <ArrowForwardIosIcon />
+          </LeftRightNavigationForIntroSwiper>
 
-      <LeftRightNavigationForIntroSwiper
-        stylesForBtn={stylesForArrowBtn.left}
-        id={20}
-      >
-        <ArrowBackIosNewIcon />
-      </LeftRightNavigationForIntroSwiper>
-      <LeftRightNavigationForIntroSwiper
-        stylesForBtn={stylesForArrowBtn.right}
-        id={10}
-      >
-        <ArrowForwardIosIcon />
-      </LeftRightNavigationForIntroSwiper>
-
-      <CustomPaginationForIntroSwiper
-        pausedSwiper={pausedSwiper}
-        setPausedSwiper={setPausedSwiper}
-      />
+          <CustomPaginationForIntroSwiper
+            pausedSwiper={pausedSwiper}
+            setPausedSwiper={setPausedSwiper}
+          />
+        </>
+      ) : (
+        <SmallScreensLeftRightNavigationForIntroSwiper />
+      )}
     </Swiper>
   )
 }

@@ -5,10 +5,11 @@ const ReusableSlide = ({ text, img, buttonText }) => {
   return (
     <Box
       sx={{
+        margin: '30px 0px 0px 0px',
         display: 'flex',
-        flexDirection: 'row',
-        height: '340px',
-        p: '0px 50px',
+        flexDirection: { md: 'row', xs: 'column' },
+        height: { md: '340px', xs: '600px' },
+        p: { md: '0px 50px' },
       }}
     >
       <Box
@@ -17,9 +18,10 @@ const ReusableSlide = ({ text, img, buttonText }) => {
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
+          justifyContent: { md: 'center' },
           gap: '2rem',
-          padding: '0px 10px 0px 0px',
+          padding: '0px 10px px 0px',
+          mb: { md: '0', xs: '20px' },
         }}
       >
         {text}
@@ -27,8 +29,8 @@ const ReusableSlide = ({ text, img, buttonText }) => {
       </Box>
       <Box
         sx={{
-          width: '1000px',
-          height: '340px',
+          width: { md: '1000px', xs: '100%' },
+          height: { md: '340px', xs: '100%' },
         }}
       >
         <img

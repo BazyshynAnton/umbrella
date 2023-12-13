@@ -15,6 +15,8 @@ const JoinUs = () => {
       onMouseEnter={handleMouseEnterFive}
       onMouseLeave={handleMouseLeaveFive}
       sx={{
+        mt: { md: '0px', xs: '20px' },
+        mb: { md: '0px', xs: '20px' },
         width: '100%',
         overflow: 'hidden',
         borderTopRightRadius: '10px',
@@ -27,7 +29,13 @@ const JoinUs = () => {
         },
       }}
     >
-      <Box sx={{ widows: '100%', height: '200px', overflow: 'hidden' }}>
+      <Box
+        sx={{
+          widows: '100%',
+          height: { md: '200px', xs: '300px' },
+          overflow: 'hidden',
+        }}
+      >
         <img
           style={{
             objectFit: 'cover',

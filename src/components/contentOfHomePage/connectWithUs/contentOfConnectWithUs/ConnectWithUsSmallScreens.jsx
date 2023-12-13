@@ -16,7 +16,8 @@ const ConnectWithUsSmallScreens = () => {
         justifyContent: 'center',
         width: '100%',
         height: '450px',
-      }}>
+      }}
+    >
       <Box
         sx={{
           position: 'relative',
@@ -29,31 +30,35 @@ const ConnectWithUsSmallScreens = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           gap: '1rem',
-        }}>
+        }}
+      >
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             gap: '2rem',
-          }}>
+          }}
+        >
           <Typography
-            variant="h3"
+            variant='h3'
             sx={{
               fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
               fontWeight: '600',
               color: '#376586',
               ...fontStyleOpenSans,
-            }}>
+            }}
+          >
             Connect with us
           </Typography>
           <Typography
-            variant="body1"
+            variant='body1'
             sx={{
               fontWeight: '400',
               color: '#376586',
               ...fontStyleOpenSans,
-            }}>
+            }}
+          >
             Questions about our products, services or clinical trials? Find the
             right contact person at our Service Center.
           </Typography>
@@ -63,29 +68,31 @@ const ConnectWithUsSmallScreens = () => {
         <Box
           sx={{
             position: 'absolute',
-            top: { md: '-70px', sm: '-60px', xs: '-20px' },
-            left: { md: '-70px', sm: '-50px', xs: '-60px' },
+            top: { md: '-70px', sm: '-60px', xs: '-35px' },
+            left: { md: '-70px', sm: '-50px', xs: '-9px' },
             width: { md: '150px', sm: '120px', xs: '100px' },
             height: { md: '150px', sm: '120px', xs: '100px' },
-          }}>
+          }}
+        >
           <img
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             src={mailIcon}
-            alt="animated-mail-icon"
+            alt='animated-mail-icon'
           />
         </Box>
         <Box
           sx={{
             position: 'absolute',
             bottom: { md: '-70px', sm: '-20px', xs: '-20px' },
-            right: { md: '-70px', sm: '-40px', xs: '-40px' },
+            right: { md: '-70px', sm: '-40px', xs: '-0px' },
             width: { md: '150px', sm: '120px', xs: '100px' },
             height: { md: '150px', sm: '120px', xs: '100px' },
-          }}>
+          }}
+        >
           <img
             style={{ objectFit: 'contain', width: '100%', height: '100%' }}
             src={phoneIcon}
-            alt="animated-phone-icon"
+            alt='animated-phone-icon'
           />
         </Box>
       </Box>
