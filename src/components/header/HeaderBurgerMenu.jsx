@@ -13,7 +13,8 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
       open={open}
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
-      anchor="top">
+      anchor='top'
+    >
       <IconButton onClick={() => setOpen(false)}>
         <MenuOpenIcon sx={{ color: '#053f68' }} />
       </IconButton>
@@ -26,22 +27,24 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
           alignItems: 'center',
           gap: '1.3rem',
           height: '200px',
-        }}>
-        <NavLink to="/" onClick={() => setOpen(false)}>
-          <Typography variant="h5" sx={stylesForLinks}>
+        }}
+      >
+        <NavLink to='/' onClick={() => setOpen(false)}>
+          <Typography variant='h5' sx={stylesForLinks}>
             Main
           </Typography>
         </NavLink>
-        <NavLink to="/vaccine/science-of-mrna" onClick={() => setOpen(false)}>
+        <NavLink to='/vaccine/science-of-mrna' onClick={() => setOpen(false)}>
           <Typography
-            variant="h5"
+            variant='h5'
             fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-            sx={stylesForLinks}>
+            sx={stylesForLinks}
+          >
             Vaccine
           </Typography>
         </NavLink>
-        <NavLink to="" onClick={() => setOpen(false)}>
-          <Typography variant="h5" sx={stylesForLinks}>
+        <NavLink to='/about-us' onClick={() => setOpen(false)}>
+          <Typography variant='h5' sx={stylesForLinks}>
             About
           </Typography>
         </NavLink>

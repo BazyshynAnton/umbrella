@@ -33,19 +33,21 @@ const Header = () => {
   return (
     <>
       <AppBar
-        component="nav"
-        position="sticky"
+        component='nav'
+        position='sticky'
         sx={{
           background: '#fff',
-        }}>
+        }}
+      >
         <Container>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <NavLink to="/">
+            <NavLink to='/'>
               {isSmallScreen ? (
                 <Box
                   sx={{
                     height: { md: '100px', sm: '70px', xs: '60px' },
-                  }}>
+                  }}
+                >
                   <img
                     style={{
                       objectFit: 'cover',
@@ -53,7 +55,7 @@ const Header = () => {
                       height: '100%',
                     }}
                     src={umbrellaHeaderLogo}
-                    alt="umbrella-logo"
+                    alt='umbrella-logo'
                   />
                 </Box>
               ) : (
@@ -65,7 +67,7 @@ const Header = () => {
                       height: '100%',
                     }}
                     src={umbrellaHeaderLogoSmall}
-                    alt="umbrella-logo"
+                    alt='umbrella-logo'
                   />
                 </Box>
               )}
@@ -73,20 +75,21 @@ const Header = () => {
 
             {isSmallScreen ? (
               <Box sx={{ display: 'flex', gap: '1.3rem' }}>
-                <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
-                  <Typography variant="h5" sx={stylesForLinks}>
+                <NavLink to='/' onClick={() => window.scrollTo(0, 0)}>
+                  <Typography variant='h5' sx={stylesForLinks}>
                     Main
                   </Typography>
                 </NavLink>
                 <NavLink
-                  to="/vaccine/science-of-mrna"
-                  onClick={() => window.scrollTo(0, 0)}>
-                  <Typography variant="h5" sx={stylesForLinks}>
+                  to='/vaccine/science-of-mrna'
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  <Typography variant='h5' sx={stylesForLinks}>
                     Vaccine
                   </Typography>
                 </NavLink>
-                <NavLink to="" onClick={() => window.scrollTo(0, 0)}>
-                  <Typography variant="h5" sx={stylesForLinks}>
+                <NavLink to='/about-us' onClick={() => window.scrollTo(0, 0)}>
+                  <Typography variant='h5' sx={stylesForLinks}>
                     About
                   </Typography>
                 </NavLink>
