@@ -1,34 +1,29 @@
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import {
   AppBar,
   Box,
   Container,
   IconButton,
   Toolbar,
-  Typography,
   useMediaQuery,
 } from '@mui/material'
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 
-import umbrellaHeaderLogo from '../../pictures/umbrellaHeaderLogo.png'
-import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
+import { useHeaderContext } from '../../context/HeaderContext'
 
-import MenuIcon from '@mui/icons-material/Menu'
 import HeaderBurgerMenu from './HeaderBurgerMenu'
+import NavigationForBigScreens from './NavigationForBigScreens'
+import Additionally from './Additionally'
+import MenuIcon from '@mui/icons-material/Menu'
 
-const stylesForLinks = {
-  fontWeight: '600',
-  fontSize: { sm: '1.5rem', xs: '1.3rem' },
-  color: '#053f68',
-  ':hover': {
-    textDecoration: 'underline',
-  },
-}
+import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
 
   const isSmallScreen = useMediaQuery('(min-width: 600px)')
+
+  const { stylesForLinks } = useHeaderContext()
 
   return (
     <>
@@ -41,64 +36,48 @@ const Header = () => {
       >
         <Container>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <NavLink to='/'>
-              {isSmallScreen ? (
-                <Box
-                  sx={{
-                    height: { md: '100px', sm: '70px', xs: '60px' },
-                  }}
-                >
-                  <img
-                    style={{
-                      objectFit: 'cover',
-                      width: '100%',
-                      height: '100%',
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: '1.3rem' }}>
+              <NavLink to='/'>
+                {isSmallScreen ? (
+                  <Box
+                    sx={{
+                      height: { md: '75px', sm: '70px', xs: '60px' },
                     }}
-                    src={umbrellaHeaderLogo}
-                    alt='umbrella-logo'
-                  />
-                </Box>
-              ) : (
-                <Box sx={{ height: { md: '100px', sm: '70px', xs: '60px' } }}>
-                  <img
-                    style={{
-                      objectFit: 'cover',
-                      width: '100%',
-                      height: '100%',
-                    }}
-                    src={umbrellaHeaderLogoSmall}
-                    alt='umbrella-logo'
-                  />
-                </Box>
-              )}
-            </NavLink>
+                  >
+                    <img
+                      style={{
+                        objectFit: 'cover',
+                        width: '100%',
+                        height: '100%',
+                      }}
+                      src={umbrellaHeaderLogoSmall}
+                      alt='umbrella-logo'
+                    />
+                  </Box>
+                ) : (
+                  <Box sx={{ height: { md: '100px', sm: '70px', xs: '60px' } }}>
+                    <img
+                      style={{
+                        objectFit: 'cover',
+                        width: '100%',
+                        height: '100%',
+                      }}
+                      src={umbrellaHeaderLogoSmall}
+                      alt='umbrella-logo'
+                    />
+                  </Box>
+                )}
+              </NavLink>
 
-            {isSmallScreen ? (
-              <Box sx={{ display: 'flex', gap: '1.3rem' }}>
-                <NavLink to='/' onClick={() => window.scrollTo(0, 0)}>
-                  <Typography variant='h5' sx={stylesForLinks}>
-                    Main
-                  </Typography>
-                </NavLink>
-                <NavLink
-                  to='/vaccine/science-of-mrna'
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  <Typography variant='h5' sx={stylesForLinks}>
-                    Vaccine
-                  </Typography>
-                </NavLink>
-                <NavLink to='/about-us' onClick={() => window.scrollTo(0, 0)}>
-                  <Typography variant='h5' sx={stylesForLinks}>
-                    About
-                  </Typography>
-                </NavLink>
-              </Box>
-            ) : (
-              <IconButton onClick={() => setOpen(true)}>
-                <MenuIcon sx={{ color: '#053f68' }} />
-              </IconButton>
-            )}
+              {isSmallScreen ? (
+                <NavigationForBigScreens />
+              ) : (
+                <IconButton onClick={() => setOpen(true)}>
+                  <MenuIcon sx={{ color: '#053f68' }} />
+                </IconButton>
+              )}
+            </Box>
+            <Additionally />
           </Toolbar>
 
           {!isSmallScreen && (

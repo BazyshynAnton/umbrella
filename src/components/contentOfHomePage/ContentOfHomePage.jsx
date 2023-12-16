@@ -7,8 +7,9 @@ import StayUpToDate from './stayUpToDate/StayUpToDate'
 import { PropagandaSwiperProvider } from '../../context/PropagandaSwiperContext'
 import IntroVaccineSwiper from './introVaccineSwiper/IntroVaccineSwiper'
 import NewsJobBlogsSwipers from './newsJobBlogsSwipers/NewsJobBlogsSwipers'
-import MeetUmbrella from './meetUmbrella/MeetUmbrella'
+import OurMission from './ourMission/OurMission'
 import { ButtonContextProvider } from '../../context/ButtonContext'
+import LifeAtUmbrella from './lifeAtUmbrella/LifeAtUmbrella'
 
 const ContentOfHomePage = () => {
   return (
@@ -17,7 +18,8 @@ const ContentOfHomePage = () => {
         <Container>
           <IntroVaccineSwiper />
           <NewsJobBlogsSwipers />
-          <MeetUmbrella />
+          <OurMission />
+          <LifeAtUmbrella />
           <PropagandaSwiper />
           <CareersAtUmbrella />
           <ConnectWithUs />
