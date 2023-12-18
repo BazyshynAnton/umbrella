@@ -2,7 +2,7 @@ import YellowButton from '../../yellowButton/YellowButton'
 
 import { fontStyleOpenSans } from '../../../../context/variables'
 
-import redbook from '../../../../pictures/redbook.png'
+import redBook from '../../../../pictures/redBook.png'
 import { Box, Typography } from '@mui/material'
 
 const ContentForBigScreens = () => {
@@ -13,21 +13,23 @@ const ContentForBigScreens = () => {
         marginTop: '60px',
         width: '100%',
         height: '600px',
-      }}>
+      }}
+    >
       <Box
         sx={{
           position: 'absolute',
-          left: { xl: '-150px', lg: '-100px' },
+          left: { xl: '-150px', lg: '0px' },
           width: '100%',
-        }}>
+        }}
+      >
         <img
           style={{
             objectFit: 'cover',
             height: '100%',
             width: '100%',
           }}
-          src={redbook}
-          alt="pic"
+          src={redBook}
+          alt='pic'
         />
       </Box>
 
@@ -44,30 +46,34 @@ const ContentForBigScreens = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           gap: '1rem',
-        }}>
+        }}
+      >
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             gap: '2rem',
-          }}>
+          }}
+        >
           <Typography
-            variant="h3"
+            variant='h3'
             sx={{
               color: '#376586',
               fontWeight: '600',
               ...fontStyleOpenSans,
-            }}>
+            }}
+          >
             Careers at Umbrella
           </Typography>
           <Typography
-            variant="body1"
+            variant='body1'
             sx={{
               color: '#376586',
               fontWeight: '400',
               ...fontStyleOpenSans,
-            }}>
+            }}
+          >
             Our mission is clear: translating science into survival to improve
             the health of people worldwide. We are always on the lookout for
             dedicated and curious new talents supporting our team of

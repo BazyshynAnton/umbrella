@@ -17,6 +17,7 @@ import Additionally from './Additionally'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
+import umblogo from '../../pictures/umblogo.jpg'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -50,7 +51,7 @@ const Header = () => {
                         width: '100%',
                         height: '100%',
                       }}
-                      src={umbrellaHeaderLogoSmall}
+                      src={umblogo}
                       alt='umbrella-logo'
                     />
                   </Box>

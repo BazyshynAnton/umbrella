@@ -3,7 +3,7 @@ import books from '../../../../pictures/books.png'
 import flask from '../../../../pictures/flask.png'
 import YellowButton from '../../yellowButton/YellowButton'
 import { fontStyleOpenSans } from '../../../../context/variables'
-const ContentForSmallSrceens = () => {
+const ContentForSmallScreens = () => {
   return (
     <Box
       sx={{
@@ -99,4 +99,4 @@ const ContentForSmallSrceens = () => {
   )
 }
 
-export default ContentForSmallSrceens
+export default ContentForSmallScreens
