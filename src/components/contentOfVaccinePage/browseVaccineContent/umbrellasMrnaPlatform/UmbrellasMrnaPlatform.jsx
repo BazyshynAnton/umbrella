@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import ReusableComponentMrnaPicture from '../reusableComponents/ReusableComponentMrnaPicture'
-import ReusableComponentForIntroduce from '../reusableComponents/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentForIntroduce'
 import ItsAllAboutProteins from './itsAllAboutProteins/ItsAllAboutProteins'
 import MrnaIsTransformational from './mRnaIsTransformational/MrnaIsTransformational'
 
@@ -18,7 +18,8 @@ const UmbrellasMrnaPlatform = () => {
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
-      }}>
+      }}
+    >
       <ReusableComponentForIntroduce
         text={text}
         img1={demoImgThree}

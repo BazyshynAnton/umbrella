@@ -2,10 +2,11 @@ import { Box, Typography, useMediaQuery } from '@mui/material'
 
 import DateBlock from './contentOfMeetUmbrella/DateBlock'
 import Shield from './contentOfMeetUmbrella/Shield'
-import ReusableButtonWithAnimation from '../reusableButtonWithAnimation/ReusableButtonWithAnimation'
+import ReusableButtonWithAnimation from '../../reusableButtonForHomeAndAboutPages/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 
 import { useButtonContext } from '../../../context/ButtonContext'
+
 const OurMission = () => {
   const {
     handleMouseEnterFour,

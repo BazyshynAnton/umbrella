@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
-const TheScienceOfMrnaForSmallCreens = () => {
+const TheScienceOfMrnaForSmallScreens = () => {
   return (
     <Box
       sx={{
@@ -9,7 +9,8 @@ const TheScienceOfMrnaForSmallCreens = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-      }}>
+      }}
+    >
       <Typography
         variant="h3"
         sx={{
@@ -18,7 +19,8 @@ const TheScienceOfMrnaForSmallCreens = () => {
           textAlign: 'center',
           fontWeight: '600',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         Your cells are protein factories
       </Typography>
       <Typography
@@ -27,7 +29,8 @@ const TheScienceOfMrnaForSmallCreens = () => {
           color: '#376586',
           textAlign: 'center',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         Proteins are made in a process called <b>protein synthesis</b>.
         <br /> And that's where mRNA comes in.
       </Typography>
@@ -35,4 +38,4 @@ const TheScienceOfMrnaForSmallCreens = () => {
   )
 }
 
-export default TheScienceOfMrnaForSmallCreens
+export default TheScienceOfMrnaForSmallScreens

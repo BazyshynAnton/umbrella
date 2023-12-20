@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import ReusableInformationBlock from '../../reusableComponents/ReusableInformationBlock'
+import ReusableInformationBlock from '../../../../reusableComponentsForVaccineAndAboutPages/ReusableInformationBlock'
 
 import picOfProteins from '../../../../../pictures/picOfProteins.png'
 import picOfResearch from '../../../../../pictures/picOfResearch.png'
@@ -31,7 +31,8 @@ const YouAreMadeOfProteins = () => {
           fontSize: { sm: '2.1rem', xs: '1.5rem' },
           fontWeight: '600',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         You are made of proteins
       </Typography>
       <Typography sx={{ color: '#376586', ...fontStyleOpenSans }}>
@@ -47,13 +48,15 @@ const YouAreMadeOfProteins = () => {
           height: { md: '300px', xs: '100%' },
           gap: { sm: '0px', xs: '1rem' },
           color: '#376586',
-        }}>
+        }}
+      >
         <Box
           sx={{
             display: 'flex',
             flexDirection: { md: 'row', xs: 'column' },
             gap: { sm: '0rem', xs: '1rem' },
-          }}>
+          }}
+        >
           <ReusableInformationBlock
             picture={picOfProteins}
             headerText={headerTextOne}
@@ -70,7 +73,8 @@ const YouAreMadeOfProteins = () => {
             display: 'flex',
             flexDirection: { md: 'row', xs: 'column' },
             gap: { sm: '0rem', xs: '1rem' },
-          }}>
+          }}
+        >
           <ReusableInformationBlock
             picture={picOfImportant}
             headerText={headerTextThree}

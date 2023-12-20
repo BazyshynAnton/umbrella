@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 
-import ReusableComponentForIntroduce from '../reusableComponents/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentMrnaPicture'
 import QuestionsSwiper from './questionsSwiper/QuestionsSwiper'
 
 import demoImgFive from '../../../../pictures/demoImgFive.jfif'
@@ -21,7 +21,8 @@ const AboutMrna = () => {
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
-      }}>
+      }}
+    >
       <ReusableComponentForIntroduce
         text={text}
         img1={demoImgSix}
@@ -37,12 +38,14 @@ const AboutMrna = () => {
           fontWeight: '600px',
           color: '#053f68',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         Q&mRNA
       </Typography>
       <Typography
         variant="body1"
-        sx={{ color: '#376586', ...fontStyleOpenSans }}>
+        sx={{ color: '#376586', ...fontStyleOpenSans }}
+      >
         Tune into our Q&mRNA video series to learn more about the power and
         potential of mRNA
         <br /> and how Umbrella is researching and developing mRNA medicines

@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import ReusableInformationBlock from '../../reusableComponents/ReusableInformationBlock'
+import ReusableInformationBlock from '../../../../reusableComponentsForVaccineAndAboutPages/ReusableInformationBlock'
 
 import picOfResearch from '../../../../../pictures/picOfResearch.png'
 import picOfMed from '../../../../../pictures/picOfMed.png'
@@ -31,7 +31,8 @@ const ItsAllAboutProteins = () => {
           fontSize: { sm: '2.1rem', xs: '1.5rem' },
           fontWeight: '600',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         It’s all about proteins
       </Typography>
       <Typography sx={{ color: '#376586', ...fontStyleOpenSans }}>
@@ -47,13 +48,15 @@ const ItsAllAboutProteins = () => {
           height: { md: '300px', xs: '100%' },
           gap: { sm: '0px', xs: '1rem' },
           color: '#376586',
-        }}>
+        }}
+      >
         <Box
           sx={{
             display: 'flex',
             flexDirection: { md: 'row', xs: 'column' },
             gap: { sm: '0rem', xs: '1rem' },
-          }}>
+          }}
+        >
           <ReusableInformationBlock
             picture={picOfResearch}
             headerText={headerTextOne}
@@ -70,7 +73,8 @@ const ItsAllAboutProteins = () => {
             display: 'flex',
             flexDirection: { md: 'row', xs: 'column' },
             gap: { sm: '0rem', xs: '1rem' },
-          }}>
+          }}
+        >
           <ReusableInformationBlock
             picture={picOfMed}
             headerText={headerTextThree}

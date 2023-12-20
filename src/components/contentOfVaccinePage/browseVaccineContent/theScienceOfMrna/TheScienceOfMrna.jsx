@@ -1,14 +1,14 @@
 import { Box, useMediaQuery } from '@mui/material'
 
-import ReusableComponentForIntroduce from '../reusableComponents/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentMrnaPicture'
 import RevolutionizeMedicine from './revolutionizeMedicine/RevolutionizeMedicine'
 import YouAreMadeOfProteins from './youAreMadeOfProteins/YouAreMadeOfProteins'
 import SwiperProteinFactories from './swiperProteinFactories/SwiperProteinFactories'
 
 import demoImgOne from '../../../../pictures/demoImgOne.jfif'
 import demoImgTwo from '../../../../pictures/demoImgTwo.jfif'
-import TheScienceOfMrnaForSmallCreens from './theScienceOfMrnaForSmallCreens/TheScienceOfMrnaForSmallCreens'
+import TheScienceOfMrnaForSmallScreens from './theScienceOfMrnaForSmallScreens/TheScienceOfMrnaForSmallScreens'
 
 const text =
   'At Umbrella, we are delivering on the promise of mRNA science to create a new generation of transformative medicines for patients.'
@@ -22,7 +22,8 @@ const TheScienceOfMrna = () => {
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
-      }}>
+      }}
+    >
       <ReusableComponentForIntroduce
         text={text}
         img1={demoImgOne}
@@ -33,7 +34,7 @@ const TheScienceOfMrna = () => {
       <YouAreMadeOfProteins />
       {isSmallScreen && (
         <>
-          <TheScienceOfMrnaForSmallCreens />
+          <TheScienceOfMrnaForSmallScreens />
           <SwiperProteinFactories />
         </>
       )}
