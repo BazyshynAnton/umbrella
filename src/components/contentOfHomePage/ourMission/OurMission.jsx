@@ -1,20 +1,19 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
 
-import DateBlock from './contentOfMeetUmbrella/DateBlock'
+import DateBlock from '../../reusableButtonForHomeAndAboutPages/DateBlock'
 import Shield from './contentOfMeetUmbrella/Shield'
 import ReusableButtonWithAnimation from '../../reusableButtonForHomeAndAboutPages/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 
 import { useButtonContext } from '../../../context/ButtonContext'
 
-const OurMission = () => {
+const OurMission = ({ isSmallScreen }) => {
   const {
     handleMouseEnterFour,
     handleMouseLeaveFour,
     animationForUnderLineFour,
   } = useButtonContext()
 
-  const isSmallScreen = useMediaQuery('(min-width:930px)')
   return (
     <Box
       sx={{

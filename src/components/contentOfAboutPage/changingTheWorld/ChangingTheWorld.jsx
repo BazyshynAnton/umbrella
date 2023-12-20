@@ -1,16 +1,15 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
-import smilingScientists from '../../../pictures/smilingScientists.jpg'
+import { useButtonContext } from '../../../context/ButtonContext'
+
 import ReusableButtonWithAnimation from '../../reusableButtonForHomeAndAboutPages/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
-import { useButtonContext } from '../../../context/ButtonContext'
-import LifePicture from './contentOfLifeOfUmbrella/LifePicture'
 
-const LifeAtUmbrella = ({ isSmallScreen }) => {
-  const {
-    handleMouseEnterFive,
-    handleMouseLeaveFive,
-    animationForUnderLineFive,
-  } = useButtonContext()
+import umbrellaGuy from '../../../pictures/umbrellaGuy.png'
+import ChangingTheWorldPicture from './ChangingTheWorldPicture'
+
+const ChangingTheWorld = ({ isSmallScreen }) => {
+  const { handleMouseEnterSix, handleMouseLeaveSix, animationForUnderLineSix } =
+    useButtonContext()
 
   return (
     <Box
@@ -22,8 +21,8 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
       }}
     >
       <Box
-        onMouseEnter={handleMouseEnterFive}
-        onMouseLeave={handleMouseLeaveFive}
+        onMouseEnter={handleMouseEnterSix}
+        onMouseLeave={handleMouseLeaveSix}
         sx={{
           mt: { md: '0px', xs: '20px' },
           mb: { md: '0px', xs: '20px' },
@@ -55,7 +54,7 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
               borderTopLeftRadius: '10px',
               transition: '0.3s ease-out',
             }}
-            src={smilingScientists}
+            src={umbrellaGuy}
             alt="join-us"
           />
         </Box>
@@ -63,20 +62,32 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
           <Typography
             sx={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}
           >
-            Join us and change the world of medicine
+            We are creating a new category of medicines and harnessing the power
+            of mRNA.
+          </Typography>
+          <Typography
+            sx={{
+              fontWeight: '500',
+              fontSize: '1rem',
+              color: '#053f68',
+              pt: '10px',
+            }}
+          >
+            We are creating a new category of medicines and harnessing the power
+            of mRNA.
           </Typography>
           <Box sx={{ width: '183.39px', mt: '20px' }}>
             <ReusableButtonWithAnimation
-              animation={animationForUnderLineFive}
+              animation={animationForUnderLineSix}
               buttonText={'life at Umbrella'}
               icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
             />
           </Box>
         </Box>
       </Box>
-      {isSmallScreen && <LifePicture />}
+      {isSmallScreen && <ChangingTheWorldPicture />}
     </Box>
   )
 }
 
-export default LifeAtUmbrella
+export default ChangingTheWorld

@@ -34,7 +34,7 @@ const SwiperProteinFactories = () => {
   return (
     <>
       <Swiper
-        allowTouchMove={false}
+        allowTouchMove={true}
         effect={'fade'}
         slidesPerView={1}
         spaceBetween={30}
@@ -64,7 +64,8 @@ const SwiperProteinFactories = () => {
           justifyContent: 'flex-end',
           flexDirection: 'row-reverse',
           position: 'relative',
-        }}>
+        }}
+      >
         {isSmallScreen ? (
           <CustomPaginationForSwiper />
         ) : (
@@ -86,7 +87,8 @@ const SwiperProteinFactories = () => {
               border: { lg: '1px solid #0163ae' },
               borderRadius: '20px',
               background: '#fff',
-            }}>
+            }}
+          >
             <img
               style={styleForImage}
               src={firstSlideSwiperProtein}
@@ -96,19 +98,22 @@ const SwiperProteinFactories = () => {
               sx={{
                 width: { lg: '50%', xs: '100%' },
                 padding: { lg: '0px', xs: '5px' },
-              }}>
+              }}
+            >
               <Typography
                 variant="h5"
                 sx={{
                   color: '#376586',
                   fontWeight: '700',
                   ...fontStyleOpenSans,
-                }}>
+                }}
+              >
                 What is mRNA?
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                sx={{ color: '#376586', ...fontStyleOpenSans }}
+              >
                 <b>Messenger RNA–or mRNA</b>–exists in all of the cells in your
                 body. It is an essential component of all living organisms and
                 has been in cells for <b>billions of years</b>.
@@ -131,7 +136,8 @@ const SwiperProteinFactories = () => {
               border: { lg: '1px solid #0163ae' },
               borderRadius: '20px',
               background: '#fff',
-            }}>
+            }}
+          >
             <img
               style={styleForImage}
               src={secondSlideSwiperProtein}
@@ -141,19 +147,22 @@ const SwiperProteinFactories = () => {
               sx={{
                 width: { lg: '50%', xs: '100%' },
                 padding: { lg: '0px', xs: '5px' },
-              }}>
+              }}
+            >
               <Typography
                 variant="h5"
                 sx={{
                   color: '#376586',
                   fontWeight: '700',
                   ...fontStyleOpenSans,
-                }}>
+                }}
+              >
                 What does it do?
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                sx={{ color: '#376586', ...fontStyleOpenSans }}
+              >
                 Just like its name suggests, mRNA is a <b>messenger</b>. It
                 interacts with other components in cells that help create
                 proteins.
@@ -176,7 +185,8 @@ const SwiperProteinFactories = () => {
               border: { lg: '1px solid #0163ae' },
               borderRadius: '20px',
               background: '#fff',
-            }}>
+            }}
+          >
             <img
               style={styleForImage}
               src={thirdSlideSwiperProtein}
@@ -186,19 +196,22 @@ const SwiperProteinFactories = () => {
               sx={{
                 width: { lg: '50%', xs: '100%' },
                 padding: { lg: '0px', xs: '5px' },
-              }}>
+              }}
+            >
               <Typography
                 variant="h5"
                 sx={{
                   color: '#376586',
                   fontWeight: '700',
                   ...fontStyleOpenSans,
-                }}>
+                }}
+              >
                 How does it help make a protein?
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                sx={{ color: '#376586', ...fontStyleOpenSans }}
+              >
                 Each mRNA carries instructions to make a specific protein.
                 <br /> These instructions are like a <b>“blueprint.”</b>
                 <br /> mRNA delivers these instructions, and cells put the
@@ -222,7 +235,8 @@ const SwiperProteinFactories = () => {
               border: { lg: '1px solid #0163ae' },
               borderRadius: '20px',
               background: '#fff',
-            }}>
+            }}
+          >
             <img
               style={styleForImage}
               src={lastSlideSwiperProtein}
@@ -232,19 +246,22 @@ const SwiperProteinFactories = () => {
               sx={{
                 width: { lg: '50%', xs: '100%' },
                 padding: { lg: '0px', xs: '5px' },
-              }}>
+              }}
+            >
               <Typography
                 variant="h5"
                 sx={{
                   color: '#376586',
                   fontWeight: '700',
                   ...fontStyleOpenSans,
-                }}>
+                }}
+              >
                 What happens after a protein is made?
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}>
+                sx={{ color: '#376586', ...fontStyleOpenSans }}
+              >
                 Once its job is done, an mRNA is <b>broken down</b> by the body.
                 It doesn’t stick around for very long.
               </Typography>

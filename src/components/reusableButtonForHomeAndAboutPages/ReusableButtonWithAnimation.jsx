@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 import { animated } from '@react-spring/web'
-import { fontStyleOpenSans } from '../../../context/variables'
+import { fontStyleOpenSans } from '../../context/variables'
 
 const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
   return (

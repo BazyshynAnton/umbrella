@@ -18,7 +18,7 @@ const ContentForSmallScreens = () => {
       <Box
         sx={{
           position: 'relative',
-          border: '1px solid black',
+          border: '1px solid #376586',
           background: '#fff',
           width: { md: '600px', sm: '500px', xs: '300px' },
           height: { sm: '400px', xs: '550px' },
@@ -38,7 +38,7 @@ const ContentForSmallScreens = () => {
           }}
         >
           <Typography
-            variant='h3'
+            variant="h3"
             sx={{
               fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
               fontWeight: '600',
@@ -49,7 +49,7 @@ const ContentForSmallScreens = () => {
             Careers at Umbrella
           </Typography>
           <Typography
-            variant='body1'
+            variant="body1"
             sx={{
               fontWeight: '400',
               color: '#376586',
@@ -76,7 +76,7 @@ const ContentForSmallScreens = () => {
           <img
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             src={books}
-            alt='animated-books-icon'
+            alt="animated-books-icon"
           />
         </Box>
         <Box
@@ -91,7 +91,7 @@ const ContentForSmallScreens = () => {
           <img
             style={{ objectFit: 'contain', width: '100%', height: '100%' }}
             src={flask}
-            alt='animated-flask-icon'
+            alt="animated-flask-icon"
           />
         </Box>
       </Box>

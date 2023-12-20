@@ -96,7 +96,7 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
           <Box sx={styleForLinkBlocks}>
             <AutoStoriesRoundedIcon sx={stylesForLinks} />
             <Typography variant="h5" sx={stylesForLinks}>
-              About
+              About Us
             </Typography>
           </Box>
         </NavLink>

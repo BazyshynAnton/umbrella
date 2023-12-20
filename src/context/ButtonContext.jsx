@@ -90,22 +90,41 @@ export const ButtonContextProvider = ({ children }) => {
     config: { duration: 200 },
   })
 
+  const [isMouseSix, setIsMouseSix] = useState(false)
+
+  const handleMouseEnterSix = () => {
+    setIsMouseSix(true)
+  }
+
+  const handleMouseLeaveSix = () => {
+    setIsMouseSix(false)
+  }
+
+  const animationForUnderLineSix = useSpring({
+    from: { width: '0%' },
+    to: { width: isMouseSix ? '100%' : '0%' },
+    config: { duration: 200 },
+  })
+
   const contextValue = {
     handleMouseEnterOne,
     handleMouseEnterTwo,
     handleMouseEnterThree,
     handleMouseEnterFour,
     handleMouseEnterFive,
+    handleMouseEnterSix,
     handleMouseLeaveOne,
     handleMouseLeaveTwo,
     handleMouseLeaveThree,
     handleMouseLeaveFour,
     handleMouseLeaveFive,
+    handleMouseLeaveSix,
     animationForUnderLineOne,
     animationForUnderLineTwo,
     animationForUnderLineThree,
     animationForUnderLineFour,
     animationForUnderLineFive,
+    animationForUnderLineSix,
   }
 
   return (

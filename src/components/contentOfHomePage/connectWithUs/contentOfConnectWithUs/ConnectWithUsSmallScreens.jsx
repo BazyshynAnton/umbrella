@@ -21,7 +21,7 @@ const ConnectWithUsSmallScreens = () => {
       <Box
         sx={{
           position: 'relative',
-          border: '1px solid black',
+          border: '1px solid #376586',
           background: '#fff',
           width: { md: '600px', sm: '500px', xs: '300px' },
           height: { xs: '400px' },
@@ -41,7 +41,7 @@ const ConnectWithUsSmallScreens = () => {
           }}
         >
           <Typography
-            variant='h3'
+            variant="h3"
             sx={{
               fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
               fontWeight: '600',
@@ -52,7 +52,7 @@ const ConnectWithUsSmallScreens = () => {
             Connect with us
           </Typography>
           <Typography
-            variant='body1'
+            variant="body1"
             sx={{
               fontWeight: '400',
               color: '#376586',
@@ -77,7 +77,7 @@ const ConnectWithUsSmallScreens = () => {
           <img
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             src={mailIcon}
-            alt='animated-mail-icon'
+            alt="animated-mail-icon"
           />
         </Box>
         <Box
@@ -92,7 +92,7 @@ const ConnectWithUsSmallScreens = () => {
           <img
             style={{ objectFit: 'contain', width: '100%', height: '100%' }}
             src={phoneIcon}
-            alt='animated-phone-icon'
+            alt="animated-phone-icon"
           />
         </Box>
       </Box>

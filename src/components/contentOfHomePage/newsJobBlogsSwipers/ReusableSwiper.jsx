@@ -53,6 +53,7 @@ const ReusableSwiper = ({
           flexDirection: { sm: 'row', xs: 'column' },
           alignItems: { sm: 'center', xs: 'flex-start' },
           justifyContent: { sm: 'space-between' },
+          gap: { md: '0', xs: '1rem' },
         }}
       >
         <NavigationButtonForNewsJobBlogsSwiper />

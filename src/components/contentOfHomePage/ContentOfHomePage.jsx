@@ -1,4 +1,4 @@
-import { Container } from '@mui/material'
+import { Container, useMediaQuery } from '@mui/material'
 import PropagandaSwiper from './propagandaSwiper/PropagandaSwiper'
 import CareersAtUmbrella from './careersAtUmbrella/CareersAtUmbrella'
 import ConnectWithUs from './connectWithUs/ConnectWithUs'
@@ -12,14 +12,15 @@ import { ButtonContextProvider } from '../../context/ButtonContext'
 import LifeAtUmbrella from './lifeAtUmbrella/LifeAtUmbrella'
 
 const ContentOfHomePage = () => {
+  const isSmallScreen = useMediaQuery('(min-width:930px)')
   return (
     <PropagandaSwiperProvider>
       <ButtonContextProvider>
         <Container>
           <IntroVaccineSwiper />
           <NewsJobBlogsSwipers />
-          <OurMission />
-          <LifeAtUmbrella />
+          <OurMission isSmallScreen={isSmallScreen} />
+          <LifeAtUmbrella isSmallScreen={isSmallScreen} />
           <PropagandaSwiper />
           <CareersAtUmbrella />
           <ConnectWithUs />

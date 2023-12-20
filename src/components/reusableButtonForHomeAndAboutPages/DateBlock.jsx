@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
-import { fontStyleOpenSans } from '../../../../context/variables'
-const DateBlock = ({ integer, text }) => {
+import { fontStyleOpenSans } from '../../context/variables'
+const DateBlock = ({ integer, text, smallPlus }) => {
   return (
     <Box>
       <Typography
@@ -12,6 +12,7 @@ const DateBlock = ({ integer, text }) => {
         }}
       >
         {integer}
+        <span style={{ fontSize: '3.3rem' }}>{smallPlus}</span>
       </Typography>
       <Typography
         sx={{
