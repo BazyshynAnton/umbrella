@@ -15,7 +15,7 @@ const ReusableSlide = ({ text, img, buttonText }) => {
       <Box
         sx={{
           width: '100%',
-          height: '100%',
+          height: { md: '100%', sm: '200px', xs: '300px' },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: { md: 'center' },
@@ -30,12 +30,12 @@ const ReusableSlide = ({ text, img, buttonText }) => {
       <Box
         sx={{
           width: { md: '1000px', xs: '100%' },
-          height: { md: '340px', xs: '100%' },
+          height: { md: '340px', sm: '400px', xs: '100%' },
         }}
       >
         <img
           src={img}
-          alt='slide'
+          alt="slide"
           style={{
             width: '100%',
             height: '100%',

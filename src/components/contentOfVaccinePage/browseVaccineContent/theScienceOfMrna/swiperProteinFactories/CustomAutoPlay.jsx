@@ -1,8 +1,12 @@
-import { Button } from '@mui/material'
-import { useSwiper } from 'swiper/react'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
-import PauseIcon from '@mui/icons-material/Pause'
 import { useState } from 'react'
+
+import { useSwiper } from 'swiper/react'
+import { Button } from '@mui/material'
+
+import PauseIcon from '@mui/icons-material/Pause'
+import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
+
+const styleForPauseAndPLayIcon = { fontSize: '2.5rem', color: '#376586' }
 
 const CustomAutoPlay = () => {
   const swiper = useSwiper()
@@ -25,13 +29,12 @@ const CustomAutoPlay = () => {
             width: '35px',
             minWidth: '35px',
             height: '35px',
-
             ':hover': {
               background: '#d6e5eb',
             },
           }}
         >
-          <PauseIcon sx={{ fontSize: '2.5rem' }} />
+          <PauseIcon sx={styleForPauseAndPLayIcon} />
         </Button>
       ) : (
         <Button
@@ -46,7 +49,7 @@ const CustomAutoPlay = () => {
             },
           }}
         >
-          <PlayArrowIcon sx={{ fontSize: '2.5rem' }} />
+          <PlayArrowRoundedIcon sx={styleForPauseAndPLayIcon} />
         </Button>
       )}
     </>

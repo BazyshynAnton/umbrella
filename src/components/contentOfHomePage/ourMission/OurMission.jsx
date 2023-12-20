@@ -1,10 +1,11 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
+
 import DateBlock from './contentOfMeetUmbrella/DateBlock'
+import Shield from './contentOfMeetUmbrella/Shield'
 import ReusableButtonWithAnimation from '../reusableButtonWithAnimation/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 
 import { useButtonContext } from '../../../context/ButtonContext'
-
 const OurMission = () => {
   const {
     handleMouseEnterFour,
@@ -12,12 +13,21 @@ const OurMission = () => {
     animationForUnderLineFour,
   } = useButtonContext()
 
+  const isSmallScreen = useMediaQuery('(min-width:930px)')
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'flex-start',
+        position: 'relative',
+        width: '100%',
+      }}
+    >
       <Box
         onMouseEnter={handleMouseEnterFour}
         onMouseLeave={handleMouseLeaveFour}
         sx={{
+          position: 'relative',
           width: '600px',
           display: 'flex',
           flexDirection: 'column',
@@ -54,6 +64,7 @@ const OurMission = () => {
           </Box>
         </Box>
       </Box>
+      {isSmallScreen && <Shield />}
     </Box>
   )
 }

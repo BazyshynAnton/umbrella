@@ -30,7 +30,8 @@ const ChartData = () => {
         justifyContent: 'center',
         alignItems: 'center',
         gap: '1rem',
-      }}>
+      }}
+    >
       <Box
         sx={{
           background: 'rgba(128, 128, 128, 0.3)',
@@ -40,8 +41,12 @@ const ChartData = () => {
           alignItems: 'center',
           borderRadius: '10px',
           paddingLeft: '8px',
-        }}>
-        <Typography variant="h5" sx={{ pr: '3px', ...fontStyleOpenSans }}>
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{ pr: '3px', color: '#376586', ...fontStyleOpenSans }}
+        >
           Clinical trial participants:
         </Typography>
         <animated.p
@@ -54,7 +59,8 @@ const ChartData = () => {
             borderRadius: '10px',
             width: '73.19px',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {people}
         </animated.p>
       </Box>
@@ -67,7 +73,8 @@ const ChartData = () => {
           alignItems: 'center',
           borderRadius: '10px',
           paddingLeft: '8px',
-        }}>
+        }}
+      >
         <Typography variant="h5" sx={{ pr: '3px', ...fontStyleOpenSans }}>
           Vaccine:
         </Typography>
@@ -81,7 +88,8 @@ const ChartData = () => {
             padding: '5px 8px 5px 8px',
             borderRadius: '10px',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {vaccine}
         </animated.p>
       </Box>
@@ -94,7 +102,8 @@ const ChartData = () => {
           alignItems: 'center',
           borderRadius: '10px',
           paddingLeft: '8px',
-        }}>
+        }}
+      >
         <Typography variant="h5" sx={{ pr: '3px', ...fontStyleOpenSans }}>
           Placebo:
         </Typography>
@@ -108,7 +117,8 @@ const ChartData = () => {
             padding: '5px 8px 5px 8px',
             borderRadius: '10px',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {placebo}
         </animated.p>
       </Box>

@@ -1,8 +1,9 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import smilingScientists from '../../../pictures/smilingScientists.jpg'
 import ReusableButtonWithAnimation from '../reusableButtonWithAnimation/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 import { useButtonContext } from '../../../context/ButtonContext'
+import LifePicture from './contentOfLifeOfUmbrella/LifePicture'
 
 const LifeAtUmbrella = () => {
   const {
@@ -10,8 +11,17 @@ const LifeAtUmbrella = () => {
     handleMouseLeaveFive,
     animationForUnderLineFive,
   } = useButtonContext()
+
+  const isSmallScreen = useMediaQuery('(min-width:930px)')
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: '30px' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        mt: '30px',
+        position: 'relative',
+      }}
+    >
       <Box
         onMouseEnter={handleMouseEnterFive}
         onMouseLeave={handleMouseLeaveFive}
@@ -47,7 +57,7 @@ const LifeAtUmbrella = () => {
               transition: '0.3s ease-out',
             }}
             src={smilingScientists}
-            alt='join-us'
+            alt="join-us"
           />
         </Box>
         <Box sx={{ p: '15px' }}>
@@ -65,6 +75,7 @@ const LifeAtUmbrella = () => {
           </Box>
         </Box>
       </Box>
+      {isSmallScreen && <LifePicture />}
     </Box>
   )
 }

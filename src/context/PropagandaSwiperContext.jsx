@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from 'react'
 import { useSpring, config } from '@react-spring/web'
-import { useSwiper } from 'swiper/react'
 
 const PropagandaSwiperContext = createContext()
 

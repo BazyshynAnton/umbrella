@@ -1,9 +1,10 @@
+import { useEffect, useState } from 'react'
+import { useSwiper } from 'swiper/react'
 import { Box } from '@mui/material'
+
 import CustomAutoPlay from './CustomAutoPlay'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import { useSwiper } from 'swiper/react'
-import { useEffect, useState } from 'react'
 
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
@@ -35,18 +36,20 @@ const CustomPaginationNavigationForSmallScreen = () => {
         alignItems: 'center',
         width: '100%',
         borderTop: '1px solid rgba(5, 63, 104, 0.5)',
-      }}>
+      }}
+    >
       <CustomAutoPlay />
       <Box
         sx={{
-          widht: '100px',
+          width: '100px',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-          color: 'rgba(5, 63, 104, 1)',
+          color: '#376586',
           pl: '20px',
-        }}>
+        }}
+      >
         <ArrowBackIosIcon
           sx={{ cursor: 'pointer' }}
           onClick={() => swiper.slidePrev()}
@@ -62,11 +65,12 @@ const CustomPaginationNavigationForSmallScreen = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'flex-end',
-          color: 'rgba(5, 63, 104, 1)',
+          color: '#376586',
           fontWeight: '600',
           fontSize: '1.3rem',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         {activeIndex + 1}/4
       </Box>
     </Box>
