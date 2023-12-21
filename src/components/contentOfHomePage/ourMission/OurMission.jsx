@@ -1,11 +1,17 @@
-import { Box, Typography, useMediaQuery } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 import DateBlock from '../../reusableButtonForHomeAndAboutPages/DateBlock'
-import Shield from './contentOfMeetUmbrella/Shield'
 import ReusableButtonWithAnimation from '../../reusableButtonForHomeAndAboutPages/ReusableButtonWithAnimation'
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 
 import { useButtonContext } from '../../../context/ButtonContext'
+import ReusablePictureForLinkBlock from '../../reusableButtonForHomeAndAboutPages/ReusablePictureForLinkBlock'
+
+import meetUmbrellaProtection from '../../../pictures/meetUmbrellaProtection.png'
+import ReusableLInkBlock from '../../reusableButtonForHomeAndAboutPages/ReusableLInkBlock'
+
+const text =
+  'Umbrella’s goal is to deliver on the promise of mRNA science to create a new generation of transformative medicines for patients.'
 
 const OurMission = ({ isSmallScreen }) => {
   const {
@@ -41,30 +47,23 @@ const OurMission = ({ isSmallScreen }) => {
           <DateBlock integer={48} text={'Products in pipeline'} />
           <DateBlock integer={35} text={'Ongoing clinical trials'} />
         </Box>
-        <Box>
-          <Typography
-            sx={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}
-          >
-            Meet Umbrella
-          </Typography>
-          <Typography sx={{ fontSize: '18px', color: '#053f68' }}>
-            Umbrella’s goal is to deliver on the promise of mRNA science to
-            create a new generation of transformative medicines for patients.
-          </Typography>
-          <Box
-            onMouseEnter={handleMouseEnterFour}
-            onMouseLeave={handleMouseLeaveFour}
-            sx={{ width: '177.14px', mt: '10px' }}
-          >
-            <ReusableButtonWithAnimation
-              animation={animationForUnderLineFour}
-              buttonText={'See our mission'}
-              icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
-            />
-          </Box>
-        </Box>
+        <ReusableLInkBlock
+          textForButton={'See our mission'}
+          animationFor={animationForUnderLineFour}
+          handleLeave={handleMouseLeaveFour}
+          handleEnter={handleMouseEnterFour}
+          buttonWidth={'177.14px'}
+          text={text}
+          headerText={'Meet Umbrella'}
+        />
       </Box>
-      {isSmallScreen && <Shield />}
+      {isSmallScreen && (
+        <ReusablePictureForLinkBlock
+          picture={meetUmbrellaProtection}
+          topPosition={'22.5px'}
+          rightPosition={'0px'}
+        />
+      )}
     </Box>
   )
 }

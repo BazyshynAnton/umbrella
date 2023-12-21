@@ -106,6 +106,54 @@ export const ButtonContextProvider = ({ children }) => {
     config: { duration: 200 },
   })
 
+  const [isMouseSeven, setIsMouseSeven] = useState(false)
+
+  const handleMouseEnterSeven = () => {
+    setIsMouseSeven(true)
+  }
+
+  const handleMouseLeaveSeven = () => {
+    setIsMouseSeven(false)
+  }
+
+  const animationForUnderLineSeven = useSpring({
+    from: { width: '0%' },
+    to: { width: isMouseSeven ? '100%' : '0%' },
+    config: { duration: 200 },
+  })
+
+  const [isMouseEight, setIsMouseEight] = useState(false)
+
+  const handleMouseEnterEight = () => {
+    setIsMouseEight(true)
+  }
+
+  const handleMouseLeaveEight = () => {
+    setIsMouseEight(false)
+  }
+
+  const animationForUnderLineEight = useSpring({
+    from: { width: '0%' },
+    to: { width: isMouseEight ? '100%' : '0%' },
+    config: { duration: 200 },
+  })
+
+  const [isMouseNine, setIsMouseNine] = useState(false)
+
+  const handleMouseEnterNine = () => {
+    setIsMouseNine(true)
+  }
+
+  const handleMouseLeaveNine = () => {
+    setIsMouseNine(false)
+  }
+
+  const animationForUnderLineNine = useSpring({
+    from: { width: '0%' },
+    to: { width: isMouseNine ? '100%' : '0%' },
+    config: { duration: 200 },
+  })
+
   const contextValue = {
     handleMouseEnterOne,
     handleMouseEnterTwo,
@@ -113,18 +161,29 @@ export const ButtonContextProvider = ({ children }) => {
     handleMouseEnterFour,
     handleMouseEnterFive,
     handleMouseEnterSix,
+    handleMouseEnterSeven,
+    handleMouseEnterEight,
+    handleMouseEnterNine,
+
     handleMouseLeaveOne,
     handleMouseLeaveTwo,
     handleMouseLeaveThree,
     handleMouseLeaveFour,
     handleMouseLeaveFive,
     handleMouseLeaveSix,
+    handleMouseLeaveSeven,
+    handleMouseLeaveEight,
+    handleMouseLeaveNine,
+
     animationForUnderLineOne,
     animationForUnderLineTwo,
     animationForUnderLineThree,
     animationForUnderLineFour,
     animationForUnderLineFive,
     animationForUnderLineSix,
+    animationForUnderLineSeven,
+    animationForUnderLineEight,
+    animationForUnderLineNine,
   }
 
   return (

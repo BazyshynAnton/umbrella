@@ -1,6 +1,11 @@
 import { Box, Typography } from '@mui/material'
+
 import DateBlock from '../../reusableButtonForHomeAndAboutPages/DateBlock'
-import DeliveringPicture from './DeliveringPicture'
+import ReusablePictureForLink from '../../reusableButtonForHomeAndAboutPages/ReusablePictureForLinkBlock'
+
+import delivering from '../../../pictures/delivering.png'
+
+import { fontStyleOpenSans } from '../../../context/variables'
 
 const Delivering = ({ isSmallScreen }) => {
   return (
@@ -32,18 +37,36 @@ const Delivering = ({ isSmallScreen }) => {
         </Box>
         <div>
           <Typography
-            sx={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}
+            sx={{
+              fontWeight: '700',
+              fontSize: '1.6rem',
+              color: '#053f68',
+              ...fontStyleOpenSans,
+            }}
           >
             Delivering the greatest possible impact through mRNA medicines
           </Typography>
-          <Typography sx={{ fontSize: '1.1rem', color: '#053f68', pt: '10px' }}>
+          <Typography
+            sx={{
+              fontSize: '1.1rem',
+              color: '#376586',
+              pt: '10px',
+              ...fontStyleOpenSans,
+            }}
+          >
             From accelerating drug discovery and early development to a rapidly
             expanding pipeline and a world-class team, we are delivering on the
             promise of mRNA.
           </Typography>
         </div>
       </Box>
-      {isSmallScreen && <DeliveringPicture />}
+      {isSmallScreen && (
+        <ReusablePictureForLink
+          topPosition={'49.5px'}
+          rightPosition={'0px'}
+          picture={delivering}
+        />
+      )}
     </Box>
   )
 }
