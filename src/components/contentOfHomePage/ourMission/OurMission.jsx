@@ -1,14 +1,11 @@
-import { Box, Typography } from '@mui/material'
-
-import DateBlock from '../../reusableButtonForHomeAndAboutPages/DateBlock'
-import ReusableButtonWithAnimation from '../../reusableButtonForHomeAndAboutPages/ReusableButtonWithAnimation'
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
-
+import { Box } from '@mui/material'
 import { useButtonContext } from '../../../context/ButtonContext'
-import ReusablePictureForLinkBlock from '../../reusableButtonForHomeAndAboutPages/ReusablePictureForLinkBlock'
+
+import DateBlock from '../../reusableComponents/DateBlock'
+import ReusablePictureForLinkBlock from '../../reusableComponents/ReusablePictureForLinkBlock'
+import ReusableLInkBlock from '../../reusableComponents/ReusableLInkBlock'
 
 import meetUmbrellaProtection from '../../../pictures/meetUmbrellaProtection.png'
-import ReusableLInkBlock from '../../reusableButtonForHomeAndAboutPages/ReusableLInkBlock'
 
 const text =
   'Umbrella’s goal is to deliver on the promise of mRNA science to create a new generation of transformative medicines for patients.'
@@ -34,7 +31,7 @@ const OurMission = ({ isSmallScreen }) => {
         onMouseLeave={handleMouseLeaveFour}
         sx={{
           position: 'relative',
-          width: '600px',
+          width: '100%',
           display: 'flex',
           flexDirection: 'column',
           gap: '2.5rem',

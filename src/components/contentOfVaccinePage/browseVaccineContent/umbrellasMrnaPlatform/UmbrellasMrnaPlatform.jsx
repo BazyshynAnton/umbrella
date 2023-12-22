@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
-import ReusableComponentMrnaPicture from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentMrnaPicture'
-import ReusableComponentForIntroduce from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../reusableComponents/ReusableComponentForIntroduce'
 import ItsAllAboutProteins from './itsAllAboutProteins/ItsAllAboutProteins'
 import MrnaIsTransformational from './mRnaIsTransformational/MrnaIsTransformational'
 

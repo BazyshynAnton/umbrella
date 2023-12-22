@@ -19,7 +19,8 @@ const ThePowerOfMrna = () => {
           fontSize: { md: '3rem', sm: '2.5rem', xs: '1.7rem' },
           fontWeight: '600',
           ...fontStyleOpenSans,
-        }}>
+        }}
+      >
         The power of mRNA
       </Typography>
       <Browse />

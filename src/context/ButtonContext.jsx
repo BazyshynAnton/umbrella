@@ -154,6 +154,22 @@ export const ButtonContextProvider = ({ children }) => {
     config: { duration: 200 },
   })
 
+  const [isMouseTen, setIsMouseTen] = useState(false)
+
+  const handleMouseEnterTen = () => {
+    setIsMouseTen(true)
+  }
+
+  const handleMouseLeaveTen = () => {
+    setIsMouseTen(false)
+  }
+
+  const animationForUnderLineTen = useSpring({
+    from: { width: '0%' },
+    to: { width: isMouseTen ? '100%' : '0%' },
+    config: { duration: 200 },
+  })
+
   const contextValue = {
     handleMouseEnterOne,
     handleMouseEnterTwo,
@@ -164,6 +180,7 @@ export const ButtonContextProvider = ({ children }) => {
     handleMouseEnterSeven,
     handleMouseEnterEight,
     handleMouseEnterNine,
+    handleMouseEnterTen,
 
     handleMouseLeaveOne,
     handleMouseLeaveTwo,
@@ -174,6 +191,7 @@ export const ButtonContextProvider = ({ children }) => {
     handleMouseLeaveSeven,
     handleMouseLeaveEight,
     handleMouseLeaveNine,
+    handleMouseLeaveTen,
 
     animationForUnderLineOne,
     animationForUnderLineTwo,
@@ -184,6 +202,7 @@ export const ButtonContextProvider = ({ children }) => {
     animationForUnderLineSeven,
     animationForUnderLineEight,
     animationForUnderLineNine,
+    animationForUnderLineTen,
   }
 
   return (

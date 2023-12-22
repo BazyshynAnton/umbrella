@@ -5,8 +5,10 @@ import {
   SwipeableDrawer,
   Typography,
 } from '@mui/material'
-import MenuOpenIcon from '@mui/icons-material/MenuOpen'
 import { NavLink } from 'react-router-dom'
+import { useHeaderContext } from '../../context/HeaderContext'
+
+import MenuOpenIcon from '@mui/icons-material/MenuOpen'
 
 import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.jpg'
 import Additionally from './Additionally'
@@ -20,7 +22,19 @@ const styleForLinkBlocks = {
   gap: '0.4rem',
 }
 
-const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
+const HeaderBurgerMenu = () => {
+  const {
+    open,
+    setOpen,
+    handleActiveLinkOne,
+    handleActiveLinkTwo,
+    handleActiveLinkThree,
+    stylesForLinks,
+    stylesForActiveLinks,
+    isActiveLinkOne,
+    isActiveLinkTwo,
+    isActiveLinkThree,
+  } = useHeaderContext()
   const handleTouchLInk = () => {
     setOpen(false)
     window.scrollTo(0, 0)
@@ -72,30 +86,42 @@ const HeaderBurgerMenu = ({ open, setOpen, stylesForLinks }) => {
           height: '200px',
         }}
       >
-        <NavLink to="/" onClick={handleTouchLInk}>
+        <NavLink to="/" onClick={handleActiveLinkOne}>
           <Box sx={styleForLinkBlocks}>
-            <HomeRoundedIcon sx={stylesForLinks} />
-            <Typography variant="h5" sx={stylesForLinks}>
+            <HomeRoundedIcon
+              sx={isActiveLinkOne ? stylesForActiveLinks : stylesForLinks}
+            />
+            <Typography
+              variant="h5"
+              sx={isActiveLinkOne ? stylesForActiveLinks : stylesForLinks}
+            >
               Main
             </Typography>
           </Box>
         </NavLink>
-        <NavLink to="/vaccine/science-of-mrna" onClick={handleTouchLInk}>
+        <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
           <Box sx={styleForLinkBlocks}>
-            <AutoStoriesRoundedIcon sx={stylesForLinks} />
+            <AutoStoriesRoundedIcon
+              sx={isActiveLinkTwo ? stylesForActiveLinks : stylesForLinks}
+            />
             <Typography
               variant="h5"
               fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
-              sx={stylesForLinks}
+              sx={isActiveLinkTwo ? stylesForActiveLinks : stylesForLinks}
             >
               Vaccine
             </Typography>
           </Box>
         </NavLink>
-        <NavLink to="/about-us" onClick={handleTouchLInk}>
+        <NavLink to="/about-us" onClick={handleActiveLinkThree}>
           <Box sx={styleForLinkBlocks}>
-            <AutoStoriesRoundedIcon sx={stylesForLinks} />
-            <Typography variant="h5" sx={stylesForLinks}>
+            <AutoStoriesRoundedIcon
+              sx={isActiveLinkThree ? stylesForActiveLinks : stylesForLinks}
+            />
+            <Typography
+              variant="h5"
+              sx={isActiveLinkThree ? stylesForActiveLinks : stylesForLinks}
+            >
               About Us
             </Typography>
           </Box>

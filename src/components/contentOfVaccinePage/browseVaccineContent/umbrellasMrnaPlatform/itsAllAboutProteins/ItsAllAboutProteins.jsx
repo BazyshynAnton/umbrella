@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import ReusableInformationBlock from '../../../../reusableComponentsForVaccineAndAboutPages/ReusableInformationBlock'
+import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
 
 import picOfResearch from '../../../../../pictures/picOfResearch.png'
 import picOfMed from '../../../../../pictures/picOfMed.png'

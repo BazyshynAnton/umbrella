@@ -1,17 +1,10 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 
 import { fontStyleOpenSans } from '../../../context/variables'
 
 const styleForImg = {
   width: '130px',
   height: '130px',
-}
-
-const styleForBlockWithImgAndText = {
-  width: '260px',
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
 }
 
 const styleForText = {
@@ -21,8 +14,17 @@ const styleForText = {
 }
 
 const ReusableItemBlock = ({ imgOne, imgTwo, textOne, textTwo }) => {
+  const width = useMediaQuery('(min-width:287px)')
+
+  const styleForBlockWithImgAndText = {
+    width: { sm: '260px', xs: '100%' },
+    display: 'flex',
+    flexDirection: width ? 'row' : 'column',
+    alignItems: { sm: 'center', xs: 'flex-start' },
+  }
+
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', flexDirection: { sm: 'row', xs: 'column' } }}>
       <Box sx={styleForBlockWithImgAndText}>
         <img style={styleForImg} src={imgOne} alt={textOne} />
         <Typography sx={styleForText}>{textOne}</Typography>

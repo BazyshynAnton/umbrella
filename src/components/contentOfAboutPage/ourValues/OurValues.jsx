@@ -6,7 +6,14 @@ import { fontStyleOpenSans } from '../../../context/variables'
 
 const OurValues = () => {
   return (
-    <Box sx={{ mt: '70px', display: 'flex', alignItems: 'center' }}>
+    <Box
+      sx={{
+        mt: '70px',
+        display: 'flex',
+        flexDirection: { md: 'row', xs: 'column' },
+        alignItems: 'center',
+      }}
+    >
       <Box sx={{ width: '100%', p: '0px 20px 0px 0px' }}>
         <Typography
           sx={{
@@ -22,7 +29,7 @@ const OurValues = () => {
           sx={{
             fontWeight: '500',
             fontSize: '1rem',
-            color: '#053f68',
+            color: '#376586',
             ...fontStyleOpenSans,
           }}
         >

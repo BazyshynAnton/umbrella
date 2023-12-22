@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
 import { fontStyleOpenSans } from '../../../../context/variables'
 import { NavLink } from 'react-router-dom'
+import { useHeaderContext } from '../../../../context/HeaderContext'
 
 const stylesForBtn = {
   blueBtn: {
@@ -40,12 +41,15 @@ const stylesForBtn = {
 }
 
 const ReusableButton = ({ buttonText }) => {
+  const { handleActiveLinkTwo } = useHeaderContext()
   return (
     <>
       {buttonText === 'learn more' ? (
         <NavLink
           to="/vaccine/science-of-mrna"
-          style={{ width: '160px', height: '62px', borderRadius: '12px' }}>
+          onClick={handleActiveLinkTwo}
+          style={{ width: '160px', height: '62px', borderRadius: '12px' }}
+        >
           <Button sx={stylesForBtn.blueBtn}>{buttonText}</Button>
         </NavLink>
       ) : (

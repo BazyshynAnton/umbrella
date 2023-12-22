@@ -1,10 +1,11 @@
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import smilingScientists from '../../../pictures/smilingScientists.jpg'
-import ReusableButtonWithAnimation from '../../reusableButtonForHomeAndAboutPages/ReusableButtonWithAnimation'
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
+import { Box } from '@mui/material'
 import { useButtonContext } from '../../../context/ButtonContext'
-import LifePicture from './contentOfLifeOfUmbrella/LifePicture'
-import ReusableLinkBlockWithPicture from '../../reusableButtonForHomeAndAboutPages/ReusableLinkBlockWithPicture'
+
+import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
+import ReusablePictureForLinkBlock from '../../reusableComponents/ReusablePictureForLinkBlock'
+
+import lifeAtUmbrellaPicture from '../../../pictures/lifeAtUmbrellaPicture.png'
+import smilingScientists from '../../../pictures/smilingScientists.jpg'
 
 const headerText = 'Join us and change the world of medicine'
 
@@ -34,8 +35,13 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
         handleLeave={handleMouseLeaveFive}
       />
 
-      {isSmallScreen && <LifePicture />}
-      {/* change  {isSmallScreen && <LifePicture />} */}
+      {isSmallScreen && (
+        <ReusablePictureForLinkBlock
+          topPosition={'13.5px'}
+          leftPosition={'0px'}
+          picture={lifeAtUmbrellaPicture}
+        />
+      )}
     </Box>
   )
 }

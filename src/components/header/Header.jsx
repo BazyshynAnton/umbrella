@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import {
   AppBar,
@@ -20,11 +19,9 @@ import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.jpg'
 import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
 const Header = () => {
-  const [open, setOpen] = useState(false)
+  const { setOpen } = useHeaderContext()
 
   const isSmallScreen = useMediaQuery('(min-width: 900px)')
-
-  const { stylesForLinks } = useHeaderContext()
 
   return (
     <>
@@ -75,13 +72,7 @@ const Header = () => {
             {isSmallScreen && <Additionally isSmallScreen={isSmallScreen} />}
           </Toolbar>
 
-          {!isSmallScreen && (
-            <HeaderBurgerMenu
-              open={open}
-              setOpen={setOpen}
-              stylesForLinks={stylesForLinks}
-            />
-          )}
+          {!isSmallScreen && <HeaderBurgerMenu />}
         </Container>
       </AppBar>
     </>

@@ -8,6 +8,7 @@ import NewFrontiers from './newFrontiers/NewFrontiers'
 import OurValues from './ourValues/OurValues'
 import OurMIndsets from './ourMIndsets/OurMIndsets'
 import Leadership from './leadership/Leadership'
+import Headquarters from './headquarters/Headquarters'
 
 const ContentOfAboutPage = () => {
   const isSmallScreen = useMediaQuery('(min-width:930px)')
@@ -22,6 +23,7 @@ const ContentOfAboutPage = () => {
         <OurValues />
         <OurMIndsets isSmallScreen={isSmallScreen} />
         <Leadership isSmallScreen={isSmallScreen} />
+        <Headquarters />
       </Container>
     </ButtonContextProvider>
   )

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 
-import ReusableComponentForIntroduce from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../../../reusableComponentsForVaccineAndAboutPages/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../reusableComponents/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../reusableComponents/ReusableComponentMrnaPicture'
 import QuestionsSwiper from './questionsSwiper/QuestionsSwiper'
 
 import demoImgFive from '../../../../pictures/demoImgFive.jfif'

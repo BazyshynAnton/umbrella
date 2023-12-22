@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 
-import ReusableComponentForIntroduce from '../../reusableComponentsForVaccineAndAboutPages/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../../reusableComponentsForVaccineAndAboutPages/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../reusableComponents/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../reusableComponents/ReusableComponentMrnaPicture'
 
 import microscope from '../../../pictures/microscope.png'
 import umbrellaGuyWithLaptop from '../../../pictures/umbrellaGuyWithLaptop.png'
@@ -13,11 +13,11 @@ const textForReusableComponent =
 
 const AboutUsOurMission = () => {
   return (
-    <Box sx={{ mt: '80px' }}>
+    <Box sx={{ mt: { lg: '80px', md: '120px' } }}>
       <Typography
         sx={{
           color: '#053f68',
-          fontSize: '3.5rem',
+          fontSize: { sm: '3.5rem', xs: '2.8rem' },
           fontWeight: '700',
           mb: '30px',
           ...fontStyleOpenSans,

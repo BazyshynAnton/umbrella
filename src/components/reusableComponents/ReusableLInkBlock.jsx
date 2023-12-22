@@ -15,7 +15,11 @@ const ReusableLInkBlock = ({
 }) => {
   return (
     <Box
-      sx={{ width: '600px', p: padding, cursor: 'pointer' }}
+      sx={{
+        width: { md: '600px', sm: '500px', xs: '100%' },
+        p: padding,
+        cursor: 'pointer',
+      }}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >

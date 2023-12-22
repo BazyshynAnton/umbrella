@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 
-import DateBlock from '../../reusableButtonForHomeAndAboutPages/DateBlock'
-import ReusablePictureForLink from '../../reusableButtonForHomeAndAboutPages/ReusablePictureForLinkBlock'
+import DateBlock from '../../reusableComponents/DateBlock'
+import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
 
 import delivering from '../../../pictures/delivering.png'
 
@@ -11,8 +11,9 @@ const Delivering = ({ isSmallScreen }) => {
   return (
     <Box
       sx={{
+        mt: { md: '0px', xs: '60px' },
         display: 'flex',
-        justifyContent: 'flex-start',
+        justifyContent: { md: 'flex-start' },
         position: 'relative',
         width: '100%',
       }}
@@ -20,7 +21,7 @@ const Delivering = ({ isSmallScreen }) => {
       <Box
         sx={{
           position: 'relative',
-          width: '600px',
+          width: { md: '600px', xs: '100%' },
           display: 'flex',
           flexDirection: 'column',
           gap: '2.5rem',
@@ -48,7 +49,7 @@ const Delivering = ({ isSmallScreen }) => {
           </Typography>
           <Typography
             sx={{
-              fontSize: '1.1rem',
+              fontSize: '1rem',
               color: '#376586',
               pt: '10px',
               ...fontStyleOpenSans,

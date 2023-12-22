@@ -1,8 +1,10 @@
 import { Box } from '@mui/material'
-import ReusableLinkBlockWithPicture from '../../reusableButtonForHomeAndAboutPages/ReusableLinkBlockWithPicture'
-import leadershipPicture from '../../../pictures/leadershipPicture.jpg'
 import { useButtonContext } from '../../../context/ButtonContext'
-import ReusablePictureForLinkBlock from '../../reusableButtonForHomeAndAboutPages/ReusablePictureForLinkBlock'
+
+import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
+import ReusablePictureForLinkBlock from '../../reusableComponents/ReusablePictureForLinkBlock'
+
+import leadershipPicture from '../../../pictures/leadershipPicture.jpg'
 import leadershipLogo from '../../../pictures/leadershipLogo.png'
 
 const text =

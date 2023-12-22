@@ -1,7 +1,13 @@
 import { Box, Typography } from '@mui/material'
 import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
-const stylesForAdditionallyLinks = { color: '#053f68', cursor: 'pointer' }
+import { fontStyleOpenSans } from '../../context/variables'
+
+const stylesForAdditionallyLinks = {
+  color: '#053f68',
+  cursor: 'pointer',
+  ...fontStyleOpenSans,
+}
 
 const Additionally = ({ isSmallScreen }) => {
   return (

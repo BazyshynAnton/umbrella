@@ -1,8 +1,8 @@
 import { Box } from '@mui/material'
 import { useButtonContext } from '../../../context/ButtonContext'
 
-import ReusableLInkBlock from '../../reusableButtonForHomeAndAboutPages/ReusableLInkBlock'
-import ReusablePictureForLink from '../../reusableButtonForHomeAndAboutPages/ReusablePictureForLinkBlock'
+import ReusableLInkBlock from '../../reusableComponents/ReusableLInkBlock'
+import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
 
 import picOfHuman from '../../../pictures/picOfHuman.png'
 
