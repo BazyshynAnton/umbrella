@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box } from '../MUIcomponents/MUIcomponents'
 
 const ReusableInformationBlock = ({ picture, headerText, informationText }) => {
   return (
@@ -9,7 +9,8 @@ const ReusableInformationBlock = ({ picture, headerText, informationText }) => {
         flexDirection: 'row',
         alignItems: { sm: 'center', xs: 'initial' },
         justifyContent: 'flex-start',
-      }}>
+      }}
+    >
       <Box sx={{ width: '150px', height: '150px' }}>
         <img
           style={{
@@ -26,7 +27,8 @@ const ReusableInformationBlock = ({ picture, headerText, informationText }) => {
           height: { sm: '130px', xs: '100%' },
           display: 'flex',
           flexDirection: 'column',
-        }}>
+        }}
+      >
         {headerText}
         {informationText}
       </Box>

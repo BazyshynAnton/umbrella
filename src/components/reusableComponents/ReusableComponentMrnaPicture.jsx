@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box } from '../MUIcomponents/MUIcomponents'
 import bgMrna from '../../pictures/bgMrna.png'
 
 const ReusableComponentMrnaPicture = () => {

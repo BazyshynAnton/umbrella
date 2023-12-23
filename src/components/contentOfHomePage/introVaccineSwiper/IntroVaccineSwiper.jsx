@@ -1,15 +1,19 @@
 import { useState } from 'react'
-import { useMediaQuery } from '@mui/material'
-import { Autoplay } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import {
+  ArrowBackIosNewIcon,
+  ArrowForwardIosIcon,
+  useMediaQuery,
+} from '../../MUIcomponents/MUIcomponents'
+import {
+  Swiper,
+  SwiperSlide,
+  Autoplay,
+} from '../../swiperComponents/swiperComponents'
 
 import LeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/LeftRightNavigationForIntroSwiper'
 import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
 import SmallScreensLeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/SmallScreensLeftRightNavigationForIntroSwiper'
 import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'
-
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 import { introVaccineSwiperData } from '../../../data/introVaccineSwiperData'
 
@@ -40,7 +44,7 @@ const IntroVaccineSlider = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className='mySwiper'
+      className="mySwiper"
       style={{
         margin: '0px 0px 30px 0px',
         display: 'flex',

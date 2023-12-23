@@ -1,5 +1,8 @@
-import { Box, Typography } from '@mui/material'
-import { useSpring, animated } from '@react-spring/web'
+import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
+import {
+  useSpring,
+  animated,
+} from '../../reactSpringComponents/reactSpringComponents'
 
 import { fontStyleOpenSans } from '../../../context/variables'
 
@@ -36,7 +39,8 @@ const YellowButton = ({ children }) => {
         justifyContent: 'flex-start',
         alignItems: 'center',
         cursor: 'pointer',
-      }}>
+      }}
+    >
       <Box
         style={{
           width: '50px',
@@ -46,15 +50,18 @@ const YellowButton = ({ children }) => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-        }}>
+        }}
+      >
         <animated.div
           style={{
             left: props.typographyOneLeft,
             position: 'absolute',
-          }}>
+          }}
+        >
           <Typography
             variant="h6"
-            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}>
+            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}
+          >
             {'>'}
           </Typography>
         </animated.div>
@@ -63,10 +70,12 @@ const YellowButton = ({ children }) => {
         style={{
           left: props.typographyTwoLeft,
           position: 'absolute',
-        }}>
+        }}
+      >
         <Typography
           variant="body1"
-          sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}>
+          sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}
+        >
           {children}
         </Typography>
       </animated.div>

@@ -1,4 +1,5 @@
-import { Box } from '@mui/material'
+import { Box } from '../../../MUIcomponents/MUIcomponents'
+
 import ReusableButton from './ReusableButton'
 
 const ReusableSlide = ({ text, img, buttonText }) => {

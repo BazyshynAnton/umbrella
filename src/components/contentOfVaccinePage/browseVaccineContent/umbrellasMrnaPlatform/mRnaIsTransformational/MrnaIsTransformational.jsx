@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../../../MUIcomponents/MUIcomponents'
 
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
@@ -16,16 +16,19 @@ const MrnaIsTransformational = () => {
           md: 'row',
           xs: 'column',
         },
-      }}>
+      }}
+    >
       <Box
         sx={{
           width: '100%',
-        }}>
+        }}
+      >
         <Box
           sx={{
             width: '100%',
             height: '300px',
-          }}>
+          }}
+        >
           <img
             style={{
               objectFit: 'cover',
@@ -45,12 +48,14 @@ const MrnaIsTransformational = () => {
             fontWeight: '600',
             color: '#376586',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           mRNA is transformational
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: '#376586', ...fontStyleOpenSans }}>
+          sx={{ color: '#376586', ...fontStyleOpenSans }}
+        >
           With our technology, we are <b>revolutionizing</b> medicine and
           developing potential mRNA treatments in shorter periods of time for
           previously <b>untreatable and emerging diseases</b>.
@@ -64,7 +69,8 @@ const MrnaIsTransformational = () => {
           display: { xs: 'flex' },
           flexDirection: { xs: 'column' },
           justifyContent: { md: 'center', xs: 'flex-start' },
-        }}>
+        }}
+      >
         <Typography
           variant="h5"
           sx={{
@@ -72,12 +78,14 @@ const MrnaIsTransformational = () => {
             fontWeight: '600',
             color: '#376586',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           We can positively impact the lives of millions of people
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: '#376586', ...fontStyleOpenSans }}>
+          sx={{ color: '#376586', ...fontStyleOpenSans }}
+        >
           Our mRNA platform, with its <b>speed, scale, and flexibility</b>, is
           uniquely suited to tackle current and emerging pathogens that threaten
           global health.

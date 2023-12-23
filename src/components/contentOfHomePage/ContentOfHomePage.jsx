@@ -1,14 +1,14 @@
-import { Container, useMediaQuery } from '@mui/material'
+import { Container, useMediaQuery } from '../MUIcomponents/MUIcomponents'
+import { PropagandaSwiperProvider } from '../../context/PropagandaSwiperContext'
+import { ButtonContextProvider } from '../../context/ButtonContext'
+
 import PropagandaSwiper from './propagandaSwiper/PropagandaSwiper'
 import CareersAtUmbrella from './careersAtUmbrella/CareersAtUmbrella'
 import ConnectWithUs from './connectWithUs/ConnectWithUs'
 import StayUpToDate from './stayUpToDate/StayUpToDate'
-
-import { PropagandaSwiperProvider } from '../../context/PropagandaSwiperContext'
 import IntroVaccineSwiper from './introVaccineSwiper/IntroVaccineSwiper'
 import NewsJobBlogsSwipers from './newsJobBlogsSwipers/NewsJobBlogsSwipers'
 import OurMission from './ourMission/OurMission'
-import { ButtonContextProvider } from '../../context/ButtonContext'
 import LifeAtUmbrella from './lifeAtUmbrella/LifeAtUmbrella'
 
 const ContentOfHomePage = () => {

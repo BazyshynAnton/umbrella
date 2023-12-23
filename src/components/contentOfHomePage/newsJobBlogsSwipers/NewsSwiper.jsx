@@ -1,5 +1,5 @@
 import ReusableSwiper from './ReusableSwiper'
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
+import { ArrowCircleRightOutlinedIcon } from '../../MUIcomponents/MUIcomponents'
 
 import { newsData } from '../../../data/newsData'
 import { useButtonContext } from '../../../context/ButtonContext'

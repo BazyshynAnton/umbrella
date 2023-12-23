@@ -1,11 +1,16 @@
-import { Box, Button, Typography } from '@mui/material'
-import { useSwiper } from 'swiper/react'
-import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
-import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded'
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded'
 import { useEffect, useState } from 'react'
+import { useSwiper } from '../../../swiperComponents/swiperComponents'
+import {
+  Box,
+  Typography,
+  Button,
+  PlayArrowRoundedIcon,
+  ArrowBackIosRoundedIcon,
+  ArrowForwardIosRoundedIcon,
+  PauseIcon,
+} from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
-import PauseIcon from '@mui/icons-material/Pause'
+
 const styleForBtns = {
   play: {
     minWidth: '0',

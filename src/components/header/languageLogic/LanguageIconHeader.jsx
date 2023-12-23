@@ -1,4 +1,4 @@
-import LanguageIcon from '@mui/icons-material/Language'
+import { LanguageIcon } from '../../MUIcomponents/MUIcomponents'
 
 const stylesForAdditionallyLinks = {
   color: '#053f68',
@@ -10,3 +10,6 @@ const LanguageIconHeader = () => {
 }
 
 export default LanguageIconHeader
+
+// язык
+// анимацию лого хедера, типо при переходе на страницу мейн оно бы прокручивалось

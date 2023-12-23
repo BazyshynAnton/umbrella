@@ -1,7 +1,11 @@
-import { Box, Button } from '@mui/material'
-import { useSwiper } from 'swiper/react'
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
+import {
+  Box,
+  ArrowBackIosNewIcon,
+  ArrowForwardIosIcon,
+  Button,
+} from '../../MUIcomponents/MUIcomponents.js'
+
+import { useSwiper } from '../../swiperComponents/swiperComponents.js'
 import { fontStyleOpenSans } from '../../../context/variables'
 
 const styleForBtn = {

@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../context/variables'
 const DateBlock = ({ integer, text, smallPlus }) => {
   return (

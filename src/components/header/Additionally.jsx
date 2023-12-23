@@ -1,7 +1,7 @@
-import { Box, Typography } from '@mui/material'
-import LanguageIconHeader from './languageLogic/LanguageIconHeader'
-
+import { Box, Typography } from '../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../context/variables'
+
+import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
 const stylesForAdditionallyLinks = {
   color: '#053f68',

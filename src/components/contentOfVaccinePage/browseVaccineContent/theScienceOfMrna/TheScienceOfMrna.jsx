@@ -6,8 +6,8 @@ import RevolutionizeMedicine from './revolutionizeMedicine/RevolutionizeMedicine
 import YouAreMadeOfProteins from './youAreMadeOfProteins/YouAreMadeOfProteins'
 import SwiperProteinFactories from './swiperProteinFactories/SwiperProteinFactories'
 
-import demoImgOne from '../../../../pictures/demoImgOne.jfif'
-import demoImgTwo from '../../../../pictures/demoImgTwo.jfif'
+import demoImgOne from '../../../../pictures/demoImgOne.png'
+import demoImgTwo from '../../../../pictures/demoImgTwo.png'
 import TheScienceOfMrnaForSmallScreens from './theScienceOfMrnaForSmallScreens/TheScienceOfMrnaForSmallScreens'
 
 const text =

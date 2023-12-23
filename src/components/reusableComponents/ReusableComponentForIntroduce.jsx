@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../MUIcomponents/MUIcomponents'
 
 const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
 
@@ -7,7 +7,8 @@ const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
     <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
       <Typography
         variant="body1"
-        sx={{ color: '#376586', width: '100%', ...fontStyle }}>
+        sx={{ color: '#376586', width: '100%', ...fontStyle }}
+      >
         {text}
       </Typography>
       <Box sx={{ width: '100%', height: '350px', position: 'relative' }}>
@@ -18,7 +19,8 @@ const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
             position: 'absolute',
             top: { lg: '-180px', md: '-220px', sm: '20px', xs: '20px' },
             right: '0',
-          }}>
+          }}
+        >
           <img
             style={{
               objectFit: 'cover',
@@ -37,7 +39,8 @@ const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
             position: 'absolute',
             bottom: { lg: '90px', md: '180px', sm: '0px', xs: '40px' },
             right: { lg: '250px', md: '200px', sm: '150px', xs: '120px' },
-          }}>
+          }}
+        >
           <img
             style={{
               objectFit: 'cover',

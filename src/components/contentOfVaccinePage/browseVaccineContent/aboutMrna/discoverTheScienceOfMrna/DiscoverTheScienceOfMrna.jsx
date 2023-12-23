@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from '@mui/material'
 
-import discoverTheScienceOfMrnaPicture from '../../../../../pictures/discoverTheScienceOfMrnaPicture.jfif'
+import discoverTheScienceOfMrnaPicture from '../../../../../pictures/discoverTheScienceOfMrnaPicture.png'
 
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
@@ -37,12 +37,12 @@ const DiscoverTheScienceOfMrna = () => {
       >
         <Box sx={{ width: { md: '540px', xs: '100%' } }}>
           <Typography
-            variant='h5'
+            variant="h5"
             sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}
           >
             Transforming medicine with mRNA
           </Typography>
-          <Typography variant='body1' sx={{ ...fontStyleOpenSans }}>
+          <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
             At Umbrella, we believe the future of medicine is mRNA, the language
             of life inside every cell in our bodies. With our technology, we are
             researching and developing investigational mRNA vaccines and
@@ -90,7 +90,7 @@ const DiscoverTheScienceOfMrna = () => {
             borderRadius: '8px',
           }}
           src={discoverTheScienceOfMrnaPicture}
-          alt='discoverTheScienceOfMrna'
+          alt="discoverTheScienceOfMrna"
         />
       </Box>
     </Box>

@@ -1,4 +1,5 @@
-import { Box } from '@mui/material'
+import { Box } from '../../MUIcomponents/MUIcomponents'
+
 import { useButtonContext } from '../../../context/ButtonContext'
 
 import DateBlock from '../../reusableComponents/DateBlock'

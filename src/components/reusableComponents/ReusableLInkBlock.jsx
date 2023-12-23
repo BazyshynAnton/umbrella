@@ -1,7 +1,11 @@
-import { Box, Typography } from '@mui/material'
+import {
+  Box,
+  Typography,
+  ArrowCircleRightOutlinedIcon,
+} from '../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../context/variables'
+
 import ReusableButtonWithAnimation from './ReusableButtonWithAnimation'
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
 
 const ReusableLInkBlock = ({
   text,

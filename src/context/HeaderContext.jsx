@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react'
 import { fontStyleOpenSans } from './variables'
+import { useSpring } from '@react-spring/web'
 
 const HeaderContext = createContext()
 
@@ -55,6 +56,15 @@ export const HeaderContextProvider = ({ children }) => {
     },
   }
 
+  const [isActiveAnimation, setIsActiveAnimation] = useState(false)
+
+  const headerLogoAnim = useSpring({
+    from: { transform: 'rotate(0deg)' },
+    to: { transform: 'rotate(360deg)' },
+    config: { duration: 400 },
+    reset: true,
+  })
+
   const [isActiveLinkOne, setIsActiveLinkOne] = useState(false)
   const [isActiveLinkTwo, setIsActiveLinkTwo] = useState(false)
   const [isActiveLinkThree, setIsActiveLinkThree] = useState(false)
@@ -64,6 +74,7 @@ export const HeaderContextProvider = ({ children }) => {
     setIsActiveLinkOne(true)
     setIsActiveLinkTwo(false)
     setIsActiveLinkThree(false)
+    setIsActiveAnimation(true)
     window.scrollTo(0, 0)
     setOpen(false)
   }
@@ -71,6 +82,7 @@ export const HeaderContextProvider = ({ children }) => {
     setIsActiveLinkOne(false)
     setIsActiveLinkTwo(true)
     setIsActiveLinkThree(false)
+    setIsActiveAnimation(false)
     window.scrollTo(0, 0)
     setOpen(false)
   }
@@ -78,6 +90,7 @@ export const HeaderContextProvider = ({ children }) => {
     setIsActiveLinkOne(false)
     setIsActiveLinkTwo(false)
     setIsActiveLinkThree(true)
+    setIsActiveAnimation(false)
     window.scrollTo(0, 0)
     setOpen(false)
   }
@@ -95,6 +108,8 @@ export const HeaderContextProvider = ({ children }) => {
     handleActiveLinkThree,
     open,
     setOpen,
+    headerLogoAnim,
+    isActiveAnimation,
   }
 
   return (

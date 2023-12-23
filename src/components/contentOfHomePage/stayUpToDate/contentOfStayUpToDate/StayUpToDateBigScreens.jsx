@@ -1,7 +1,7 @@
-import YellowButton from '../../yellowButton/YellowButton'
-import { Box, Typography } from '@mui/material'
-
+import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
+
+import YellowButton from '../../yellowButton/YellowButton'
 
 const StayUpToDateBigScreens = () => {
   return (
@@ -18,7 +18,7 @@ const StayUpToDateBigScreens = () => {
     >
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <Typography
-          variant='h3'
+          variant="h3"
           sx={{
             color: '#376586',
             fontWeight: '600',
@@ -29,7 +29,7 @@ const StayUpToDateBigScreens = () => {
         </Typography>
         <Box>
           <Typography
-            variant='body1'
+            variant="body1"
             sx={{
               color: '#376586',
               fontWeight: '400',

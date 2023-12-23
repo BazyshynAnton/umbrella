@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material'
-import { useSpring, animated } from '@react-spring/web'
+import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
+import { useSpring, animated } from '../../React-Spring/reactSpringComponents'
 
 import { fontStyleOpenSans } from '../../../context/variables'
 
@@ -30,7 +30,8 @@ const ChartDataSmallScreen = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: { sm: 'center', xs: 'flex-start' },
-      }}>
+      }}
+    >
       <Box
         sx={{
           width: { sm: '500px', xs: '200px' },
@@ -42,7 +43,8 @@ const ChartDataSmallScreen = () => {
           alignItems: 'flex-start',
           borderLeft: '2px solid #808080',
           paddingLeft: '8px',
-        }}>
+        }}
+      >
         <animated.p
           style={{
             fontSize: '20px',
@@ -51,7 +53,8 @@ const ChartDataSmallScreen = () => {
             fontWeight: '600',
 
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {people}
         </animated.p>
         <Typography variant="body1" sx={{ pr: '3px', ...fontStyleOpenSans }}>
@@ -69,7 +72,8 @@ const ChartDataSmallScreen = () => {
           alignItems: 'flex-start',
           paddingLeft: '8px',
           borderLeft: '2px solid #FF0000',
-        }}>
+        }}
+      >
         <animated.p
           style={{
             fontSize: '20px',
@@ -77,7 +81,8 @@ const ChartDataSmallScreen = () => {
             justifyContent: 'flex-start',
             fontWeight: '600',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {vaccine}
         </animated.p>
         <Typography variant="body1" sx={{ pr: '3px', ...fontStyleOpenSans }}>
@@ -95,7 +100,8 @@ const ChartDataSmallScreen = () => {
           alignItems: 'flex-start',
           paddingLeft: '8px',
           borderLeft: '2px solid #35a2eb',
-        }}>
+        }}
+      >
         <animated.p
           style={{
             fontSize: '20px',
@@ -103,7 +109,8 @@ const ChartDataSmallScreen = () => {
             justifyContent: 'flex-start',
             fontWeight: '600',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           {placebo}
         </animated.p>
         <Typography variant="body1" sx={{ pr: '3px', ...fontStyleOpenSans }}>

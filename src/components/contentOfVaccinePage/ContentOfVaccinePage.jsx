@@ -1,9 +1,10 @@
-import { Container } from '@mui/system'
+import { Container, useMediaQuery } from '../MUIcomponents/MUIcomponents'
+
 import VaccineEfficacyChart from './vaccineEfficacyChart/VaccineEfficacyChart'
 import VaccineEfficacyChartSmallScreen from './vaccineEfficacyChart/VaccineEfficacyChartSmallScreen'
 import BrowseVaccineContent from './browseVaccineContent/BrowseVaccineContent'
 import ChartData from './chartData/ChartData'
-import { useMediaQuery } from '@mui/material'
+
 import ChartDataSmallScreen from './chartData/ChartDataSmallScreen'
 import PieChartForMobile from './vaccineEfficacyChart/PieChartForMobile'
 

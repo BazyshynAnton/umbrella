@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@mui/material'
+import { useMediaQuery } from '../../MUIcomponents/MUIcomponents'
 
 import ConnectWithUsBigScreens from './contentOfConnectWithUs/ConnectWithUsBigScreens'
 import ConnectWithUsSmallScreens from './contentOfConnectWithUs/ConnectWithUsSmallScreens'

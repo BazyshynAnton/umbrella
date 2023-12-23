@@ -1,25 +1,28 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { useHeaderContext } from '../../context/HeaderContext'
 import {
+  MenuIcon,
   AppBar,
   Box,
   Container,
   IconButton,
   Toolbar,
   useMediaQuery,
-} from '@mui/material'
+} from '../MUIcomponents/MUIcomponents'
 
-import { useHeaderContext } from '../../context/HeaderContext'
+import { animated } from '@react-spring/web'
 
 import HeaderBurgerMenu from './HeaderBurgerMenu'
 import NavigationForBigScreens from './NavigationForBigScreens'
 import Additionally from './Additionally'
-import MenuIcon from '@mui/icons-material/Menu'
 
-import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.jpg'
+import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
 import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
-const Header = () => {
-  const { setOpen } = useHeaderContext()
+const Header = React.memo(() => {
+  const { setOpen, headerLogoAnim, isActiveAnimation, handleActiveLinkOne } =
+    useHeaderContext()
 
   const isSmallScreen = useMediaQuery('(min-width: 900px)')
 
@@ -35,17 +38,18 @@ const Header = () => {
         <Container>
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: '1.3rem' }}>
-              <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
+              <NavLink to="/" onClick={handleActiveLinkOne}>
                 <Box
                   sx={{
                     height: { md: '75px', sm: '70px', xs: '60px' },
                   }}
                 >
-                  <img
+                  <animated.img
                     style={{
                       objectFit: 'cover',
                       width: '100%',
                       height: '100%',
+                      ...(isActiveAnimation ? headerLogoAnim : {}),
                     }}
                     src={umbrellaHeaderLogoSmall}
                     alt="umbrella-logo"
@@ -77,6 +81,6 @@ const Header = () => {
       </AppBar>
     </>
   )
-}
+})
 
 export default Header

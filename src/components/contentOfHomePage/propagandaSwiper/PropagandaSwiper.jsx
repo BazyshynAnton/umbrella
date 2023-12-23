@@ -1,14 +1,14 @@
-import { animated } from '@react-spring/web'
-import { Box, Typography } from '@mui/material'
-import { usePropagandaSwiperContext } from '../../../context/PropagandaSwiperContext'
-
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
 import {
   EffectCreative,
   Autoplay,
   Pagination,
   Navigation,
-} from 'swiper/modules'
+  Swiper,
+  SwiperSlide,
+} from '../../swiperComponents/swiperComponents'
+import { animated } from '../../reactSpringComponents/reactSpringComponents'
+import { usePropagandaSwiperContext } from '../../../context/PropagandaSwiperContext'
 
 import slideForHomePageOne from '../../../pictures/slideForHomePageOne.jpg'
 import slideForHomePageTwo from '../../../pictures/slideForHomePageTwo.jpg'
@@ -36,7 +36,7 @@ const PropagandaSwiper = () => {
 
   return (
     <Swiper
-      className='my-swiper'
+      className="my-swiper"
       onSlideChange={handleSlideChange}
       spaceBetween={50}
       slidesPerView={1}
@@ -70,7 +70,7 @@ const PropagandaSwiper = () => {
             ...animatedStyles,
           }}
           src={slideForHomePageOne}
-          alt='slide-1'
+          alt="slide-1"
         />
         <Box
           sx={{
@@ -85,12 +85,12 @@ const PropagandaSwiper = () => {
               ...textAnimation1,
             }}
           >
-            <img style={stylesForQuotes} src={quote} alt='quotes' />
-            <Typography variant='body1' sx={stylesForTextInSlides.blueText}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
               Protect Yourself
               <br />
               <Typography
-                variant='caption'
+                variant="caption"
                 sx={stylesForTextInSlides.yellowText}
               >
                 and Others:
@@ -106,7 +106,7 @@ const PropagandaSwiper = () => {
         <animated.img
           style={{ ...stylesForPictures, ...animatedStyles }}
           src={slideForHomePageTwo}
-          alt='slide-2'
+          alt="slide-2"
         />
         <Box
           sx={{
@@ -121,8 +121,8 @@ const PropagandaSwiper = () => {
               ...textAnimation2,
             }}
           >
-            <img style={stylesForQuotes} src={quote} alt='quotes' />
-            <Typography variant='body1' sx={stylesForTextInSlides.blueText}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
               Together
               <br />
               we are stronger:
@@ -130,7 +130,7 @@ const PropagandaSwiper = () => {
               protect yourself
               <br />
               <Typography
-                variant='caption'
+                variant="caption"
                 sx={stylesForTextInSlides.yellowText}
               >
                 and your loved
@@ -145,7 +145,7 @@ const PropagandaSwiper = () => {
         <animated.img
           style={{ ...stylesForPictures, ...animatedStyles }}
           src={slideForHomePageThree}
-          alt='slide-3'
+          alt="slide-3"
         />
         <Box
           sx={{
@@ -160,8 +160,8 @@ const PropagandaSwiper = () => {
               ...textAnimation3,
             }}
           >
-            <img style={stylesForQuotes} src={quote} alt='quotes' />
-            <Typography variant='body1' sx={stylesForTextInSlides.blueText}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
               Take
               <br />
               the Umbrella vaccine
@@ -169,7 +169,7 @@ const PropagandaSwiper = () => {
               to strengthen
               <br />
               <Typography
-                variant='caption'
+                variant="caption"
                 sx={stylesForTextInSlides.yellowText}
               >
                 the immune system
@@ -182,7 +182,7 @@ const PropagandaSwiper = () => {
         <animated.img
           style={{ ...stylesForPictures, ...animatedStyles }}
           src={slideForHomePageFour}
-          alt='slide-4'
+          alt="slide-4"
         />
         <Box
           sx={{
@@ -197,14 +197,14 @@ const PropagandaSwiper = () => {
               ...textAnimation4,
             }}
           >
-            <img style={stylesForQuotes} src={quote} alt='quotes' />
-            <Typography variant='body1' sx={stylesForTextInSlides.blueText}>
+            <img style={stylesForQuotes} src={quote} alt="quotes" />
+            <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
               Umbrella:
               <br />
               Innovations
               <br />
               <Typography
-                variant='caption'
+                variant="caption"
                 sx={stylesForTextInSlides.yellowText}
               >
                 with

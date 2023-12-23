@@ -5,11 +5,11 @@ import SwiperCore from 'swiper/core'
 
 import { fontStyleOpenSans } from '../../../../../context/variables'
 
-import firstSlideSwiperProtein from '../../../../../pictures/firstSlideSwiperProtein.jfif'
+import firstSlideSwiperProtein from '../../../../../pictures/firstSlideSwiperProtein.png'
 
-import secondSlideSwiperProtein from '../../../../../pictures/secondSlideSwiperProtein.jfif'
-import thirdSlideSwiperProtein from '../../../../../pictures/thirdSlideSwiperProtein.jfif'
-import lastSlideSwiperProtein from '../../../../../pictures/lastSlideSwiperProtein.jfif'
+import secondSlideSwiperProtein from '../../../../../pictures/secondSlideSwiperProtein.png'
+import thirdSlideSwiperProtein from '../../../../../pictures/thirdSlideSwiperProtein.png'
+import lastSlideSwiperProtein from '../../../../../pictures/lastSlideSwiperProtein.png'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'

@@ -5,7 +5,7 @@ import ItsAllAboutProteins from './itsAllAboutProteins/ItsAllAboutProteins'
 import MrnaIsTransformational from './mRnaIsTransformational/MrnaIsTransformational'
 
 import demoImgThree from '../../../../pictures/demoImgThree.jpeg'
-import demoImgFour from '../../../../pictures/demoImgFour.jfif'
+import demoImgFour from '../../../../pictures/demoImgFour.png'
 
 const text =
   'Our scientists are developing mRNA medicines to help prevent or treat disease.'

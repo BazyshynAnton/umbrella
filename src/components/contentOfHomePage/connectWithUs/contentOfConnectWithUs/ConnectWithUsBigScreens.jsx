@@ -1,7 +1,7 @@
-import { Box, Typography } from '@mui/material'
-import YellowButton from '../../yellowButton/YellowButton'
-
+import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
+
+import YellowButton from '../../yellowButton/YellowButton'
 
 import chair from '../../../../pictures/chair.jpg'
 
@@ -30,7 +30,7 @@ const ConnectWithUsBigScreens = () => {
             height: '100%',
           }}
           src={chair}
-          alt='pic'
+          alt="pic"
         />
       </Box>
 
@@ -58,7 +58,7 @@ const ConnectWithUsBigScreens = () => {
           }}
         >
           <Typography
-            variant='h3'
+            variant="h3"
             sx={{
               color: '#376586',
               fontWeight: '600',
@@ -68,7 +68,7 @@ const ConnectWithUsBigScreens = () => {
             Connect with us
           </Typography>
           <Typography
-            variant='body1'
+            variant="body1"
             sx={{
               color: '#376586',
               fontWeight: '400',

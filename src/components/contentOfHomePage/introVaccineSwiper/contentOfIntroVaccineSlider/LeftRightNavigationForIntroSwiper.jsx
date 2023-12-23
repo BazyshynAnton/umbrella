@@ -1,6 +1,6 @@
-import { Button } from '@mui/material'
 import { fontStyleOpenSans } from '../../../../context/variables'
-import { useSwiper } from 'swiper/react'
+import { Button } from '../../../MUIcomponents/MUIcomponents'
+import { useSwiper } from '../../../swiperComponents/swiperComponents'
 
 const LeftRightNavigationForIntroSwiper = ({ children, stylesForBtn, id }) => {
   const swiper = useSwiper()
@@ -24,7 +24,8 @@ const LeftRightNavigationForIntroSwiper = ({ children, stylesForBtn, id }) => {
         },
         ...stylesForBtn,
         ...fontStyleOpenSans,
-      }}>
+      }}
+    >
       {children}
     </Button>
   )

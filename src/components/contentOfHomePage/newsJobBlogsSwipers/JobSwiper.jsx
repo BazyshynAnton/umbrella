@@ -1,8 +1,8 @@
-import ReusableSwiper from './ReusableSwiper'
-import OpenInNewIcon from '@mui/icons-material/OpenInNew'
-
 import { jobData } from '../../../data/jobData'
+import { OpenInNewIcon } from '../../MUIcomponents/MUIcomponents'
 import { useButtonContext } from '../../../context/ButtonContext'
+
+import ReusableSwiper from './ReusableSwiper'
 
 const JobSwiper = () => {
   const { handleMouseEnterTwo, handleMouseLeaveTwo, animationForUnderLineTwo } =

@@ -1,9 +1,9 @@
-import YellowButton from '../../yellowButton/YellowButton'
-
+import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
+import YellowButton from '../../yellowButton/YellowButton'
+
 import redBook from '../../../../pictures/redBook.png'
-import { Box, Typography } from '@mui/material'
 
 const ContentForBigScreens = () => {
   return (
@@ -29,7 +29,7 @@ const ContentForBigScreens = () => {
             width: '100%',
           }}
           src={redBook}
-          alt='pic'
+          alt="pic"
         />
       </Box>
 
@@ -57,7 +57,7 @@ const ContentForBigScreens = () => {
           }}
         >
           <Typography
-            variant='h3'
+            variant="h3"
             sx={{
               color: '#376586',
               fontWeight: '600',
@@ -67,7 +67,7 @@ const ContentForBigScreens = () => {
             Careers at Umbrella
           </Typography>
           <Typography
-            variant='body1'
+            variant="body1"
             sx={{
               color: '#376586',
               fontWeight: '400',

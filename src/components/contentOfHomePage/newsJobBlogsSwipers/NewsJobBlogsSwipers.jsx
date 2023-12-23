@@ -1,9 +1,10 @@
-import { Box, Button } from '@mui/material'
-import NewsSwiper from './NewsSwiper'
 import { useState } from 'react'
+import { Box, Button } from '../../MUIcomponents/MUIcomponents'
+import { fontStyleOpenSans } from '../../../context/variables'
+
+import NewsSwiper from './NewsSwiper'
 import JobSwiper from './JobSwiper'
 import BlogsSwiper from './BlogsSwiper'
-import { fontStyleOpenSans } from '../../../context/variables'
 
 const NewsJobBlogsSwipers = () => {
   const [activeNewsSwiper, setActiveNewsSwiper] = useState(true)

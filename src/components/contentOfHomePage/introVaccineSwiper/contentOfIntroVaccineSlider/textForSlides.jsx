@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
 export const textForSlide1 = (

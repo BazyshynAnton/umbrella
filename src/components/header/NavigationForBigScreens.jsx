@@ -1,6 +1,7 @@
-import { Box, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
+import { Box, Typography } from '../MUIcomponents/MUIcomponents'
 import { useHeaderContext } from '../../context/HeaderContext'
+
 const NavigationForBigScreens = () => {
   const {
     stylesForLinks,

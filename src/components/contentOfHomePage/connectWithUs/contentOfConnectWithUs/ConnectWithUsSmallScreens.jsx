@@ -1,7 +1,7 @@
-import YellowButton from '../../yellowButton/YellowButton'
-import { Box, Typography } from '@mui/material'
-
+import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
+
+import YellowButton from '../../yellowButton/YellowButton'
 
 import phoneIcon from '../../../../pictures/phoneIcon.png'
 import mailIcon from '../../../../pictures/mailIcon.png'

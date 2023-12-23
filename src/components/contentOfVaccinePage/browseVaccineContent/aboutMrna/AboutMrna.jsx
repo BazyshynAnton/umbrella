@@ -4,8 +4,8 @@ import ReusableComponentForIntroduce from '../../../reusableComponents/ReusableC
 import ReusableComponentMrnaPicture from '../../../reusableComponents/ReusableComponentMrnaPicture'
 import QuestionsSwiper from './questionsSwiper/QuestionsSwiper'
 
-import demoImgFive from '../../../../pictures/demoImgFive.jfif'
-import demoImgSix from '../../../../pictures/demoImgSix.jfif'
+import demoImgFive from '../../../../pictures/demoImgFive.png'
+import demoImgSix from '../../../../pictures/demoImgSix.png'
 import DiscoverTheScienceOfMrna from './discoverTheScienceOfMrna/DiscoverTheScienceOfMrna'
 
 import { fontStyleOpenSans } from '../../../../context/variables'

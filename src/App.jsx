@@ -1,9 +1,14 @@
+import { lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import MainLayout from './components/layouts/MainLayout'
-import HomePage from './pages/HomePage'
-import VaccinePage from './pages/VaccinePage'
-import AboutPage from './pages/AboutPage'
 import { HeaderContextProvider } from './context/HeaderContext'
+import MainLayout from './components/layouts/MainLayout'
+// import HomePage from './pages/HomePage'
+// import VaccinePage from './pages/VaccinePage'
+// import AboutPage from './pages/AboutPage'
+
+const HomePage = lazy(() => import('./pages/HomePage'))
+const VaccinePage = lazy(() => import('./pages/VaccinePage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
 
 function App() {
   return (

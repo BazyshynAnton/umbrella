@@ -1,10 +1,10 @@
 import { useState } from 'react'
-
-import { Button } from '@mui/material'
-import { useSwiper } from 'swiper/react'
-
-import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
-import PauseIcon from '@mui/icons-material/Pause'
+import {
+  Button,
+  PlayArrowRoundedIcon,
+  PauseIcon,
+} from '../../../MUIcomponents/MUIcomponents'
+import { useSwiper } from '../../../swiperComponents/swiperComponents'
 
 const stylesForPauseAndPlayBtn = {
   blocks: {

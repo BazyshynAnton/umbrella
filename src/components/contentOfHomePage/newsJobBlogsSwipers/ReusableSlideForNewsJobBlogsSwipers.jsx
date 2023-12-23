@@ -1,4 +1,5 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
+
 import { fontStyleOpenSans } from '../../../context/variables'
 
 const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
@@ -28,7 +29,7 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
       }}
     >
       <Typography
-        variant='body1'
+        variant="body1"
         sx={{
           fontSize: '17px',
           fontWeight: '600',
@@ -39,7 +40,7 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
         {text}
       </Typography>
       <Typography
-        variant='body1'
+        variant="body1"
         sx={{
           fontSize: '14px',
           color: 'rgb(80, 121, 149)',

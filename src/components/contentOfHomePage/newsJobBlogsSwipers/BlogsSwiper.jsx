@@ -1,8 +1,8 @@
-import ReusableSwiper from './ReusableSwiper'
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined'
-
+import { ArrowCircleRightOutlinedIcon } from '../../MUIcomponents/MUIcomponents'
 import { blogsData } from '../../../data/blogsData'
 import { useButtonContext } from '../../../context/ButtonContext'
+
+import ReusableSwiper from './ReusableSwiper'
 
 const JobSwiper = () => {
   const {

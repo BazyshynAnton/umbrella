@@ -1,7 +1,10 @@
-import { Box, Container, Typography } from '@mui/material'
-
-import TwitterIcon from '@mui/icons-material/Twitter'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import {
+  Box,
+  Container,
+  Typography,
+  TwitterIcon,
+  LinkedInIcon,
+} from '../MUIcomponents/MUIcomponents'
 
 import umbrellaFooterLogo from '../../pictures/umbrellaFooterLogo.png'
 
@@ -40,7 +43,8 @@ const Footer = () => {
         height: '100%',
         background: '#083952',
         color: '#fff',
-      }}>
+      }}
+    >
       <Container>
         <Box
           sx={{
@@ -50,10 +54,12 @@ const Footer = () => {
             alignItems: { md: 'center', xs: 'flex-start' },
             mt: '30px',
             height: '100%',
-          }}>
+          }}
+        >
           <Box>
             <Box
-              sx={{ width: '200px', height: '104px', mb: '20px', mt: '20px' }}>
+              sx={{ width: '200px', height: '104px', mb: '20px', mt: '20px' }}
+            >
               <img
                 style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 src={umbrellaFooterLogo}
@@ -85,7 +91,8 @@ const Footer = () => {
                 alignItems: 'center',
                 mt: '15px',
                 mb: '20px',
-              }}>
+              }}
+            >
               <TwitterIcon
                 sx={{
                   background: '#fff',
@@ -110,21 +117,24 @@ const Footer = () => {
               display: 'flex',
               flexDirection: { sm: 'row', xs: 'column' },
               gap: '1.5rem',
-            }}>
+            }}
+          >
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 gap: '0.5rem',
-              }}>
+              }}
+            >
               <Typography
                 variant="h5"
                 sx={{
                   fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '600',
                   cursor: 'default',
-                }}>
+                }}
+              >
                 Company
               </Typography>
               <Typography variant="body1" sx={styleForTextCompany}>
@@ -148,14 +158,16 @@ const Footer = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0.5rem',
-              }}>
+              }}
+            >
               <Typography
                 variant="h5"
                 sx={{
                   fontFamily: "'Open Sans', sans-serif",
                   fontWeight: '600',
                   cursor: 'default',
-                }}>
+                }}
+              >
                 Quick Links
               </Typography>
               <Typography variant="body1" sx={styleForTextCompany}>
@@ -189,7 +201,8 @@ const Footer = () => {
             flexDirection: 'row',
             gap: '1rem',
             flexWrap: 'wrap',
-          }}>
+          }}
+        >
           <Typography variant="body2" sx={stylesForTextBelowTheLine}>
             Terms of Use
           </Typography>
@@ -219,7 +232,8 @@ const Footer = () => {
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: '600',
               cursor: 'default',
-            }}>
+            }}
+          >
             © {DATE} Umbrella.corp
           </Typography>
           <Typography
@@ -228,7 +242,8 @@ const Footer = () => {
               fontFamily: "'Open Sans', sans-serif",
               fontWeight: '600',
               cursor: 'default',
-            }}>
+            }}
+          >
             All rights reserved
           </Typography>
         </Box>

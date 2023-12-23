@@ -1,20 +1,19 @@
+import { NavLink } from 'react-router-dom'
+import { useHeaderContext } from '../../context/HeaderContext'
 import {
   Box,
+  Typography,
   Divider,
   IconButton,
   SwipeableDrawer,
-  Typography,
-} from '@mui/material'
-import { NavLink } from 'react-router-dom'
-import { useHeaderContext } from '../../context/HeaderContext'
+  MenuOpenIcon,
+  AutoStoriesRoundedIcon,
+  HomeRoundedIcon,
+} from '../MUIcomponents/MUIcomponents'
 
-import MenuOpenIcon from '@mui/icons-material/MenuOpen'
-
-import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.jpg'
 import Additionally from './Additionally'
 
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
-import AutoStoriesRoundedIcon from '@mui/icons-material/AutoStoriesRounded'
+import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
 
 const styleForLinkBlocks = {
   display: 'flex',

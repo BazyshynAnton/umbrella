@@ -1,7 +1,10 @@
-import { Box } from '@mui/material'
-import { useSpring, animated } from '@react-spring/web'
+import {
+  useSpring,
+  animated,
+} from '../../../reactSpringComponents/reactSpringComponents'
 import { useEffect, useState } from 'react'
-import { useSwiper } from 'swiper/react'
+import { useSwiper } from '../../../swiperComponents/swiperComponents'
+import { Box } from '../../../MUIcomponents/MUIcomponents'
 
 import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccineSwiper'
 

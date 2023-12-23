@@ -1,4 +1,4 @@
-import { useMediaQuery } from '@mui/material'
+import { useMediaQuery } from '../../MUIcomponents/MUIcomponents'
 
 import StayUpToDateBigScreens from './contentOfStayUpToDate/StayUpToDateBigScreens'
 import StayUpToDateSmallScreens from './contentOfStayUpToDate/StayUpToDateSmallScreens'

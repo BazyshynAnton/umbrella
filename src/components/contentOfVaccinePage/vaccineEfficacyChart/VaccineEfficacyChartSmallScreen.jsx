@@ -1,5 +1,5 @@
 import {
-  Chart as ChartJS,
+  ChartJS,
   CategoryScale,
   LinearScale,
   PointElement,
@@ -7,8 +7,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js'
-import { Line } from 'react-chartjs-2'
+  Line,
+} from '../../ChartComponents/chartComponents'
 
 ChartJS.register(
   CategoryScale,
