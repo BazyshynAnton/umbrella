@@ -1,5 +1,5 @@
 import ReusableLeftInfoRightPictureBlock from '../../reusableComponents/ReusableLeftInfoRightPictureBlock'
-import headquartersPicture from '../../../pictures/headquartersPicture.png'
+import headquartersPicture from '../../../assets/pictures/headquartersPicture.webp'
 import { useButtonContext } from '../../../context/ButtonContext'
 
 const text = 'Our headquarters are located in Raccoon City, Missouri, USA.'

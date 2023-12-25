@@ -1,9 +1,9 @@
 import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
-import YellowButton from '../../yellowButton/YellowButton'
+import YellowButton from '../../shared/Button/YellowButton'
 
-import redBook from '../../../../pictures/redBook.png'
+import redBook from '../../../../assets/pictures/redBook.webp'
 
 const ContentForBigScreens = () => {
   return (

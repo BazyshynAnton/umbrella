@@ -2,10 +2,10 @@ import { Box } from '@mui/material'
 
 import ReusableItemBlock from './ReusableItemBlock'
 
-import medalForItemsBlock from '../../../pictures/medalForItemsBlock.png'
-import puzzleForItemsBlock from '../../../pictures/puzzleForItemsBlock.png'
-import relentlessPicForItemsBlock from '../../../pictures/relentlessPicForItemsBlock.png'
-import picOfResearch from '../../../pictures/picOfResearch.png'
+import medalForItemsBlock from '../../../assets/pictures/medalForItemsBlock.png'
+import puzzleForItemsBlock from '../../../assets/pictures/puzzleForItemsBlock.png'
+import relentlessPicForItemsBlock from '../../../assets/pictures/relentlessPicForItemsBlock.png'
+import picOfResearch from '../../../assets/pictures/picOfResearch.png'
 
 const ItemsBlock = () => {
   return (

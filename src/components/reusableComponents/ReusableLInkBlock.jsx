@@ -5,7 +5,7 @@ import {
 } from '../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../context/variables'
 
-import ReusableButtonWithAnimation from './ReusableButtonWithAnimation'
+import ReusableButtonWithAnimation from '../contentOfHomePage/shared/Button/ReusableButtonWithAnimation'
 
 const ReusableLInkBlock = ({
   text,

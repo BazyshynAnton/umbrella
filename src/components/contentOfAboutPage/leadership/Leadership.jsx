@@ -4,8 +4,8 @@ import { useButtonContext } from '../../../context/ButtonContext'
 import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
 import ReusablePictureForLinkBlock from '../../reusableComponents/ReusablePictureForLinkBlock'
 
-import leadershipPicture from '../../../pictures/leadershipPicture.jpg'
-import leadershipLogo from '../../../pictures/leadershipLogo.png'
+import leadershipPicture from '../../../assets/pictures/leadershipPicture.webp'
+import leadershipLogo from '../../../assets/pictures/leadershipLogo.webp'
 
 const text =
   'Together, we are working to deliver on the promise of mRNA science for people around the world.'

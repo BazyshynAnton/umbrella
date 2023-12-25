@@ -1,5 +1,5 @@
 import { jobData } from '../../../data/jobData'
-import { OpenInNewIcon } from '../../MUIcomponents/MUIcomponents'
+import { OpenInNewIcon } from '../shared/ui/MUI/mui'
 import { useButtonContext } from '../../../context/ButtonContext'
 
 import ReusableSwiper from './ReusableSwiper'

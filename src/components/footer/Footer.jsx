@@ -6,7 +6,7 @@ import {
   LinkedInIcon,
 } from '../MUIcomponents/MUIcomponents'
 
-import umbrellaFooterLogo from '../../pictures/umbrellaFooterLogo.png'
+import umbrellaFooterLogo from '../../assets/pictures/umbrellaFooterLogo.webp'
 
 const DATE = new Date().getFullYear()
 

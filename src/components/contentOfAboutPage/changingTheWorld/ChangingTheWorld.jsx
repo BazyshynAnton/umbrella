@@ -6,8 +6,8 @@ import { useHeaderContext } from '../../../context/HeaderContext'
 import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
 import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
 
-import umbrellaGuy from '../../../pictures/umbrellaGuy.png'
-import changingTheWorld from '../../../pictures/changingTheWorld.png'
+import umbrellaGuy from '../../../assets/pictures/umbrellaGuy.webp'
+import changingTheWorld from '../../../assets/pictures/changingTheWorld.webp'
 
 const headerText = 'We’re changing the world of medicine'
 const text =

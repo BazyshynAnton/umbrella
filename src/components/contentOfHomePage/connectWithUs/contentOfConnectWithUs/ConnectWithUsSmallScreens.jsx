@@ -1,10 +1,10 @@
 import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
-import YellowButton from '../../yellowButton/YellowButton'
+import YellowButton from '../../shared/Button/YellowButton'
 
-import phoneIcon from '../../../../pictures/phoneIcon.png'
-import mailIcon from '../../../../pictures/mailIcon.png'
+import phoneIcon from '../../../../assets/pictures/phoneIcon.webp'
+import mailIcon from '../../../../assets/pictures/mailIcon.webp'
 
 const ConnectWithUsSmallScreens = () => {
   return (

@@ -1,5 +1,8 @@
 import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
-import { useSpring, animated } from '../../React-Spring/reactSpringComponents'
+import {
+  useSpring,
+  animated,
+} from '../../reactSpringComponents/reactSpringComponents'
 
 import { fontStyleOpenSans } from '../../../context/variables'
 

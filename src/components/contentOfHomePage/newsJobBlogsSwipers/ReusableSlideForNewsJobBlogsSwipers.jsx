@@ -1,6 +1,6 @@
-import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
+import { Box, Typography } from '../shared/ui/MUI/mui'
 
-import { fontStyleOpenSans } from '../../../context/variables'
+import { fontStyleOpenSans } from '../shared/ui/font/openSans'
 
 const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
   return (

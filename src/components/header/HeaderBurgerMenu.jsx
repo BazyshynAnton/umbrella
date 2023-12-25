@@ -13,7 +13,7 @@ import {
 
 import Additionally from './Additionally'
 
-import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
+import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
 
 const styleForLinkBlocks = {
   display: 'flex',

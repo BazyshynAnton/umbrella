@@ -4,7 +4,7 @@ import { useHeaderContext } from '../../../context/HeaderContext'
 
 import ReusableLeftInfoRightPictureBlock from '../../reusableComponents/ReusableLeftInfoRightPictureBlock'
 
-import newFrontiers from '../../../pictures/newFrontiersPic.jpeg'
+import newFrontiers from '../../../assets/pictures/newFrontiersPic.webp'
 
 const headerText = 'Exploring new frontiers of mRNA'
 const text =

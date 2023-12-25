@@ -1,9 +1,9 @@
 import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
-import YellowButton from '../../yellowButton/YellowButton'
+import YellowButton from '../../shared/Button/YellowButton'
 
-import chair from '../../../../pictures/chair.jpg'
+import chair from '../../../../assets/pictures/chair.webp'
 
 const ConnectWithUsBigScreens = () => {
   return (

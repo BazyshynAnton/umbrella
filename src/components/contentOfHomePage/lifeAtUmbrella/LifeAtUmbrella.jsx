@@ -1,11 +1,10 @@
-import { Box } from '../../MUIcomponents/MUIcomponents'
 import { useButtonContext } from '../../../context/ButtonContext'
 
-import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
-import ReusablePictureForLinkBlock from '../../reusableComponents/ReusablePictureForLinkBlock'
+import ReusableLinkBlockWithPicture from '../shared/Blocks/ReusableLinkBlockWithPicture'
+import ReusablePictureForLinkBlock from '../shared/Blocks/ReusablePictureForLinkBlock'
 
-import lifeAtUmbrellaPicture from '../../../pictures/lifeAtUmbrellaPicture.png'
-import smilingScientists from '../../../pictures/smilingScientists.jpg'
+import lifeAtUmbrellaPicture from '../../../assets/pictures/lifeAtUmbrellaPicture.webp'
+import smilingScientists from '../../../assets/pictures/smilingScientists.webp'
 
 const headerText = 'Join us and change the world of medicine'
 
@@ -17,8 +16,8 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
   } = useButtonContext()
 
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: 'flex',
         justifyContent: 'flex-end',
         mt: '30px',
@@ -42,7 +41,7 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
           picture={lifeAtUmbrellaPicture}
         />
       )}
-    </Box>
+    </div>
   )
 }
 

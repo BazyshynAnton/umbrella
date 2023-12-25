@@ -1,5 +1,5 @@
-import { Typography } from '../../../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { Typography } from '../../shared/ui/MUI/mui'
+import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
 
 export const textForSlide1 = (
   <Typography

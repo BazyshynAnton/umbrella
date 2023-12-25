@@ -1,6 +1,6 @@
-import umbrellaVaccineSlide1 from '../pictures/umbrellaVaccineSlide1.png'
-import getVaccinatedThisSeasonSlide2 from '../pictures/getVaccinatedThisSeasonSlide2.png'
-import holidaysVaccineSlide3 from '../pictures/holidaysVaccineSlide3.png'
+import umbrellaVaccineSlide1 from '../assets/pictures/umbrellaVaccineSlide1.webp'
+import getVaccinatedThisSeasonSlide2 from '../assets/pictures/getVaccinatedThisSeasonSlide2.webp'
+import holidaysVaccineSlide3 from '../assets/pictures/holidaysVaccineSlide3.webp'
 
 import {
   textForSlide1,

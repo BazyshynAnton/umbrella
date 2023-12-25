@@ -1,28 +1,20 @@
-import { useState } from 'react'
+import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
+import { useState } from '../../shared/ui/reactImports/reactImports'
 import {
   Button,
   PlayArrowRoundedIcon,
   PauseIcon,
-} from '../../../MUIcomponents/MUIcomponents'
-import { useSwiper } from '../../../swiperComponents/swiperComponents'
+} from '../../shared/ui/MUI/mui'
 
-const stylesForPauseAndPlayBtn = {
-  blocks: {
-    width: '35px',
-    minWidth: '35px',
-    height: '35px',
-
-    ':hover': {
-      background: '#d6e5eb',
-    },
-  },
-  icons: { fontSize: '2.5rem', color: '#376586' },
-}
-
-const CustomAutoPlayForIntroVaccineSwiper = ({ setPausedSwiper }) => {
+const CustomAutoPlayForIntroVaccineSwiper = ({
+  stylesForIcons,
+  stylesForPlayPauseBtn,
+  setPausedSwiper,
+}) => {
   const swiper = useSwiper()
 
   const [isPlayTrue, setIsPlayTrue] = useState(true)
+
   const handlePauseClick = () => {
     swiper.autoplay.stop()
     setIsPlayTrue(false)
@@ -33,15 +25,16 @@ const CustomAutoPlayForIntroVaccineSwiper = ({ setPausedSwiper }) => {
     setIsPlayTrue(true)
     setPausedSwiper(true)
   }
+
   return (
     <>
       {isPlayTrue ? (
-        <Button onClick={handlePauseClick} sx={stylesForPauseAndPlayBtn.blocks}>
-          <PauseIcon sx={stylesForPauseAndPlayBtn.icons} />
+        <Button onClick={handlePauseClick} sx={stylesForPlayPauseBtn}>
+          <PauseIcon sx={stylesForIcons} />
         </Button>
       ) : (
-        <Button onClick={handlePLayClick} sx={stylesForPauseAndPlayBtn.blocks}>
-          <PlayArrowRoundedIcon sx={stylesForPauseAndPlayBtn.icons} />
+        <Button onClick={handlePLayClick} sx={stylesForPlayPauseBtn}>
+          <PlayArrowRoundedIcon sx={stylesForIcons} />
         </Button>
       )}
     </>

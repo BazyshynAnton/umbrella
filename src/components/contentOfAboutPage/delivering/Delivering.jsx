@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 import DateBlock from '../../reusableComponents/DateBlock'
 import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
 
-import delivering from '../../../pictures/delivering.png'
+import delivering from '../../../assets/pictures/delivering.webp'
 
 import { fontStyleOpenSans } from '../../../context/variables'
 

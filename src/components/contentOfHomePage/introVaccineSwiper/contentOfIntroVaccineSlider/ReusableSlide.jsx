@@ -1,4 +1,4 @@
-import { Box } from '../../../MUIcomponents/MUIcomponents'
+import { Box } from '../../shared/ui/MUI/mui'
 
 import ReusableButton from './ReusableButton'
 

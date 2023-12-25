@@ -10,11 +10,11 @@ import {
 import { animated } from '../../reactSpringComponents/reactSpringComponents'
 import { usePropagandaSwiperContext } from '../../../context/PropagandaSwiperContext'
 
-import slideForHomePageOne from '../../../pictures/slideForHomePageOne.jpg'
-import slideForHomePageTwo from '../../../pictures/slideForHomePageTwo.jpg'
-import slideForHomePageThree from '../../../pictures/slideForHomePageThree.jpg'
-import slideForHomePageFour from '../../../pictures/slideForHomePageFour.jpg'
-import quote from '../../../pictures/quote.png'
+import slideForHomePageOne from '../../../assets/pictures/slideForHomePageOne.webp'
+import slideForHomePageTwo from '../../../assets/pictures/slideForHomePageTwo.webp'
+import slideForHomePageThree from '../../../assets/pictures/slideForHomePageThree.webp'
+import slideForHomePageFour from '../../../assets/pictures/slideForHomePageFour.webp'
+import quote from '../../../assets/pictures/quote.webp'
 
 import 'swiper/css'
 import 'swiper/css/effect-creative'

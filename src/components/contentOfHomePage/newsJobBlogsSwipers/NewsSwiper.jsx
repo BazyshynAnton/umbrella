@@ -1,8 +1,8 @@
-import ReusableSwiper from './ReusableSwiper'
-import { ArrowCircleRightOutlinedIcon } from '../../MUIcomponents/MUIcomponents'
-
 import { newsData } from '../../../data/newsData'
+import { ArrowCircleRightOutlinedIcon } from '../shared/ui/MUI/mui'
 import { useButtonContext } from '../../../context/ButtonContext'
+
+import ReusableSwiper from './ReusableSwiper'
 
 const NewsSwiper = () => {
   const { handleMouseEnterOne, handleMouseLeaveOne, animationForUnderLineOne } =

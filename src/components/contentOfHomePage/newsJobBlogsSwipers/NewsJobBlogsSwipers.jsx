@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { Box, Button } from '../../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../../context/variables'
+import { useState } from '../shared/ui/reactImports/reactImports'
+import { Box, Button } from '../shared/ui/MUI/mui'
+import { fontStyleOpenSans } from '../shared/ui/font/openSans'
 
 import NewsSwiper from './NewsSwiper'
 import JobSwiper from './JobSwiper'

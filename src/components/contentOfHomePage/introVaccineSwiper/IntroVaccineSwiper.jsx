@@ -1,36 +1,19 @@
-import { useState } from 'react'
-import {
-  ArrowBackIosNewIcon,
-  ArrowForwardIosIcon,
-  useMediaQuery,
-} from '../../MUIcomponents/MUIcomponents'
+import { useState } from '../shared/ui/reactImports/reactImports'
+import { useMediaQuery } from '../shared/ui/MUI/mui'
 import {
   Swiper,
   SwiperSlide,
   Autoplay,
-} from '../../swiperComponents/swiperComponents'
+} from '../shared/ui/swiperImports/swiperImports'
 
-import LeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/LeftRightNavigationForIntroSwiper'
 import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
 import SmallScreensLeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/SmallScreensLeftRightNavigationForIntroSwiper'
 import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'
+import LeftRightNavigationIntro from './contentOfIntroVaccineSlider/LeftRightNavigationIntro'
 
 import { introVaccineSwiperData } from '../../../data/introVaccineSwiperData'
 
 import 'swiper/css'
-
-const stylesForArrowBtn = {
-  left: {
-    position: 'absolute',
-    top: '50%',
-    left: '0px',
-  },
-  right: {
-    position: 'absolute',
-    top: '50%',
-    right: '0px',
-  },
-}
 
 const IntroVaccineSlider = () => {
   const [pausedSwiper, setPausedSwiper] = useState(true)
@@ -63,18 +46,7 @@ const IntroVaccineSlider = () => {
       ))}
       {isSmallScreen ? (
         <>
-          <LeftRightNavigationForIntroSwiper
-            stylesForBtn={stylesForArrowBtn.left}
-            id={20}
-          >
-            <ArrowBackIosNewIcon />
-          </LeftRightNavigationForIntroSwiper>
-          <LeftRightNavigationForIntroSwiper
-            stylesForBtn={stylesForArrowBtn.right}
-            id={10}
-          >
-            <ArrowForwardIosIcon />
-          </LeftRightNavigationForIntroSwiper>
+          <LeftRightNavigationIntro />
 
           <CustomPaginationForIntroSwiper
             pausedSwiper={pausedSwiper}
@@ -82,7 +54,10 @@ const IntroVaccineSlider = () => {
           />
         </>
       ) : (
-        <SmallScreensLeftRightNavigationForIntroSwiper />
+        <SmallScreensLeftRightNavigationForIntroSwiper
+          pausedSwiper={pausedSwiper}
+          setPausedSwiper={setPausedSwiper}
+        />
       )}
     </Swiper>
   )

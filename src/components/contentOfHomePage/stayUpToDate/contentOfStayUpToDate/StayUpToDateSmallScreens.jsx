@@ -1,7 +1,7 @@
 import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
-import YellowButton from '../../yellowButton/YellowButton'
+import YellowButton from '../../shared/Button/YellowButton'
 
 const StayUpToDateSmallScreens = () => {
   return (

@@ -1,12 +1,25 @@
 import {
   useSpring,
   animated,
-} from '../../../reactSpringComponents/reactSpringComponents'
-import { useEffect, useState } from 'react'
-import { useSwiper } from '../../../swiperComponents/swiperComponents'
-import { Box } from '../../../MUIcomponents/MUIcomponents'
+} from '../../shared/ui/reactSpringImports/reactSpringImports'
+import { useEffect, useState } from '../../shared/ui/reactImports/reactImports'
+import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
+import { Box } from '../../shared/ui/MUI/mui'
 
 import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccineSwiper'
+
+const stylesForPauseAndPlayBtn = {
+  blocks: {
+    width: '35px',
+    minWidth: '35px',
+    height: '35px',
+
+    ':hover': {
+      background: '#d6e5eb',
+    },
+  },
+  icons: { fontSize: '2.5rem', color: '#376586' },
+}
 
 const stylesForBlocksWithAnimatedLine = {
   position: 'relative',
@@ -18,7 +31,7 @@ const stylesForBlocksWithAnimatedLine = {
   height: '40px',
   cursor: 'pointer',
 }
-const qqq = {
+const pausedStyles = {
   width: '40px',
   height: '2px',
   background: 'rgb(55, 101, 134)',
@@ -62,7 +75,11 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
         gap: '0.5rem',
       }}
     >
-      <CustomAutoPlayForIntroVaccineSwiper setPausedSwiper={setPausedSwiper} />
+      <CustomAutoPlayForIntroVaccineSwiper
+        stylesForPlayPauseBtn={stylesForPauseAndPlayBtn.blocks}
+        stylesForIcons={stylesForPauseAndPlayBtn.icons}
+        setPausedSwiper={setPausedSwiper}
+      />
       {allSlidesNavigation.map((_, index) => (
         <Box
           key={index}
@@ -78,7 +95,7 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
                     ...animationWidth,
                   }
                 : activeIndex === index && !pausedSwiper
-                ? qqq
+                ? pausedStyles
                 : {}
             }
           />

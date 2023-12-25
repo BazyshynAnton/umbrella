@@ -3,8 +3,8 @@ import { Box, Typography } from '@mui/material'
 import ReusableComponentForIntroduce from '../../reusableComponents/ReusableComponentForIntroduce'
 import ReusableComponentMrnaPicture from '../../reusableComponents/ReusableComponentMrnaPicture'
 
-import microscope from '../../../pictures/microscope.png'
-import umbrellaGuyWithLaptop from '../../../pictures/umbrellaGuyWithLaptop.png'
+import microscope from '../../../assets/pictures/microscope.webp'
+import umbrellaGuyWithLaptop from '../../../assets/pictures/umbrellaGuyWithLaptop.webp'
 
 import { fontStyleOpenSans } from '../../../context/variables'
 

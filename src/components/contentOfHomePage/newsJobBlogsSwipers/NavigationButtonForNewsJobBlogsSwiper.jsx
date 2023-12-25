@@ -1,12 +1,9 @@
-import {
-  Box,
-  ArrowBackIosNewIcon,
-  ArrowForwardIosIcon,
-  Button,
-} from '../../MUIcomponents/MUIcomponents.js'
+import { Box } from '../shared/ui/MUI/mui.js'
+import { useSwiper } from '../shared/ui/swiperImports/swiperImports.js'
+import { fontStyleOpenSans } from '../shared/ui/font/openSans.js'
 
-import { useSwiper } from '../../swiperComponents/swiperComponents.js'
-import { fontStyleOpenSans } from '../../../context/variables'
+import NavigationLeftButtonForSwipers from '../shared/Button/NavigationLeftButtonForSwipers.jsx'
+import NavigationRightButtonForSwipers from '../shared/Button/NavigationRightButtonForSwipers.jsx'
 
 const styleForBtn = {
   minWidth: '20px',
@@ -25,6 +22,14 @@ const styleForBtn = {
 
 const NavigationButtonForNewsJobBlogsSwiper = () => {
   const swiper = useSwiper()
+
+  const handlePrev = () => {
+    swiper.slidePrev()
+  }
+
+  const handleNext = () => {
+    swiper.slideNext()
+  }
   return (
     <Box
       sx={{
@@ -34,12 +39,14 @@ const NavigationButtonForNewsJobBlogsSwiper = () => {
         width: '80px',
       }}
     >
-      <Button sx={styleForBtn} onClick={() => swiper.slidePrev()}>
-        <ArrowBackIosNewIcon />
-      </Button>
-      <Button sx={styleForBtn} onClick={() => swiper.slideNext()}>
-        <ArrowForwardIosIcon />
-      </Button>
+      <NavigationLeftButtonForSwipers
+        styles={styleForBtn}
+        handleClick={handlePrev}
+      />
+      <NavigationRightButtonForSwipers
+        styles={styleForBtn}
+        handleClick={handleNext}
+      />
     </Box>
   )
 }

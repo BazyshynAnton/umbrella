@@ -1,10 +1,10 @@
 import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
 import { fontStyleOpenSans } from '../../../../context/variables'
 
-import YellowButton from '../../yellowButton/YellowButton'
+import YellowButton from '../../shared/Button/YellowButton'
 
-import books from '../../../../pictures/books.png'
-import flask from '../../../../pictures/flask.png'
+import books from '../../../../assets/pictures/books.webp'
+import flask from '../../../../assets/pictures/flask.webp'
 
 const ContentForSmallScreens = () => {
   return (

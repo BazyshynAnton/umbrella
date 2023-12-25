@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom'
-import { Button } from '../../../MUIcomponents/MUIcomponents'
+import { NavLink } from '../../shared/ui/reactImports/reactImports'
+import { Button } from '../../shared/ui/MUI/mui'
+import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
 import { useHeaderContext } from '../../../../context/HeaderContext'
-import { fontStyleOpenSans } from '../../../../context/variables'
 
 const stylesForBtn = {
   blueBtn: {
@@ -9,7 +9,7 @@ const stylesForBtn = {
     color: 'rgb(5, 63, 104)',
     borderRadius: '12px',
     transition: ' all 0.2s ease 0s',
-    width: '160px',
+    width: '200px',
     height: '62px',
     padding: '17px',
     ':hover': {
@@ -48,7 +48,7 @@ const ReusableButton = ({ buttonText }) => {
         <NavLink
           to="/vaccine/science-of-mrna"
           onClick={handleActiveLinkTwo}
-          style={{ width: '160px', height: '62px', borderRadius: '12px' }}
+          style={{ width: '200px', height: '62px', borderRadius: '12px' }}
         >
           <Button sx={stylesForBtn.blueBtn}>{buttonText}</Button>
         </NavLink>

@@ -1,4 +1,4 @@
-import { ArrowCircleRightOutlinedIcon } from '../../MUIcomponents/MUIcomponents'
+import { ArrowCircleRightOutlinedIcon } from '../shared/ui/MUI/mui'
 import { blogsData } from '../../../data/blogsData'
 import { useButtonContext } from '../../../context/ButtonContext'
 

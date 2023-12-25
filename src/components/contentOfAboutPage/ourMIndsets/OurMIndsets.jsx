@@ -4,7 +4,7 @@ import { useButtonContext } from '../../../context/ButtonContext'
 import ReusableLInkBlock from '../../reusableComponents/ReusableLInkBlock'
 import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
 
-import picOfHuman from '../../../pictures/picOfHuman.png'
+import picOfHuman from '../../../assets/pictures/picOfHuman.webp'
 
 const headerText = 'Our Mindsets'
 const description =

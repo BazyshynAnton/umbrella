@@ -17,7 +17,7 @@ import HeaderBurgerMenu from './HeaderBurgerMenu'
 import NavigationForBigScreens from './NavigationForBigScreens'
 import Additionally from './Additionally'
 
-import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
+import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
 import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
 const Header = React.memo(() => {

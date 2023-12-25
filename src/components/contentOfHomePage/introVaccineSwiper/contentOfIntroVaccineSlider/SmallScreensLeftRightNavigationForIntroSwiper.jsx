@@ -1,15 +1,10 @@
-import { useEffect, useState } from 'react'
-import { useSwiper } from '../../../swiperComponents/swiperComponents'
-import {
-  Box,
-  Typography,
-  Button,
-  PlayArrowRoundedIcon,
-  ArrowBackIosRoundedIcon,
-  ArrowForwardIosRoundedIcon,
-  PauseIcon,
-} from '../../../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { useEffect, useState } from '../../shared/ui/reactImports/reactImports'
+import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
+import { Box, Typography } from '../../shared/ui/MUI/mui'
+import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
+import NavigationLeftButtonForSwipers from '../../shared/Button/NavigationLeftButtonForSwipers'
+import NavigationRightButtonForSwipers from '../../shared/Button/NavigationRightButtonForSwipers'
+import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccineSwiper'
 
 const styleForBtns = {
   play: {
@@ -32,7 +27,7 @@ const styleForBtns = {
   iconLeftAndRight: { fontSize: '2rem', color: '#507995' },
 }
 
-const SmallScreensLeftRightNavigationForIntroSwiper = () => {
+const SmallScreensLeftRightNavigationForIntroSwiper = ({ setPausedSwiper }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const swiper = useSwiper()
 
@@ -47,16 +42,6 @@ const SmallScreensLeftRightNavigationForIntroSwiper = () => {
       swiper.off('slideChange', handleSlideChange)
     }
   }, [swiper])
-
-  const [isPlayTrue, setIsPlayTrue] = useState(true)
-  const handlePauseClick = () => {
-    swiper.autoplay.stop()
-    setIsPlayTrue(false)
-  }
-  const handlePLayClick = () => {
-    swiper.autoplay.start()
-    setIsPlayTrue(true)
-  }
 
   const handleSlideChangePrev = () => {
     swiper.slidePrev()
@@ -83,22 +68,22 @@ const SmallScreensLeftRightNavigationForIntroSwiper = () => {
         {activeIndex + 1}/3
       </Typography>
 
-      {!isPlayTrue ? (
-        <Button onClick={handlePLayClick} sx={styleForBtns.play}>
-          <PlayArrowRoundedIcon sx={styleForBtns.iconPlay} />
-        </Button>
-      ) : (
-        <Button onClick={handlePauseClick} sx={styleForBtns.play}>
-          <PauseIcon sx={styleForBtns.iconPlay} />
-        </Button>
-      )}
+      <CustomAutoPlayForIntroVaccineSwiper
+        stylesForIcons={styleForBtns.iconPlay}
+        stylesForPlayPauseBtn={styleForBtns.play}
+        setPausedSwiper={setPausedSwiper}
+      />
 
-      <Button onClick={handleSlideChangePrev} sx={styleForBtns.leftAndRight}>
-        <ArrowBackIosRoundedIcon sx={styleForBtns.iconLeftAndRight} />
-      </Button>
-      <Button onClick={handleSlideChangeNext} sx={styleForBtns.leftAndRight}>
-        <ArrowForwardIosRoundedIcon sx={styleForBtns.iconLeftAndRight} />
-      </Button>
+      <NavigationLeftButtonForSwipers
+        styles={styleForBtns.leftAndRight}
+        stylesIcon={styleForBtns.iconLeftAndRight}
+        handleClick={handleSlideChangePrev}
+      />
+      <NavigationRightButtonForSwipers
+        styles={styleForBtns.leftAndRight}
+        stylesIcon={styleForBtns.iconLeftAndRight}
+        handleClick={handleSlideChangeNext}
+      />
     </Box>
   )
 }

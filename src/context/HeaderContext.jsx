@@ -1,6 +1,10 @@
-import { createContext, useContext, useState } from 'react'
-import { fontStyleOpenSans } from './variables'
-import { useSpring } from '@react-spring/web'
+import {
+  createContext,
+  useContext,
+  useState,
+} from '../components/contentOfHomePage/shared/ui/reactImports/reactImports'
+import { fontStyleOpenSans } from '../components/contentOfHomePage/shared/ui/font/openSans'
+import { useSpring } from '../components/contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
 
 const HeaderContext = createContext()
 

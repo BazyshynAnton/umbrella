@@ -5,7 +5,7 @@ import {
 } from '../reactSpringComponents/reactSpringComponents'
 import { fontStyleOpenSans } from '../../context/variables'
 
-import umbrellaHeaderLogoSmall from '../../pictures/umbrellaHeaderLogoSmall.png'
+import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
 
 const Spinner = () => {
   const rotation = useSpring({
