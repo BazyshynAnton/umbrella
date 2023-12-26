@@ -1,10 +1,10 @@
-import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
+import { Box, Typography } from '../ui/MUI/mui'
 import {
   useSpring,
   animated,
-} from '../../../reactSpringComponents/reactSpringComponents'
+} from '../ui/reactSpringImports/reactSpringImports'
 
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { fontStyleOpenSans } from '../ui/font/openSans'
 
 const YellowButton = ({ children }) => {
   const [props, set] = useSpring(() => ({

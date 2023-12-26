@@ -28,7 +28,7 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
         textForButton={'life at Umbrella'}
         animationFor={animationForUnderLineFive}
         mainPicture={smilingScientists}
-        buttonWidth={'183.39px'}
+        buttonWidth={'189px'}
         headerText={headerText}
         handleEnter={handleMouseEnterFive}
         handleLeave={handleMouseLeaveFive}

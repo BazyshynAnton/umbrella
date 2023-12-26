@@ -6,4 +6,12 @@ import {
 } from 'swiper/modules'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 
-export { useSwiper, Swiper, SwiperSlide, Autoplay }
+export {
+  useSwiper,
+  Swiper,
+  SwiperSlide,
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectCreative,
+}

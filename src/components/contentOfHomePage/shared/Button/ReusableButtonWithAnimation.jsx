@@ -1,6 +1,6 @@
-import { Button } from '../../../MUIcomponents/MUIcomponents'
-import { animated } from '../../../reactSpringComponents/reactSpringComponents'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { Button } from '../ui/MUI/mui'
+import { animated } from '../ui/reactSpringImports/reactSpringImports'
+import { fontStyleOpenSans } from '../ui/font/openSans'
 
 const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
   return (

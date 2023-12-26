@@ -1,5 +1,5 @@
-import { Box, Typography } from '../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../context/variables'
+import { Box, Typography } from '../contentOfHomePage/shared/ui/MUI/mui'
+import { fontStyleOpenSans } from '../contentOfHomePage/shared/ui/font/openSans'
 
 import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
@@ -23,9 +23,6 @@ const Additionally = ({ isSmallScreen }) => {
         >
           <Typography sx={stylesForAdditionallyLinks}>Careers</Typography>
           <Typography sx={stylesForAdditionallyLinks}>Investors</Typography>
-
-          <hr style={{ height: '25px', width: '1px', background: '#508bb6' }} />
-
           <Typography sx={stylesForAdditionallyLinks}>Contact Us</Typography>
           <LanguageIconHeader />
         </Box>

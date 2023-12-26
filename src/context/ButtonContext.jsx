@@ -1,5 +1,9 @@
-import { useSpring } from '@react-spring/web'
-import { createContext, useContext, useState } from 'react'
+import { useSpring } from '../components/contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
+import {
+  createContext,
+  useContext,
+  useState,
+} from '../components/contentOfHomePage/shared/ui/reactImports/reactImports'
 
 const ButtonContext = createContext()
 

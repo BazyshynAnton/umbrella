@@ -1,12 +1,15 @@
-import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { Box, Typography } from '../ui/MUI/mui'
+import { fontStyleOpenSans } from '../ui/font/openSans'
 
-import YellowButton from '../../shared/Button/YellowButton'
+import YellowButton from '../Button/YellowButton'
 
-import books from '../../../../assets/pictures/books.webp'
-import flask from '../../../../assets/pictures/flask.webp'
-
-const ContentForSmallScreens = () => {
+const ContentForSmallScreens = ({
+  picture1,
+  picture2,
+  buttonText,
+  headerText,
+  text,
+}) => {
   return (
     <Box
       sx={{
@@ -49,7 +52,7 @@ const ContentForSmallScreens = () => {
               ...fontStyleOpenSans,
             }}
           >
-            Careers at Umbrella
+            {headerText}
           </Typography>
           <Typography
             variant="body1"
@@ -59,14 +62,10 @@ const ContentForSmallScreens = () => {
               ...fontStyleOpenSans,
             }}
           >
-            Our mission is clear: translating science into survival to improve
-            the health of people worldwide. We are always on the lookout for
-            dedicated and curious new talents supporting our team of
-            visionaries, entrepreneurs, scientists, engineers and business
-            professionals. Join us and be part of our unique pioneering spirit.
+            {text}
           </Typography>
         </Box>
-        <YellowButton>Careers Portal</YellowButton>
+        <YellowButton>{buttonText}</YellowButton>
         <Box
           sx={{
             position: 'absolute',
@@ -78,7 +77,7 @@ const ContentForSmallScreens = () => {
         >
           <img
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-            src={books}
+            src={picture1}
             alt="animated-books-icon"
           />
         </Box>
@@ -93,7 +92,7 @@ const ContentForSmallScreens = () => {
         >
           <img
             style={{ objectFit: 'contain', width: '100%', height: '100%' }}
-            src={flask}
+            src={picture2}
             alt="animated-flask-icon"
           />
         </Box>

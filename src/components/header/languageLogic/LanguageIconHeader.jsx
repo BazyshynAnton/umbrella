@@ -1,12 +1,19 @@
-import { LanguageIcon } from '../../MUIcomponents/MUIcomponents'
+import langIcon from '../../../assets/pictures/app-icons/langIcon.webp'
 
 const stylesForAdditionallyLinks = {
-  color: '#053f68',
+  width: '30px',
+  height: '30px',
   cursor: 'pointer',
 }
 
 const LanguageIconHeader = () => {
-  return <LanguageIcon sx={stylesForAdditionallyLinks} />
+  return (
+    <img
+      style={stylesForAdditionallyLinks}
+      src={langIcon}
+      alt="change-language"
+    />
+  )
 }
 
 export default LanguageIconHeader

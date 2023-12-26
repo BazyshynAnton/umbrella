@@ -1,19 +1,19 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from '../contentOfHomePage/shared/ui/reactImports/reactImports.js'
 import { useHeaderContext } from '../../context/HeaderContext'
 import {
   Box,
   Typography,
-  Divider,
-  IconButton,
   SwipeableDrawer,
-  MenuOpenIcon,
-  AutoStoriesRoundedIcon,
-  HomeRoundedIcon,
-} from '../MUIcomponents/MUIcomponents'
+} from '../contentOfHomePage/shared/ui/MUI/mui'
 
 import Additionally from './Additionally'
 
 import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
+import menuIcon from '../../assets/pictures/app-icons/menuIcon.webp'
+import homeIconActive from '../../assets/pictures/app-icons/homeIconActive.webp'
+import homeIconDisabled from '../../assets/pictures/app-icons/homeIconDisabled.webp'
+import bookIconActive from '../../assets/pictures/app-icons/bookIconActive.webp'
+import bookIconDisabled from '../../assets/pictures/app-icons/bookIconDisabled.webp'
 
 const styleForLinkBlocks = {
   display: 'flex',
@@ -45,13 +45,14 @@ const HeaderBurgerMenu = () => {
       onClose={() => setOpen(false)}
       anchor="top"
     >
-      <IconButton
+      <button
         onClick={handleTouchLInk}
-        sx={{
-          p: '0px 48px',
+        style={{
+          padding: '0px 48px',
           width: '100%',
           display: 'flex',
           justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
         <NavLink to="/">
@@ -71,9 +72,19 @@ const HeaderBurgerMenu = () => {
             />
           </Box>
         </NavLink>
-        <MenuOpenIcon sx={{ color: 'rgb(209, 52, 62)', fontSize: '2rem' }} />
-      </IconButton>
-      <Divider sx={{ background: 'rgba(5, 63, 104, 0.5)' }} />
+        <img
+          style={{ width: '30px', height: '30px', cursor: 'pointer' }}
+          src={menuIcon}
+          alt="menu-icon"
+        />
+      </button>
+      <hr
+        style={{
+          height: '1px',
+          width: '100%',
+          background: 'rgba(5, 63, 104, 0.5)',
+        }}
+      />
       <Box
         sx={{
           p: '0px 48px',
@@ -87,9 +98,19 @@ const HeaderBurgerMenu = () => {
       >
         <NavLink to="/" onClick={handleActiveLinkOne}>
           <Box sx={styleForLinkBlocks}>
-            <HomeRoundedIcon
-              sx={isActiveLinkOne ? stylesForActiveLinks : stylesForLinks}
-            />
+            {isActiveLinkOne ? (
+              <img
+                style={{ width: '25px', height: '25px' }}
+                src={homeIconActive}
+                alt="home"
+              />
+            ) : (
+              <img
+                style={{ width: '25px', height: '25px' }}
+                src={homeIconDisabled}
+                alt="home"
+              />
+            )}
             <Typography
               variant="h5"
               sx={isActiveLinkOne ? stylesForActiveLinks : stylesForLinks}
@@ -100,9 +121,19 @@ const HeaderBurgerMenu = () => {
         </NavLink>
         <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
           <Box sx={styleForLinkBlocks}>
-            <AutoStoriesRoundedIcon
-              sx={isActiveLinkTwo ? stylesForActiveLinks : stylesForLinks}
-            />
+            {isActiveLinkTwo ? (
+              <img
+                style={{ width: '25px', height: '20px' }}
+                src={bookIconActive}
+                alt="home"
+              />
+            ) : (
+              <img
+                style={{ width: '25px', height: '20px' }}
+                src={bookIconDisabled}
+                alt="home"
+              />
+            )}
             <Typography
               variant="h5"
               fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
@@ -114,9 +145,19 @@ const HeaderBurgerMenu = () => {
         </NavLink>
         <NavLink to="/about-us" onClick={handleActiveLinkThree}>
           <Box sx={styleForLinkBlocks}>
-            <AutoStoriesRoundedIcon
-              sx={isActiveLinkThree ? stylesForActiveLinks : stylesForLinks}
-            />
+            {isActiveLinkThree ? (
+              <img
+                style={{ width: '25px', height: '20px' }}
+                src={bookIconActive}
+                alt="home"
+              />
+            ) : (
+              <img
+                style={{ width: '25px', height: '20px' }}
+                src={bookIconDisabled}
+                alt="home"
+              />
+            )}
             <Typography
               variant="h5"
               sx={isActiveLinkThree ? stylesForActiveLinks : stylesForLinks}

@@ -1,5 +1,15 @@
-import { createContext, useContext, useState } from 'react'
-import { useSpring, config } from '@react-spring/web'
+import {
+  createContext,
+  useContext,
+  useState,
+} from '../components/contentOfHomePage/shared/ui/reactImports/reactImports'
+
+import {
+  useSpring,
+  config,
+} from '../components/contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
+
+import { fontStyleOpenSans } from '../components/contentOfHomePage/shared/ui/font/openSans'
 
 const PropagandaSwiperContext = createContext()
 
@@ -30,12 +40,14 @@ export const PropagandaSwiperProvider = ({ children }) => {
     blueText: {
       color: '#376586',
       fontFamily: "'Tilt Warp', sans-serif",
+      fontWeight: '600',
       fontSize: { md: '1.5rem', sm: '1rem', xs: '0.8rem' },
       letterSpacing: '0.07em',
       lineHeight: '1em',
       textAlign: 'left',
       textTransform: 'uppercase',
       cursor: 'default',
+      ...fontStyleOpenSans,
     },
 
     yellowText: {
@@ -44,6 +56,7 @@ export const PropagandaSwiperProvider = ({ children }) => {
       fontSize: { md: '1.2rem', sm: '1rem', xs: '0.8rem' },
       color: '#DAA520',
       cursor: 'default',
+      ...fontStyleOpenSans,
     },
   }
 

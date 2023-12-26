@@ -1,3 +1,3 @@
-import { animated, useSpring } from '@react-spring/web'
+import { animated, useSpring, config } from '@react-spring/web'
 
-export { animated, useSpring }
+export { animated, useSpring, config }

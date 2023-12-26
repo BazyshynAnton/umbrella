@@ -53,12 +53,12 @@ const ReusableLinkBlockWithPicture = ({
         />
       </Box>
       <Box sx={{ p: '15px' }}>
-        <p sx={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}>
+        <p style={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}>
           {headerText}
         </p>
         {text && (
           <p
-            sx={{
+            style={{
               fontWeight: '500',
               fontSize: '1rem',
               color: '#376586',

@@ -1,12 +1,13 @@
-import {
-  Box,
-  Container,
-  Typography,
-  TwitterIcon,
-  LinkedInIcon,
-} from '../MUIcomponents/MUIcomponents'
+import { Box, Container } from '../contentOfHomePage/shared/ui/MUI/mui'
+
+import InformationUmbrella from './contentOfFooter/InformationUmbrella'
+import UsefulLinks from './contentOfFooter/UsefulLinks'
+import LinksOfRules from './contentOfFooter/LinksOfRules'
+import AllRights from './contentOfFooter/AllRights'
 
 import umbrellaFooterLogo from '../../assets/pictures/umbrellaFooterLogo.webp'
+import linkedIcon from '../../assets/pictures/app-icons/linkedIcon.webp'
+import twitterIcon from '../../assets/pictures/app-icons/twitterIcon.webp'
 
 const DATE = new Date().getFullYear()
 
@@ -56,134 +57,13 @@ const Footer = () => {
             height: '100%',
           }}
         >
-          <Box>
-            <Box
-              sx={{ width: '200px', height: '104px', mb: '20px', mt: '20px' }}
-            >
-              <img
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                src={umbrellaFooterLogo}
-                alt="umbrella-logo"
-              />
-            </Box>
-            <Typography variant="body1" sx={stylesForText}>
-              Umbrella Corp.
-            </Typography>
-            <Typography variant="body1" sx={stylesForText}>
-              123 Raccoon Street
-            </Typography>
-            <Typography variant="body1" sx={stylesForText}>
-              Raccoon City, CA 90210
-            </Typography>
-            <Typography variant="body1" sx={stylesForText}>
-              T: +1 9084 6113-0
-            </Typography>
-            <Typography variant="body1" sx={stylesForText}>
-              F: +1 6311 8490-1212
-            </Typography>
-            <Typography variant="body1" sx={stylesForText}>
-              M: service@umbrella.corp
-            </Typography>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                mt: '15px',
-                mb: '20px',
-              }}
-            >
-              <TwitterIcon
-                sx={{
-                  background: '#fff',
-                  borderRadius: '20px',
-                  padding: '5px',
-                  color: '#1E90FF',
-                  cursor: 'pointer',
-                  fontSize: '2rem',
-                }}
-              />
-              <LinkedInIcon
-                sx={{
-                  color: '#fff',
-                  cursor: 'pointer',
-                  fontSize: '2.5rem',
-                }}
-              />
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: { sm: 'row', xs: 'column' },
-              gap: '1.5rem',
-            }}
-          >
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                gap: '0.5rem',
-              }}
-            >
-              <Typography
-                variant="h5"
-                sx={{
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontWeight: '600',
-                  cursor: 'default',
-                }}
-              >
-                Company
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} About
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Research & Innovation
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Manufacturing
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Careers
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Covid-19
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.5rem',
-              }}
-            >
-              <Typography
-                variant="h5"
-                sx={{
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontWeight: '600',
-                  cursor: 'default',
-                }}
-              >
-                Quick Links
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Newsroom
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Investors
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Healthcare Professionals
-              </Typography>
-              <Typography variant="body1" sx={styleForTextCompany}>
-                {'>'} Connect
-              </Typography>
-            </Box>
-          </Box>
+          <InformationUmbrella
+            umbrellaFooterLogo={umbrellaFooterLogo}
+            stylesForText={stylesForText}
+            twitterIcon={twitterIcon}
+            linkedIcon={linkedIcon}
+          />
+          <UsefulLinks styleForTextCompany={styleForTextCompany} />
         </Box>
         <hr
           style={{
@@ -195,58 +75,9 @@ const Footer = () => {
             borderRadius: '5px',
           }}
         />
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-            flexWrap: 'wrap',
-          }}
-        >
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            Terms of Use
-          </Typography>
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            General Terms and Conditions
-          </Typography>
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            General Conditions of Purchase
-          </Typography>
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            Data Privacy Statement
-          </Typography>
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            Adverse Event Reporting
-          </Typography>
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            Imprint
-          </Typography>
-          <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-            Cookie Settings
-          </Typography>
-        </Box>
-        <Box sx={{ mt: '40px', pb: '10px' }}>
-          <Typography
-            variant="body2"
-            sx={{
-              fontFamily: "'Open Sans', sans-serif",
-              fontWeight: '600',
-              cursor: 'default',
-            }}
-          >
-            © {DATE} Umbrella.corp
-          </Typography>
-          <Typography
-            variant="body2"
-            sx={{
-              fontFamily: "'Open Sans', sans-serif",
-              fontWeight: '600',
-              cursor: 'default',
-            }}
-          >
-            All rights reserved
-          </Typography>
-        </Box>
+        <LinksOfRules stylesForTextBelowTheLine={stylesForTextBelowTheLine} />
+
+        <AllRights DATE={DATE} />
       </Container>
     </Box>
   )

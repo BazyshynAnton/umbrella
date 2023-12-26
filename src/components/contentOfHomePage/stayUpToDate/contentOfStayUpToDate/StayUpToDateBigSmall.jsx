@@ -1,22 +1,19 @@
-import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { Box, Typography } from '../../shared/ui/MUI/mui'
+import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
 
 import YellowButton from '../../shared/Button/YellowButton'
 
-const StayUpToDateBigScreens = () => {
+const StayUpToDateBigSmall = ({
+  stylesForBigScreensFirst,
+  stylesForBigScreensSecond,
+  stylesForSmallScreensFirst,
+  stylesForSmallScreensSecond,
+}) => {
   return (
-    <Box
-      sx={{
-        marginTop: '60px',
-        marginBottom: '60px',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-end',
-        pr: { xl: '0px', lg: '32px' },
-      }}
-    >
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <Box sx={{ ...stylesForBigScreensFirst, ...stylesForSmallScreensFirst }}>
+      <Box
+        sx={{ ...stylesForBigScreensSecond, ...stylesForSmallScreensSecond }}
+      >
         <Typography
           variant="h3"
           sx={{
@@ -47,4 +44,4 @@ const StayUpToDateBigScreens = () => {
   )
 }
 
-export default StayUpToDateBigScreens
+export default StayUpToDateBigSmall

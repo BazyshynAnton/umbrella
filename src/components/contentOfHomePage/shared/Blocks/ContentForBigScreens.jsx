@@ -1,11 +1,17 @@
-import { Box, Typography } from '../../../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import { Box, Typography } from '../ui/MUI/mui'
+import { fontStyleOpenSans } from '../ui/font/openSans'
 
-import YellowButton from '../../shared/Button/YellowButton'
+import YellowButton from '../Button/YellowButton'
 
-import chair from '../../../../assets/pictures/chair.webp'
-
-const ConnectWithUsBigScreens = () => {
+const ContentForBigScreens = ({
+  picture,
+  headerText,
+  text,
+  buttonText,
+  height,
+  rightStyles,
+  leftStyles,
+}) => {
   return (
     <Box
       sx={{
@@ -18,18 +24,20 @@ const ConnectWithUsBigScreens = () => {
       <Box
         sx={{
           position: 'absolute',
-          right: { xl: '-150px', lg: '0px' },
+
           width: '100%',
-          height: '600px',
+          height: height,
+          ...rightStyles,
+          ...leftStyles,
         }}
       >
         <img
           style={{
             objectFit: 'cover',
-            width: '100%',
             height: '100%',
+            width: '100%',
           }}
-          src={chair}
+          src={picture}
           alt="pic"
         />
       </Box>
@@ -37,11 +45,11 @@ const ConnectWithUsBigScreens = () => {
       <Box
         sx={{
           position: 'absolute',
-          top: '26%',
-          left: '0',
+          top: '18%',
+          right: '0',
           background: '#fff',
-          width: '550px',
-          height: '300px',
+          width: '600px',
+          height: '400px',
           padding: '2pc',
           display: 'flex',
           flexDirection: 'column',
@@ -65,7 +73,7 @@ const ConnectWithUsBigScreens = () => {
               ...fontStyleOpenSans,
             }}
           >
-            Connect with us
+            {headerText}
           </Typography>
           <Typography
             variant="body1"
@@ -75,15 +83,13 @@ const ConnectWithUsBigScreens = () => {
               ...fontStyleOpenSans,
             }}
           >
-            Questions about our products, services or clinical trials? Find the
-            right contact person at our Service Center.
+            {text}
           </Typography>
         </Box>
-
-        <YellowButton>Contact Us</YellowButton>
+        <YellowButton>{buttonText}</YellowButton>
       </Box>
     </Box>
   )
 }
 
-export default ConnectWithUsBigScreens
+export default ContentForBigScreens

@@ -1,4 +1,7 @@
-import { Container, useMediaQuery } from '../MUIcomponents/MUIcomponents'
+import {
+  Container,
+  useMediaQuery,
+} from '../contentOfHomePage/shared/ui/MUI/mui'
 import { PropagandaSwiperProvider } from '../../context/PropagandaSwiperContext'
 import { ButtonContextProvider } from '../../context/ButtonContext'
 

@@ -1,26 +1,24 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from '../contentOfHomePage/shared/ui/reactImports/reactImports'
 import { useHeaderContext } from '../../context/HeaderContext'
 import {
-  MenuIcon,
   AppBar,
   Box,
   Container,
-  IconButton,
   Toolbar,
   useMediaQuery,
-} from '../MUIcomponents/MUIcomponents'
+} from '../contentOfHomePage/shared/ui/MUI/mui'
 
-import { animated } from '@react-spring/web'
+import { animated } from '../contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
 
 import HeaderBurgerMenu from './HeaderBurgerMenu'
 import NavigationForBigScreens from './NavigationForBigScreens'
 import Additionally from './Additionally'
-
-import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
 import LanguageIconHeader from './languageLogic/LanguageIconHeader'
 
-const Header = React.memo(() => {
+import menuIcon from '../../assets/pictures/app-icons/menuIcon.webp'
+import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
+
+const Header = () => {
   const { setOpen, headerLogoAnim, isActiveAnimation, handleActiveLinkOne } =
     useHeaderContext()
 
@@ -65,11 +63,16 @@ const Header = React.memo(() => {
                 sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
               >
                 <LanguageIconHeader />
-                <IconButton onClick={() => setOpen(true)}>
-                  <MenuIcon
-                    sx={{ color: 'rgb(209, 52, 62)', fontSize: '1.8rem' }}
+                <button
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => setOpen(true)}
+                >
+                  <img
+                    style={{ width: '30px', height: '30px' }}
+                    src={menuIcon}
+                    alt="menu-icon"
                   />
-                </IconButton>
+                </button>
               </Box>
             )}
 
@@ -81,6 +84,6 @@ const Header = React.memo(() => {
       </AppBar>
     </>
   )
-})
+}
 
 export default Header
