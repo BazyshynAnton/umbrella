@@ -1,8 +1,9 @@
 import { newsData } from '../../../data/newsData'
-import { ArrowCircleRightOutlinedIcon } from '../shared/ui/MUI/mui'
 import { useButtonContext } from '../../../context/ButtonContext'
 
 import ReusableSwiper from './ReusableSwiper'
+
+import arrowCircleRightOutlinedIcon from '../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
 
 const NewsSwiper = () => {
   const { handleMouseEnterOne, handleMouseLeaveOne, animationForUnderLineOne } =
@@ -15,7 +16,13 @@ const NewsSwiper = () => {
       handleMouseEnter={handleMouseEnterOne}
       handleMouseLeave={handleMouseLeaveOne}
       animationForUnderLine={animationForUnderLineOne}
-      icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
+      icon={
+        <img
+          style={{ width: '18x', height: '18px', padding: '0px 0px 1px 0px' }}
+          src={arrowCircleRightOutlinedIcon}
+          alt="arrow"
+        />
+      }
     />
   )
 }

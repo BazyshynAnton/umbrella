@@ -1,13 +1,15 @@
-import { Button, ArrowForwardIosRoundedIcon } from '../ui/MUI/mui'
+import { Button } from '../ui/MUI/mui'
+import { LazyLoadImage } from '../ui/reactImports/reactImports'
+import arrowForward from '../../../../assets/pictures/app-icons/arrowForward.webp'
 
-const NavigationRightButtonForSwipers = ({
-  styles,
-  handleClick,
-  stylesIcon,
-}) => {
+const NavigationRightButtonForSwipers = ({ styles, handleClick }) => {
   return (
     <Button sx={styles} onClick={handleClick}>
-      <ArrowForwardIosRoundedIcon sx={stylesIcon} />
+      <LazyLoadImage
+        style={{ width: '35px', height: '35px' }}
+        src={arrowForward}
+        alt="prev"
+      />
     </Button>
   )
 }

@@ -1,5 +1,6 @@
 import { Box, Typography } from '../ui/MUI/mui'
 import { fontStyleOpenSans } from '../ui/font/openSans'
+import { LazyLoadImage } from '../ui/reactImports/reactImports'
 
 import YellowButton from '../Button/YellowButton'
 
@@ -31,7 +32,7 @@ const ContentForBigScreens = ({
           ...leftStyles,
         }}
       >
-        <img
+        <LazyLoadImage
           style={{
             objectFit: 'cover',
             height: '100%',

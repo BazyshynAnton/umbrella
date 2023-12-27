@@ -17,12 +17,9 @@ const stylesForArrowBtn = {
     minWidth: '20px',
     padding: '2px',
     borderRadius: '8px',
-    color: '#376586',
-    fontWeight: '600',
-    lineHeight: '0',
     zIndex: '10',
     ':hover': {
-      background: '#d6e5eb',
+      background: 'rgb(55 101 134 / 40%)',
     },
   },
 }

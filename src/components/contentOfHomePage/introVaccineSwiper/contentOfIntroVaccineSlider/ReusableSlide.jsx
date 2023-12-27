@@ -1,5 +1,5 @@
 import { Box } from '../../shared/ui/MUI/mui'
-
+import { LazyLoadImage } from '../../shared/ui/reactImports/reactImports'
 import ReusableButton from './ReusableButton'
 
 const ReusableSlide = ({ text, img, buttonText }) => {
@@ -34,7 +34,7 @@ const ReusableSlide = ({ text, img, buttonText }) => {
           height: { md: '340px', sm: '400px', xs: '100%' },
         }}
       >
-        <img
+        <LazyLoadImage
           src={img}
           alt="slide"
           style={{

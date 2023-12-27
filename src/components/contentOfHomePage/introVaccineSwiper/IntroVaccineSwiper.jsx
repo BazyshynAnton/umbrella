@@ -1,4 +1,8 @@
-import { useState } from '../shared/ui/reactImports/reactImports'
+import {
+  Suspense,
+  lazy,
+  useState,
+} from '../shared/ui/reactImports/reactImports'
 import { useMediaQuery } from '../shared/ui/MUI/mui'
 import {
   Swiper,
@@ -7,13 +11,18 @@ import {
 } from '../shared/ui/swiperImports/swiperImports'
 
 import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
-import SmallScreensLeftRightNavigationForIntroSwiper from './contentOfIntroVaccineSlider/SmallScreensLeftRightNavigationForIntroSwiper'
 import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'
 import LeftRightNavigationIntro from './contentOfIntroVaccineSlider/LeftRightNavigationIntro'
 
 import { introVaccineSwiperData } from '../../../data/introVaccineSwiperData'
 
 import 'swiper/css'
+
+const SmallScreensLeftRightNavigationForIntroSwiper = lazy(() =>
+  import(
+    './contentOfIntroVaccineSlider/SmallScreensLeftRightNavigationForIntroSwiper'
+  )
+)
 
 const IntroVaccineSlider = () => {
   const [pausedSwiper, setPausedSwiper] = useState(true)
@@ -54,10 +63,12 @@ const IntroVaccineSlider = () => {
           />
         </>
       ) : (
-        <SmallScreensLeftRightNavigationForIntroSwiper
-          pausedSwiper={pausedSwiper}
-          setPausedSwiper={setPausedSwiper}
-        />
+        <Suspense>
+          <SmallScreensLeftRightNavigationForIntroSwiper
+            pausedSwiper={pausedSwiper}
+            setPausedSwiper={setPausedSwiper}
+          />
+        </Suspense>
       )}
     </Swiper>
   )

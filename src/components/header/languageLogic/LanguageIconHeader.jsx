@@ -1,3 +1,5 @@
+import { LazyLoadImage } from '../../contentOfHomePage/shared/ui/reactImports/reactImports'
+
 import langIcon from '../../../assets/pictures/app-icons/langIcon.webp'
 
 const stylesForAdditionallyLinks = {
@@ -8,7 +10,7 @@ const stylesForAdditionallyLinks = {
 
 const LanguageIconHeader = () => {
   return (
-    <img
+    <LazyLoadImage
       style={stylesForAdditionallyLinks}
       src={langIcon}
       alt="change-language"

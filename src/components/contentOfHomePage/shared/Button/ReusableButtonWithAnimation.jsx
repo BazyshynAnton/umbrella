@@ -9,6 +9,7 @@ const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
         sx={{
           p: '6px 0px',
           display: 'flex',
+          alignItems: 'center',
           gap: '0.3rem',
           fontSize: '16px',
           fontWeight: '700',

@@ -1,5 +1,6 @@
 import { Box, Typography } from '../ui/MUI/mui'
 import { fontStyleOpenSans } from '../ui/font/openSans'
+import { LazyLoadImage } from '../ui/reactImports/reactImports'
 
 import YellowButton from '../Button/YellowButton'
 
@@ -75,7 +76,7 @@ const ContentForSmallScreens = ({
             height: { md: '150px', sm: '120px', xs: '100px' },
           }}
         >
-          <img
+          <LazyLoadImage
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             src={picture1}
             alt="animated-books-icon"
@@ -90,7 +91,7 @@ const ContentForSmallScreens = ({
             height: { md: '150px', sm: '120px', xs: '100px' },
           }}
         >
-          <img
+          <LazyLoadImage
             style={{ objectFit: 'contain', width: '100%', height: '100%' }}
             src={picture2}
             alt="animated-flask-icon"

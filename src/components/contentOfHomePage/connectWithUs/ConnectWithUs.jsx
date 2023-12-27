@@ -1,7 +1,7 @@
 import { useMediaQuery } from '../shared/ui/MUI/mui'
+import { Suspense, lazy } from '../shared/ui/reactImports/reactImports'
 
 import ContentForBigScreens from '../shared/Blocks/ContentForBigScreens'
-import ContentForSmallScreens from '../shared/Blocks/ContentForSmallScreens'
 
 import chair from '../../../assets/pictures/chair.webp'
 import phoneIcon from '../../../assets/pictures/phoneIcon.webp'
@@ -13,6 +13,10 @@ const text =
 const buttonText = 'Contact Us'
 
 const rightStyles = { right: { xl: '-150px', lg: '0px' } }
+
+const ContentForSmallScreens = lazy(() =>
+  import('../shared/Blocks/ContentForSmallScreens')
+)
 
 const ConnectWithUs = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
@@ -28,13 +32,15 @@ const ConnectWithUs = () => {
           rightStyles={rightStyles}
         />
       ) : (
-        <ContentForSmallScreens
-          picture1={mailIcon}
-          picture2={phoneIcon}
-          buttonText={buttonText}
-          headerText={headerText}
-          text={text}
-        />
+        <Suspense>
+          <ContentForSmallScreens
+            picture1={mailIcon}
+            picture2={phoneIcon}
+            buttonText={buttonText}
+            headerText={headerText}
+            text={text}
+          />
+        </Suspense>
       )}
     </>
   )

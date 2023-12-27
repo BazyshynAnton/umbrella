@@ -9,7 +9,7 @@ import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccine
 const styleForBtns = {
   play: {
     minWidth: '0',
-    p: '0px',
+    p: '4px',
     borderRadius: '8px',
     border: '1px solid #507995',
   },
@@ -19,12 +19,6 @@ const styleForBtns = {
     borderRadius: '8px',
     border: '1px solid #507995',
   },
-
-  iconPlay: {
-    fontSize: '2.5rem',
-    color: '#507995',
-  },
-  iconLeftAndRight: { fontSize: '2rem', color: '#507995' },
 }
 
 const SmallScreensLeftRightNavigationForIntroSwiper = ({ setPausedSwiper }) => {
@@ -69,19 +63,16 @@ const SmallScreensLeftRightNavigationForIntroSwiper = ({ setPausedSwiper }) => {
       </Typography>
 
       <CustomAutoPlayForIntroVaccineSwiper
-        stylesForIcons={styleForBtns.iconPlay}
         stylesForPlayPauseBtn={styleForBtns.play}
         setPausedSwiper={setPausedSwiper}
       />
 
       <NavigationLeftButtonForSwipers
         styles={styleForBtns.leftAndRight}
-        stylesIcon={styleForBtns.iconLeftAndRight}
         handleClick={handleSlideChangePrev}
       />
       <NavigationRightButtonForSwipers
         styles={styleForBtns.leftAndRight}
-        stylesIcon={styleForBtns.iconLeftAndRight}
         handleClick={handleSlideChangeNext}
       />
     </Box>

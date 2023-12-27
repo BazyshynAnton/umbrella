@@ -1,3 +1,5 @@
+import { LazyLoadImage } from '../ui/reactImports/reactImports'
+
 const ReusablePictureForLinkBlock = ({
   topPosition,
   leftPosition,
@@ -15,7 +17,7 @@ const ReusablePictureForLinkBlock = ({
         height: '300px',
       }}
     >
-      <img
+      <LazyLoadImage
         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         src={picture}
         alt="shield"

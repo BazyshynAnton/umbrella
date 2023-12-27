@@ -1,7 +1,10 @@
-import { Box, ArrowCircleRightOutlinedIcon } from '../ui/MUI/mui'
+import { Box } from '../ui/MUI/mui'
 import { fontStyleOpenSans } from '../ui/font/openSans'
+import { LazyLoadImage } from '../ui/reactImports/reactImports'
 
 import ReusableButtonWithAnimation from '../Button/ReusableButtonWithAnimation'
+
+import arrowCircleRightOutlinedIcon from '../../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
 
 const ReusableLinkBlockWithPicture = ({
   text,
@@ -39,7 +42,7 @@ const ReusableLinkBlockWithPicture = ({
           overflow: 'hidden',
         }}
       >
-        <img
+        <LazyLoadImage
           style={{
             objectFit: 'cover',
             width: '100%',
@@ -73,7 +76,17 @@ const ReusableLinkBlockWithPicture = ({
           <ReusableButtonWithAnimation
             animation={animationFor}
             buttonText={textForButton}
-            icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
+            icon={
+              <LazyLoadImage
+                style={{
+                  width: '18x',
+                  height: '18px',
+                  padding: '0px 0px 1px 0px',
+                }}
+                src={arrowCircleRightOutlinedIcon}
+                alt="arrow"
+              />
+            }
           />
         </Box>
       </Box>

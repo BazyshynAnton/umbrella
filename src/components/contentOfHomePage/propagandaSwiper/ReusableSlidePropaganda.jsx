@@ -1,4 +1,5 @@
 import { Box } from '../shared/ui/MUI/mui'
+import { LazyLoadImage } from '../shared/ui/reactImports/reactImports'
 import { animated } from '../shared/ui/reactSpringImports/reactSpringImports'
 const ReusableSlidePropaganda = ({
   stylesForPictures,
@@ -32,7 +33,7 @@ const ReusableSlidePropaganda = ({
             ...textAnimation,
           }}
         >
-          <img style={stylesForQuotes} src={quote} alt="quotes" />
+          <LazyLoadImage style={stylesForQuotes} src={quote} alt="quotes" />
           {text}
         </animated.div>
       </Box>

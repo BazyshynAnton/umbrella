@@ -1,13 +1,13 @@
 import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
-import { useState } from '../../shared/ui/reactImports/reactImports'
 import {
-  Button,
-  PlayArrowRoundedIcon,
-  PauseIcon,
-} from '../../shared/ui/MUI/mui'
+  useState,
+  LazyLoadImage,
+} from '../../shared/ui/reactImports/reactImports'
+import { Button } from '../../shared/ui/MUI/mui'
+import play from '../../../../assets/pictures/app-icons/play.webp'
+import pauseIcon from '../../../../assets/pictures/app-icons/pauseIcon.webp'
 
 const CustomAutoPlayForIntroVaccineSwiper = ({
-  stylesForIcons,
   stylesForPlayPauseBtn,
   setPausedSwiper,
 }) => {
@@ -30,11 +30,19 @@ const CustomAutoPlayForIntroVaccineSwiper = ({
     <>
       {isPlayTrue ? (
         <Button onClick={handlePauseClick} sx={stylesForPlayPauseBtn}>
-          <PauseIcon sx={stylesForIcons} />
+          <LazyLoadImage
+            style={{ width: '35px', height: '35px' }}
+            src={pauseIcon}
+            alt="play"
+          />
         </Button>
       ) : (
         <Button onClick={handlePLayClick} sx={stylesForPlayPauseBtn}>
-          <PlayArrowRoundedIcon sx={stylesForIcons} />
+          <LazyLoadImage
+            style={{ width: '35px', height: '35px' }}
+            src={play}
+            alt="pause"
+          />
         </Button>
       )}
     </>

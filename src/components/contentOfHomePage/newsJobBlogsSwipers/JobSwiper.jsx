@@ -1,8 +1,9 @@
 import { jobData } from '../../../data/jobData'
-import { OpenInNewIcon } from '../shared/ui/MUI/mui'
 import { useButtonContext } from '../../../context/ButtonContext'
 
 import ReusableSwiper from './ReusableSwiper'
+
+import openInNewIcon from '../../../assets/pictures/app-icons/openInNewIcon.webp'
 
 const JobSwiper = () => {
   const { handleMouseEnterTwo, handleMouseLeaveTwo, animationForUnderLineTwo } =
@@ -15,7 +16,13 @@ const JobSwiper = () => {
       handleMouseEnter={handleMouseEnterTwo}
       handleMouseLeave={handleMouseLeaveTwo}
       animationForUnderLine={animationForUnderLineTwo}
-      icon={<OpenInNewIcon sx={{ color: '#d1343e' }} />}
+      icon={
+        <img
+          style={{ width: '18x', height: '18px', padding: '0px 0px 2px 0px' }}
+          src={openInNewIcon}
+          alt="arrow"
+        />
+      }
     />
   )
 }

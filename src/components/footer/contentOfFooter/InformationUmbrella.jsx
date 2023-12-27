@@ -1,5 +1,5 @@
 import { Box, Typography } from '../../contentOfHomePage/shared/ui/MUI/mui'
-
+import { LazyLoadImage } from '../../contentOfHomePage/shared/ui/reactImports/reactImports'
 const InformationUmbrella = ({
   umbrellaFooterLogo,
   stylesForText,
@@ -9,7 +9,7 @@ const InformationUmbrella = ({
   return (
     <Box>
       <Box sx={{ width: '200px', height: '104px', mb: '20px', mt: '20px' }}>
-        <img
+        <LazyLoadImage
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           src={umbrellaFooterLogo}
           alt="umbrella-logo"
@@ -53,7 +53,7 @@ const InformationUmbrella = ({
             marginRight: '8px',
           }}
         >
-          <img
+          <LazyLoadImage
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             src={twitterIcon}
             alt="twitter"
@@ -66,7 +66,7 @@ const InformationUmbrella = ({
             height: '35px',
           }}
         >
-          <img
+          <LazyLoadImage
             style={{
               objectFit: 'cover',
               width: '100%',

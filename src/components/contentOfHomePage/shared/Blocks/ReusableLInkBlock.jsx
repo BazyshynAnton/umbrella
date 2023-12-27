@@ -1,7 +1,10 @@
-import { Box, Typography, ArrowCircleRightOutlinedIcon } from '../ui/MUI/mui'
+import { Box, Typography } from '../ui/MUI/mui'
 import { fontStyleOpenSans } from '../ui/font/openSans'
+import { LazyLoadImage } from '../ui/reactImports/reactImports'
 
 import ReusableButtonWithAnimation from '../Button/ReusableButtonWithAnimation'
+
+import arrowCircleRightOutlinedIcon from '../../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
 
 const ReusableLInkBlock = ({
   text,
@@ -47,7 +50,17 @@ const ReusableLInkBlock = ({
         <Box sx={{ width: buttonWidth }}>
           <ReusableButtonWithAnimation
             buttonText={textForButton}
-            icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
+            icon={
+              <LazyLoadImage
+                style={{
+                  width: '18x',
+                  height: '18px',
+                  padding: '0px 0px 1px 0px',
+                }}
+                src={arrowCircleRightOutlinedIcon}
+                alt="arrow"
+              />
+            }
             animation={animationFor}
           />
         </Box>

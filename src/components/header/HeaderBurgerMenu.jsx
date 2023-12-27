@@ -1,10 +1,11 @@
-import { NavLink } from '../contentOfHomePage/shared/ui/reactImports/reactImports.js'
-import { useHeaderContext } from '../../context/HeaderContext'
 import {
-  Box,
-  Typography,
-  SwipeableDrawer,
-} from '../contentOfHomePage/shared/ui/MUI/mui'
+  NavLink,
+  LazyLoadImage,
+} from '../contentOfHomePage/shared/ui/reactImports/reactImports.js'
+import { useHeaderContext } from '../../context/HeaderContext'
+import { Box, Typography } from '../contentOfHomePage/shared/ui/MUI/mui'
+
+import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 
 import Additionally from './Additionally'
 
@@ -61,7 +62,7 @@ const HeaderBurgerMenu = () => {
               height: { md: '75px', sm: '70px', xs: '60px' },
             }}
           >
-            <img
+            <LazyLoadImage
               style={{
                 objectFit: 'cover',
                 width: '100%',
@@ -72,7 +73,7 @@ const HeaderBurgerMenu = () => {
             />
           </Box>
         </NavLink>
-        <img
+        <LazyLoadImage
           style={{ width: '30px', height: '30px', cursor: 'pointer' }}
           src={menuIcon}
           alt="menu-icon"
@@ -99,13 +100,13 @@ const HeaderBurgerMenu = () => {
         <NavLink to="/" onClick={handleActiveLinkOne}>
           <Box sx={styleForLinkBlocks}>
             {isActiveLinkOne ? (
-              <img
+              <LazyLoadImage
                 style={{ width: '25px', height: '25px' }}
                 src={homeIconActive}
                 alt="home"
               />
             ) : (
-              <img
+              <LazyLoadImage
                 style={{ width: '25px', height: '25px' }}
                 src={homeIconDisabled}
                 alt="home"
@@ -122,13 +123,13 @@ const HeaderBurgerMenu = () => {
         <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
           <Box sx={styleForLinkBlocks}>
             {isActiveLinkTwo ? (
-              <img
+              <LazyLoadImage
                 style={{ width: '25px', height: '20px' }}
                 src={bookIconActive}
                 alt="home"
               />
             ) : (
-              <img
+              <LazyLoadImage
                 style={{ width: '25px', height: '20px' }}
                 src={bookIconDisabled}
                 alt="home"
@@ -146,13 +147,13 @@ const HeaderBurgerMenu = () => {
         <NavLink to="/about-us" onClick={handleActiveLinkThree}>
           <Box sx={styleForLinkBlocks}>
             {isActiveLinkThree ? (
-              <img
+              <LazyLoadImage
                 style={{ width: '25px', height: '20px' }}
                 src={bookIconActive}
                 alt="home"
               />
             ) : (
-              <img
+              <LazyLoadImage
                 style={{ width: '25px', height: '20px' }}
                 src={bookIconDisabled}
                 alt="home"
