@@ -1,9 +1,10 @@
-import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
+import { useSwiper } from '../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
 import {
   useState,
   LazyLoadImage,
-} from '../../shared/ui/reactImports/reactImports'
-import { Button } from '../../shared/ui/MUI/mui'
+} from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Button } from '../../../shared/ui/MUIglobal/muiGlobal'
+
 import play from '../../../../assets/pictures/app-icons/play.webp'
 import pauseIcon from '../../../../assets/pictures/app-icons/pauseIcon.webp'
 

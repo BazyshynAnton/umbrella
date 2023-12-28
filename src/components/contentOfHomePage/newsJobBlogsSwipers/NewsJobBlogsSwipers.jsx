@@ -1,10 +1,17 @@
-import { useState } from '../shared/ui/reactImports/reactImports'
-import { Box, Button } from '../shared/ui/MUI/mui'
-import { fontStyleOpenSans } from '../shared/ui/font/openSans'
+import {
+  Suspense,
+  lazy,
+  useState,
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Button, Box } from '../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 import NewsSwiper from './NewsSwiper'
-import JobSwiper from './JobSwiper'
-import BlogsSwiper from './BlogsSwiper'
+// import JobSwiper from './JobSwiper'
+// import BlogsSwiper from './BlogsSwiper'
+
+const JobSwiper = lazy(() => import('./JobSwiper'))
+const BlogsSwiper = lazy(() => import('./BlogsSwiper'))
 
 const NewsJobBlogsSwipers = () => {
   const [activeNewsSwiper, setActiveNewsSwiper] = useState(true)
@@ -40,8 +47,18 @@ const NewsJobBlogsSwipers = () => {
   }
 
   return (
-    <Box>
-      <Box sx={{ mb: '15px', p: '0px 10px', display: 'flex', gap: '0.3rem' }}>
+    <div>
+      <Box
+        sx={{
+          marginBottom: '15px',
+          padding: '0px 10px',
+          display: 'flex',
+          flexDirection: { sm: 'row', xs: 'column' },
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          gap: '0.3rem',
+        }}
+      >
         <Button
           sx={activeNewsSwiper ? stylesForActiveBtn : stylesForBtns}
           onClick={handleChangeToNews}
@@ -62,9 +79,17 @@ const NewsJobBlogsSwipers = () => {
         </Button>
       </Box>
       {activeNewsSwiper && <NewsSwiper />}
-      {activeJobSwiper && <JobSwiper />}
-      {activeBlogsSwiper && <BlogsSwiper />}
-    </Box>
+      {activeJobSwiper && (
+        <Suspense>
+          <JobSwiper />
+        </Suspense>
+      )}
+      {activeBlogsSwiper && (
+        <Suspense>
+          <BlogsSwiper />
+        </Suspense>
+      )}
+    </div>
   )
 }
 

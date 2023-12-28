@@ -1,7 +1,7 @@
-import { Box, Typography } from '../../shared/ui/MUI/mui'
-import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
+import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
-import YellowButton from '../../shared/Button/YellowButton'
+import YellowButton from '../../shared/Buttons/YellowButton'
 
 const StayUpToDateBigSmall = ({
   stylesForBigScreensFirst,
@@ -17,14 +17,17 @@ const StayUpToDateBigSmall = ({
         <Typography
           variant="h3"
           sx={{
+            fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
             color: '#376586',
             fontWeight: '600',
+            textAlign: 'center',
+
             ...fontStyleOpenSans,
           }}
         >
           Stay up to date
         </Typography>
-        <Box>
+        <div>
           <Typography
             variant="body1"
             sx={{
@@ -37,7 +40,7 @@ const StayUpToDateBigSmall = ({
             <br />
             Sign-up for our alerts here.
           </Typography>
-        </Box>
+        </div>
         <YellowButton>Subscribe</YellowButton>
       </Box>
     </Box>

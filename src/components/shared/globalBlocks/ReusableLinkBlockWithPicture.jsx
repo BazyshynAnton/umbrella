@@ -1,14 +1,15 @@
-import { Box } from '../ui/MUI/mui'
-import { fontStyleOpenSans } from '../ui/font/openSans'
-import { LazyLoadImage } from '../ui/reactImports/reactImports'
+import { Box } from '../ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../ui/fontStyles/openSans'
+import { LazyLoadImage } from '../ui/reactImportsGlobal/reactImportsGlobal'
 
-import ReusableButtonWithAnimation from '../Button/ReusableButtonWithAnimation'
+import ReusableButtonWithAnimation from '../globalButtons/ReusableButtonWithAnimation'
 
-import arrowCircleRightOutlinedIcon from '../../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
+import arrowCircleRightOutlinedIcon from '../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
 
 const ReusableLinkBlockWithPicture = ({
   text,
   headerText,
+  isMouseOver,
   handleEnter,
   handleLeave,
   buttonWidth,
@@ -28,11 +29,6 @@ const ReusableLinkBlockWithPicture = ({
         borderTopRightRadius: '10px',
         borderTopLeftRadius: '10px',
         cursor: 'pointer',
-        ':hover': {
-          img: {
-            transform: 'scale(1.1)',
-          },
-        },
       }}
     >
       <Box
@@ -50,6 +46,7 @@ const ReusableLinkBlockWithPicture = ({
             borderTopRightRadius: '10px',
             borderTopLeftRadius: '10px',
             transition: '0.3s ease-out',
+            transform: isMouseOver ? 'scale(1.1)' : '',
           }}
           src={mainPicture}
           alt="join-us"

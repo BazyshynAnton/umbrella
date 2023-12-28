@@ -1,9 +1,9 @@
-import { Box, Typography } from '../../contentOfHomePage/shared/ui/MUI/mui'
+import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 
 const LinksOfRules = ({ stylesForTextBelowTheLine }) => {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: 'flex',
         flexDirection: 'row',
         gap: '1rem',
@@ -31,7 +31,7 @@ const LinksOfRules = ({ stylesForTextBelowTheLine }) => {
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
         Cookie Settings
       </Typography>
-    </Box>
+    </div>
   )
 }
 

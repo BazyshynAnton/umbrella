@@ -1,9 +1,9 @@
-import { Box, Typography } from '../contentOfHomePage/shared/ui/MUI/mui'
+import { Box, Typography } from '../shared/ui/MUIglobal/muiGlobal'
 import {
   animated,
   useSpring,
-} from '../contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
-import { fontStyleOpenSans } from '../contentOfHomePage/shared/ui/font/openSans'
+} from '../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
+import { fontStyleOpenSans } from '../shared/ui/fontStyles/openSans'
 
 import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
 

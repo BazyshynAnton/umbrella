@@ -1,9 +1,8 @@
-import { Box } from '../shared/ui/MUI/mui.js'
-import { useSwiper } from '../shared/ui/swiperImports/swiperImports.js'
-import { fontStyleOpenSans } from '../shared/ui/font/openSans.js'
+import { useSwiper } from '../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
-import NavigationLeftButtonForSwipers from '../shared/Button/NavigationLeftButtonForSwipers.jsx'
-import NavigationRightButtonForSwipers from '../shared/Button/NavigationRightButtonForSwipers.jsx'
+import NavigationLeftButtonForSwipers from '../../shared/globalButtons/NavigationLeftButtonForSwipers'
+import NavigationRightButtonForSwipers from '../../shared/globalButtons/NavigationRightButtonForSwipers'
 
 const styleForBtn = {
   minWidth: '20px',
@@ -31,12 +30,13 @@ const NavigationButtonForNewsJobBlogsSwiper = () => {
     swiper.slideNext()
   }
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: 'flex',
         alignItems: 'center',
+
         justifyContent: 'space-between',
-        width: '80px',
+        width: '95px',
       }}
     >
       <NavigationLeftButtonForSwipers
@@ -47,7 +47,7 @@ const NavigationButtonForNewsJobBlogsSwiper = () => {
         styles={styleForBtn}
         handleClick={handleNext}
       />
-    </Box>
+    </div>
   )
 }
 

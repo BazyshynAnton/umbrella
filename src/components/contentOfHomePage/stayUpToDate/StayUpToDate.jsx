@@ -1,4 +1,4 @@
-import { useMediaQuery } from '../shared/ui/MUI/mui'
+import { useMediaQuery } from '../../shared/ui/MUIglobal/muiGlobal'
 
 import StayUpToDateBigSmall from './contentOfStayUpToDate/StayUpToDateBigSmall'
 
@@ -28,6 +28,7 @@ const stylesForSmallScreens = {
     width: { sm: '450px', xs: '300px' },
     height: { xs: '300px' },
     border: '1px solid #376586',
+    borderRadius: '10px',
     padding: '2pc',
     display: 'flex',
     flexDirection: 'column',

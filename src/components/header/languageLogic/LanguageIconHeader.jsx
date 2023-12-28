@@ -1,4 +1,4 @@
-import { LazyLoadImage } from '../../contentOfHomePage/shared/ui/reactImports/reactImports'
+import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
 import langIcon from '../../../assets/pictures/app-icons/langIcon.webp'
 

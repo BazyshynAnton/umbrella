@@ -1,6 +1,7 @@
-import { Button } from '../ui/MUI/mui'
-import { LazyLoadImage } from '../ui/reactImports/reactImports'
-import arrowBack from '../../../../assets/pictures/app-icons/arrowBack.webp'
+import { Button } from '../ui/MUIglobal/muiGlobal'
+import { LazyLoadImage } from '../ui/reactImportsGlobal/reactImportsGlobal'
+
+import arrowBack from '../../../assets/pictures/app-icons/arrowBack.webp'
 
 const NavigationLeftButtonForSwipers = ({ styles, handleClick }) => {
   return (

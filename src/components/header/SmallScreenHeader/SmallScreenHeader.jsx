@@ -1,14 +1,13 @@
-import { LazyLoadImage } from '../contentOfHomePage/shared/ui/reactImports/reactImports'
-import { Box } from '../contentOfHomePage/shared/ui/MUI/mui'
+import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import LanguageIconHeader from './languageLogic/LanguageIconHeader'
+import LanguageIconHeader from '../languageLogic/LanguageIconHeader'
 
-import menuIcon from '../../assets/pictures/app-icons/menuIcon.webp'
+import menuIcon from '../../../assets/pictures/app-icons/menuIcon.webp'
 
 const SmallScreenHeader = ({ setOpen }) => {
   return (
     <>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         <LanguageIconHeader />
         <button
           style={{ cursor: 'pointer', background: '#fff' }}
@@ -20,7 +19,7 @@ const SmallScreenHeader = ({ setOpen }) => {
             alt="menu-icon"
           />
         </button>
-      </Box>
+      </div>
     </>
   )
 }

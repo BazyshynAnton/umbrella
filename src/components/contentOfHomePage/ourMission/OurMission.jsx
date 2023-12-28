@@ -1,8 +1,8 @@
 import { useButtonContext } from '../../../context/ButtonContext'
 
-import DateBlock from '../shared/Blocks/DateBlock'
-import ReusableLInkBlock from '../shared/Blocks/ReusableLInkBlock'
-import ReusablePictureForLinkBlock from '../shared/Blocks/ReusablePictureForLinkBlock'
+import DateBlock from '../../shared/globalBlocks/DateBlock'
+import ReusableLInkBlock from '../../shared/globalBlocks/ReusableLInkBlock'
+import ReusablePictureForLinkBlock from '../../shared/globalBlocks/ReusablePictureForLinkBlock'
 
 import meetUmbrellaProtection from '../../../assets/pictures/meetUmbrellaProtection.webp'
 
@@ -10,11 +10,7 @@ const text =
   'Umbrella’s goal is to deliver on the promise of mRNA science to create a new generation of transformative medicines for patients.'
 
 const OurMission = ({ isSmallScreen }) => {
-  const {
-    handleMouseEnterFour,
-    handleMouseLeaveFour,
-    animationForUnderLineFour,
-  } = useButtonContext()
+  const { handleMouseEnter, handleMouseLeave, animations } = useButtonContext()
 
   return (
     <div
@@ -26,8 +22,8 @@ const OurMission = ({ isSmallScreen }) => {
       }}
     >
       <div
-        onMouseEnter={handleMouseEnterFour}
-        onMouseLeave={handleMouseLeaveFour}
+        onMouseEnter={handleMouseEnter(3)}
+        onMouseLeave={handleMouseLeave(3)}
         style={{
           position: 'relative',
           width: '100%',
@@ -45,10 +41,8 @@ const OurMission = ({ isSmallScreen }) => {
         </div>
         <ReusableLInkBlock
           textForButton={'See our mission'}
-          animationFor={animationForUnderLineFour}
-          handleLeave={handleMouseLeaveFour}
-          handleEnter={handleMouseEnterFour}
-          buttonWidth={'180px'}
+          animationFor={animations[3]}
+          buttonWidth={'173px'}
           text={text}
           headerText={'Meet Umbrella'}
         />

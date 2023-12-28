@@ -1,9 +1,9 @@
-import { Box, Typography } from '../ui/MUI/mui'
-import { fontStyleOpenSans } from '../ui/font/openSans'
+import { Typography } from '../ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../ui/fontStyles/openSans'
 
 const DateBlock = ({ integer, text, smallPlus }) => {
   return (
-    <Box>
+    <div>
       <Typography
         sx={{
           fontWeight: '700',
@@ -25,7 +25,7 @@ const DateBlock = ({ integer, text, smallPlus }) => {
       >
         {text}
       </Typography>
-    </Box>
+    </div>
   )
 }
 

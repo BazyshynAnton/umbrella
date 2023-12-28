@@ -1,10 +1,10 @@
-import { Box, Typography } from '../ui/MUI/mui'
-import { fontStyleOpenSans } from '../ui/font/openSans'
-import { LazyLoadImage } from '../ui/reactImports/reactImports'
+import { Box, Typography } from '../ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
+import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import ReusableButtonWithAnimation from '../Button/ReusableButtonWithAnimation'
+import ReusableButtonWithAnimation from '../globalButtons/ReusableButtonWithAnimation'
 
-import arrowCircleRightOutlinedIcon from '../../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
+import arrowCircleRightOutlinedIcon from '../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
 
 const ReusableLInkBlock = ({
   text,

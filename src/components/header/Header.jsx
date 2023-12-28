@@ -2,25 +2,25 @@ import {
   NavLink,
   lazy,
   Suspense,
-} from '../contentOfHomePage/shared/ui/reactImports/reactImports'
+} from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Box, Container, useMediaQuery } from '../shared/ui/MUIglobal/muiGlobal'
+import { animated } from '../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 import { useHeaderContext } from '../../context/HeaderContext'
-import {
-  Box,
-  Container,
-  useMediaQuery,
-} from '../contentOfHomePage/shared/ui/MUI/mui'
 
-import { animated } from '../contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
+import Additionally from './Additionally/Additionally'
 
 import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
-import Additionally from './Additionally'
 
-const HeaderBurgerMenu = lazy(() => import('./HeaderBurgerMenu'))
-const SmallScreenHeader = lazy(() => import('./SmallScreenHeader'))
+const HeaderBurgerMenu = lazy(() =>
+  import('./SmallScreenHeader/HeaderBurgerMenu')
+)
+const SmallScreenHeader = lazy(() =>
+  import('./SmallScreenHeader/SmallScreenHeader')
+)
 const NavigationForBigScreens = lazy(() => import('./NavigationForBigScreens'))
 
 const Header = () => {
-  const { setOpen, headerLogoAnim, isActiveAnimation, handleActiveLinkOne } =
+  const { setOpen, headerLogoAnim, isActiveAnimation, handleActiveLink } =
     useHeaderContext()
 
   const isSmallScreen = useMediaQuery('(min-width: 900px)')
@@ -37,9 +37,15 @@ const Header = () => {
       }}
     >
       <Container>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: '1.3rem' }}>
-            <NavLink to="/" onClick={handleActiveLinkOne}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            padding: '0px 24px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.3rem' }}>
+            <NavLink to="/" onClick={() => handleActiveLink(1)}>
               <Box
                 sx={{
                   height: { md: '75px', sm: '70px', xs: '60px' },
@@ -63,7 +69,7 @@ const Header = () => {
                 <NavigationForBigScreens />
               </Suspense>
             )}
-          </Box>
+          </div>
 
           {!isSmallScreen && (
             <Suspense>
@@ -75,7 +81,7 @@ const Header = () => {
           )}
 
           {isSmallScreen && <Additionally isSmallScreen={isSmallScreen} />}
-        </Box>
+        </div>
 
         {!isSmallScreen && (
           <Suspense>

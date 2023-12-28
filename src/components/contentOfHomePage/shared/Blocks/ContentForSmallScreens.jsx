@@ -1,8 +1,8 @@
-import { Box, Typography } from '../ui/MUI/mui'
-import { fontStyleOpenSans } from '../ui/font/openSans'
-import { LazyLoadImage } from '../ui/reactImports/reactImports'
+import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
+import { LazyLoadImage } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import YellowButton from '../Button/YellowButton'
+import YellowButton from '../Buttons/YellowButton'
 
 const ContentForSmallScreens = ({
   picture1,
@@ -10,25 +10,27 @@ const ContentForSmallScreens = ({
   buttonText,
   headerText,
   text,
+  height1,
+  height2,
 }) => {
   return (
-    <Box
-      sx={{
-        mt: '80px',
+    <div
+      style={{
+        marginTop: '80px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        height: '450px',
       }}
     >
       <Box
         sx={{
           position: 'relative',
           border: '1px solid #376586',
+          borderRadius: '10px',
           background: '#fff',
           width: { md: '600px', sm: '500px', xs: '300px' },
-          height: { sm: '400px', xs: '550px' },
+          height: { sm: height1, xs: height2 },
           padding: '2pc',
           display: 'flex',
           flexDirection: 'column',
@@ -36,12 +38,13 @@ const ContentForSmallScreens = ({
           gap: '1rem',
         }}
       >
-        <Box
-          sx={{
+        <div
+          style={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             gap: '2rem',
+            alignItems: 'center',
           }}
         >
           <Typography
@@ -50,6 +53,7 @@ const ContentForSmallScreens = ({
               fontSize: { md: '3rem', sm: '2.5rem', xs: '1.5rem' },
               fontWeight: '600',
               color: '#376586',
+
               ...fontStyleOpenSans,
             }}
           >
@@ -65,13 +69,13 @@ const ContentForSmallScreens = ({
           >
             {text}
           </Typography>
-        </Box>
+        </div>
         <YellowButton>{buttonText}</YellowButton>
         <Box
           sx={{
             position: 'absolute',
             top: { md: '-50px', sm: '-60px', xs: '-40px' },
-            left: { md: '-100px', sm: '-50px', xs: '-10px' },
+            left: { md: '-100px', sm: '-50px', xs: '-20px' },
             width: { md: '150px', sm: '120px', xs: '100px' },
             height: { md: '150px', sm: '120px', xs: '100px' },
           }}
@@ -98,7 +102,7 @@ const ContentForSmallScreens = ({
           />
         </Box>
       </Box>
-    </Box>
+    </div>
   )
 }
 

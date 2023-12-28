@@ -1,10 +1,9 @@
-import { Box, Typography } from '../ui/MUI/mui'
+import { Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
 import {
   useSpring,
   animated,
-} from '../ui/reactSpringImports/reactSpringImports'
-
-import { fontStyleOpenSans } from '../ui/font/openSans'
+} from '../../../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
 const YellowButton = ({ children }) => {
   const [props, set] = useSpring(() => ({
@@ -41,7 +40,7 @@ const YellowButton = ({ children }) => {
         cursor: 'pointer',
       }}
     >
-      <Box
+      <div
         style={{
           width: '50px',
           height: '50px',
@@ -60,12 +59,16 @@ const YellowButton = ({ children }) => {
         >
           <Typography
             variant="h6"
-            sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}
+            sx={{
+              color: '#053f68',
+              fontWeight: '700',
+              ...fontStyleOpenSans,
+            }}
           >
             {'>'}
           </Typography>
         </animated.div>
-      </Box>
+      </div>
       <animated.div
         style={{
           left: props.typographyTwoLeft,

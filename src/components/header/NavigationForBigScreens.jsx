@@ -1,5 +1,5 @@
-import { NavLink } from '../contentOfHomePage/shared/ui/reactImports/reactImports'
-import { Box, Typography } from '../contentOfHomePage/shared/ui/MUI/mui'
+import { NavLink } from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Box, Typography } from '../shared/ui/MUIglobal/muiGlobal'
 import { useHeaderContext } from '../../context/HeaderContext'
 
 const NavigationForBigScreens = () => {
@@ -11,13 +11,11 @@ const NavigationForBigScreens = () => {
     isActiveLinkOne,
     isActiveLinkTwo,
     isActiveLinkThree,
-    handleActiveLinkOne,
-    handleActiveLinkTwo,
-    handleActiveLinkThree,
+    handleActiveLink,
   } = useHeaderContext()
   return (
-    <Box sx={{ display: 'flex', gap: '1.3rem' }}>
-      <NavLink to="/" onClick={handleActiveLinkOne}>
+    <div style={{ display: 'flex', gap: '1.3rem' }}>
+      <NavLink to="/" onClick={() => handleActiveLink(1)}>
         <Box
           sx={
             isActiveLinkOne
@@ -33,7 +31,10 @@ const NavigationForBigScreens = () => {
           </Typography>
         </Box>
       </NavLink>
-      <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
+      <NavLink
+        to="/vaccine/science-of-mrna"
+        onClick={() => handleActiveLink(2)}
+      >
         <Box
           sx={
             isActiveLinkTwo
@@ -49,7 +50,7 @@ const NavigationForBigScreens = () => {
           </Typography>
         </Box>
       </NavLink>
-      <NavLink to="/about-us" onClick={handleActiveLinkThree}>
+      <NavLink to="/about-us" onClick={() => handleActiveLink(3)}>
         <Box
           sx={
             isActiveLinkThree
@@ -65,7 +66,7 @@ const NavigationForBigScreens = () => {
           </Typography>
         </Box>
       </NavLink>
-    </Box>
+    </div>
   )
 }
 

@@ -2,14 +2,14 @@ import {
   createContext,
   useContext,
   useState,
-} from '../components/contentOfHomePage/shared/ui/reactImports/reactImports'
+} from '../components/shared/ui/reactImportsGlobal/reactImportsGlobal'
 
 import {
   useSpring,
   config,
-} from '../components/contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
+} from '../components/shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 
-import { fontStyleOpenSans } from '../components/contentOfHomePage/shared/ui/font/openSans'
+import { fontStyleOpenSans } from '../components/shared/ui/fontStyles/openSans'
 
 const PropagandaSwiperContext = createContext()
 
@@ -19,99 +19,78 @@ export const usePropagandaSwiperContext = () => {
   return context
 }
 
+// Custom hook to create text animations
+const useTextAnimation = (activeIndex, index) => {
+  return useSpring({
+    opacity: activeIndex === index ? 1 : 0,
+    transform:
+      activeIndex === index ? 'translateX(0px)' : 'translateX(-1000px)',
+    config: config.slow,
+  })
+}
+
 export const PropagandaSwiperProvider = ({ children }) => {
-  const stylesForPictures = {
-    objectFit: 'contain',
-    width: '100%',
-    height: '100%',
-    transition: 'ease',
-  }
-
-  const stylesForQuotes = {
-    objectFit: 'cover',
-    width: '40px',
-    height: '30px',
-    position: 'absolute',
-    top: '0',
-    left: '-45px',
-  }
-
-  const stylesForTextInSlides = {
-    blueText: {
-      color: '#376586',
-      fontFamily: "'Tilt Warp', sans-serif",
-      fontWeight: '600',
-      fontSize: { md: '1.5rem', sm: '1rem', xs: '0.8rem' },
-      letterSpacing: '0.07em',
-      lineHeight: '1em',
-      textAlign: 'left',
-      textTransform: 'uppercase',
-      cursor: 'default',
-      ...fontStyleOpenSans,
-    },
-
-    yellowText: {
-      fontFamily: "'Figtree', sans-serif",
-      fontWeight: '600',
-      fontSize: { md: '1.2rem', sm: '1rem', xs: '0.8rem' },
-      color: '#DAA520',
-      cursor: 'default',
-      ...fontStyleOpenSans,
-    },
-  }
-
-  const animationDuration = 50000
-  const scaleFrom = 'scale(1)'
-  const scaleTo = 'scale(2)'
   const [activeIndex, setActiveIndex] = useState(0)
 
-  const animatedStyles = useSpring({
-    from: { transform: scaleFrom },
-    to: { transform: scaleTo },
+  const styles = {
+    forPictures: {
+      objectFit: 'contain',
+      width: '100%',
+      height: '100%',
+      transition: 'ease',
+    },
+    forQuotes: {
+      objectFit: 'cover',
+      width: '40px',
+      height: '30px',
+      position: 'absolute',
+      top: '0',
+      left: '-45px',
+    },
+    forTextInSlides: {
+      blueText: {
+        color: '#376586',
+        fontWeight: '600',
+        fontSize: { md: '1.5rem', sm: '1rem', xs: '0.8rem' },
+        letterSpacing: '0.07em',
+        lineHeight: '1em',
+        textAlign: 'left',
+        textTransform: 'uppercase',
+        cursor: 'default',
+        ...fontStyleOpenSans,
+      },
 
-    config: { duration: animationDuration },
+      yellowText: {
+        fontWeight: '600',
+        fontSize: { md: '1.2rem', sm: '1rem', xs: '0.8rem' },
+        color: '#DAA520',
+        cursor: 'default',
+        ...fontStyleOpenSans,
+      },
+    },
+  }
 
+  // Animations
+  const scaleAnimation = useSpring({
+    from: { transform: 'scale(1)' },
+    to: { transform: 'scale(2)' },
+    config: { duration: 50000 },
     reset: activeIndex !== 0,
   })
 
-  const textAnimation1 = useSpring({
-    from: activeIndex === 0 ? { opacity: 0, x: -1000 } : { opacity: 0, x: 0 },
-    to: activeIndex === 0 ? { opacity: 1, x: 0 } : { opacity: 0, x: -1000 },
-    config: config.slow,
-  })
-
-  const textAnimation2 = useSpring({
-    opacity: activeIndex === 1 ? 1 : 0,
-    transform: activeIndex === 1 ? 'translateX(0px)' : 'translateX(-1000px)',
-    config: config.slow,
-  })
-
-  const textAnimation3 = useSpring({
-    opacity: activeIndex === 2 ? 1 : 0,
-    transform: activeIndex === 2 ? 'translateX(0px)' : 'translateX(-1000px)',
-    config: config.slow,
-  })
-
-  const textAnimation4 = useSpring({
-    opacity: activeIndex === 3 ? 1 : 0,
-    transform: activeIndex === 3 ? 'translateX(0px)' : 'translateX(-1000px)',
-    config: config.slow,
-  })
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex)
-  }
+  const textAnimation1 = useTextAnimation(activeIndex, 0)
+  const textAnimation2 = useTextAnimation(activeIndex, 1)
+  const textAnimation3 = useTextAnimation(activeIndex, 2)
+  const textAnimation4 = useTextAnimation(activeIndex, 3)
 
   const contextValue = {
-    stylesForPictures,
-    stylesForQuotes,
-    stylesForTextInSlides,
-    animatedStyles,
+    styles,
+    scaleAnimation,
     textAnimation1,
     textAnimation2,
     textAnimation3,
     textAnimation4,
-    handleSlideChange,
+    handleSlideChange: (swiper) => setActiveIndex(swiper.activeIndex),
   }
 
   return (

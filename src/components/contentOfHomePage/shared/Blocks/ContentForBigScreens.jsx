@@ -1,8 +1,8 @@
-import { Box, Typography } from '../ui/MUI/mui'
-import { fontStyleOpenSans } from '../ui/font/openSans'
-import { LazyLoadImage } from '../ui/reactImports/reactImports'
+import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
+import { LazyLoadImage } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import YellowButton from '../Button/YellowButton'
+import YellowButton from '../Buttons/YellowButton'
 
 const ContentForBigScreens = ({
   picture,
@@ -10,12 +10,12 @@ const ContentForBigScreens = ({
   text,
   buttonText,
   height,
-  rightStyles,
-  leftStyles,
+  positionForPicture,
+  position,
 }) => {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         position: 'relative',
         marginTop: '60px',
         width: '100%',
@@ -28,8 +28,7 @@ const ContentForBigScreens = ({
 
           width: '100%',
           height: height,
-          ...rightStyles,
-          ...leftStyles,
+          ...positionForPicture,
         }}
       >
         <LazyLoadImage
@@ -43,11 +42,10 @@ const ContentForBigScreens = ({
         />
       </Box>
 
-      <Box
-        sx={{
+      <div
+        style={{
           position: 'absolute',
           top: '18%',
-          right: '0',
           background: '#fff',
           width: '600px',
           height: '400px',
@@ -56,10 +54,11 @@ const ContentForBigScreens = ({
           flexDirection: 'column',
           justifyContent: 'center',
           gap: '1rem',
+          ...position,
         }}
       >
-        <Box
-          sx={{
+        <div
+          style={{
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -86,10 +85,10 @@ const ContentForBigScreens = ({
           >
             {text}
           </Typography>
-        </Box>
+        </div>
         <YellowButton>{buttonText}</YellowButton>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 

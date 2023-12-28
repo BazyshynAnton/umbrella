@@ -1,8 +1,14 @@
-import { useEffect, useState } from '../shared/ui/reactImports/reactImports'
-import { Swiper, SwiperSlide } from '../shared/ui/swiperImports/swiperImports'
-import { Box } from '../shared/ui/MUI/mui'
+import {
+  useEffect,
+  useState,
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import {
+  Swiper,
+  SwiperSlide,
+} from '../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 
-import ReusableButtonWithAnimation from '../shared/Button/ReusableButtonWithAnimation'
+import ReusableButtonWithAnimation from '../../shared/globalButtons/ReusableButtonWithAnimation'
 import NavigationButtonForNewsJobBlogsSwiper from './NavigationButtonForNewsJobBlogsSwiper'
 import ReusableSlideForNewsJobBlogsSwipers from './ReusableSlideForNewsJobBlogsSwipers'
 

@@ -2,9 +2,9 @@ import {
   createContext,
   useContext,
   useState,
-} from '../components/contentOfHomePage/shared/ui/reactImports/reactImports'
-import { fontStyleOpenSans } from '../components/contentOfHomePage/shared/ui/font/openSans'
-import { useSpring } from '../components/contentOfHomePage/shared/ui/reactSpringImports/reactSpringImports'
+} from '../components/shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { fontStyleOpenSans } from '../components/shared/ui/fontStyles/openSans'
+import { useSpring } from '../components/shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 
 const HeaderContext = createContext()
 
@@ -69,32 +69,12 @@ export const HeaderContextProvider = ({ children }) => {
     reset: true,
   })
 
-  const [isActiveLinkOne, setIsActiveLinkOne] = useState(false)
-  const [isActiveLinkTwo, setIsActiveLinkTwo] = useState(false)
-  const [isActiveLinkThree, setIsActiveLinkThree] = useState(false)
+  const [activeLink, setActiveLink] = useState(null)
   const [open, setOpen] = useState(false)
 
-  const handleActiveLinkOne = () => {
-    setIsActiveLinkOne(true)
-    setIsActiveLinkTwo(false)
-    setIsActiveLinkThree(false)
-    setIsActiveAnimation(true)
-    window.scrollTo(0, 0)
-    setOpen(false)
-  }
-  const handleActiveLinkTwo = () => {
-    setIsActiveLinkOne(false)
-    setIsActiveLinkTwo(true)
-    setIsActiveLinkThree(false)
-    setIsActiveAnimation(false)
-    window.scrollTo(0, 0)
-    setOpen(false)
-  }
-  const handleActiveLinkThree = () => {
-    setIsActiveLinkOne(false)
-    setIsActiveLinkTwo(false)
-    setIsActiveLinkThree(true)
-    setIsActiveAnimation(false)
+  const handleActiveLink = (linkNumber) => {
+    setActiveLink(linkNumber)
+    setIsActiveAnimation(linkNumber === 1)
     window.scrollTo(0, 0)
     setOpen(false)
   }
@@ -104,12 +84,10 @@ export const HeaderContextProvider = ({ children }) => {
     stylesForActiveLinks,
     stylesForHoveredNavLinks,
     stylesForActiveHoveredNavLinks,
-    isActiveLinkOne,
-    isActiveLinkTwo,
-    isActiveLinkThree,
-    handleActiveLinkOne,
-    handleActiveLinkTwo,
-    handleActiveLinkThree,
+    isActiveLinkOne: activeLink === 1,
+    isActiveLinkTwo: activeLink === 2,
+    isActiveLinkThree: activeLink === 3,
+    handleActiveLink,
     open,
     setOpen,
     headerLogoAnim,

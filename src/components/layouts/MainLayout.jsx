@@ -1,18 +1,22 @@
-import { Outlet } from 'react-router-dom'
-import { Suspense } from 'react'
+import {
+  Outlet,
+  Suspense,
+  lazy,
+} from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import Header from '../header/Header'
-import Footer from '../footer/Footer'
 import Spinner from '../spinner/Spinner'
+
+const Header = lazy(() => import('../header/Header'))
+const Footer = lazy(() => import('../footer/Footer'))
 
 const MainLayout = () => {
   return (
     <>
-      <Header />
       <Suspense fallback={<Spinner />}>
+        <Header />
         <Outlet />
+        <Footer />
       </Suspense>
-      <Footer />
     </>
   )
 }

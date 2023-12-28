@@ -1,13 +1,13 @@
-import { Typography } from '../shared/ui/MUI/mui'
+import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import { usePropagandaSwiperContext } from '../../../context/PropagandaSwiperContext'
 
 export const TextForSlide1 = () => {
-  const { stylesForTextInSlides } = usePropagandaSwiperContext()
+  const { styles } = usePropagandaSwiperContext()
   return (
-    <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
+    <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
       Protect Yourself
       <br />
-      <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
+      <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
         and Others:
       </Typography>
       <br />
@@ -17,16 +17,16 @@ export const TextForSlide1 = () => {
   )
 }
 export const TextForSlide2 = () => {
-  const { stylesForTextInSlides } = usePropagandaSwiperContext()
+  const { styles } = usePropagandaSwiperContext()
   return (
-    <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
+    <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
       Together
       <br />
       we are stronger:
       <br />
       protect yourself
       <br />
-      <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
+      <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
         and your loved
       </Typography>
       <br />
@@ -35,30 +35,30 @@ export const TextForSlide2 = () => {
   )
 }
 export const TextForSlide3 = () => {
-  const { stylesForTextInSlides } = usePropagandaSwiperContext()
+  const { styles } = usePropagandaSwiperContext()
   return (
-    <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
+    <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
       Take
       <br />
       the Umbrella vaccine
       <br />
       to strengthen
       <br />
-      <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
+      <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
         the immune system
       </Typography>
     </Typography>
   )
 }
 export const TextForSlide4 = () => {
-  const { stylesForTextInSlides } = usePropagandaSwiperContext()
+  const { styles } = usePropagandaSwiperContext()
   return (
-    <Typography variant="body1" sx={stylesForTextInSlides.blueText}>
+    <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
       Umbrella:
       <br />
       Innovations
       <br />
-      <Typography variant="caption" sx={stylesForTextInSlides.yellowText}>
+      <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
         with
       </Typography>
       <br />

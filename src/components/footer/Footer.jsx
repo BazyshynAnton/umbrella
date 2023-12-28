@@ -1,4 +1,4 @@
-import { Box, Container } from '../contentOfHomePage/shared/ui/MUI/mui'
+import { Box, Container } from '../shared/ui/MUIglobal/muiGlobal'
 
 import InformationUmbrella from './contentOfFooter/InformationUmbrella'
 import UsefulLinks from './contentOfFooter/UsefulLinks'
@@ -38,8 +38,8 @@ const stylesForTextBelowTheLine = {
 
 const Footer = () => {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         width: '100%',
         height: '100%',
         background: '#083952',
@@ -79,7 +79,7 @@ const Footer = () => {
 
         <AllRights DATE={DATE} />
       </Container>
-    </Box>
+    </div>
   )
 }
 

@@ -1,9 +1,10 @@
-import { Box } from '../shared/ui/MUI/mui'
-import { LazyLoadImage } from '../shared/ui/reactImports/reactImports'
-import { animated } from '../shared/ui/reactSpringImports/reactSpringImports'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
+import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { animated } from '../../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
+
 const ReusableSlidePropaganda = ({
   stylesForPictures,
-  animatedStyles,
+  scaleAnimation,
   picture,
   textAnimation,
   stylesForQuotes,
@@ -12,14 +13,14 @@ const ReusableSlidePropaganda = ({
 }) => {
   return (
     <>
-      <animated.img
+      <animated.div
         style={{
           ...stylesForPictures,
-          ...animatedStyles,
+          ...scaleAnimation,
         }}
-        src={picture}
-        alt="slide"
-      />
+      >
+        {picture}
+      </animated.div>
       <Box
         sx={{
           position: 'absolute',
@@ -33,7 +34,12 @@ const ReusableSlidePropaganda = ({
             ...textAnimation,
           }}
         >
-          <LazyLoadImage style={stylesForQuotes} src={quote} alt="quotes" />
+          <LazyLoadImage
+            className="swiper-lazy"
+            style={stylesForQuotes}
+            src={quote}
+            alt="quotes"
+          />
           {text}
         </animated.div>
       </Box>

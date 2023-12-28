@@ -1,4 +1,4 @@
-import { Box, Typography } from '../../contentOfHomePage/shared/ui/MUI/mui'
+import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 
 const UsefulLinks = ({ styleForTextCompany }) => {
   return (
@@ -9,8 +9,8 @@ const UsefulLinks = ({ styleForTextCompany }) => {
         gap: '1.5rem',
       }}
     >
-      <Box
-        sx={{
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -42,9 +42,9 @@ const UsefulLinks = ({ styleForTextCompany }) => {
         <Typography variant="body1" sx={styleForTextCompany}>
           {'>'} Covid-19
         </Typography>
-      </Box>
-      <Box
-        sx={{
+      </div>
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'column',
           gap: '0.5rem',
@@ -72,7 +72,7 @@ const UsefulLinks = ({ styleForTextCompany }) => {
         <Typography variant="body1" sx={styleForTextCompany}>
           {'>'} Connect
         </Typography>
-      </Box>
+      </div>
     </Box>
   )
 }

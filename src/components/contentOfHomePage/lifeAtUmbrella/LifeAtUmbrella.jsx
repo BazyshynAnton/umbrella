@@ -1,7 +1,7 @@
 import { useButtonContext } from '../../../context/ButtonContext'
 
-import ReusableLinkBlockWithPicture from '../shared/Blocks/ReusableLinkBlockWithPicture'
-import ReusablePictureForLinkBlock from '../shared/Blocks/ReusablePictureForLinkBlock'
+import ReusableLinkBlockWithPicture from '../../shared/globalBlocks/ReusableLinkBlockWithPicture'
+import ReusablePictureForLinkBlock from '../../shared/globalBlocks/ReusablePictureForLinkBlock'
 
 import lifeAtUmbrellaPicture from '../../../assets/pictures/lifeAtUmbrellaPicture.webp'
 import smilingScientists from '../../../assets/pictures/smilingScientists.webp'
@@ -9,11 +9,8 @@ import smilingScientists from '../../../assets/pictures/smilingScientists.webp'
 const headerText = 'Join us and change the world of medicine'
 
 const LifeAtUmbrella = ({ isSmallScreen }) => {
-  const {
-    handleMouseEnterFive,
-    handleMouseLeaveFive,
-    animationForUnderLineFive,
-  } = useButtonContext()
+  const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
+    useButtonContext()
 
   return (
     <div
@@ -26,12 +23,13 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
     >
       <ReusableLinkBlockWithPicture
         textForButton={'life at Umbrella'}
-        animationFor={animationForUnderLineFive}
         mainPicture={smilingScientists}
-        buttonWidth={'189px'}
+        buttonWidth={'182px'}
         headerText={headerText}
-        handleEnter={handleMouseEnterFive}
-        handleLeave={handleMouseLeaveFive}
+        isMouseOver={isMouseOver[4]}
+        animationFor={animations[4]}
+        handleEnter={handleMouseEnter(4)}
+        handleLeave={handleMouseLeave(4)}
       />
 
       {isSmallScreen && (

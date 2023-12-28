@@ -1,10 +1,13 @@
 import {
   useSpring,
   animated,
-} from '../../shared/ui/reactSpringImports/reactSpringImports'
-import { useEffect, useState } from '../../shared/ui/reactImports/reactImports'
-import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
-import { Box } from '../../shared/ui/MUI/mui'
+} from '../../../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
+import {
+  useEffect,
+  useState,
+} from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useSwiper } from '../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { Box } from '../../../shared/ui/MUIglobal/muiGlobal'
 
 import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccineSwiper'
 
@@ -64,10 +67,9 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
   })
 
   return (
-    <Box
-      sx={{
-        mt: '12px',
-
+    <div
+      style={{
+        marginTop: '12px',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -99,8 +101,8 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
                 : {}
             }
           />
-          <Box
-            sx={{
+          <div
+            style={{
               position: 'absolute',
               left: '0px',
               top: '19px',
@@ -112,7 +114,7 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
           />
         </Box>
       ))}
-    </Box>
+    </div>
   )
 }
 

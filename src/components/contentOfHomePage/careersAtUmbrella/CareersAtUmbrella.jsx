@@ -1,5 +1,8 @@
-import { useMediaQuery } from '../shared/ui/MUI/mui'
-import { Suspense, lazy } from '../shared/ui/reactImports/reactImports'
+import { useMediaQuery } from '../../shared/ui/MUIglobal/muiGlobal'
+import {
+  Suspense,
+  lazy,
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
 import ContentForBigScreens from '../shared/Blocks/ContentForBigScreens'
 
@@ -16,7 +19,8 @@ const text =
 const buttonText = 'Careers Portal'
 const headerText = 'Careers at Umbrella'
 
-const leftStyles = { left: { xl: '-150px', lg: '0px' } }
+const positionForPicture = { left: '-150px' }
+const position = { right: '0px' }
 
 const CareersAtUmbrella = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
@@ -29,7 +33,8 @@ const CareersAtUmbrella = () => {
           headerText={headerText}
           text={text}
           buttonText={buttonText}
-          leftStyles={leftStyles}
+          positionForPicture={positionForPicture}
+          position={position}
         />
       ) : (
         <Suspense>
@@ -39,6 +44,8 @@ const CareersAtUmbrella = () => {
             text={text}
             buttonText={buttonText}
             headerText={headerText}
+            height1={'400px'}
+            height2={'550px'}
           />
         </Suspense>
       )}

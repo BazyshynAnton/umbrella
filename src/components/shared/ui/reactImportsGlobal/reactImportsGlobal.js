@@ -7,7 +7,7 @@ import {
   Suspense,
 } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 export {
   useState,
@@ -18,4 +18,5 @@ export {
   LazyLoadImage,
   lazy,
   Suspense,
+  Outlet,
 }

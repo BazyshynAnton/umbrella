@@ -1,5 +1,5 @@
-import { Box, Typography } from '../../contentOfHomePage/shared/ui/MUI/mui'
-import { LazyLoadImage } from '../../contentOfHomePage/shared/ui/reactImports/reactImports'
+import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
+import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 const InformationUmbrella = ({
   umbrellaFooterLogo,
   stylesForText,
@@ -7,14 +7,14 @@ const InformationUmbrella = ({
   linkedIcon,
 }) => {
   return (
-    <Box>
-      <Box sx={{ width: '200px', height: '104px', mb: '20px', mt: '20px' }}>
+    <div>
+      <div style={{ width: '200px', height: '104px', margin: '20px 0px' }}>
         <LazyLoadImage
           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           src={umbrellaFooterLogo}
           alt="umbrella-logo"
         />
-      </Box>
+      </div>
       <Typography variant="body1" sx={stylesForText}>
         Umbrella Corp.
       </Typography>
@@ -33,13 +33,13 @@ const InformationUmbrella = ({
       <Typography variant="body1" sx={stylesForText}>
         M: service@umbrella.corp
       </Typography>
-      <Box
-        sx={{
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
-          mt: '15px',
-          mb: '20px',
+          marginTop: '15px',
+          marginBottom: '20px',
         }}
       >
         <div
@@ -77,8 +77,8 @@ const InformationUmbrella = ({
             alt="linked-in"
           />
         </div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 

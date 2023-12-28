@@ -1,9 +1,13 @@
-import { useEffect, useState } from '../../shared/ui/reactImports/reactImports'
-import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
-import { Box, Typography } from '../../shared/ui/MUI/mui'
-import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
-import NavigationLeftButtonForSwipers from '../../shared/Button/NavigationLeftButtonForSwipers'
-import NavigationRightButtonForSwipers from '../../shared/Button/NavigationRightButtonForSwipers'
+import {
+  useEffect,
+  useState,
+} from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useSwiper } from '../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
+
+import NavigationLeftButtonForSwipers from '../../../shared/globalButtons/NavigationLeftButtonForSwipers'
+import NavigationRightButtonForSwipers from '../../../shared/globalButtons/NavigationRightButtonForSwipers'
 import CustomAutoPlayForIntroVaccineSwiper from './CustomAutoPlayForIntroVaccineSwiper'
 
 const styleForBtns = {
@@ -46,9 +50,9 @@ const SmallScreensLeftRightNavigationForIntroSwiper = ({ setPausedSwiper }) => {
   }
 
   return (
-    <Box
-      sx={{
-        mt: '15px',
+    <div
+      style={{
+        marginTop: '15px',
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -75,7 +79,7 @@ const SmallScreensLeftRightNavigationForIntroSwiper = ({ setPausedSwiper }) => {
         styles={styleForBtns.leftAndRight}
         handleClick={handleSlideChangeNext}
       />
-    </Box>
+    </div>
   )
 }
 

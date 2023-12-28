@@ -1,5 +1,5 @@
-import { Typography } from '../../shared/ui/MUI/mui'
-import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
+import { Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
 export const textForSlide1 = (
   <Typography
@@ -10,7 +10,7 @@ export const textForSlide1 = (
       ...fontStyleOpenSans,
     }}
   >
-    SAFEVAX (COVID-19 Vaccine, mRNA) Now Approved!
+    T-VAX (COVID-19 Vaccine, mRNA) Now Approved!
   </Typography>
 )
 export const textForSlide2 = (

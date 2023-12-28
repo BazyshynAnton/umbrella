@@ -1,4 +1,4 @@
-import { LazyLoadImage } from '../ui/reactImports/reactImports'
+import { LazyLoadImage } from '../ui/reactImportsGlobal/reactImportsGlobal'
 
 const ReusablePictureForLinkBlock = ({
   topPosition,

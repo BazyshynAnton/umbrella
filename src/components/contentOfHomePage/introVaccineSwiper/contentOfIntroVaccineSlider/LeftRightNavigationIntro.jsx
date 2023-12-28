@@ -1,6 +1,7 @@
-import { useSwiper } from '../../shared/ui/swiperImports/swiperImports'
-import NavigationLeftButtonForSwipers from '../../shared/Button/NavigationLeftButtonForSwipers'
-import NavigationRightButtonForSwipers from '../../shared/Button/NavigationRightButtonForSwipers'
+import { useSwiper } from '../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+
+import NavigationLeftButtonForSwipers from '../../../shared/globalButtons/NavigationLeftButtonForSwipers'
+import NavigationRightButtonForSwipers from '../../../shared/globalButtons/NavigationRightButtonForSwipers'
 
 const stylesForArrowBtn = {
   left: {

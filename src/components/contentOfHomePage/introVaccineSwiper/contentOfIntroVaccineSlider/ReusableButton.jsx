@@ -1,6 +1,7 @@
-import { NavLink } from '../../shared/ui/reactImports/reactImports'
-import { Button } from '../../shared/ui/MUI/mui'
-import { fontStyleOpenSans } from '../../shared/ui/font/openSans'
+import { NavLink } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Button } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
+
 import { useHeaderContext } from '../../../../context/HeaderContext'
 
 const stylesForBtn = {

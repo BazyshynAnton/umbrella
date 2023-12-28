@@ -2,13 +2,13 @@ import {
   Suspense,
   lazy,
   useState,
-} from '../shared/ui/reactImports/reactImports'
-import { useMediaQuery } from '../shared/ui/MUI/mui'
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useMediaQuery } from '../../shared/ui/MUIglobal/muiGlobal'
 import {
   Swiper,
   SwiperSlide,
   Autoplay,
-} from '../shared/ui/swiperImports/swiperImports'
+} from '../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
 
 import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
 import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'

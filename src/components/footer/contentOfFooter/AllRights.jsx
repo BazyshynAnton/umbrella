@@ -1,8 +1,8 @@
-import { Box, Typography } from '../../contentOfHomePage/shared/ui/MUI/mui'
+import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 
 const AllRights = ({ DATE }) => {
   return (
-    <Box sx={{ mt: '40px', pb: '10px' }}>
+    <div style={{ marginTop: '40px', paddingBottom: '10px' }}>
       <Typography
         variant="body2"
         sx={{
@@ -23,7 +23,7 @@ const AllRights = ({ DATE }) => {
       >
         All rights reserved
       </Typography>
-    </Box>
+    </div>
   )
 }
 

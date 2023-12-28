@@ -1,20 +1,20 @@
 import {
   NavLink,
   LazyLoadImage,
-} from '../contentOfHomePage/shared/ui/reactImports/reactImports.js'
-import { useHeaderContext } from '../../context/HeaderContext'
-import { Box, Typography } from '../contentOfHomePage/shared/ui/MUI/mui'
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
+import { useHeaderContext } from '../../../context/HeaderContext.jsx'
 
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 
-import Additionally from './Additionally'
+import Additionally from '../Additionally/Additionally.jsx'
 
-import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSmall.webp'
-import menuIcon from '../../assets/pictures/app-icons/menuIcon.webp'
-import homeIconActive from '../../assets/pictures/app-icons/homeIconActive.webp'
-import homeIconDisabled from '../../assets/pictures/app-icons/homeIconDisabled.webp'
-import bookIconActive from '../../assets/pictures/app-icons/bookIconActive.webp'
-import bookIconDisabled from '../../assets/pictures/app-icons/bookIconDisabled.webp'
+import umbrellaHeaderLogoSmall from '../../../assets/pictures/umbrellaHeaderLogoSmall.webp'
+import menuIcon from '../../../assets/pictures/app-icons/menuIcon.webp'
+import homeIconActive from '../../../assets/pictures/app-icons/homeIconActive.webp'
+import homeIconDisabled from '../../../assets/pictures/app-icons/homeIconDisabled.webp'
+import bookIconActive from '../../../assets/pictures/app-icons/bookIconActive.webp'
+import bookIconDisabled from '../../../assets/pictures/app-icons/bookIconDisabled.webp'
 
 const styleForLinkBlocks = {
   display: 'flex',
@@ -26,14 +26,12 @@ const HeaderBurgerMenu = () => {
   const {
     open,
     setOpen,
-    handleActiveLinkOne,
-    handleActiveLinkTwo,
-    handleActiveLinkThree,
-    stylesForLinks,
-    stylesForActiveLinks,
     isActiveLinkOne,
     isActiveLinkTwo,
     isActiveLinkThree,
+    handleActiveLink,
+    stylesForLinks,
+    stylesForActiveLinks,
   } = useHeaderContext()
   const handleTouchLInk = () => {
     setOpen(false)
@@ -56,7 +54,7 @@ const HeaderBurgerMenu = () => {
           alignItems: 'center',
         }}
       >
-        <NavLink to="/">
+        <NavLink to="/" onClick={() => handleActiveLink(1)}>
           <Box
             sx={{
               height: { md: '75px', sm: '70px', xs: '60px' },
@@ -86,9 +84,9 @@ const HeaderBurgerMenu = () => {
           background: 'rgba(5, 63, 104, 0.5)',
         }}
       />
-      <Box
-        sx={{
-          p: '0px 48px',
+      <div
+        style={{
+          padding: '0px 48px',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -97,7 +95,7 @@ const HeaderBurgerMenu = () => {
           height: '200px',
         }}
       >
-        <NavLink to="/" onClick={handleActiveLinkOne}>
+        <NavLink to="/" onClick={() => handleActiveLink(1)}>
           <Box sx={styleForLinkBlocks}>
             {isActiveLinkOne ? (
               <LazyLoadImage
@@ -120,7 +118,10 @@ const HeaderBurgerMenu = () => {
             </Typography>
           </Box>
         </NavLink>
-        <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
+        <NavLink
+          to="/vaccine/science-of-mrna"
+          onClick={() => handleActiveLink(2)}
+        >
           <Box sx={styleForLinkBlocks}>
             {isActiveLinkTwo ? (
               <LazyLoadImage
@@ -144,7 +145,7 @@ const HeaderBurgerMenu = () => {
             </Typography>
           </Box>
         </NavLink>
-        <NavLink to="/about-us" onClick={handleActiveLinkThree}>
+        <NavLink to="/about-us" onClick={() => handleActiveLink(3)}>
           <Box sx={styleForLinkBlocks}>
             {isActiveLinkThree ? (
               <LazyLoadImage
@@ -167,7 +168,7 @@ const HeaderBurgerMenu = () => {
             </Typography>
           </Box>
         </NavLink>
-      </Box>
+      </div>
       <Additionally />
     </SwipeableDrawer>
   )
