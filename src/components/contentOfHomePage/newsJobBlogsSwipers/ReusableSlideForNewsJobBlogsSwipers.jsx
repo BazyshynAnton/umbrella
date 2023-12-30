@@ -1,11 +1,12 @@
-import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
   return (
     <Box
       sx={{
-        width: '300px',
+        width: '100%',
+        height: '120px',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -27,27 +28,25 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
         },
       }}
     >
-      <Typography
-        variant="body1"
-        sx={{
-          fontSize: '17px',
+      <p
+        style={{
+          fontSize: '19px',
           fontWeight: '600',
           color: 'rgb(5, 63, 104)',
           ...fontStyleOpenSans,
         }}
       >
         {text}
-      </Typography>
-      <Typography
-        variant="body1"
-        sx={{
-          fontSize: '14px',
+      </p>
+      <p
+        style={{
+          fontSize: '15px',
           color: 'rgb(80, 121, 149)',
           ...fontStyleOpenSans,
         }}
       >
         {date}
-      </Typography>
+      </p>
     </Box>
   )
 }

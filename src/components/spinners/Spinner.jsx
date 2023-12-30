@@ -9,7 +9,7 @@ import umbrellaHeaderLogoSmall from '../../assets/pictures/umbrellaHeaderLogoSma
 
 const Spinner = () => {
   const rotation = useSpring({
-    loop: { reverse: true },
+    loop: true,
     from: { transform: 'rotate(0deg)' },
     to: { transform: 'rotate(360deg)' },
     config: { duration: 2000 },

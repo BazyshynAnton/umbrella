@@ -31,7 +31,7 @@ const ReusableSlide = ({ text, img, buttonText }) => {
       </Box>
       <Box
         sx={{
-          width: { md: '1000px', xs: '100%' },
+          width: { md: '900px', xs: '100%' },
           height: { md: '340px', sm: '400px', xs: '100%' },
         }}
       >

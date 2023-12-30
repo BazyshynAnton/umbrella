@@ -2,49 +2,35 @@ import {
   Suspense,
   lazy,
   useState,
+  useCallback,
 } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { Button, Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 import NewsSwiper from './NewsSwiper'
-// import JobSwiper from './JobSwiper'
-// import BlogsSwiper from './BlogsSwiper'
+import SmallSpinner from '../../spinners/SmallSpinner'
 
 const JobSwiper = lazy(() => import('./JobSwiper'))
 const BlogsSwiper = lazy(() => import('./BlogsSwiper'))
 
+const stylesForBtns = {
+  fontWeight: '600',
+  color: '#376586',
+  ...fontStyleOpenSans,
+}
+
+const stylesForActiveBtn = {
+  fontWeight: '600',
+  color: '#053f68',
+  ...fontStyleOpenSans,
+}
+
 const NewsJobBlogsSwipers = () => {
-  const [activeNewsSwiper, setActiveNewsSwiper] = useState(true)
-  const [activeJobSwiper, setActiveJobSwiper] = useState(false)
-  const [activeBlogsSwiper, setActiveBlogsSwiper] = useState(false)
+  const [activeSwiper, setActiveSwiper] = useState('news')
 
-  const handleChangeToNews = () => {
-    setActiveNewsSwiper(true)
-    setActiveJobSwiper(false)
-    setActiveBlogsSwiper(false)
-  }
-  const handleChangeToJob = () => {
-    setActiveNewsSwiper(false)
-    setActiveJobSwiper(true)
-    setActiveBlogsSwiper(false)
-  }
-  const handleChangeToBlogs = () => {
-    setActiveNewsSwiper(false)
-    setActiveJobSwiper(false)
-    setActiveBlogsSwiper(true)
-  }
-
-  const stylesForBtns = {
-    fontWeight: '600',
-    color: '#376586',
-    ...fontStyleOpenSans,
-  }
-
-  const stylesForActiveBtn = {
-    fontWeight: '600',
-    color: '#053f68',
-    ...fontStyleOpenSans,
-  }
+  const handleChangeToNews = useCallback(() => setActiveSwiper('news'), [])
+  const handleChangeToJob = useCallback(() => setActiveSwiper('job'), [])
+  const handleChangeToBlogs = useCallback(() => setActiveSwiper('blogs'), [])
 
   return (
     <div>
@@ -60,32 +46,32 @@ const NewsJobBlogsSwipers = () => {
         }}
       >
         <Button
-          sx={activeNewsSwiper ? stylesForActiveBtn : stylesForBtns}
+          sx={activeSwiper === 'news' ? stylesForActiveBtn : stylesForBtns}
           onClick={handleChangeToNews}
         >
           News
         </Button>
         <Button
-          sx={activeJobSwiper ? stylesForActiveBtn : stylesForBtns}
+          sx={activeSwiper === 'job' ? stylesForActiveBtn : stylesForBtns}
           onClick={handleChangeToJob}
         >
           Job opportunities
         </Button>
         <Button
-          sx={activeBlogsSwiper ? stylesForActiveBtn : stylesForBtns}
+          sx={activeSwiper === 'blogs' ? stylesForActiveBtn : stylesForBtns}
           onClick={handleChangeToBlogs}
         >
           Blogs
         </Button>
       </Box>
-      {activeNewsSwiper && <NewsSwiper />}
-      {activeJobSwiper && (
-        <Suspense>
+      {activeSwiper === 'news' && <NewsSwiper />}
+      {activeSwiper === 'job' && (
+        <Suspense fallback={<SmallSpinner />}>
           <JobSwiper />
         </Suspense>
       )}
-      {activeBlogsSwiper && (
-        <Suspense>
+      {activeSwiper === 'blogs' && (
+        <Suspense fallback={<SmallSpinner />}>
           <BlogsSwiper />
         </Suspense>
       )}

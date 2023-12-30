@@ -5,10 +5,10 @@ import {
   useContext,
   lazy,
   Suspense,
+  useCallback,
 } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { NavLink, Outlet } from 'react-router-dom'
-
 export {
   useState,
   useEffect,
@@ -19,4 +19,5 @@ export {
   lazy,
   Suspense,
   Outlet,
+  useCallback,
 }

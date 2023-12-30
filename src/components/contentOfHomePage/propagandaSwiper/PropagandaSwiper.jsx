@@ -19,10 +19,10 @@ import { usePropagandaSwiperContext } from '../../../context/PropagandaSwiperCon
 
 import ReusableSlidePropaganda from './ReusableSlidePropaganda'
 
-import slideForHomePageOne from '../../../assets/pictures/slideForHomePageOne.webp'
-import slideForHomePageTwo from '../../../assets/pictures/slideForHomePageTwo.webp'
-import slideForHomePageThree from '../../../assets/pictures/slideForHomePageThree.webp'
-import slideForHomePageFour from '../../../assets/pictures/slideForHomePageFour.webp'
+import slideForHomePageOne from '../../../assets/pictures/slideForHomePageOne.jpg'
+import slideForHomePageTwo from '../../../assets/pictures/slideForHomePageTwo.jpg'
+import slideForHomePageThree from '../../../assets/pictures/slideForHomePageThree.jpg'
+import slideForHomePageFour from '../../../assets/pictures/slideForHomePageFour.jpg'
 import quote from '../../../assets/pictures/quote.webp'
 
 import 'swiper/css'
@@ -42,6 +42,29 @@ const PropagandaSwiper = () => {
     textAnimation4,
     handleSlideChange,
   } = usePropagandaSwiperContext()
+
+  const slides = [
+    {
+      src: slideForHomePageOne,
+      textAnimation: textAnimation1,
+      text: <TextForSlide1 />,
+    },
+    {
+      src: slideForHomePageTwo,
+      textAnimation: textAnimation2,
+      text: <TextForSlide2 />,
+    },
+    {
+      src: slideForHomePageThree,
+      textAnimation: textAnimation3,
+      text: <TextForSlide3 />,
+    },
+    {
+      src: slideForHomePageFour,
+      textAnimation: textAnimation4,
+      text: <TextForSlide4 />,
+    },
+  ]
 
   return (
     <Swiper
@@ -71,74 +94,25 @@ const PropagandaSwiper = () => {
       modules={[EffectCreative, Pagination, Navigation, Autoplay]}
       style={{ height: '100%' }}
     >
-      <SwiperSlide style={styleForSlide}>
-        <ReusableSlidePropaganda
-          stylesForPictures={styles.forPictures}
-          scaleAnimation={scaleAnimation}
-          picture={
-            <LazyLoadImage
-              style={styles.forPictures}
-              src={slideForHomePageOne}
-              alt="slide"
-            />
-          }
-          textAnimation={textAnimation1}
-          stylesForQuotes={styles.forQuotes}
-          quote={quote}
-          text={<TextForSlide1 />}
-        />
-      </SwiperSlide>
-      <SwiperSlide style={styleForSlide}>
-        <ReusableSlidePropaganda
-          stylesForPictures={styles.forPictures}
-          scaleAnimation={scaleAnimation}
-          picture={
-            <LazyLoadImage
-              style={styles.forPictures}
-              src={slideForHomePageTwo}
-              alt="slide"
-            />
-          }
-          textAnimation={textAnimation2}
-          stylesForQuotes={styles.forQuotes}
-          quote={quote}
-          text={<TextForSlide2 />}
-        />
-      </SwiperSlide>
-      <SwiperSlide style={styleForSlide}>
-        <ReusableSlidePropaganda
-          stylesForPictures={styles.forPictures}
-          scaleAnimation={scaleAnimation}
-          picture={
-            <LazyLoadImage
-              style={styles.forPictures}
-              src={slideForHomePageThree}
-              alt="slide"
-            />
-          }
-          textAnimation={textAnimation3}
-          stylesForQuotes={styles.forQuotes}
-          quote={quote}
-          text={<TextForSlide3 />}
-        />
-      </SwiperSlide>
-      <SwiperSlide style={styleForSlide}>
-        <ReusableSlidePropaganda
-          stylesForPictures={styles.forPictures}
-          scaleAnimation={scaleAnimation}
-          picture={
-            <LazyLoadImage
-              style={styles.forPictures}
-              src={slideForHomePageFour}
-              alt="slide"
-            />
-          }
-          textAnimation={textAnimation4}
-          stylesForQuotes={styles.forQuotes}
-          quote={quote}
-          text={<TextForSlide4 />}
-        />
-      </SwiperSlide>
+      {slides.map((slide, index) => (
+        <SwiperSlide key={index} style={styleForSlide}>
+          <ReusableSlidePropaganda
+            stylesForPictures={styles.forPictures}
+            scaleAnimation={scaleAnimation}
+            picture={
+              <LazyLoadImage
+                style={styles.forPictures}
+                src={slide.src}
+                alt={`slide ${index + 1}`}
+              />
+            }
+            textAnimation={slide.textAnimation}
+            stylesForQuotes={styles.forQuotes}
+            quote={quote}
+            text={slide.text}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   )
 }

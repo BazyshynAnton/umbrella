@@ -4,7 +4,7 @@ import {
   lazy,
 } from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import Spinner from '../spinner/Spinner'
+import Spinner from '../spinners/Spinner'
 
 const Header = lazy(() => import('../header/Header'))
 const Footer = lazy(() => import('../footer/Footer'))
