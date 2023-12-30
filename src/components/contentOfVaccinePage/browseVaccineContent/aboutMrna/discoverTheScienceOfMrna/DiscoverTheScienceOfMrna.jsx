@@ -1,8 +1,11 @@
-import { Box, Button, Typography } from '@mui/material'
-
-import discoverTheScienceOfMrnaPicture from '../../../../../pictures/discoverTheScienceOfMrnaPicture.png'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import {
+  Box,
+  Button,
+  Typography,
+} from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
+import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import discoverTheScienceOfMrnaPicture from '../../../../../assets/pictures/discoverTheScienceOfMrnaPicture.png'
 
 const DiscoverTheScienceOfMrna = () => {
   return (
@@ -81,7 +84,7 @@ const DiscoverTheScienceOfMrna = () => {
           borderRadius: '8px',
         }}
       >
-        <img
+        <LazyLoadImage
           style={{
             objectFit: 'cover',
             width: '100%',

@@ -1,11 +1,17 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
+import {
+  Suspense,
+  lazy,
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import DateBlock from '../../reusableComponents/DateBlock'
-import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
+import DateBlock from '../../shared/globalBlocks/DateBlock'
 
-import delivering from '../../../assets/pictures/delivering.webp'
+import delivering from '../../../assets/pictures/delivering.png'
 
-import { fontStyleOpenSans } from '../../../context/variables'
+const ReusablePictureForLinkBlock = lazy(() =>
+  import('../../shared/globalBlocks/ReusablePictureForLinkBlock')
+)
 
 const Delivering = ({ isSmallScreen }) => {
   return (
@@ -62,11 +68,13 @@ const Delivering = ({ isSmallScreen }) => {
         </div>
       </Box>
       {isSmallScreen && (
-        <ReusablePictureForLink
-          topPosition={'49.5px'}
-          rightPosition={'0px'}
-          picture={delivering}
-        />
+        <Suspense>
+          <ReusablePictureForLinkBlock
+            topPosition={'49.5px'}
+            rightPosition={'0px'}
+            picture={delivering}
+          />
+        </Suspense>
       )}
     </Box>
   )

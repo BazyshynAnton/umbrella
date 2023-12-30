@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 
 import ReusableItemBlock from './ReusableItemBlock'
 

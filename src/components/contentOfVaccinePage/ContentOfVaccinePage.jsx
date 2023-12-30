@@ -1,12 +1,22 @@
-import { Container, useMediaQuery } from '../MUIcomponents/MUIcomponents'
+import { Container, useMediaQuery } from '../shared/ui/MUIglobal/muiGlobal'
+import {
+  lazy,
+  Suspense,
+} from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
 import VaccineEfficacyChart from './vaccineEfficacyChart/VaccineEfficacyChart'
-import VaccineEfficacyChartSmallScreen from './vaccineEfficacyChart/VaccineEfficacyChartSmallScreen'
 import BrowseVaccineContent from './browseVaccineContent/BrowseVaccineContent'
 import ChartData from './chartData/ChartData'
 
-import ChartDataSmallScreen from './chartData/ChartDataSmallScreen'
-import PieChartForMobile from './vaccineEfficacyChart/PieChartForMobile'
+const ChartDataSmallScreen = lazy(() =>
+  import('./chartData/ChartDataSmallScreen')
+)
+const PieChartForMobile = lazy(() =>
+  import('./vaccineEfficacyChart/PieChartForMobile')
+)
+const VaccineEfficacyChartSmallScreen = lazy(() =>
+  import('./vaccineEfficacyChart/VaccineEfficacyChartSmallScreen')
+)
 
 const ContentOfVaccinePage = () => {
   const isSmallScreen = useMediaQuery('(min-width: 825px)')
@@ -16,11 +26,21 @@ const ContentOfVaccinePage = () => {
       {isSmallScreen ? (
         <VaccineEfficacyChart />
       ) : isSmallScreenTwo ? (
-        <VaccineEfficacyChartSmallScreen />
+        <Suspense>
+          <VaccineEfficacyChartSmallScreen />
+        </Suspense>
       ) : (
-        <PieChartForMobile />
+        <Suspense>
+          <PieChartForMobile />
+        </Suspense>
       )}
-      {isSmallScreen ? <ChartData /> : <ChartDataSmallScreen />}
+      {isSmallScreen ? (
+        <ChartData />
+      ) : (
+        <Suspense>
+          <ChartDataSmallScreen />
+        </Suspense>
+      )}
       <BrowseVaccineContent />
     </Container>
   )

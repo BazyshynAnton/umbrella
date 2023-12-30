@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material'
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
 const TheScienceOfMrnaForSmallScreens = () => {
   return (

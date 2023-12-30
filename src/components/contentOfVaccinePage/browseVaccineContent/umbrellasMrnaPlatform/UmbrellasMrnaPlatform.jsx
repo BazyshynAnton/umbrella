@@ -1,20 +1,19 @@
-import { Box } from '@mui/material'
-import ReusableComponentMrnaPicture from '../../../reusableComponents/ReusableComponentMrnaPicture'
-import ReusableComponentForIntroduce from '../../../reusableComponents/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../shared/globalBlocks/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../shared/globalBlocks/ReusableComponentForIntroduce'
 import ItsAllAboutProteins from './itsAllAboutProteins/ItsAllAboutProteins'
 import MrnaIsTransformational from './mRnaIsTransformational/MrnaIsTransformational'
 
-import demoImgThree from '../../../../pictures/demoImgThree.jpeg'
-import demoImgFour from '../../../../pictures/demoImgFour.png'
+import demoImgThree from '../../../../assets/pictures/demoImgThree.jpeg'
+import demoImgFour from '../../../../assets/pictures/demoImgFour.png'
 
 const text =
   'Our scientists are developing mRNA medicines to help prevent or treat disease.'
 
 const UmbrellasMrnaPlatform = () => {
   return (
-    <Box
-      sx={{
-        mt: '20px',
+    <div
+      style={{
+        marginTop: '20px',
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
@@ -28,7 +27,7 @@ const UmbrellasMrnaPlatform = () => {
       <ReusableComponentMrnaPicture />
       <ItsAllAboutProteins />
       <MrnaIsTransformational />
-    </Box>
+    </div>
   )
 }
 

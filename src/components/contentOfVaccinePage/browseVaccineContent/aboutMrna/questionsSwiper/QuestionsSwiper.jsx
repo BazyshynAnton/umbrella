@@ -1,15 +1,20 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-
-import { Box } from '@mui/material'
+import {
+  Swiper,
+  SwiperSlide,
+  Autoplay,
+} from '../../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import {
+  useEffect,
+  useState,
+} from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { Box } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { infoForQuestionsSwiper } from '../../../../../data/infoForQuestionsSwiper'
+
 import CardForQuestionsSwiper from './CardForQuestionsSwiper'
 import SwiperNavBtns from './SwiperNavBtns'
 
-import { Autoplay } from 'swiper/modules'
-import { useEffect, useState } from 'react'
+import 'swiper/css'
+import 'swiper/css/navigation'
 
 const QuestionsSwiper = () => {
   const [slidesPerView, setSlidesPerView] = useState(3)

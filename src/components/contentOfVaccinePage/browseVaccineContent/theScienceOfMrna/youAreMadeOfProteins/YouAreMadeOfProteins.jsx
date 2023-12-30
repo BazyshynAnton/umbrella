@@ -1,12 +1,5 @@
-import { Box, Typography } from '@mui/material'
-import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
-
-import picOfProteins from '../../../../../pictures/picOfProteins.png'
-import picOfResearch from '../../../../../pictures/picOfResearch.png'
-import picOfMed from '../../../../../pictures/picOfMed.png'
-import picOfImportant from '../../../../../pictures/picOfImportant.png'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 import {
   headerTextOne,
   headerTextTwo,
@@ -19,6 +12,13 @@ import {
   informationTextThree,
   informationTextFour,
 } from './VariablesForYouAreMadeOfProteins'
+
+import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
+
+import picOfProteins from '../../../../../assets/pictures/picOfProteins.png'
+import picOfResearch from '../../../../../assets/pictures/picOfResearch.png'
+import picOfMed from '../../../../../assets/pictures/picOfMed.png'
+import picOfImportant from '../../../../../assets/pictures/picOfImportant.png'
 
 const YouAreMadeOfProteins = () => {
   return (
@@ -39,7 +39,7 @@ const YouAreMadeOfProteins = () => {
         Your body contains <b>trillions of cells</b>, the basic units of life.
         And every cell contains proteins.
       </Typography>
-      {/*  */}
+
       <Box
         sx={{
           mt: '40px',

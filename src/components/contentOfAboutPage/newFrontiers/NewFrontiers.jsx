@@ -1,35 +1,33 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { useButtonContext } from '../../../context/ButtonContext'
 import { useHeaderContext } from '../../../context/HeaderContext'
 
-import ReusableLeftInfoRightPictureBlock from '../../reusableComponents/ReusableLeftInfoRightPictureBlock'
+import ReusableLeftInfoRightPictureBlock from '../shared/Blocks/ReusableLeftInfoRightPictureBlock'
 
-import newFrontiers from '../../../assets/pictures/newFrontiersPic.webp'
+import newFrontiersPic from '../../../assets/pictures/newFrontiersPic.jpeg'
 
 const headerText = 'Exploring new frontiers of mRNA'
 const text =
   ' With our mRNA Design Studio™ that allows our scientists to design, research and test mRNA within days and our internal incubator for ongoing exploration, we are boldly going where no biotech company has gone before.'
 
 const NewFrontiers = () => {
-  const {
-    handleMouseEnterSeven,
-    handleMouseLeaveSeven,
-    animationForUnderLineSeven,
-  } = useButtonContext()
+  const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
+    useButtonContext()
 
-  const { handleActiveLinkTwo } = useHeaderContext()
+  const { handleActiveLink } = useHeaderContext()
 
   return (
-    <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
+    <NavLink to="/vaccine/science-of-mrna" onClick={() => handleActiveLink(2)}>
       <ReusableLeftInfoRightPictureBlock
-        mouseEnter={handleMouseEnterSeven}
-        mouseLeave={handleMouseLeaveSeven}
-        picture={newFrontiers}
-        blockButtonWidth={'137.5px'}
+        mouseEnter={handleMouseEnter(7)}
+        mouseLeave={handleMouseLeave(7)}
+        picture={newFrontiersPic}
+        blockButtonWidth={'134px'}
         text={text}
         headerText={headerText}
         buttonText={'learn more'}
-        animationFor={animationForUnderLineSeven}
+        animationFor={animations[7]}
+        isMouseOver={isMouseOver[7]}
       />
     </NavLink>
   )

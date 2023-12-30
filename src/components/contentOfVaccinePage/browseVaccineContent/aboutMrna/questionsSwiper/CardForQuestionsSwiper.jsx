@@ -1,7 +1,6 @@
-import { Box, Typography } from '@mui/material'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
-
+import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
+import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 const CardForQuestionsSwiper = ({ img, header, text, id }) => {
   return (
     <Box
@@ -29,7 +28,7 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
           borderTopLeftRadius: '8px',
         }}
       >
-        <img
+        <LazyLoadImage
           style={{
             objectFit: 'cover',
             width: '100%',
@@ -50,7 +49,7 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
         }}
       >
         <Typography
-          variant='h7'
+          variant="h7"
           sx={{
             fontSize: { sm: '16px', xs: '15px' },
             fontWeight: '600',
@@ -62,7 +61,7 @@ const CardForQuestionsSwiper = ({ img, header, text, id }) => {
           {header}
         </Typography>
         <Typography
-          variant='body2'
+          variant="body2"
           sx={{ fontSize: '14', color: '#376586', ...fontStyleOpenSans }}
         >
           {text}

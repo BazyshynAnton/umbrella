@@ -1,5 +1,5 @@
-import { Typography } from '@mui/material'
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import { Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
 export const headerTextOne = (
   <Typography
@@ -8,7 +8,8 @@ export const headerTextOne = (
       fontSize: { sm: '1.5rem', xs: '1.2rem' },
       fontWeight: { sm: '400', xs: '600' },
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     What proteins do
   </Typography>
 )
@@ -28,7 +29,8 @@ export const headerTextTwo = (
       fontSize: { sm: '1.5rem', xs: '1.2rem' },
       fontWeight: { sm: '400', xs: '600' },
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     How proteins work
   </Typography>
 )
@@ -48,7 +50,8 @@ export const headerTextThree = (
       fontSize: { sm: '1.5rem', xs: '1.2rem' },
       fontWeight: { sm: '400', xs: '600' },
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     Why proteins are important'
   </Typography>
 )
@@ -67,7 +70,8 @@ export const headerTextFour = (
       fontSize: { sm: '1.5rem', xs: '1.2rem' },
       fontWeight: { sm: '400', xs: '600' },
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     Why we focus on proteins
   </Typography>
 )

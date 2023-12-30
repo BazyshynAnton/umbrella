@@ -1,6 +1,7 @@
 import { NavLink } from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { Box, Typography } from '../shared/ui/MUIglobal/muiGlobal'
 import { useHeaderContext } from '../../context/HeaderContext'
+import { useTranslation } from '../shared/translations/translationsImports'
 
 const NavigationForBigScreens = () => {
   const {
@@ -13,6 +14,9 @@ const NavigationForBigScreens = () => {
     isActiveLinkThree,
     handleActiveLink,
   } = useHeaderContext()
+
+  const { t } = useTranslation()
+
   return (
     <div style={{ display: 'flex', gap: '1.3rem' }}>
       <NavLink to="/" onClick={() => handleActiveLink(1)}>
@@ -27,7 +31,7 @@ const NavigationForBigScreens = () => {
             variant="h5"
             sx={isActiveLinkOne ? stylesForActiveLinks : stylesForLinks}
           >
-            Main
+            {t('Main')}
           </Typography>
         </Box>
       </NavLink>
@@ -46,7 +50,7 @@ const NavigationForBigScreens = () => {
             variant="h5"
             sx={isActiveLinkTwo ? stylesForActiveLinks : stylesForLinks}
           >
-            Vaccine
+            {t('Vaccine')}
           </Typography>
         </Box>
       </NavLink>
@@ -62,7 +66,7 @@ const NavigationForBigScreens = () => {
             variant="h5"
             sx={isActiveLinkThree ? stylesForActiveLinks : stylesForLinks}
           >
-            About Us
+            {t('About Us')}
           </Typography>
         </Box>
       </NavLink>

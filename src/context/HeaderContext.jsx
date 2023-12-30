@@ -4,7 +4,6 @@ import {
   useState,
 } from '../components/shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { fontStyleOpenSans } from '../components/shared/ui/fontStyles/openSans'
-import { useSpring } from '../components/shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 
 const HeaderContext = createContext()
 
@@ -60,21 +59,11 @@ export const HeaderContextProvider = ({ children }) => {
     },
   }
 
-  const [isActiveAnimation, setIsActiveAnimation] = useState(false)
-
-  const headerLogoAnim = useSpring({
-    from: { transform: 'rotate(0deg)' },
-    to: { transform: 'rotate(360deg)' },
-    config: { duration: 400 },
-    reset: true,
-  })
-
   const [activeLink, setActiveLink] = useState(null)
   const [open, setOpen] = useState(false)
 
   const handleActiveLink = (linkNumber) => {
     setActiveLink(linkNumber)
-    setIsActiveAnimation(linkNumber === 1)
     window.scrollTo(0, 0)
     setOpen(false)
   }
@@ -90,8 +79,6 @@ export const HeaderContextProvider = ({ children }) => {
     handleActiveLink,
     open,
     setOpen,
-    headerLogoAnim,
-    isActiveAnimation,
   }
 
   return (

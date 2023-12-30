@@ -1,14 +1,13 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
-import ReusableComponentForIntroduce from '../../../reusableComponents/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../../../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../shared/globalBlocks/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../shared/globalBlocks/ReusableComponentMrnaPicture'
 import QuestionsSwiper from './questionsSwiper/QuestionsSwiper'
-
-import demoImgFive from '../../../../pictures/demoImgFive.png'
-import demoImgSix from '../../../../pictures/demoImgSix.png'
 import DiscoverTheScienceOfMrna from './discoverTheScienceOfMrna/DiscoverTheScienceOfMrna'
 
-import { fontStyleOpenSans } from '../../../../context/variables'
+import demoImgFive from '../../../../assets/pictures/demoImgFive.png'
+import demoImgSix from '../../../../assets/pictures/demoImgSix.png'
 
 const text =
   "Learn more about the science behind mRNA and how Umbrella's scientists are researching and developing investigational mRNA medicines to potentially help prevent or treat disease."

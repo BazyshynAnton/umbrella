@@ -1,4 +1,4 @@
-import { Container, useMediaQuery } from '@mui/material'
+import { Container, useMediaQuery } from '../shared/ui/MUIglobal/muiGlobal'
 import { ButtonContextProvider } from '../../context/ButtonContext'
 
 import AboutUsOurMission from './aboutUsOurMission/AboutUsOurMission'
@@ -6,7 +6,7 @@ import Delivering from './delivering/Delivering'
 import ChangingTheWorld from './changingTheWorld/ChangingTheWorld'
 import NewFrontiers from './newFrontiers/NewFrontiers'
 import OurValues from './ourValues/OurValues'
-import OurMIndsets from './ourMIndsets/OurMIndsets'
+import OurMindsets from './ourMindsets/OurMindsets'
 import Leadership from './leadership/Leadership'
 import Headquarters from './headquarters/Headquarters'
 
@@ -21,7 +21,7 @@ const ContentOfAboutPage = () => {
         <ChangingTheWorld isSmallScreen={isSmallScreen} />
         <NewFrontiers />
         <OurValues />
-        <OurMIndsets isSmallScreen={isSmallScreen} />
+        <OurMindsets isSmallScreen={isSmallScreen} />
         <Leadership isSmallScreen={isSmallScreen} />
         <Headquarters />
       </Container>

@@ -1,24 +1,37 @@
-import { Box } from '@mui/material'
-import { NavLink } from 'react-router-dom'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
+import {
+  NavLink,
+  lazy,
+  Suspense,
+} from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { useButtonContext } from '../../../context/ButtonContext'
 import { useHeaderContext } from '../../../context/HeaderContext'
 
-import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
-import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
+import ReusableLinkBlockWithPicture from '../../shared/globalBlocks/ReusableLinkBlockWithPicture'
 
-import umbrellaGuy from '../../../assets/pictures/umbrellaGuy.webp'
-import changingTheWorld from '../../../assets/pictures/changingTheWorld.webp'
+import umbrellaGuy from '../../../assets/pictures/umbrellaGuy.png'
+import changingTheWorld from '../../../assets/pictures/changingTheWorld.png'
+
+const ReusablePictureForLinkBlock = lazy(() =>
+  import('../../shared/globalBlocks/ReusablePictureForLinkBlock')
+)
 
 const headerText = 'We’re changing the world of medicine'
 const text =
   'We are creating a new category of medicines and harnessing the power of mRNA.'
 
 const ChangingTheWorld = ({ isSmallScreen }) => {
-  const { handleMouseEnterSix, handleMouseLeaveSix, animationForUnderLineSix } =
+  const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
     useButtonContext()
-  const { handleActiveLinkTwo } = useHeaderContext()
+  const { handleActiveLink } = useHeaderContext()
+
   return (
-    <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
+    <NavLink
+      to="/vaccine/science-of-mrna"
+      onClick={(event) => {
+        handleActiveLink(2)
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
@@ -30,19 +43,22 @@ const ChangingTheWorld = ({ isSmallScreen }) => {
         <ReusableLinkBlockWithPicture
           text={text}
           headerText={headerText}
-          buttonWidth={'196.9px'}
+          buttonWidth={'190px'}
           mainPicture={umbrellaGuy}
-          handleEnter={handleMouseEnterSix}
-          handleLeave={handleMouseLeaveSix}
-          animationFor={animationForUnderLineSix}
+          handleEnter={handleMouseEnter(6)}
+          handleLeave={handleMouseLeave(6)}
+          animationFor={animations[6]}
           textForButton={'more about mrna'}
+          isMouseOver={isMouseOver[6]}
         />
         {isSmallScreen && (
-          <ReusablePictureForLink
-            topPosition={'24.5px'}
-            leftPosition={'0px'}
-            picture={changingTheWorld}
-          />
+          <Suspense>
+            <ReusablePictureForLinkBlock
+              topPosition={'24.5px'}
+              leftPosition={'0px'}
+              picture={changingTheWorld}
+            />
+          </Suspense>
         )}
       </Box>
     </NavLink>

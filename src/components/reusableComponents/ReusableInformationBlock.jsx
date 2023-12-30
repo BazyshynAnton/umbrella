@@ -1,4 +1,5 @@
-import { Box } from '../MUIcomponents/MUIcomponents'
+import { Box } from '../shared/ui/MUIglobal/muiGlobal'
+import { LazyLoadImage } from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
 const ReusableInformationBlock = ({ picture, headerText, informationText }) => {
   return (
@@ -12,7 +13,7 @@ const ReusableInformationBlock = ({ picture, headerText, informationText }) => {
       }}
     >
       <Box sx={{ width: '150px', height: '150px' }}>
-        <img
+        <LazyLoadImage
           style={{
             objectFit: 'cover',
             width: '150px',

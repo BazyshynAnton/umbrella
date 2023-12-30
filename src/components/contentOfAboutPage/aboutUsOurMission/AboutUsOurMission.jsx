@@ -1,12 +1,11 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
-import ReusableComponentForIntroduce from '../../reusableComponents/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../shared/globalBlocks/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../shared/globalBlocks/ReusableComponentMrnaPicture'
 
-import microscope from '../../../assets/pictures/microscope.webp'
-import umbrellaGuyWithLaptop from '../../../assets/pictures/umbrellaGuyWithLaptop.webp'
-
-import { fontStyleOpenSans } from '../../../context/variables'
+import microscope from '../../../assets/pictures/microscope.png'
+import umbrellaGuyWithLaptop from '../../../assets/pictures/umbrellaGuyWithLaptop.png'
 
 const textForReusableComponent =
   'Our mission is to deliver the greatest possible impact to people through mRNA medicines.'

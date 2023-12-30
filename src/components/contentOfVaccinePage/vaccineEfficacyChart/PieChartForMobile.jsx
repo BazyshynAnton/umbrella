@@ -3,7 +3,7 @@ import {
   ArcElement,
   Tooltip,
   Legend,
-} from '../../ChartComponents/chartComponents.js'
+} from '../shared/chartComponents/chartComponents'
 
 import { Pie } from 'react-chartjs-2'
 

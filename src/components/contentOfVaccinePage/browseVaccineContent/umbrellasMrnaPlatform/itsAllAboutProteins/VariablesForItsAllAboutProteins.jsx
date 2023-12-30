@@ -1,6 +1,5 @@
-import { Typography } from '@mui/material'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import { Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
 const styleForHeader = {
   fontSize: { sm: '1.5rem', xs: '1.2rem' },
@@ -13,7 +12,8 @@ export const headerTextOne = (
     sx={{
       ...styleForHeader,
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     We start with a protein
   </Typography>
 )
@@ -30,7 +30,8 @@ export const headerTextTwo = (
     sx={{
       ...styleForHeader,
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     Then we design the mRNA
   </Typography>
 )
@@ -46,7 +47,8 @@ export const headerTextThree = (
     sx={{
       ...styleForHeader,
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     And repeat this process to create other medicines
   </Typography>
 )
@@ -64,7 +66,8 @@ export const headerTextFour = (
     sx={{
       ...styleForHeader,
       ...fontStyleOpenSans,
-    }}>
+    }}
+  >
     We have an extensive pipeline
   </Typography>
 )

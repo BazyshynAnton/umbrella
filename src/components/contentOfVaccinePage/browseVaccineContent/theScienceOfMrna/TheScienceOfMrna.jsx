@@ -1,14 +1,14 @@
-import { Box, useMediaQuery } from '@mui/material'
+import { useMediaQuery } from '../../../shared/ui/MUIglobal/muiGlobal'
 
-import ReusableComponentForIntroduce from '../../../reusableComponents/ReusableComponentForIntroduce'
-import ReusableComponentMrnaPicture from '../../../reusableComponents/ReusableComponentMrnaPicture'
+import ReusableComponentForIntroduce from '../../../shared/globalBlocks/ReusableComponentForIntroduce'
+import ReusableComponentMrnaPicture from '../../../shared/globalBlocks/ReusableComponentMrnaPicture'
 import RevolutionizeMedicine from './revolutionizeMedicine/RevolutionizeMedicine'
 import YouAreMadeOfProteins from './youAreMadeOfProteins/YouAreMadeOfProteins'
 import SwiperProteinFactories from './swiperProteinFactories/SwiperProteinFactories'
-
-import demoImgOne from '../../../../pictures/demoImgOne.png'
-import demoImgTwo from '../../../../pictures/demoImgTwo.png'
 import TheScienceOfMrnaForSmallScreens from './theScienceOfMrnaForSmallScreens/TheScienceOfMrnaForSmallScreens'
+
+import demoImgOne from '../../../../assets/pictures/demoImgOne.png'
+import demoImgTwo from '../../../../assets/pictures/demoImgTwo.png'
 
 const text =
   'At Umbrella, we are delivering on the promise of mRNA science to create a new generation of transformative medicines for patients.'
@@ -16,9 +16,9 @@ const text =
 const TheScienceOfMrna = () => {
   const isSmallScreen = useMediaQuery('(min-width: 325px)')
   return (
-    <Box
-      sx={{
-        mt: '20px',
+    <div
+      style={{
+        marginTop: '20px',
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
@@ -38,7 +38,7 @@ const TheScienceOfMrna = () => {
           <SwiperProteinFactories />
         </>
       )}
-    </Box>
+    </div>
   )
 }
 

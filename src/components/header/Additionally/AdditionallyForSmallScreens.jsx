@@ -1,4 +1,4 @@
-const AdditionallyForSmallScreens = ({ stylesForAdditionallyLinks }) => {
+const AdditionallyForSmallScreens = ({ stylesForAdditionallyLinks, t }) => {
   return (
     <div
       style={{
@@ -27,9 +27,9 @@ const AdditionallyForSmallScreens = ({ stylesForAdditionallyLinks }) => {
           paddingBottom: '1rem',
         }}
       >
-        <p style={stylesForAdditionallyLinks}>Careers</p>
-        <p style={stylesForAdditionallyLinks}>Investors</p>
-        <p style={stylesForAdditionallyLinks}>Contact Us</p>
+        <p style={stylesForAdditionallyLinks}>{t('Careers')}</p>
+        <p style={stylesForAdditionallyLinks}>{t('Investors')}</p>
+        <p style={stylesForAdditionallyLinks}>{t('Contact Us')}</p>
       </div>
     </div>
   )

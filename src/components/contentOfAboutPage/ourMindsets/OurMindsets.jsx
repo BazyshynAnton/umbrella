@@ -1,21 +1,17 @@
-import { Box } from '@mui/material'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { useButtonContext } from '../../../context/ButtonContext'
 
-import ReusableLInkBlock from '../../reusableComponents/ReusableLInkBlock'
-import ReusablePictureForLink from '../../reusableComponents/ReusablePictureForLinkBlock'
+import ReusableLInkBlock from '../../shared/globalBlocks/ReusableLInkBlock'
+import ReusablePictureForLink from '../../shared/globalBlocks/ReusablePictureForLinkBlock'
 
-import picOfHuman from '../../../assets/pictures/picOfHuman.webp'
+import picOfHuman from '../../../assets/pictures/picOfHuman.png'
 
 const headerText = 'Our Mindsets'
 const description =
   'Alongside our Values, our Mindsets allow us to overcome challenges together. We are working to build the best possible version of Umbrella 20 years from now. These Mindsets are tools we are using to build it, together.'
 
-const OurMIndsets = ({ isSmallScreen }) => {
-  const {
-    handleMouseEnterEight,
-    handleMouseLeaveEight,
-    animationForUnderLineEight,
-  } = useButtonContext()
+const OurMindsets = ({ isSmallScreen }) => {
+  const { handleMouseEnter, handleMouseLeave, animations } = useButtonContext()
   return (
     <Box
       sx={{
@@ -30,11 +26,11 @@ const OurMIndsets = ({ isSmallScreen }) => {
       <ReusableLInkBlock
         text={description}
         headerText={headerText}
-        buttonWidth={'187.7px'}
+        buttonWidth={'188.3px'}
         textForButton={'See our mindsets'}
-        handleEnter={handleMouseEnterEight}
-        handleLeave={handleMouseLeaveEight}
-        animationFor={animationForUnderLineEight}
+        handleEnter={handleMouseEnter(8)}
+        handleLeave={handleMouseLeave(8)}
+        animationFor={animations[8]}
       />
       {isSmallScreen && (
         <ReusablePictureForLink
@@ -47,4 +43,4 @@ const OurMIndsets = ({ isSmallScreen }) => {
   )
 }
 
-export default OurMIndsets
+export default OurMindsets

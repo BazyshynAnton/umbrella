@@ -1,21 +1,18 @@
-import { Box } from '@mui/material'
+import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { useButtonContext } from '../../../context/ButtonContext'
 
-import ReusableLinkBlockWithPicture from '../../reusableComponents/ReusableLinkBlockWithPicture'
-import ReusablePictureForLinkBlock from '../../reusableComponents/ReusablePictureForLinkBlock'
+import ReusableLinkBlockWithPicture from '../../shared/globalBlocks/ReusableLinkBlockWithPicture'
+import ReusablePictureForLinkBlock from '../../shared/globalBlocks/ReusablePictureForLinkBlock'
 
-import leadershipPicture from '../../../assets/pictures/leadershipPicture.webp'
-import leadershipLogo from '../../../assets/pictures/leadershipLogo.webp'
+import leadershipPicture from '../../../assets/pictures/leadershipPicture.jpg'
+import leadershipLogo from '../../../assets/pictures/leadershipLogo.png'
 
 const text =
   'Together, we are working to deliver on the promise of mRNA science for people around the world.'
 
 const Leadership = ({ isSmallScreen }) => {
-  const {
-    handleMouseEnterNine,
-    handleMouseLeaveNine,
-    animationForUnderLineNine,
-  } = useButtonContext()
+  const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
+    useButtonContext()
 
   return (
     <Box
@@ -32,9 +29,10 @@ const Leadership = ({ isSmallScreen }) => {
         buttonWidth={'165.1px'}
         textForButton={'meet our team'}
         mainPicture={leadershipPicture}
-        handleEnter={handleMouseEnterNine}
-        handleLeave={handleMouseLeaveNine}
-        animationFor={animationForUnderLineNine}
+        handleEnter={handleMouseEnter(9)}
+        handleLeave={handleMouseLeave(9)}
+        animationFor={animations[9]}
+        isMouseOver={isMouseOver[9]}
       />
       {isSmallScreen && (
         <ReusablePictureForLinkBlock

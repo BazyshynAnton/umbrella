@@ -1,12 +1,10 @@
-import { useState } from 'react'
+import { useState } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import { useSwiper } from 'swiper/react'
-import { Button } from '@mui/material'
+import { useSwiper } from '../../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { Button } from '../../../../shared/ui/MUIglobal/muiGlobal'
 
-import PauseIcon from '@mui/icons-material/Pause'
-import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
-
-const styleForPauseAndPLayIcon = { fontSize: '2.5rem', color: '#376586' }
+import play from '../../../../../assets/pictures/app-icons/play.webp'
+import pauseIcon from '../../../../../assets/pictures/app-icons/pauseIcon.webp'
 
 const CustomAutoPlay = () => {
   const swiper = useSwiper()
@@ -34,7 +32,11 @@ const CustomAutoPlay = () => {
             },
           }}
         >
-          <PauseIcon sx={styleForPauseAndPLayIcon} />
+          <img
+            style={{ width: '35px', height: '35px' }}
+            src={pauseIcon}
+            alt="play"
+          />
         </Button>
       ) : (
         <Button
@@ -49,7 +51,11 @@ const CustomAutoPlay = () => {
             },
           }}
         >
-          <PlayArrowRoundedIcon sx={styleForPauseAndPLayIcon} />
+          <img
+            style={{ width: '35px', height: '35px' }}
+            src={play}
+            alt="play"
+          />
         </Button>
       )}
     </>

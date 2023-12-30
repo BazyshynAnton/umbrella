@@ -1,8 +1,8 @@
-import questionsImg1 from '../pictures/questionsImg1.png'
-import questionsImg2 from '../pictures/questionsImg2.png'
-import questionsImg3 from '../pictures/questionsImg3.png'
-import questionsImg4 from '../pictures/questionsImg4.png'
-import questionsImg5 from '../pictures/questionsImg5.png'
+import questionsImg1 from '../assets/pictures/questionsImg1.png'
+import questionsImg2 from '../assets/pictures/questionsImg2.png'
+import questionsImg3 from '../assets/pictures/questionsImg3.png'
+import questionsImg4 from '../assets/pictures/questionsImg4.png'
+import questionsImg5 from '../assets/pictures/questionsImg5.png'
 
 export const infoForQuestionsSwiper = [
   {

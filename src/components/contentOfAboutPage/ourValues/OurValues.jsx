@@ -1,8 +1,7 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 import ItemsBlock from './ItemsBlock'
-
-import { fontStyleOpenSans } from '../../../context/variables'
 
 const OurValues = () => {
   return (

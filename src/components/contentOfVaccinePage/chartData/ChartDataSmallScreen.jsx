@@ -1,10 +1,10 @@
-import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
+import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import {
   useSpring,
   animated,
-} from '../../reactSpringComponents/reactSpringComponents'
+} from '../../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 
-import { fontStyleOpenSans } from '../../../context/variables'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 const ChartDataSmallScreen = () => {
   const { number } = useSpring({

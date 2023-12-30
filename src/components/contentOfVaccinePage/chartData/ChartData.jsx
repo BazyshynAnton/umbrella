@@ -1,10 +1,10 @@
-import { Box, Typography } from '../../MUIcomponents/MUIcomponents'
+import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import {
   useSpring,
   animated,
-} from '../../reactSpringComponents/reactSpringComponents'
+} from '../../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 
-import { fontStyleOpenSans } from '../../../context/variables'
+import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 const ChartData = () => {
   const { number } = useSpring({
@@ -24,8 +24,8 @@ const ChartData = () => {
   const placebo = numberTwo.to((val) => Math.floor(val))
 
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         width: '100%',
         height: '100px',
         display: 'flex',
@@ -35,8 +35,8 @@ const ChartData = () => {
         gap: '1rem',
       }}
     >
-      <Box
-        sx={{
+      <div
+        style={{
           background: 'rgba(128, 128, 128, 0.3)',
           display: 'flex',
           flexDirection: 'row',
@@ -66,9 +66,9 @@ const ChartData = () => {
         >
           {people}
         </animated.p>
-      </Box>
-      <Box
-        sx={{
+      </div>
+      <div
+        style={{
           background: 'rgba(255, 0, 0, 0.3)',
           display: 'flex',
           flexDirection: 'row',
@@ -95,9 +95,9 @@ const ChartData = () => {
         >
           {vaccine}
         </animated.p>
-      </Box>
-      <Box
-        sx={{
+      </div>
+      <div
+        style={{
           background: 'rgba(53, 162, 235, 0.4)',
           display: 'flex',
           flexDirection: 'row',
@@ -124,8 +124,8 @@ const ChartData = () => {
         >
           {placebo}
         </animated.p>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 

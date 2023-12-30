@@ -1,11 +1,10 @@
-import {
-  Box,
-  Typography,
-  ArrowCircleRightOutlinedIcon,
-} from '../MUIcomponents/MUIcomponents'
-import { fontStyleOpenSans } from '../../context/variables'
+import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { LazyLoadImage } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
-import ReusableButtonWithAnimation from './ReusableButtonWithAnimation'
+import ReusableButtonWithAnimation from '../../../shared/globalButtons/ReusableButtonWithAnimation'
+
+import arrowCircleRightOutlinedIcon from '../../../../assets/pictures/app-icons/arrowCircleRightOutlinedIcon.webp'
 
 const ReusableLeftInfoRightPictureBlock = ({
   headerText,
@@ -16,6 +15,7 @@ const ReusableLeftInfoRightPictureBlock = ({
   blockButtonWidth,
   mouseEnter,
   mouseLeave,
+  isMouseOver,
 }) => {
   return (
     <Box
@@ -28,11 +28,6 @@ const ReusableLeftInfoRightPictureBlock = ({
         alignItems: 'center',
         height: { md: '300px', xs: '100%' },
         cursor: 'pointer',
-        ':hover': {
-          img: {
-            transform: 'scale(1.1)',
-          },
-        },
       }}
     >
       <Box
@@ -66,7 +61,17 @@ const ReusableLeftInfoRightPictureBlock = ({
         <Box sx={{ width: blockButtonWidth }}>
           <ReusableButtonWithAnimation
             buttonText={buttonText}
-            icon={<ArrowCircleRightOutlinedIcon sx={{ color: '#d1343e' }} />}
+            icon={
+              <LazyLoadImage
+                style={{
+                  width: '18x',
+                  height: '18px',
+                  padding: '0px 0px 1px 0px',
+                }}
+                src={arrowCircleRightOutlinedIcon}
+                alt="arrow"
+              />
+            }
             animation={animationFor}
           />
         </Box>
@@ -78,15 +83,16 @@ const ReusableLeftInfoRightPictureBlock = ({
           overflow: 'hidden',
           borderTopRightRadius: { md: '20px' },
           borderBottomRightRadius: '20px',
-          borderBottomLeftRadius: '20px',
+          borderBottomLeftRadius: { md: '0px', xs: '20px' },
         }}
       >
-        <img
+        <LazyLoadImage
           style={{
             objectFit: 'cover',
             width: '100%',
             height: '100%',
             transition: 'all 0.3s ease-in-out',
+            transform: isMouseOver ? 'scale(1.1)' : '',
           }}
           src={picture}
           alt="scientists"

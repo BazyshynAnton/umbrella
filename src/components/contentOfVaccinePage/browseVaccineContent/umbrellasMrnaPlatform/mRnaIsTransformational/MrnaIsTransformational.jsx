@@ -1,8 +1,8 @@
-import { Box, Typography } from '../../../../MUIcomponents/MUIcomponents'
+import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
+import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
-import { fontStyleOpenSans } from '../../../../../context/variables'
-
-import femaleScientist from '../../../../../pictures/femaleScientist.jpg'
+import femaleScientist from '../../../../../assets/pictures/femaleScientist.jpg'
 
 const MrnaIsTransformational = () => {
   return (
@@ -29,7 +29,7 @@ const MrnaIsTransformational = () => {
             height: '300px',
           }}
         >
-          <img
+          <LazyLoadImage
             style={{
               objectFit: 'cover',
               width: '100%',

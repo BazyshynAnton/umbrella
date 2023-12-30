@@ -1,9 +1,8 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
-import { fontStyleOpenSans } from '../../../../../context/variables'
-
-import scienceInTheLab from '../../../../../pictures/scienceInTheLab.jpeg'
-
+import scienceInTheLab from '../../../../../assets/pictures/scienceInTheLab.jpeg'
 const RevolutionizeMedicine = () => {
   return (
     <Box
@@ -15,17 +14,20 @@ const RevolutionizeMedicine = () => {
           md: 'row',
           xs: 'column',
         },
-      }}>
+      }}
+    >
       <Box
         sx={{
           width: '100%',
-        }}>
+        }}
+      >
         <Box
           sx={{
             width: '100%',
             height: '300px',
-          }}>
-          <img
+          }}
+        >
+          <LazyLoadImage
             style={{
               objectFit: 'cover',
               width: '100%',
@@ -44,12 +46,14 @@ const RevolutionizeMedicine = () => {
             fontSize: { sm: '1.5rem', xs: '1.3rem' },
             fontWeight: '600',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           mRNA could revolutionize medicine
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: '#376586', ...fontStyleOpenSans }}>
+          sx={{ color: '#376586', ...fontStyleOpenSans }}
+        >
           Scientists have been studying mRNA <b>for decades</b>. And mRNA
           vaccines are
           <b> just the start</b>.
@@ -63,7 +67,8 @@ const RevolutionizeMedicine = () => {
           display: { xs: 'flex' },
           flexDirection: { xs: 'column' },
           justifyContent: { md: 'center', xs: 'flex-start' },
-        }}>
+        }}
+      >
         <Typography
           variant="h5"
           sx={{
@@ -71,12 +76,14 @@ const RevolutionizeMedicine = () => {
             fontSize: { sm: '1.5rem', xs: '1.3rem' },
             fontWeight: '600',
             ...fontStyleOpenSans,
-          }}>
+          }}
+        >
           It's all about proteins
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: '#376586', ...fontStyleOpenSans }}>
+          sx={{ color: '#376586', ...fontStyleOpenSans }}
+        >
           An mRNA can <b>teach the body</b> how to make a specific protein that
           can help your immune system prevent or treat certain
           <b>diseases</b>.

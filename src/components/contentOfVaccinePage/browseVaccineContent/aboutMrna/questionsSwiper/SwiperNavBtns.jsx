@@ -1,10 +1,9 @@
-import { Box, Button } from '@mui/material'
-import { useSwiper } from 'swiper/react'
+import { Box, Button } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { useSwiper } from '../../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import arrowForward from '../../../../../assets/pictures/app-icons/arrowForward.webp'
+import arrowBack from '../../../../../assets/pictures/app-icons/arrowBack.webp'
 
 const SwiperNavBtns = () => {
   const swiper = useSwiper()
@@ -24,7 +23,8 @@ const SwiperNavBtns = () => {
         button: {
           cursor: 'pointer',
         },
-      }}>
+      }}
+    >
       <Button
         onClick={() => swiper.slidePrev()}
         sx={{
@@ -39,8 +39,13 @@ const SwiperNavBtns = () => {
             background: '#d6e5eb',
           },
           ...fontStyleOpenSans,
-        }}>
-        <KeyboardArrowLeftIcon sx={{ fontSize: '30px' }} />
+        }}
+      >
+        <img
+          style={{ width: '35px', height: '35px' }}
+          src={arrowBack}
+          alt="arrow-back"
+        />
       </Button>
       <Button
         onClick={() => swiper.slideNext()}
@@ -56,8 +61,13 @@ const SwiperNavBtns = () => {
             background: '#d6e5eb',
           },
           ...fontStyleOpenSans,
-        }}>
-        <KeyboardArrowRightIcon sx={{ fontSize: '30px' }} />
+        }}
+      >
+        <img
+          style={{ width: '35px', height: '35px' }}
+          src={arrowForward}
+          alt="arrow-forward"
+        />
       </Button>
     </Box>
   )

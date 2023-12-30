@@ -1,6 +1,10 @@
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import { NavLink } from 'react-router-dom'
-import { fontStyleOpenSans } from '../../../../context/variables'
+import {
+  Box,
+  Typography,
+  useMediaQuery,
+} from '../../../shared/ui/MUIglobal/muiGlobal'
+import { NavLink } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
 const styleForPoint = {
   width: '5px',
@@ -30,7 +34,8 @@ const Browse = () => {
     <div>
       <Typography
         variant="body1"
-        sx={{ color: '#376586', ...fontStyleOpenSans }}>
+        sx={{ color: '#376586', ...fontStyleOpenSans }}
+      >
         browse:
       </Typography>
       <Box
@@ -40,7 +45,8 @@ const Browse = () => {
           justifyContent: { lg: 'flex-start' },
           gap: { lg: '1rem', sm: '0.3rem', xs: '0.2rem' },
           alignItems: { lg: 'center', xs: 'flex-start' },
-        }}>
+        }}
+      >
         <NavLink to="/vaccine/science-of-mrna" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
             The Science of mRNA

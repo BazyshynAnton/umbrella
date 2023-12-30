@@ -3,6 +3,7 @@ import {
   lazy,
 } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
+import { useTranslation } from '../../shared/translations/translationsImports'
 
 import LanguageIconHeader from '../languageLogic/LanguageIconHeader'
 
@@ -17,6 +18,7 @@ const stylesForAdditionallyLinks = {
 }
 
 const Additionally = ({ isSmallScreen }) => {
+  const { t } = useTranslation()
   return (
     <>
       {isSmallScreen ? (
@@ -28,14 +30,15 @@ const Additionally = ({ isSmallScreen }) => {
             gap: '1.3rem',
           }}
         >
-          <p style={stylesForAdditionallyLinks}>Careers</p>
-          <p style={stylesForAdditionallyLinks}>Investors</p>
-          <p style={stylesForAdditionallyLinks}>Contact Us</p>
+          <p style={stylesForAdditionallyLinks}>{t('Careers')}</p>
+          <p style={stylesForAdditionallyLinks}>{t('Investors')}</p>
+          <p style={stylesForAdditionallyLinks}>{t('Contact Us')}</p>
           <LanguageIconHeader />
         </div>
       ) : (
         <Suspense>
           <AdditionallyForSmallScreens
+            t={t}
             stylesForAdditionallyLinks={stylesForAdditionallyLinks}
           />
         </Suspense>

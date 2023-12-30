@@ -1,13 +1,13 @@
-import { Box, Typography } from '../MUIcomponents/MUIcomponents'
-
-const fontStyle = { fontFamily: "'Open Sans', sans-serif" }
+import { Box, Typography } from '../ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../ui/fontStyles/openSans'
+import { LazyLoadImage } from '../ui/reactImportsGlobal/reactImportsGlobal'
 
 const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: { md: 'row', xs: 'column' } }}>
       <Typography
         variant="body1"
-        sx={{ color: '#376586', width: '100%', ...fontStyle }}
+        sx={{ color: '#376586', width: '100%', ...fontStyleOpenSans }}
       >
         {text}
       </Typography>
@@ -21,7 +21,7 @@ const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
             right: '0',
           }}
         >
-          <img
+          <LazyLoadImage
             style={{
               objectFit: 'cover',
               width: '100%',
@@ -41,7 +41,7 @@ const ReusableComponentForIntroduce = ({ text, img1, img2 }) => {
             right: { lg: '250px', md: '200px', sm: '150px', xs: '120px' },
           }}
         >
-          <img
+          <LazyLoadImage
             style={{
               objectFit: 'cover',
               width: '100%',

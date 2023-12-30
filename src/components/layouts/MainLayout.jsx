@@ -4,16 +4,16 @@ import {
   lazy,
 } from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 
+import Header from '../header/Header'
 import Spinner from '../spinners/Spinner'
 
-const Header = lazy(() => import('../header/Header'))
 const Footer = lazy(() => import('../footer/Footer'))
 
 const MainLayout = () => {
   return (
     <>
+      <Header />
       <Suspense fallback={<Spinner />}>
-        <Header />
         <Outlet />
         <Footer />
       </Suspense>

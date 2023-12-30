@@ -1,11 +1,13 @@
-import ReusableLeftInfoRightPictureBlock from '../../reusableComponents/ReusableLeftInfoRightPictureBlock'
-import headquartersPicture from '../../../assets/pictures/headquartersPicture.webp'
 import { useButtonContext } from '../../../context/ButtonContext'
+
+import ReusableLeftInfoRightPictureBlock from '../shared/Blocks/ReusableLeftInfoRightPictureBlock'
+
+import headquartersPicture from '../../../assets/pictures/headquartersPicture.png'
 
 const text = 'Our headquarters are located in Raccoon City, Missouri, USA.'
 
 const Headquarters = () => {
-  const { handleMouseEnterTen, handleMouseLeaveTen, animationForUnderLineTen } =
+  const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
     useButtonContext()
 
   return (
@@ -15,9 +17,10 @@ const Headquarters = () => {
       picture={headquartersPicture}
       blockButtonWidth={'134.2px'}
       buttonText={'contact us'}
-      mouseEnter={handleMouseEnterTen}
-      mouseLeave={handleMouseLeaveTen}
-      animationFor={animationForUnderLineTen}
+      mouseEnter={handleMouseEnter(10)}
+      mouseLeave={handleMouseLeave(10)}
+      animationFor={animations[10]}
+      isMouseOver={isMouseOver[10]}
     />
   )
 }

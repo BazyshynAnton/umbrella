@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
   Line,
-} from '../../ChartComponents/chartComponents'
+} from '../shared/chartComponents/chartComponents'
 
 ChartJS.register(
   CategoryScale,

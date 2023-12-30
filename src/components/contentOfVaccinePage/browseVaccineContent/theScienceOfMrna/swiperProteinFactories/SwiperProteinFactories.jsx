@@ -1,21 +1,39 @@
-import { Box, Typography, useMediaQuery } from '@mui/material'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules'
+import {
+  Box,
+  Typography,
+  useMediaQuery,
+} from '../../../../shared/ui/MUIglobal/muiGlobal'
+import {
+  LazyLoadImage,
+  Suspense,
+  lazy,
+} from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import {
+  Swiper,
+  SwiperSlide,
+  Navigation,
+  Pagination,
+  Autoplay,
+} from '../../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
+import { EffectFade } from 'swiper/modules'
+
 import SwiperCore from 'swiper/core'
 
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import CustomPaginationForSwiper from './CustomPaginationForSwiper'
 
-import firstSlideSwiperProtein from '../../../../../pictures/firstSlideSwiperProtein.png'
-
-import secondSlideSwiperProtein from '../../../../../pictures/secondSlideSwiperProtein.png'
-import thirdSlideSwiperProtein from '../../../../../pictures/thirdSlideSwiperProtein.png'
-import lastSlideSwiperProtein from '../../../../../pictures/lastSlideSwiperProtein.png'
+import firstSlideSwiperProtein from '../../../../../assets/pictures/firstSlideSwiperProtein.png'
+import secondSlideSwiperProtein from '../../../../../assets/pictures/secondSlideSwiperProtein.png'
+import thirdSlideSwiperProtein from '../../../../../assets/pictures/thirdSlideSwiperProtein.png'
+import lastSlideSwiperProtein from '../../../../../assets/pictures/lastSlideSwiperProtein.png'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
-import CustomPaginationForSwiper from './CustomPaginationForSwiper'
-import CustomPaginationNavigationForSmallScreen from './CustomPaginationNavigationForSmallScreen'
+
+const CustomPaginationNavigationForSmallScreen = lazy(() =>
+  import('./CustomPaginationNavigationForSmallScreen')
+)
 
 SwiperCore.use([Pagination])
 
@@ -69,7 +87,9 @@ const SwiperProteinFactories = () => {
         {isSmallScreen ? (
           <CustomPaginationForSwiper />
         ) : (
-          <CustomPaginationNavigationForSmallScreen />
+          <Suspense>
+            <CustomPaginationNavigationForSmallScreen />
+          </Suspense>
         )}
 
         <SwiperSlide>
@@ -89,7 +109,7 @@ const SwiperProteinFactories = () => {
               background: '#fff',
             }}
           >
-            <img
+            <LazyLoadImage
               style={styleForImage}
               src={firstSlideSwiperProtein}
               alt="first-slide"
@@ -138,7 +158,7 @@ const SwiperProteinFactories = () => {
               background: '#fff',
             }}
           >
-            <img
+            <LazyLoadImage
               style={styleForImage}
               src={secondSlideSwiperProtein}
               alt="second-slide"
@@ -187,7 +207,7 @@ const SwiperProteinFactories = () => {
               background: '#fff',
             }}
           >
-            <img
+            <LazyLoadImage
               style={styleForImage}
               src={thirdSlideSwiperProtein}
               alt="third-slide"
@@ -237,7 +257,7 @@ const SwiperProteinFactories = () => {
               background: '#fff',
             }}
           >
-            <img
+            <LazyLoadImage
               style={styleForImage}
               src={lastSlideSwiperProtein}
               alt="last-slide"

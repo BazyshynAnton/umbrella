@@ -4,7 +4,6 @@ import {
   Suspense,
 } from '../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { Box, Container, useMediaQuery } from '../shared/ui/MUIglobal/muiGlobal'
-import { animated } from '../shared/ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 import { useHeaderContext } from '../../context/HeaderContext'
 
 import Additionally from './Additionally/Additionally'
@@ -20,8 +19,7 @@ const SmallScreenHeader = lazy(() =>
 const NavigationForBigScreens = lazy(() => import('./NavigationForBigScreens'))
 
 const Header = () => {
-  const { setOpen, headerLogoAnim, isActiveAnimation, handleActiveLink } =
-    useHeaderContext()
+  const { setOpen, handleActiveLink } = useHeaderContext()
 
   const isSmallScreen = useMediaQuery('(min-width: 900px)')
 
@@ -51,12 +49,11 @@ const Header = () => {
                   height: { md: '75px', sm: '70px', xs: '60px' },
                 }}
               >
-                <animated.img
+                <img
                   style={{
                     objectFit: 'cover',
                     width: '100%',
                     height: '100%',
-                    ...(isActiveAnimation ? headerLogoAnim : {}),
                   }}
                   src={umbrellaHeaderLogoSmall}
                   alt="umbrella-logo"

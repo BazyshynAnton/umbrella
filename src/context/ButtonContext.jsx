@@ -24,7 +24,7 @@ function createAnimations(isMouseOver) {
 }
 
 export const ButtonContextProvider = ({ children }) => {
-  const buttonCount = 10
+  const buttonCount = 11
   const [isMouseOver, setIsMouseOver] = useState(Array(buttonCount).fill(false))
   const animations = createAnimations(isMouseOver)
 

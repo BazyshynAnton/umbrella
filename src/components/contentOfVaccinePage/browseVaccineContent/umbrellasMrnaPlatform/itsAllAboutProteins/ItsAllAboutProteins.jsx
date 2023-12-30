@@ -1,12 +1,5 @@
-import { Box, Typography } from '@mui/material'
-import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
-
-import picOfResearch from '../../../../../pictures/picOfResearch.png'
-import picOfMed from '../../../../../pictures/picOfMed.png'
-import picOfHuman from '../../../../../pictures/picOfHuman.png'
-import picOfMrnaSmall from '../../../../../pictures/picOfMrnaSmall.png'
-
-import { fontStyleOpenSans } from '../../../../../context/variables'
+import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
+import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 import {
   headerTextOne,
   headerTextTwo,
@@ -19,6 +12,13 @@ import {
   informationTextThree,
   informationTextFour,
 } from './VariablesForItsAllAboutProteins'
+
+import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
+
+import picOfResearch from '../../../../../assets/pictures/picOfResearch.png'
+import picOfMed from '../../../../../assets/pictures/picOfMed.png'
+import picOfHuman from '../../../../../assets/pictures/picOfHuman.png'
+import picOfMrnaSmall from '../../../../../assets/pictures/picOfMrnaSmall.png'
 
 const ItsAllAboutProteins = () => {
   return (
