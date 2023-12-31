@@ -53,6 +53,7 @@ const ContentForBigScreens = ({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
+
           gap: '1rem',
           ...position,
         }}

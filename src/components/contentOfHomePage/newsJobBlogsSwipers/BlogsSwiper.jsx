@@ -12,7 +12,7 @@ const JobSwiper = () => {
   return (
     <ReusableSwiper
       iterableInfo={blogsData}
-      buttonText={'View blog posts'}
+      buttonText={'view blog posts'}
       handleMouseEnter={handleMouseEnter(2)}
       handleMouseLeave={handleMouseLeave(2)}
       animationForUnderLine={animations[2]}

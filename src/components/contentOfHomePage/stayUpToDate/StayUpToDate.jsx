@@ -39,6 +39,7 @@ const stylesForSmallScreens = {
 
 const StayUpToDate = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
+
   return (
     <>
       {isSmallScreen ? (

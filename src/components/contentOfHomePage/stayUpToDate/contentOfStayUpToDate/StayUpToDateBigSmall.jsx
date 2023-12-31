@@ -1,3 +1,5 @@
+import { useTranslation } from '../../../shared/translations/translationsImports'
+
 import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
@@ -9,6 +11,8 @@ const StayUpToDateBigSmall = ({
   stylesForSmallScreensFirst,
   stylesForSmallScreensSecond,
 }) => {
+  const { t } = useTranslation()
+
   return (
     <Box sx={{ ...stylesForBigScreensFirst, ...stylesForSmallScreensFirst }}>
       <Box
@@ -25,7 +29,7 @@ const StayUpToDateBigSmall = ({
             ...fontStyleOpenSans,
           }}
         >
-          Stay up to date
+          {t('Stay up to date')}
         </Typography>
         <div>
           <Typography
@@ -36,12 +40,12 @@ const StayUpToDateBigSmall = ({
               ...fontStyleOpenSans,
             }}
           >
-            Looking for our latest news?
+            {t('Looking for our')}
             <br />
-            Sign-up for our alerts here.
+            {t('Sign-up')}
           </Typography>
         </div>
-        <YellowButton>Subscribe</YellowButton>
+        <YellowButton>{t('subscribe')}</YellowButton>
       </Box>
     </Box>
   )

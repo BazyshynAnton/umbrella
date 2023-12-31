@@ -1,6 +1,8 @@
+import { useTranslation } from '../../shared/translations/translationsImports'
 import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 
 const LinksOfRules = ({ stylesForTextBelowTheLine }) => {
+  const { t } = useTranslation()
   return (
     <div
       style={{
@@ -11,25 +13,25 @@ const LinksOfRules = ({ stylesForTextBelowTheLine }) => {
       }}
     >
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        Terms of Use
+        {t('Terms of Use')}
       </Typography>
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        General Terms and Conditions
+        {t('General Terms and Conditions')}
       </Typography>
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        General Conditions of Purchase
+        {t('General Conditions of Purchase')}
       </Typography>
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        Data Privacy Statement
+        {t('Data Privacy Statement')}
       </Typography>
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        Adverse Event Reporting
+        {t('Adverse Event Reporting')}
       </Typography>
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        Imprint
+        {t('Imprint')}
       </Typography>
       <Typography variant="body2" sx={stylesForTextBelowTheLine}>
-        Cookie Settings
+        {t('Cookie Settings')}
       </Typography>
     </div>
   )

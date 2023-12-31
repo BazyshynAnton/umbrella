@@ -1,6 +1,9 @@
+import { useTranslation } from '../../shared/translations/translationsImports'
 import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 
 const UsefulLinks = ({ styleForTextCompany }) => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -25,22 +28,22 @@ const UsefulLinks = ({ styleForTextCompany }) => {
             cursor: 'default',
           }}
         >
-          Company
+          {t('Company')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} About
+          {'>'} {t('About')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Research & Innovation
+          {'>'} {t('Research & Innovation')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Manufacturing
+          {'>'} {t('Manufacturing')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Careers
+          {'>'} {t('Careers')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Covid-19
+          {'>'} {t('Covid-19')}
         </Typography>
       </div>
       <div
@@ -58,19 +61,19 @@ const UsefulLinks = ({ styleForTextCompany }) => {
             cursor: 'default',
           }}
         >
-          Quick Links
+          {t('Quick Links')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Newsroom
+          {'>'} {t('Newsroom')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Investors
+          {'>'} {t('Investors')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Healthcare Professionals
+          {'>'} {t('Healthcare Professionals')}
         </Typography>
         <Typography variant="body1" sx={styleForTextCompany}>
-          {'>'} Connect
+          {'>'} {t('Connect')}
         </Typography>
       </div>
     </Box>

@@ -6,8 +6,7 @@ import ReusablePictureForLinkBlock from '../../shared/globalBlocks/ReusablePictu
 
 import meetUmbrellaProtection from '../../../assets/pictures/meetUmbrellaProtection.webp'
 
-const text =
-  'Umbrella’s goal is to deliver on the promise of mRNA science to create a new generation of transformative medicines for patients.'
+const text = 'Umbrella’s goal is'
 
 const OurMission = ({ isSmallScreen }) => {
   const { handleMouseEnter, handleMouseLeave, animations } = useButtonContext()
@@ -40,9 +39,8 @@ const OurMission = ({ isSmallScreen }) => {
           <DateBlock integer={35} text={'Ongoing clinical trials'} />
         </div>
         <ReusableLInkBlock
-          textForButton={'See our mission'}
+          textForButton={'see our mission'}
           animationFor={animations[3]}
-          buttonWidth={'173px'}
           text={text}
           headerText={'Meet Umbrella'}
         />

@@ -1,9 +1,12 @@
-import { Box } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
 import { LazyLoadImage } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useTranslation } from '../../../shared/translations/translationsImports'
+import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
 import ReusableButton from './ReusableButton'
 
-const ReusableSlide = ({ text, img, buttonText }) => {
+const ReusableSlide = ({ text, img, buttonText, fontSize }) => {
+  const { t } = useTranslation()
   return (
     <Box
       sx={{
@@ -20,13 +23,23 @@ const ReusableSlide = ({ text, img, buttonText }) => {
           height: { md: '100%', sm: '200px', xs: '300px' },
           display: 'flex',
           flexDirection: 'column',
+          alignItems: 'flex-start',
           justifyContent: { md: 'center' },
           gap: '2rem',
           padding: '0px 10px px 0px',
           mb: { md: '0', xs: '20px' },
         }}
       >
-        {text}
+        <Typography
+          sx={{
+            color: 'rgb(5, 63, 104)',
+            fontWeight: '700',
+            fontSize: fontSize,
+            ...fontStyleOpenSans,
+          }}
+        >
+          {t(`${text}`)}
+        </Typography>
         <ReusableButton buttonText={buttonText} />
       </Box>
       <Box

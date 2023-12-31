@@ -12,7 +12,7 @@ const JobSwiper = () => {
   return (
     <ReusableSwiper
       iterableInfo={jobData}
-      buttonText={'View all job opportunities'}
+      buttonText={'view all job opportunities'}
       handleMouseEnter={handleMouseEnter(1)}
       handleMouseLeave={handleMouseLeave(1)}
       animationForUnderLine={animations[1]}

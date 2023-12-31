@@ -16,7 +16,7 @@ const YellowButton = ({ children }) => {
     <animated.div
       onMouseOver={() =>
         set.start({
-          background: 'linear-gradient(to left, #fff 0%, #FFFF00 100%)',
+          background: 'linear-gradient(to left, #fff 0%, #FFFF00 70%)',
           typographyOneLeft: 26,
           typographyTwoLeft: 40,
         })
@@ -71,6 +71,7 @@ const YellowButton = ({ children }) => {
       </div>
       <animated.div
         style={{
+          width: '150px',
           left: props.typographyTwoLeft,
           position: 'absolute',
         }}

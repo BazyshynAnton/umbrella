@@ -1,7 +1,10 @@
 import { Typography } from '../ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../ui/fontStyles/openSans'
+import { useTranslation } from '../translations/translationsImports'
 
 const DateBlock = ({ integer, text, smallPlus }) => {
+  const { t } = useTranslation()
+
   return (
     <div>
       <Typography
@@ -23,7 +26,7 @@ const DateBlock = ({ integer, text, smallPlus }) => {
           ...fontStyleOpenSans,
         }}
       >
-        {text}
+        {t(text)}
       </Typography>
     </div>
   )

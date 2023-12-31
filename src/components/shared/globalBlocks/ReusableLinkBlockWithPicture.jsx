@@ -1,6 +1,7 @@
 import { Box } from '../ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../ui/fontStyles/openSans'
 import { LazyLoadImage } from '../ui/reactImportsGlobal/reactImportsGlobal'
+import { useTranslation } from '../translations/translationsImports'
 
 import ReusableButtonWithAnimation from '../globalButtons/ReusableButtonWithAnimation'
 
@@ -12,11 +13,12 @@ const ReusableLinkBlockWithPicture = ({
   isMouseOver,
   handleEnter,
   handleLeave,
-  buttonWidth,
   mainPicture,
   animationFor,
   textForButton,
 }) => {
+  const { t } = useTranslation()
+
   return (
     <Box
       onMouseEnter={handleEnter}
@@ -54,7 +56,7 @@ const ReusableLinkBlockWithPicture = ({
       </Box>
       <Box sx={{ p: '15px' }}>
         <p style={{ fontWeight: '700', fontSize: '1.6rem', color: '#053f68' }}>
-          {headerText}
+          {t(headerText)}
         </p>
         {text && (
           <p
@@ -66,10 +68,10 @@ const ReusableLinkBlockWithPicture = ({
               ...fontStyleOpenSans,
             }}
           >
-            {text}
+            {t(text)}
           </p>
         )}
-        <Box sx={{ width: buttonWidth, mt: '20px' }}>
+        <Box sx={{ mt: '20px' }}>
           <ReusableButtonWithAnimation
             animation={animationFor}
             buttonText={textForButton}

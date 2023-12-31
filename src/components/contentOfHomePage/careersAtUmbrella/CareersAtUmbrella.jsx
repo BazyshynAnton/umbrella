@@ -3,6 +3,7 @@ import {
   Suspense,
   lazy,
 } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useTranslation } from '../../shared/translations/translationsImports'
 
 import ContentForBigScreens from '../shared/Blocks/ContentForBigScreens'
 
@@ -14,8 +15,7 @@ const ContentForSmallScreens = lazy(() =>
   import('../shared/Blocks/ContentForSmallScreens')
 )
 
-const text =
-  'Our mission is clear: translating science into survival to improve the health of people worldwide. We are always on the lookout for dedicated and curious new talents supporting our team of visionaries, entrepreneurs, scientists, engineers and business professionals. Join us and be part of our unique pioneering spirit.'
+const text = 'Our mission is clear'
 const buttonText = 'Careers Portal'
 const headerText = 'Careers at Umbrella'
 
@@ -24,15 +24,15 @@ const position = { right: '0px' }
 
 const CareersAtUmbrella = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
-
+  const { t } = useTranslation()
   return (
     <>
       {isSmallScreen ? (
         <ContentForBigScreens
           picture={redBook}
-          headerText={headerText}
-          text={text}
-          buttonText={buttonText}
+          headerText={t(headerText)}
+          text={t(text)}
+          buttonText={t(buttonText)}
           positionForPicture={positionForPicture}
           position={position}
         />
@@ -41,9 +41,9 @@ const CareersAtUmbrella = () => {
           <ContentForSmallScreens
             picture1={books}
             picture2={flask}
-            text={text}
-            buttonText={buttonText}
-            headerText={headerText}
+            text={t(text)}
+            buttonText={t(buttonText)}
+            headerText={t(headerText)}
             height1={'400px'}
             height2={'550px'}
           />

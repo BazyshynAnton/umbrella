@@ -4,6 +4,7 @@ import {
 } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import { useHeaderContext } from '../../../context/HeaderContext.jsx'
+import { useTranslation } from '../../shared/translations/translationsImports.js'
 
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 
@@ -37,6 +38,9 @@ const HeaderBurgerMenu = () => {
     setOpen(false)
     window.scrollTo(0, 0)
   }
+
+  const { t } = useTranslation()
+
   return (
     <SwipeableDrawer
       open={open}
@@ -114,7 +118,7 @@ const HeaderBurgerMenu = () => {
               variant="h5"
               sx={isActiveLinkOne ? stylesForActiveLinks : stylesForLinks}
             >
-              Main
+              {t('Main')}
             </Typography>
           </Box>
         </NavLink>
@@ -141,7 +145,7 @@ const HeaderBurgerMenu = () => {
               fontSize={{ sm: '1.5rem', xs: '1.3rem' }}
               sx={isActiveLinkTwo ? stylesForActiveLinks : stylesForLinks}
             >
-              Vaccine
+              {t('Vaccine')}
             </Typography>
           </Box>
         </NavLink>
@@ -164,7 +168,7 @@ const HeaderBurgerMenu = () => {
               variant="h5"
               sx={isActiveLinkThree ? stylesForActiveLinks : stylesForLinks}
             >
-              About Us
+              {t('About Us')}
             </Typography>
           </Box>
         </NavLink>

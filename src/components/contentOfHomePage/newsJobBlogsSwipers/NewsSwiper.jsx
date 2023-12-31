@@ -12,7 +12,7 @@ const NewsSwiper = () => {
   return (
     <ReusableSwiper
       iterableInfo={newsData}
-      buttonText={'View all news'}
+      buttonText={'view all news'}
       handleMouseEnter={handleMouseEnter(0)}
       handleMouseLeave={handleMouseLeave(0)}
       animationForUnderLine={animations[0]}

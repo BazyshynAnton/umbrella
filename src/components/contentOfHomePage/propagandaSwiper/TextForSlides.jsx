@@ -1,68 +1,73 @@
 import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import { usePropagandaSwiperContext } from '../../../context/PropagandaSwiperContext'
+import { useTranslation } from '../../shared/translations/translationsImports'
 
 export const TextForSlide1 = () => {
   const { styles } = usePropagandaSwiperContext()
+  const { t } = useTranslation()
   return (
     <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
-      Protect Yourself
+      {t('Protect Yourself')}
       <br />
       <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
-        and Others:
+        {t('and Others')}:
       </Typography>
       <br />
-      Vaccination - the key
-      <br /> to a safer tomorrow!
+      {t('Vaccination - the key')}
+      <br /> {t('to a safer tomorrow!')}
     </Typography>
   )
 }
 export const TextForSlide2 = () => {
   const { styles } = usePropagandaSwiperContext()
+  const { t } = useTranslation()
   return (
     <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
-      Together
+      {t('Together')}
       <br />
-      we are stronger:
+      {t('we are stronger')}:
       <br />
-      protect yourself
+      {t('protect yourself')}
       <br />
       <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
-        and your loved
+        {t('and your loved')}
       </Typography>
       <br />
-      ones with the vaccine!
+      {t('ones with the vaccine!')}
     </Typography>
   )
 }
 export const TextForSlide3 = () => {
   const { styles } = usePropagandaSwiperContext()
+  const { t } = useTranslation()
   return (
     <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
-      Take
+      {t('Take')}
       <br />
-      the Umbrella vaccine
+      {t('the Umbrella vaccine')}
       <br />
-      to strengthen
+      {t('to strengthen')}
       <br />
       <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
-        the immune system
+        {t('the immune system')}
       </Typography>
     </Typography>
   )
 }
 export const TextForSlide4 = () => {
   const { styles } = usePropagandaSwiperContext()
+  const { t } = useTranslation()
   return (
     <Typography variant="body1" sx={styles.forTextInSlides.blueText}>
-      Umbrella:
+      {t('Umbrella')}:
       <br />
-      Innovations
+      {t('Innovations')}
       <br />
       <Typography variant="caption" sx={styles.forTextInSlides.yellowText}>
-        with
+        {t('with')}
       </Typography>
       <br />
-      Responsibility
+      {t('Responsibility')}
     </Typography>
   )
 }

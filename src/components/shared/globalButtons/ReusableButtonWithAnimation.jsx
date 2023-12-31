@@ -1,10 +1,19 @@
-import { Button } from '../ui/MUIglobal/muiGlobal'
+import { Box, Button } from '../ui/MUIglobal/muiGlobal'
 import { animated } from '../ui/reactSpringImportsGlobal/reactSpringImportsGlobal'
 import { fontStyleOpenSans } from '../ui/fontStyles/openSans'
+import { useTranslation } from '../translations/translationsImports'
 
 const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
+  const { t } = useTranslation()
+
   return (
-    <>
+    <Box
+      sx={{
+        display: 'inline-flex',
+        flexDirection: 'column',
+        alignItems: 'stretch',
+      }}
+    >
       <Button
         sx={{
           p: '6px 0px',
@@ -17,7 +26,7 @@ const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
           ...fontStyleOpenSans,
         }}
       >
-        {buttonText} {icon}
+        {t(buttonText)} {icon}
       </Button>
       <animated.div
         style={{
@@ -26,7 +35,7 @@ const ReusableButtonWithAnimation = ({ buttonText, icon, animation }) => {
           ...animation,
         }}
       />
-    </>
+    </Box>
   )
 }
 

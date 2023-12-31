@@ -1,6 +1,7 @@
 import { Box, Typography } from '../ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useTranslation } from '../../shared/translations/translationsImports'
 
 import ReusableButtonWithAnimation from '../globalButtons/ReusableButtonWithAnimation'
 
@@ -16,6 +17,8 @@ const ReusableLInkBlock = ({
   textForButton,
   padding,
 }) => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -34,7 +37,7 @@ const ReusableLInkBlock = ({
           ...fontStyleOpenSans,
         }}
       >
-        {headerText}
+        {t(headerText)}
       </Typography>
       <Typography
         sx={{
@@ -44,26 +47,24 @@ const ReusableLInkBlock = ({
           ...fontStyleOpenSans,
         }}
       >
-        {text}
+        {t(text)}
       </Typography>
       {textForButton && (
-        <Box sx={{ width: buttonWidth }}>
-          <ReusableButtonWithAnimation
-            buttonText={textForButton}
-            icon={
-              <LazyLoadImage
-                style={{
-                  width: '18x',
-                  height: '18px',
-                  padding: '0px 0px 1px 0px',
-                }}
-                src={arrowCircleRightOutlinedIcon}
-                alt="arrow"
-              />
-            }
-            animation={animationFor}
-          />
-        </Box>
+        <ReusableButtonWithAnimation
+          buttonText={t(textForButton)}
+          icon={
+            <LazyLoadImage
+              style={{
+                width: '18x',
+                height: '18px',
+                padding: '0px 0px 1px 0px',
+              }}
+              src={arrowCircleRightOutlinedIcon}
+              alt="arrow"
+            />
+          }
+          animation={animationFor}
+        />
       )}
     </Box>
   )

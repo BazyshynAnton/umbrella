@@ -50,6 +50,7 @@ const IntroVaccineSlider = () => {
             img={el.img}
             text={el.text}
             buttonText={el.buttonText}
+            fontSize={el.fontSize}
           />
         </SwiperSlide>
       ))}

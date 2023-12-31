@@ -2,10 +2,10 @@ import {
   Suspense,
   lazy,
   useState,
-  useCallback,
 } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { Button, Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
+import { useTranslation } from '../../shared/translations/translationsImports'
 
 import NewsSwiper from './NewsSwiper'
 import SmallSpinner from '../../spinners/SmallSpinner'
@@ -26,11 +26,12 @@ const stylesForActiveBtn = {
 }
 
 const NewsJobBlogsSwipers = () => {
-  const [activeSwiper, setActiveSwiper] = useState('news')
+  const { t } = useTranslation()
 
-  const handleChangeToNews = useCallback(() => setActiveSwiper('news'), [])
-  const handleChangeToJob = useCallback(() => setActiveSwiper('job'), [])
-  const handleChangeToBlogs = useCallback(() => setActiveSwiper('blogs'), [])
+  const [activeSwiper, setActiveSwiper] = useState('news')
+  const handleChangeToNews = () => setActiveSwiper('news')
+  const handleChangeToJob = () => setActiveSwiper('job')
+  const handleChangeToBlogs = () => setActiveSwiper('blogs')
 
   return (
     <div>
@@ -46,31 +47,35 @@ const NewsJobBlogsSwipers = () => {
         }}
       >
         <Button
-          sx={activeSwiper === 'news' ? stylesForActiveBtn : stylesForBtns}
+          sx={
+            t(activeSwiper) === t('news') ? stylesForActiveBtn : stylesForBtns
+          }
           onClick={handleChangeToNews}
         >
-          News
+          {t('news')}
         </Button>
         <Button
-          sx={activeSwiper === 'job' ? stylesForActiveBtn : stylesForBtns}
+          sx={t(activeSwiper) === t('job') ? stylesForActiveBtn : stylesForBtns}
           onClick={handleChangeToJob}
         >
-          Job opportunities
+          {t('job')}
         </Button>
         <Button
-          sx={activeSwiper === 'blogs' ? stylesForActiveBtn : stylesForBtns}
+          sx={
+            t(activeSwiper) === t('blogs') ? stylesForActiveBtn : stylesForBtns
+          }
           onClick={handleChangeToBlogs}
         >
-          Blogs
+          {t('blogs')}
         </Button>
       </Box>
-      {activeSwiper === 'news' && <NewsSwiper />}
-      {activeSwiper === 'job' && (
+      {t(activeSwiper) === t('news') && <NewsSwiper />}
+      {t(activeSwiper) === t('job') && (
         <Suspense fallback={<SmallSpinner />}>
           <JobSwiper />
         </Suspense>
       )}
-      {activeSwiper === 'blogs' && (
+      {t(activeSwiper) === t('blogs') && (
         <Suspense fallback={<SmallSpinner />}>
           <BlogsSwiper />
         </Suspense>

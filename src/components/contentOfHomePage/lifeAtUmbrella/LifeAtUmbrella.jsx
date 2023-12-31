@@ -6,7 +6,7 @@ import ReusablePictureForLinkBlock from '../../shared/globalBlocks/ReusablePictu
 import lifeAtUmbrellaPicture from '../../../assets/pictures/lifeAtUmbrellaPicture.webp'
 import smilingScientists from '../../../assets/pictures/smilingScientists.webp'
 
-const headerText = 'Join us and change the world of medicine'
+const headerText = 'Join us and change'
 
 const LifeAtUmbrella = ({ isSmallScreen }) => {
   const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
@@ -24,7 +24,6 @@ const LifeAtUmbrella = ({ isSmallScreen }) => {
       <ReusableLinkBlockWithPicture
         textForButton={'life at Umbrella'}
         mainPicture={smilingScientists}
-        buttonWidth={'182px'}
         headerText={headerText}
         isMouseOver={isMouseOver[4]}
         animationFor={animations[4]}

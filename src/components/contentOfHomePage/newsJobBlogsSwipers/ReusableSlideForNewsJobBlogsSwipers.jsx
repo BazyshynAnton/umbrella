@@ -1,7 +1,9 @@
 import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
-
+import { useTranslation } from '../../shared/translations/translationsImports'
 const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -36,7 +38,7 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
           ...fontStyleOpenSans,
         }}
       >
-        {text}
+        {t(text)}
       </p>
       <p
         style={{
@@ -45,7 +47,7 @@ const ReusableSlideForNewsJobBlogsSwipers = ({ text, date }) => {
           ...fontStyleOpenSans,
         }}
       >
-        {date}
+        {t(date)}
       </p>
     </Box>
   )
