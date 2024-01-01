@@ -52,7 +52,7 @@ export const headerTextThree = (
       ...fontStyleOpenSans,
     }}
   >
-    Why proteins are important'
+    Why proteins are important
   </Typography>
 )
 

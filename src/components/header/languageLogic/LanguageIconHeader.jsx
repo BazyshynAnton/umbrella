@@ -1,5 +1,6 @@
 import { LazyLoadImage } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { useTranslation } from '../../shared/translations/translationsImports'
+import { loadLanguage } from '../../../i18n/i18n'
 
 import langIcon from '../../../assets/pictures/app-icons/langIcon.webp'
 
@@ -12,8 +13,9 @@ const stylesForAdditionallyLinks = {
 const LanguageIconHeader = () => {
   const { i18n } = useTranslation()
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language)
+  const changeLanguage = async (lng) => {
+    await loadLanguage(lng)
+    i18n.changeLanguage(lng)
   }
 
   return (
