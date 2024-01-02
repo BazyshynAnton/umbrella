@@ -15,8 +15,10 @@ import {
   Pagination,
   Autoplay,
 } from '../../../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { useTranslation } from '../../../../shared/translations/translationsImports'
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 import { EffectFade } from 'swiper/modules'
+import { useHeaderContext } from '../../../../../context/HeaderContext'
 
 import SwiperCore from 'swiper/core'
 
@@ -38,6 +40,8 @@ const CustomPaginationNavigationForSmallScreen = lazy(() =>
 SwiperCore.use([Pagination])
 
 const SwiperProteinFactories = () => {
+  const { setChangeLang } = useHeaderContext()
+
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
   const isSmallScreenStyle = useMediaQuery('(min-width: 900px)')
   const isSmallScreenStyleTwo = useMediaQuery('(min-width: 530px)')
@@ -49,247 +53,246 @@ const SwiperProteinFactories = () => {
     borderRadius: '20px',
   }
 
-  return (
-    <>
-      <Swiper
-        allowTouchMove={true}
-        effect={'fade'}
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={false}
-        pagination={{
-          clickable: true,
-          el: '.swiper-pagination',
-        }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        modules={[EffectFade, Navigation, Pagination, Autoplay]}
-        style={{
-          width: '100%',
-          height: `${
-            isSmallScreen
-              ? '350px'
-              : isSmallScreenStyle
-              ? '290px'
-              : isSmallScreenStyleTwo
-              ? '550px'
-              : '500px'
-          }`,
-          marginTop: '20px',
-          display: 'flex',
-          justifyContent: 'flex-end',
-          flexDirection: 'row-reverse',
-          position: 'relative',
-        }}
-      >
-        {isSmallScreen ? (
-          <CustomPaginationForSwiper />
-        ) : (
-          <Suspense>
-            <CustomPaginationNavigationForSmallScreen />
-          </Suspense>
-        )}
+  const { t } = useTranslation()
 
-        <SwiperSlide>
+  return (
+    <Swiper
+      onClick={() => setChangeLang(false)}
+      allowTouchMove={true}
+      effect={'fade'}
+      slidesPerView={1}
+      spaceBetween={30}
+      loop={false}
+      pagination={{
+        clickable: true,
+        el: '.swiper-pagination',
+      }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      modules={[EffectFade, Navigation, Pagination, Autoplay]}
+      style={{
+        width: '100%',
+        height: `${
+          isSmallScreen
+            ? '350px'
+            : isSmallScreenStyle
+            ? '290px'
+            : isSmallScreenStyleTwo
+            ? '550px'
+            : '500px'
+        }`,
+        marginTop: '20px',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        flexDirection: 'row-reverse',
+        position: 'relative',
+      }}
+    >
+      {isSmallScreen ? (
+        <CustomPaginationForSwiper t={t} />
+      ) : (
+        <Suspense>
+          <CustomPaginationNavigationForSmallScreen />
+        </Suspense>
+      )}
+
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: 'relative',
+            width: { lg: '700px', xs: '100%' },
+            height: { md: '300px', xs: '100%' },
+            pb: { lg: '0px', md: '50px' },
+            display: 'flex',
+            flexDirection: { md: 'row', xs: 'column' },
+            justifyContent: { md: 'flex-start' },
+            alignItems: 'center',
+            gap: '1rem',
+            border: { lg: '1px solid #0163ae' },
+            borderRadius: '20px',
+            background: '#fff',
+          }}
+        >
+          <LazyLoadImage
+            style={styleForImage}
+            src={firstSlideSwiperProtein}
+            alt="first-slide"
+          />
           <Box
             sx={{
-              position: 'relative',
-              width: { lg: '700px', xs: '100%' },
-              height: { md: '300px', xs: '100%' },
-              pb: { lg: '0px', md: '50px' },
-              display: 'flex',
-              flexDirection: { md: 'row', xs: 'column' },
-              justifyContent: { md: 'flex-start' },
-              alignItems: 'center',
-              gap: '1rem',
-              border: { lg: '1px solid #0163ae' },
-              borderRadius: '20px',
-              background: '#fff',
+              width: { lg: '50%', xs: '100%' },
+              padding: { lg: '0px', xs: '5px' },
             }}
           >
-            <LazyLoadImage
-              style={styleForImage}
-              src={firstSlideSwiperProtein}
-              alt="first-slide"
-            />
-            <Box
+            <Typography
+              variant="h5"
               sx={{
-                width: { lg: '50%', xs: '100%' },
-                padding: { lg: '0px', xs: '5px' },
+                color: '#376586',
+                fontWeight: '700',
+                ...fontStyleOpenSans,
               }}
             >
-              <Typography
-                variant="h5"
-                sx={{
-                  color: '#376586',
-                  fontWeight: '700',
-                  ...fontStyleOpenSans,
-                }}
-              >
-                What is mRNA?
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}
-              >
-                <b>Messenger RNA–or mRNA</b>–exists in all of the cells in your
-                body. It is an essential component of all living organisms and
-                has been in cells for <b>billions of years</b>.
-              </Typography>
-            </Box>
+              {t('What is mRNA?')}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: '#376586', ...fontStyleOpenSans }}
+            >
+              <b>{t('Messenger RNA–or mRNA')}</b> – {t('exists in all of')}{' '}
+              <b>{t('billions of years')}</b>.
+            </Typography>
           </Box>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Box>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: 'relative',
+            width: { lg: '700px', xs: '100%' },
+            height: { md: '300px', xs: '100%' },
+            pb: { lg: '0px', md: '50px' },
+            display: 'flex',
+            flexDirection: { md: 'row', xs: 'column' },
+            justifyContent: { md: 'flex-start' },
+            alignItems: 'center',
+            gap: '1rem',
+            border: { lg: '1px solid #0163ae' },
+            borderRadius: '20px',
+            background: '#fff',
+          }}
+        >
+          <LazyLoadImage
+            style={styleForImage}
+            src={secondSlideSwiperProtein}
+            alt="second-slide"
+          />
           <Box
             sx={{
-              position: 'relative',
-              width: { lg: '700px', xs: '100%' },
-              height: { md: '300px', xs: '100%' },
-              pb: { lg: '0px', md: '50px' },
-              display: 'flex',
-              flexDirection: { md: 'row', xs: 'column' },
-              justifyContent: { md: 'flex-start' },
-              alignItems: 'center',
-              gap: '1rem',
-              border: { lg: '1px solid #0163ae' },
-              borderRadius: '20px',
-              background: '#fff',
+              width: { lg: '50%', xs: '100%' },
+              padding: { lg: '0px', xs: '5px' },
             }}
           >
-            <LazyLoadImage
-              style={styleForImage}
-              src={secondSlideSwiperProtein}
-              alt="second-slide"
-            />
-            <Box
+            <Typography
+              variant="h5"
               sx={{
-                width: { lg: '50%', xs: '100%' },
-                padding: { lg: '0px', xs: '5px' },
+                color: '#376586',
+                fontWeight: '700',
+                ...fontStyleOpenSans,
               }}
             >
-              <Typography
-                variant="h5"
-                sx={{
-                  color: '#376586',
-                  fontWeight: '700',
-                  ...fontStyleOpenSans,
-                }}
-              >
-                What does it do?
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}
-              >
-                Just like its name suggests, mRNA is a <b>messenger</b>. It
-                interacts with other components in cells that help create
-                proteins.
-              </Typography>
-            </Box>
+              {t('What does it do?')}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: '#376586', ...fontStyleOpenSans }}
+            >
+              {t('Just like its')} <b>{t('messenger')}</b>
+              {t('It interacts with')}
+            </Typography>
           </Box>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Box>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: 'relative',
+            width: { lg: '700px', xs: '100%' },
+            height: { md: '300px', xs: '100%' },
+            pb: { lg: '0px', md: '50px' },
+            display: 'flex',
+            flexDirection: { md: 'row', xs: 'column' },
+            justifyContent: { md: 'flex-start' },
+            alignItems: 'center',
+            gap: '1rem',
+            border: { lg: '1px solid #0163ae' },
+            borderRadius: '20px',
+            background: '#fff',
+          }}
+        >
+          <LazyLoadImage
+            style={styleForImage}
+            src={thirdSlideSwiperProtein}
+            alt="third-slide"
+          />
           <Box
             sx={{
-              position: 'relative',
-              width: { lg: '700px', xs: '100%' },
-              height: { md: '300px', xs: '100%' },
-              pb: { lg: '0px', md: '50px' },
-              display: 'flex',
-              flexDirection: { md: 'row', xs: 'column' },
-              justifyContent: { md: 'flex-start' },
-              alignItems: 'center',
-              gap: '1rem',
-              border: { lg: '1px solid #0163ae' },
-              borderRadius: '20px',
-              background: '#fff',
+              width: { lg: '50%', xs: '100%' },
+              padding: { lg: '0px', xs: '5px' },
             }}
           >
-            <LazyLoadImage
-              style={styleForImage}
-              src={thirdSlideSwiperProtein}
-              alt="third-slide"
-            />
-            <Box
+            <Typography
+              variant="h5"
               sx={{
-                width: { lg: '50%', xs: '100%' },
-                padding: { lg: '0px', xs: '5px' },
+                color: '#376586',
+                fontWeight: '700',
+                ...fontStyleOpenSans,
               }}
             >
-              <Typography
-                variant="h5"
-                sx={{
-                  color: '#376586',
-                  fontWeight: '700',
-                  ...fontStyleOpenSans,
-                }}
-              >
-                How does it help make a protein?
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}
-              >
-                Each mRNA carries instructions to make a specific protein.
-                <br /> These instructions are like a <b>“blueprint.”</b>
-                <br /> mRNA delivers these instructions, and cells put the
-                protein together.
-              </Typography>
-            </Box>
+              {t('How does it help')}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: '#376586', ...fontStyleOpenSans }}
+            >
+              {t('Each mRNA carries instructions')}
+              <br /> {t('These instructions are like a')}
+              <b>“{t('blueprint')}.”</b>
+              <br /> {t('mRNA delivers these')}
+            </Typography>
           </Box>
-        </SwiperSlide>
-        <SwiperSlide>
+        </Box>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box
+          sx={{
+            position: 'relative',
+            width: { lg: '700px', xs: '100%' },
+            height: { md: '300px', xs: '100%' },
+            pb: { lg: '0px', md: '50px' },
+            display: 'flex',
+            flexDirection: { md: 'row', xs: 'column' },
+            justifyContent: { md: 'flex-start' },
+            alignItems: 'center',
+            gap: '1rem',
+            border: { lg: '1px solid #0163ae' },
+            borderRadius: '20px',
+            background: '#fff',
+          }}
+        >
+          <LazyLoadImage
+            style={styleForImage}
+            src={lastSlideSwiperProtein}
+            alt="last-slide"
+          />
           <Box
             sx={{
-              position: 'relative',
-              width: { lg: '700px', xs: '100%' },
-              height: { md: '300px', xs: '100%' },
-              pb: { lg: '0px', md: '50px' },
-              display: 'flex',
-              flexDirection: { md: 'row', xs: 'column' },
-              justifyContent: { md: 'flex-start' },
-              alignItems: 'center',
-              gap: '1rem',
-              border: { lg: '1px solid #0163ae' },
-              borderRadius: '20px',
-              background: '#fff',
+              width: { lg: '50%', xs: '100%' },
+              padding: { lg: '0px', xs: '5px' },
             }}
           >
-            <LazyLoadImage
-              style={styleForImage}
-              src={lastSlideSwiperProtein}
-              alt="last-slide"
-            />
-            <Box
+            <Typography
+              variant="h5"
               sx={{
-                width: { lg: '50%', xs: '100%' },
-                padding: { lg: '0px', xs: '5px' },
+                color: '#376586',
+                fontWeight: '700',
+                ...fontStyleOpenSans,
               }}
             >
-              <Typography
-                variant="h5"
-                sx={{
-                  color: '#376586',
-                  fontWeight: '700',
-                  ...fontStyleOpenSans,
-                }}
-              >
-                What happens after a protein is made?
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: '#376586', ...fontStyleOpenSans }}
-              >
-                Once its job is done, an mRNA is <b>broken down</b> by the body.
-                It doesn’t stick around for very long.
-              </Typography>
-            </Box>
+              {t('What happens after')}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: '#376586', ...fontStyleOpenSans }}
+            >
+              {t('Once its job')} <b>{t('broken down')}</b> {t('by the body')}.{' '}
+              {t('It doesn’t stick')}.
+            </Typography>
           </Box>
-        </SwiperSlide>
-      </Swiper>
-    </>
+        </Box>
+      </SwiperSlide>
+    </Swiper>
   )
 }
 

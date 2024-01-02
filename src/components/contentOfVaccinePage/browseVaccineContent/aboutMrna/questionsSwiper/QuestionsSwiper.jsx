@@ -7,6 +7,7 @@ import {
   useEffect,
   useState,
 } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useHeaderContext } from '../../../../../context/HeaderContext'
 import { Box } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { infoForQuestionsSwiper } from '../../../../../data/infoForQuestionsSwiper'
 
@@ -16,7 +17,9 @@ import SwiperNavBtns from './SwiperNavBtns'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-const QuestionsSwiper = () => {
+const QuestionsSwiper = ({ t }) => {
+  const { setChangeLang } = useHeaderContext()
+
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   useEffect(() => {
@@ -49,6 +52,7 @@ const QuestionsSwiper = () => {
       }}
     >
       <Swiper
+        onClick={() => setChangeLang(false)}
         spaceBetween={60}
         loop={true}
         autoplay={{
@@ -72,8 +76,8 @@ const QuestionsSwiper = () => {
           >
             <CardForQuestionsSwiper
               img={cardInfo.img}
-              header={cardInfo.header}
-              text={cardInfo.text}
+              header={t(cardInfo.header)}
+              text={t(cardInfo.text)}
             />
           </SwiperSlide>
         ))}

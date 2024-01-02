@@ -7,10 +7,9 @@ import ReusablePictureForLink from '../../shared/globalBlocks/ReusablePictureFor
 import picOfHuman from '../../../assets/pictures/picOfHuman.png'
 
 const headerText = 'Our Mindsets'
-const description =
-  'Alongside our Values, our Mindsets allow us to overcome challenges together. We are working to build the best possible version of Umbrella 20 years from now. These Mindsets are tools we are using to build it, together.'
+const description = 'Alongside our Values'
 
-const OurMindsets = ({ isSmallScreen }) => {
+const OurMindsets = ({ isSmallScreen, t }) => {
   const { handleMouseEnter, handleMouseLeave, animations } = useButtonContext()
   return (
     <Box
@@ -24,10 +23,9 @@ const OurMindsets = ({ isSmallScreen }) => {
       }}
     >
       <ReusableLInkBlock
-        text={description}
-        headerText={headerText}
-        buttonWidth={'188.3px'}
-        textForButton={'See our mindsets'}
+        text={t(description)}
+        headerText={t(headerText)}
+        textForButton={t('See our mindsets')}
         handleEnter={handleMouseEnter(8)}
         handleLeave={handleMouseLeave(8)}
         animationFor={animations[8]}

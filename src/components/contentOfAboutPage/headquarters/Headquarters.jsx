@@ -4,19 +4,18 @@ import ReusableLeftInfoRightPictureBlock from '../shared/Blocks/ReusableLeftInfo
 
 import headquartersPicture from '../../../assets/pictures/headquartersPicture.png'
 
-const text = 'Our headquarters are located in Raccoon City, Missouri, USA.'
+const text = 'Our headquarters are'
 
-const Headquarters = () => {
+const Headquarters = ({ t }) => {
   const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
     useButtonContext()
 
   return (
     <ReusableLeftInfoRightPictureBlock
-      text={text}
-      headerText={'Our headquarters'}
+      text={t(text)}
+      headerText={t('Our headquarters')}
       picture={headquartersPicture}
-      blockButtonWidth={'134.2px'}
-      buttonText={'contact us'}
+      buttonText={t('Contact Us')}
       mouseEnter={handleMouseEnter(10)}
       mouseLeave={handleMouseLeave(10)}
       animationFor={animations[10]}

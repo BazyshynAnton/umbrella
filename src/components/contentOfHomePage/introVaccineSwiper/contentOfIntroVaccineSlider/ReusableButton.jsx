@@ -50,14 +50,17 @@ const stylesForBtn = {
 }
 
 const ReusableButton = ({ buttonText }) => {
-  const { handleActiveLinkTwo } = useHeaderContext()
+  const { handleActiveLink } = useHeaderContext()
   const { t } = useTranslation()
 
   return (
     <>
       {t(buttonText) === t('learn more') ? (
         <Button sx={stylesForBtn.blueBtn}>
-          <NavLink to="/vaccine/science-of-mrna" onClick={handleActiveLinkTwo}>
+          <NavLink
+            to="/vaccine/science-of-mrna"
+            onClick={() => handleActiveLink(2)}
+          >
             {t(`${buttonText}`)}
           </NavLink>
         </Button>

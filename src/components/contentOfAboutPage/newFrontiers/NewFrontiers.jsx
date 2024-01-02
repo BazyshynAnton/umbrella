@@ -6,11 +6,10 @@ import ReusableLeftInfoRightPictureBlock from '../shared/Blocks/ReusableLeftInfo
 
 import newFrontiersPic from '../../../assets/pictures/newFrontiersPic.jpeg'
 
-const headerText = 'Exploring new frontiers of mRNA'
-const text =
-  ' With our mRNA Design Studio™ that allows our scientists to design, research and test mRNA within days and our internal incubator for ongoing exploration, we are boldly going where no biotech company has gone before.'
+const headerText = 'Exploring new'
+const text = 'With our mRNA Design'
 
-const NewFrontiers = () => {
+const NewFrontiers = ({ t }) => {
   const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
     useButtonContext()
 
@@ -22,9 +21,8 @@ const NewFrontiers = () => {
         mouseEnter={handleMouseEnter(7)}
         mouseLeave={handleMouseLeave(7)}
         picture={newFrontiersPic}
-        blockButtonWidth={'134px'}
-        text={text}
-        headerText={headerText}
+        headerText={t(headerText)}
+        text={t(text)}
         buttonText={'learn more'}
         animationFor={animations[7]}
         isMouseOver={isMouseOver[7]}

@@ -1,16 +1,17 @@
 import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
+import { useTranslation } from '../../../../shared/translations/translationsImports'
 import {
-  headerTextOne,
-  headerTextTwo,
-  headerTextThree,
-  headerTextFour,
+  HeaderTextOne,
+  HeaderTextTwo,
+  HeaderTextThree,
+  HeaderTextFour,
 } from './VariablesForItsAllAboutProteins'
 import {
-  informationTextOne,
-  informationTextTwo,
-  informationTextThree,
-  informationTextFour,
+  InformationTextOne,
+  InformationTextTwo,
+  InformationTextThree,
+  InformationTextFour,
 } from './VariablesForItsAllAboutProteins'
 
 import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
@@ -21,6 +22,7 @@ import picOfHuman from '../../../../../assets/pictures/picOfHuman.png'
 import picOfMrnaSmall from '../../../../../assets/pictures/picOfMrnaSmall.png'
 
 const ItsAllAboutProteins = () => {
+  const { t } = useTranslation()
   return (
     <>
       <Typography
@@ -33,12 +35,12 @@ const ItsAllAboutProteins = () => {
           ...fontStyleOpenSans,
         }}
       >
-        It’s all about proteins
+        {t('It’s all about proteins')}
       </Typography>
       <Typography sx={{ color: '#376586', ...fontStyleOpenSans }}>
-        At Umbrella, we are working on developing and testing
-        <b> new mRNA medicines </b>
-        for a wide range of diseases.
+        {t('At Umbrella, we are working')}
+        <b> {t('new mRNA medicines')} </b>
+        {t('for a wide range of diseases')}.
       </Typography>
       <Box
         sx={{
@@ -59,13 +61,13 @@ const ItsAllAboutProteins = () => {
         >
           <ReusableInformationBlock
             picture={picOfResearch}
-            headerText={headerTextOne}
-            informationText={informationTextOne}
+            headerText={<HeaderTextOne />}
+            informationText={<InformationTextOne />}
           />
           <ReusableInformationBlock
             picture={picOfHuman}
-            headerText={headerTextTwo}
-            informationText={informationTextTwo}
+            headerText={<HeaderTextTwo />}
+            informationText={<InformationTextTwo />}
           />
         </Box>
         <Box
@@ -77,13 +79,13 @@ const ItsAllAboutProteins = () => {
         >
           <ReusableInformationBlock
             picture={picOfMed}
-            headerText={headerTextThree}
-            informationText={informationTextThree}
+            headerText={<HeaderTextThree />}
+            informationText={<InformationTextThree />}
           />
           <ReusableInformationBlock
             picture={picOfMrnaSmall}
-            headerText={headerTextFour}
-            informationText={informationTextFour}
+            headerText={<HeaderTextFour />}
+            informationText={<InformationTextFour />}
           />
         </Box>
       </Box>

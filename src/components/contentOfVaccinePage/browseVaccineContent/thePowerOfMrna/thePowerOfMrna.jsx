@@ -1,5 +1,6 @@
 import { Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
 import { useParams } from 'react-router-dom'
+import { useTranslation } from '../../../shared/translations/translationsImports'
 import {
   Suspense,
   lazy,
@@ -8,9 +9,7 @@ import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
 import Browse from '../browse/Browse'
 import Spinner from '../../../spinners/Spinner'
-// import TheScienceOfMrna from '../theScienceOfMrna/TheScienceOfMrna'
-// import UmbrellasMrnaPlatform from '../umbrellasMrnaPlatform/UmbrellasMrnaPlatform'
-// import AboutMrna from '../aboutMrna/AboutMrna'
+
 const UmbrellasMrnaPlatform = lazy(() =>
   import('../umbrellasMrnaPlatform/UmbrellasMrnaPlatform')
 )
@@ -21,7 +20,7 @@ const TheScienceOfMrna = lazy(() =>
 
 const ThePowerOfMrna = () => {
   const params = useParams()
-
+  const { t } = useTranslation()
   return (
     <div style={{ marginTop: '60px' }}>
       <Typography
@@ -33,7 +32,7 @@ const ThePowerOfMrna = () => {
           ...fontStyleOpenSans,
         }}
       >
-        The power of mRNA
+        {t('The power of mRNA')}
       </Typography>
       <Browse />
 

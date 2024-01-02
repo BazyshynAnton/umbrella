@@ -24,11 +24,17 @@ const ReusableItemBlock = ({ imgOne, imgTwo, textOne, textTwo }) => {
     width: { sm: '260px', xs: '100%' },
     display: 'flex',
     flexDirection: width ? 'row' : 'column',
-    alignItems: { sm: 'center', xs: 'flex-start' },
+    alignItems: { sm: 'center', xs: 'center' },
+    justifyContent: { sm: 'initial', xs: 'flex-start' },
   }
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: { sm: 'row', xs: 'column' } }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: { sm: 'row', xs: 'column' },
+      }}
+    >
       <Box sx={styleForBlockWithImgAndText}>
         <LazyLoadImage style={styleForImg} src={imgOne} alt={textOne} />
         <Typography sx={styleForText}>{textOne}</Typography>

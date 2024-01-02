@@ -74,14 +74,14 @@ const ContentForSmallScreens = ({
         <Box
           sx={{
             position: 'absolute',
-            top: { md: '-50px', sm: '-60px', xs: '-40px' },
-            left: { md: '-100px', sm: '-50px', xs: '-20px' },
+            top: { md: '-40px', sm: '-40px', xs: '-50px' },
+            left: { md: '-15px', sm: '-15px', xs: '-15px' },
             width: { md: '150px', sm: '120px', xs: '100px' },
             height: { md: '150px', sm: '120px', xs: '100px' },
           }}
         >
           <LazyLoadImage
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            style={{ objectFit: 'cover', width: '80px', height: '80px' }}
             src={picture1}
             alt="animated-books-icon"
           />
@@ -89,14 +89,14 @@ const ContentForSmallScreens = ({
         <Box
           sx={{
             position: 'absolute',
-            bottom: { md: '-50px', sm: '-20px', xs: '-20px' },
-            right: { md: '-50px', sm: '-40px', xs: '-10px' },
+            bottom: { md: '-100px', sm: '-65px', xs: '-70px' },
+            right: { md: '-50px', sm: '-40px', xs: '-30px' },
             width: { md: '150px', sm: '120px', xs: '100px' },
             height: { md: '150px', sm: '120px', xs: '100px' },
           }}
         >
           <LazyLoadImage
-            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+            style={{ objectFit: 'contain', width: '70px', height: '70px' }}
             src={picture2}
             alt="animated-flask-icon"
           />

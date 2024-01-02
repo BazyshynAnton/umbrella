@@ -13,6 +13,7 @@ import NavigationButtonForNewsJobBlogsSwiper from './NavigationButtonForNewsJobB
 import ReusableSlideForNewsJobBlogsSwipers from './ReusableSlideForNewsJobBlogsSwipers'
 
 import 'swiper/css'
+import { useHeaderContext } from '../../../context/HeaderContext'
 
 const ReusableSwiper = ({
   iterableInfo,
@@ -22,6 +23,8 @@ const ReusableSwiper = ({
   animationForUnderLine,
   icon,
 }) => {
+  const { setChangeLang } = useHeaderContext()
+
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   useEffect(() => {
@@ -41,6 +44,7 @@ const ReusableSwiper = ({
 
   return (
     <Swiper
+      onClick={() => setChangeLang(false)}
       spaceBetween={10}
       slidesPerView={slidesPerView}
       style={{ marginBottom: '50px' }}

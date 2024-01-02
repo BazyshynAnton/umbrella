@@ -20,7 +20,7 @@ export const infoForQuestionsSwiper = [
   {
     img: questionsImg3,
     header: 'How researchers unlocked mRNA',
-    text: ' Learn about mRNA research history',
+    text: 'Learn about mRNA research history',
     id: 'ca82b04e-8d1d-11ee-b9d1-0242ac120002',
   },
   {

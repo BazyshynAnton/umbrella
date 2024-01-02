@@ -1,84 +1,111 @@
+import { useTranslation } from '../../../../shared/translations/translationsImports'
 import { Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
-export const headerTextOne = (
-  <Typography
-    variant="h5"
-    sx={{
-      fontSize: { sm: '1.5rem', xs: '1.2rem' },
-      fontWeight: { sm: '400', xs: '600' },
-      ...fontStyleOpenSans,
-    }}
-  >
-    What proteins do
-  </Typography>
-)
+export const HeaderTextOne = () => {
+  const { t } = useTranslation()
 
-export const informationTextOne = (
-  <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-    Proteins are the <b>"workhorses"</b> of your cells. <br /> And your body
-    makes
-    <br />
-    <b>{'>'}100,000</b> different kinds of proteins.
-  </Typography>
-)
-export const headerTextTwo = (
-  <Typography
-    variant="h5"
-    sx={{
-      fontSize: { sm: '1.5rem', xs: '1.2rem' },
-      fontWeight: { sm: '400', xs: '600' },
-      ...fontStyleOpenSans,
-    }}
-  >
-    How proteins work
-  </Typography>
-)
+  return (
+    <Typography
+      variant="h5"
+      sx={{
+        fontSize: { sm: '1.5rem', xs: '1.2rem' },
+        fontWeight: { sm: '400', xs: '600' },
+        ...fontStyleOpenSans,
+      }}
+    >
+      {t('What proteins do')}
+    </Typography>
+  )
+}
+export const InformationTextOne = () => {
+  const { t } = useTranslation()
 
-export const informationTextTwo = (
-  <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-    For example, insulin is a protein that helps the body
-    <br /> control sugar levels in the blood.
-    <br /> In people with Type I diabetes, their body doesn't make enough{' '}
-    <b>insulin</b>.
-  </Typography>
-)
-export const headerTextThree = (
-  <Typography
-    variant="h5"
-    sx={{
-      fontSize: { sm: '1.5rem', xs: '1.2rem' },
-      fontWeight: { sm: '400', xs: '600' },
-      ...fontStyleOpenSans,
-    }}
-  >
-    Why proteins are important
-  </Typography>
-)
+  return (
+    <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
+      {t('Proteins are the')} <b>"{t('workhorses')}"</b> {t('of your cells')}.{' '}
+      <br /> {t('And your body makes')}
+      <br />
+      <b>{'>'}100,000</b> {t('different kinds of proteins')}.
+    </Typography>
+  )
+}
+export const HeaderTextTwo = () => {
+  const { t } = useTranslation()
+  return (
+    <Typography
+      variant="h5"
+      sx={{
+        fontSize: { sm: '1.5rem', xs: '1.2rem' },
+        fontWeight: { sm: '400', xs: '600' },
+        ...fontStyleOpenSans,
+      }}
+    >
+      {t('How proteins work')}
+    </Typography>
+  )
+}
 
-export const informationTextThree = (
-  <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-    When the body doesn’t make the right amount
-    <br /> or type of protein, it can cause conditions
-    <br /> like <b>cancer or metabolic diseases</b>.
-  </Typography>
-)
-export const headerTextFour = (
-  <Typography
-    variant="h5"
-    sx={{
-      fontSize: { sm: '1.5rem', xs: '1.2rem' },
-      fontWeight: { sm: '400', xs: '600' },
-      ...fontStyleOpenSans,
-    }}
-  >
-    Why we focus on proteins
-  </Typography>
-)
+export const InformationTextTwo = () => {
+  const { t } = useTranslation()
+  return (
+    <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
+      {t('For example, insulin')}
+      <br /> {t('control sugar')}. {t('In people with')} <br />{' '}
+      {t('Type I diabetes')} <b>{t('insulin')}</b>.
+    </Typography>
+  )
+}
 
-export const informationTextFour = (
-  <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-    Proteins are essential for
-    <b> maintaining health and preventing disease</b>.
-  </Typography>
-)
+export const HeaderTextThree = () => {
+  const { t } = useTranslation()
+  return (
+    <Typography
+      variant="h5"
+      sx={{
+        fontSize: { sm: '1.5rem', xs: '1.2rem' },
+        fontWeight: { sm: '400', xs: '600' },
+        ...fontStyleOpenSans,
+      }}
+    >
+      {t('Why proteins are important')}
+    </Typography>
+  )
+}
+
+export const InformationTextThree = () => {
+  const { t } = useTranslation()
+  return (
+    <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
+      {t('When the body')}
+      <br /> {t('or type of protein')}
+      <br /> {t('like')} <b>{t('cancer or metabolic')}</b>.
+    </Typography>
+  )
+}
+
+export const HeaderTextFour = () => {
+  const { t } = useTranslation()
+  return (
+    <Typography
+      variant="h5"
+      sx={{
+        fontSize: { sm: '1.5rem', xs: '1.2rem' },
+        fontWeight: { sm: '400', xs: '600' },
+        ...fontStyleOpenSans,
+      }}
+    >
+      {t('Why we focus on proteins')}
+    </Typography>
+  )
+}
+
+export const InformationTextFour = () => {
+  const { t } = useTranslation()
+  return (
+    <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
+      {t('Proteins are essential')}
+      <b> {t('maintaining health')}</b>.
+    </Typography>
+  )
+}

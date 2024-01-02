@@ -8,7 +8,7 @@ import {
 
 import CustomAutoPlay from './CustomAutoPlay'
 
-const CustomPaginationForSwiper = () => {
+const CustomPaginationForSwiper = ({ t }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const swiper = useSwiper()
 
@@ -50,7 +50,7 @@ const CustomPaginationForSwiper = () => {
           variant="body1"
           sx={{ fontWeight: '700', cursor: 'pointer', ...fontStyleOpenSans }}
         >
-          What is mRNA?
+          {t('What is mRNA?')}
         </Typography>
       </Box>
       <Box
@@ -63,7 +63,7 @@ const CustomPaginationForSwiper = () => {
           variant="body1"
           sx={{ fontWeight: '700', cursor: 'pointer', ...fontStyleOpenSans }}
         >
-          What does it do?
+          {t('What does it do?')}
         </Typography>
       </Box>
       <Box
@@ -76,7 +76,7 @@ const CustomPaginationForSwiper = () => {
           variant="body1"
           sx={{ fontWeight: '700', cursor: 'pointer', ...fontStyleOpenSans }}
         >
-          How does it help make a protein?
+          {t('How does it help')}
         </Typography>
       </Box>
       <Box
@@ -89,7 +89,7 @@ const CustomPaginationForSwiper = () => {
           variant="body1"
           sx={{ fontWeight: '700', cursor: 'pointer', ...fontStyleOpenSans }}
         >
-          What happens after a protein is made?
+          {t('What happens after')}
         </Typography>
       </Box>
       <CustomAutoPlay />

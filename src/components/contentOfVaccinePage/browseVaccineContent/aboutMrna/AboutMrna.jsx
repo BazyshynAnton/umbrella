@@ -1,5 +1,6 @@
 import { Box, Typography } from '../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
+import { useTranslation } from '../../../shared/translations/translationsImports'
 
 import ReusableComponentForIntroduce from '../../../shared/globalBlocks/ReusableComponentForIntroduce'
 import ReusableComponentMrnaPicture from '../../../shared/globalBlocks/ReusableComponentMrnaPicture'
@@ -9,10 +10,11 @@ import DiscoverTheScienceOfMrna from './discoverTheScienceOfMrna/DiscoverTheScie
 import demoImgFive from '../../../../assets/pictures/demoImgFive.png'
 import demoImgSix from '../../../../assets/pictures/demoImgSix.png'
 
-const text =
-  "Learn more about the science behind mRNA and how Umbrella's scientists are researching and developing investigational mRNA medicines to potentially help prevent or treat disease."
+const text = 'Learn more about the science'
 
 const AboutMrna = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -23,12 +25,12 @@ const AboutMrna = () => {
       }}
     >
       <ReusableComponentForIntroduce
-        text={text}
+        text={t(text)}
         img1={demoImgSix}
         img2={demoImgFive}
       />
       <ReusableComponentMrnaPicture />
-      <DiscoverTheScienceOfMrna />
+      <DiscoverTheScienceOfMrna t={t} />
 
       <Typography
         variant="h4"
@@ -39,20 +41,17 @@ const AboutMrna = () => {
           ...fontStyleOpenSans,
         }}
       >
-        Q&mRNA
+        {t('Q&mRNA')}
       </Typography>
       <Typography
         variant="body1"
         sx={{ color: '#376586', ...fontStyleOpenSans }}
       >
-        Tune into our Q&mRNA video series to learn more about the power and
-        potential of mRNA
-        <br /> and how Umbrella is researching and developing mRNA medicines
-        with the goal
-        <br /> of delivering the greatest possible impact to people through mRNA
-        medicines.
+        {t('Tune into our Q&mRNA')}
+        <br /> {t('and how Umbrella is researching')}
+        <br /> {t('of delivering the greatest')}.
       </Typography>
-      <QuestionsSwiper />
+      <QuestionsSwiper t={t} />
     </Box>
   )
 }

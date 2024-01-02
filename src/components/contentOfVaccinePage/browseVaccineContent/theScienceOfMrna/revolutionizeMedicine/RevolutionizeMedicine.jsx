@@ -3,7 +3,7 @@ import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImp
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
 import scienceInTheLab from '../../../../../assets/pictures/scienceInTheLab.jpeg'
-const RevolutionizeMedicine = () => {
+const RevolutionizeMedicine = ({ t }) => {
   return (
     <Box
       sx={{
@@ -48,15 +48,15 @@ const RevolutionizeMedicine = () => {
             ...fontStyleOpenSans,
           }}
         >
-          mRNA could revolutionize medicine
+          {t('mRNA could revolutionize medicine')}
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: '#376586', ...fontStyleOpenSans }}
         >
-          Scientists have been studying mRNA <b>for decades</b>. And mRNA
-          vaccines are
-          <b> just the start</b>.
+          {t('Scientists have been')} <b>{t('for decades')}</b>.{' '}
+          {t('And mRNA vaccines are')}
+          <b> {t('just the start')}</b>.
         </Typography>
       </Box>
       <Box
@@ -78,15 +78,14 @@ const RevolutionizeMedicine = () => {
             ...fontStyleOpenSans,
           }}
         >
-          It's all about proteins
+          {t("It's all about proteins")}
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: '#376586', ...fontStyleOpenSans }}
         >
-          An mRNA can <b>teach the body</b> how to make a specific protein that
-          can help your immune system prevent or treat certain
-          <b>diseases</b>.
+          {t('An mRNA can')} <b>{t('teach the body')}</b> {t('how to make a')}
+          <b> {t('diseases')}</b>.
         </Typography>
       </Box>
     </Box>

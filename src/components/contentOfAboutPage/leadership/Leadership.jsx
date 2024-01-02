@@ -7,10 +7,9 @@ import ReusablePictureForLinkBlock from '../../shared/globalBlocks/ReusablePictu
 import leadershipPicture from '../../../assets/pictures/leadershipPicture.jpg'
 import leadershipLogo from '../../../assets/pictures/leadershipLogo.png'
 
-const text =
-  'Together, we are working to deliver on the promise of mRNA science for people around the world.'
+const text = 'Together, we are working'
 
-const Leadership = ({ isSmallScreen }) => {
+const Leadership = ({ isSmallScreen, t }) => {
   const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
     useButtonContext()
 
@@ -24,10 +23,9 @@ const Leadership = ({ isSmallScreen }) => {
       }}
     >
       <ReusableLinkBlockWithPicture
-        text={text}
-        headerText={'Leadership'}
-        buttonWidth={'165.1px'}
-        textForButton={'meet our team'}
+        text={t(text)}
+        headerText={t('Leadership')}
+        textForButton={t('meet our team')}
         mainPicture={leadershipPicture}
         handleEnter={handleMouseEnter(9)}
         handleLeave={handleMouseLeave(9)}

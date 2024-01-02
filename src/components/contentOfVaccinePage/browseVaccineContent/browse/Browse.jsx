@@ -3,6 +3,7 @@ import {
   Typography,
   useMediaQuery,
 } from '../../../shared/ui/MUIglobal/muiGlobal'
+import { useTranslation } from '../../../shared/translations/translationsImports'
 import { NavLink } from '../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { fontStyleOpenSans } from '../../../shared/ui/fontStyles/openSans'
 
@@ -29,14 +30,14 @@ const styleForTypography = {
 
 const Browse = () => {
   const isSmallScreen = useMediaQuery('(min-width: 1200px)')
-
+  const { t } = useTranslation()
   return (
     <div>
       <Typography
         variant="body1"
         sx={{ color: '#376586', ...fontStyleOpenSans }}
       >
-        browse:
+        {t('browse')}
       </Typography>
       <Box
         sx={{
@@ -49,19 +50,19 @@ const Browse = () => {
       >
         <NavLink to="/vaccine/science-of-mrna" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
-            The Science of mRNA
+            {t('The Science of mRNA')}
           </Typography>
         </NavLink>
         {isSmallScreen && <hr style={styleForPoint} />}
         <NavLink to="/vaccine/umbrellas-mrna-platform" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
-            Umbrella's mRNA platform
+            {t("Umbrella's mRNA platform")}
           </Typography>
         </NavLink>
         {isSmallScreen && <hr style={styleForPoint} />}
         <NavLink to="/vaccine/about-mrna" style={styleForLinks}>
           <Typography variant="h5" sx={styleForTypography}>
-            About mRNA
+            {t('About mRNA')}
           </Typography>
         </NavLink>
       </Box>

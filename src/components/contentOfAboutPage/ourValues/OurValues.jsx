@@ -3,7 +3,7 @@ import { fontStyleOpenSans } from '../../shared/ui/fontStyles/openSans'
 
 import ItemsBlock from './ItemsBlock'
 
-const OurValues = () => {
+const OurValues = ({ t }) => {
   return (
     <Box
       sx={{
@@ -32,12 +32,10 @@ const OurValues = () => {
             ...fontStyleOpenSans,
           }}
         >
-          Umbrella people hold a deep sense of responsibility for each other,
-          patients, the environment and our local communities. Our people live
-          our Values every day.
+          {t('Umbrella people hold')}
         </Typography>
       </Box>
-      <ItemsBlock />
+      <ItemsBlock t={t} />
     </Box>
   )
 }

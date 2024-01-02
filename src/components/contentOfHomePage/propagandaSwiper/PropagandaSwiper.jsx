@@ -29,10 +29,13 @@ import 'swiper/css'
 import 'swiper/css/effect-creative'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import { useHeaderContext } from '../../../context/HeaderContext'
 
 const styleForSlide = { position: 'relative', background: '#fff' }
 
 const PropagandaSwiper = () => {
+  const { setChangeLang } = useHeaderContext()
+
   const {
     styles,
     scaleAnimation,
@@ -68,6 +71,7 @@ const PropagandaSwiper = () => {
 
   return (
     <Swiper
+      onClick={() => setChangeLang(false)}
       onSlideChange={handleSlideChange}
       spaceBetween={50}
       slidesPerView={1}

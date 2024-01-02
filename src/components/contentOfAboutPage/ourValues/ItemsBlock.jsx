@@ -7,20 +7,20 @@ import puzzleForItemsBlock from '../../../assets/pictures/puzzleForItemsBlock.pn
 import relentlessPicForItemsBlock from '../../../assets/pictures/relentlessPicForItemsBlock.png'
 import picOfResearch from '../../../assets/pictures/picOfResearch.png'
 
-const ItemsBlock = () => {
+const ItemsBlock = ({ t }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <ReusableItemBlock
         imgOne={medalForItemsBlock}
         imgTwo={puzzleForItemsBlock}
-        textOne={'Bold'}
-        textTwo={'Collaborative'}
+        textOne={t('Bold')}
+        textTwo={t('Collaborative')}
       />
       <ReusableItemBlock
         imgOne={relentlessPicForItemsBlock}
         imgTwo={picOfResearch}
-        textOne={'Relentless'}
-        textTwo={'Curious'}
+        textOne={t('Relentless')}
+        textTwo={t('Curious')}
       />
     </Box>
   )

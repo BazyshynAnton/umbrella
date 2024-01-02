@@ -9,6 +9,7 @@ import {
   SwiperSlide,
   Autoplay,
 } from '../../shared/ui/swiperImportsGlobal/swiperImportsGlobal'
+import { useHeaderContext } from '../../../context/HeaderContext'
 
 import CustomPaginationForIntroSwiper from './contentOfIntroVaccineSlider/CustomPaginationForIntroSwiper'
 import ReusableSlide from './contentOfIntroVaccineSlider/ReusableSlide'
@@ -25,11 +26,13 @@ const SmallScreensLeftRightNavigationForIntroSwiper = lazy(() =>
 )
 
 const IntroVaccineSlider = () => {
+  const { setChangeLang } = useHeaderContext()
   const [pausedSwiper, setPausedSwiper] = useState(true)
   const isSmallScreen = useMediaQuery('(min-width: 900px)')
 
   return (
     <Swiper
+      onClick={() => setChangeLang(false)}
       spaceBetween={30}
       autoplay={{
         delay: 5000,

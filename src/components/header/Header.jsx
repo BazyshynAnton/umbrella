@@ -37,6 +37,7 @@ const Header = () => {
       <Container>
         <div
           style={{
+            position: '  relative',
             display: 'flex',
             justifyContent: 'space-between',
             padding: '0px 24px',

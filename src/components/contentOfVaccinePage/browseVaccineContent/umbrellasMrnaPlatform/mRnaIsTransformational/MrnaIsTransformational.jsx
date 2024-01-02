@@ -1,10 +1,13 @@
 import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
+import { useTranslation } from '../../../../shared/translations/translationsImports'
 
 import femaleScientist from '../../../../../assets/pictures/femaleScientist.jpg'
 
 const MrnaIsTransformational = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -50,15 +53,15 @@ const MrnaIsTransformational = () => {
             ...fontStyleOpenSans,
           }}
         >
-          mRNA is transformational
+          {t('mRNA is transformational')}
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: '#376586', ...fontStyleOpenSans }}
         >
-          With our technology, we are <b>revolutionizing</b> medicine and
-          developing potential mRNA treatments in shorter periods of time for
-          previously <b>untreatable and emerging diseases</b>.
+          {t('With our technology, we are')} <b>{t('revolutionizing')}</b>{' '}
+          {t('medicine and developing')}
+          <b> {t('untreatable and emerging diseases')}</b>.
         </Typography>
       </Box>
       <Box
@@ -80,15 +83,15 @@ const MrnaIsTransformational = () => {
             ...fontStyleOpenSans,
           }}
         >
-          We can positively impact the lives of millions of people
+          {t('We can positively impact')}
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: '#376586', ...fontStyleOpenSans }}
         >
-          Our mRNA platform, with its <b>speed, scale, and flexibility</b>, is
-          uniquely suited to tackle current and emerging pathogens that threaten
-          global health.
+          {t('Our mRNA platform, with its')}
+          <b> {t('speed, scale, and flexibility')}</b>,{' '}
+          {t('is uniquely suited to')}.
         </Typography>
       </Box>
     </Box>

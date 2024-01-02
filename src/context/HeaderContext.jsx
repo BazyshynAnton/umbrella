@@ -68,6 +68,8 @@ export const HeaderContextProvider = ({ children }) => {
     setOpen(false)
   }
 
+  const [changeLang, setChangeLang] = useState(false)
+
   const contextValue = {
     stylesForLinks,
     stylesForActiveLinks,
@@ -79,6 +81,8 @@ export const HeaderContextProvider = ({ children }) => {
     handleActiveLink,
     open,
     setOpen,
+    changeLang,
+    setChangeLang,
   }
 
   return (

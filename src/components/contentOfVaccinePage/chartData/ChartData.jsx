@@ -1,3 +1,4 @@
+import { useTranslation } from '../../shared/translations/translationsImports'
 import { Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import {
   useSpring,
@@ -23,6 +24,8 @@ const ChartData = () => {
   const vaccine = numberTwo.to((val) => Math.floor(val))
   const placebo = numberTwo.to((val) => Math.floor(val))
 
+  const { t } = useTranslation()
+
   return (
     <div
       style={{
@@ -37,7 +40,7 @@ const ChartData = () => {
     >
       <div
         style={{
-          background: 'rgba(128, 128, 128, 0.3)',
+          background: 'rgba(128, 128, 128, 0.4)',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'center',
@@ -46,11 +49,8 @@ const ChartData = () => {
           paddingLeft: '8px',
         }}
       >
-        <Typography
-          variant="h5"
-          sx={{ pr: '3px', color: '#376586', ...fontStyleOpenSans }}
-        >
-          Clinical trial participants:
+        <Typography variant="h5" sx={{ pr: '3px', ...fontStyleOpenSans }}>
+          {t('Clinical trial participants')}
         </Typography>
         <animated.p
           style={{
@@ -79,7 +79,7 @@ const ChartData = () => {
         }}
       >
         <Typography variant="h5" sx={{ pr: '3px', ...fontStyleOpenSans }}>
-          Vaccine:
+          {t('Vaccine')}:
         </Typography>
         <animated.p
           style={{
@@ -108,7 +108,7 @@ const ChartData = () => {
         }}
       >
         <Typography variant="h5" sx={{ pr: '3px', ...fontStyleOpenSans }}>
-          Placebo:
+          {t('Placebo')}:
         </Typography>
         <animated.p
           style={{

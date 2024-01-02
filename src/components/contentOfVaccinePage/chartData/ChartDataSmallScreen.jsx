@@ -1,3 +1,4 @@
+import { useTranslation } from '../../shared/translations/translationsImports'
 import { Box, Typography } from '../../shared/ui/MUIglobal/muiGlobal'
 import {
   useSpring,
@@ -23,6 +24,8 @@ const ChartDataSmallScreen = () => {
   const vaccine = numberTwo.to((val) => Math.floor(val))
   const placebo = numberTwo.to((val) => Math.floor(val))
 
+  const { t } = useTranslation()
+
   return (
     <Box
       sx={{
@@ -39,7 +42,7 @@ const ChartDataSmallScreen = () => {
         sx={{
           width: { sm: '500px', xs: '200px' },
           height: '100px',
-          background: 'rgba(128, 128, 128, 0.3)',
+          background: 'rgba(128, 128, 128, 0.4)',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -61,7 +64,7 @@ const ChartDataSmallScreen = () => {
           {people}
         </animated.p>
         <Typography variant="body1" sx={{ pr: '3px', ...fontStyleOpenSans }}>
-          Clinical trial participants
+          {t('Clinical trial participants')}
         </Typography>
       </Box>
       <Box
@@ -89,7 +92,7 @@ const ChartDataSmallScreen = () => {
           {vaccine}
         </animated.p>
         <Typography variant="body1" sx={{ pr: '3px', ...fontStyleOpenSans }}>
-          Vaccine
+          {t('Vaccine')}:
         </Typography>
       </Box>
       <Box
@@ -117,7 +120,7 @@ const ChartDataSmallScreen = () => {
           {placebo}
         </animated.p>
         <Typography variant="body1" sx={{ pr: '3px', ...fontStyleOpenSans }}>
-          Placebo
+          {t('Placebo')}:
         </Typography>
       </Box>
     </Box>

@@ -1,16 +1,16 @@
 import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 import {
-  headerTextOne,
-  headerTextTwo,
-  headerTextThree,
-  headerTextFour,
+  HeaderTextOne,
+  HeaderTextTwo,
+  HeaderTextThree,
+  HeaderTextFour,
 } from './VariablesForYouAreMadeOfProteins'
 import {
-  informationTextOne,
-  informationTextTwo,
-  informationTextThree,
-  informationTextFour,
+  InformationTextOne,
+  InformationTextTwo,
+  InformationTextThree,
+  InformationTextFour,
 } from './VariablesForYouAreMadeOfProteins'
 
 import ReusableInformationBlock from '../../../../reusableComponents/ReusableInformationBlock'
@@ -20,7 +20,7 @@ import picOfResearch from '../../../../../assets/pictures/picOfResearch.png'
 import picOfMed from '../../../../../assets/pictures/picOfMed.png'
 import picOfImportant from '../../../../../assets/pictures/picOfImportant.png'
 
-const YouAreMadeOfProteins = () => {
+const YouAreMadeOfProteins = ({ t }) => {
   return (
     <>
       <Typography
@@ -33,11 +33,11 @@ const YouAreMadeOfProteins = () => {
           ...fontStyleOpenSans,
         }}
       >
-        You are made of proteins
+        {t('You are made of proteins')}
       </Typography>
       <Typography sx={{ color: '#376586', ...fontStyleOpenSans }}>
-        Your body contains <b>trillions of cells</b>, the basic units of life.
-        And every cell contains proteins.
+        {t('Your body contains')} <b>{t('trillions of cells')}</b>,{' '}
+        {t('the basic units of life')}. {t('And every cell contains proteins')}.
       </Typography>
 
       <Box
@@ -45,7 +45,7 @@ const YouAreMadeOfProteins = () => {
           mt: '40px',
           display: 'flex',
           flexDirection: 'column',
-          height: { md: '300px', xs: '100%' },
+          height: { md: '100%', xs: '100%' },
           gap: { sm: '0px', xs: '1rem' },
           color: '#376586',
         }}
@@ -59,13 +59,13 @@ const YouAreMadeOfProteins = () => {
         >
           <ReusableInformationBlock
             picture={picOfProteins}
-            headerText={headerTextOne}
-            informationText={informationTextOne}
+            headerText={<HeaderTextOne />}
+            informationText={<InformationTextOne />}
           />
           <ReusableInformationBlock
             picture={picOfResearch}
-            headerText={headerTextTwo}
-            informationText={informationTextTwo}
+            headerText={<HeaderTextTwo />}
+            informationText={<InformationTextTwo />}
           />
         </Box>
         <Box
@@ -77,13 +77,13 @@ const YouAreMadeOfProteins = () => {
         >
           <ReusableInformationBlock
             picture={picOfImportant}
-            headerText={headerTextThree}
-            informationText={informationTextThree}
+            headerText={<HeaderTextThree />}
+            informationText={<InformationTextThree />}
           />
           <ReusableInformationBlock
             picture={picOfMed}
-            headerText={headerTextFour}
-            informationText={informationTextFour}
+            headerText={<HeaderTextFour />}
+            informationText={<InformationTextFour />}
           />
         </Box>
       </Box>

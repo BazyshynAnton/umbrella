@@ -13,7 +13,7 @@ const ReusablePictureForLinkBlock = lazy(() =>
   import('../../shared/globalBlocks/ReusablePictureForLinkBlock')
 )
 
-const Delivering = ({ isSmallScreen }) => {
+const Delivering = ({ isSmallScreen, t }) => {
   return (
     <Box
       sx={{
@@ -51,7 +51,7 @@ const Delivering = ({ isSmallScreen }) => {
               ...fontStyleOpenSans,
             }}
           >
-            Delivering the greatest possible impact through mRNA medicines
+            {t('Delivering the greatest')}
           </Typography>
           <Typography
             sx={{
@@ -61,9 +61,7 @@ const Delivering = ({ isSmallScreen }) => {
               ...fontStyleOpenSans,
             }}
           >
-            From accelerating drug discovery and early development to a rapidly
-            expanding pipeline and a world-class team, we are delivering on the
-            promise of mRNA.
+            {t('From accelerating drug')}
           </Typography>
         </div>
       </Box>

@@ -16,11 +16,10 @@ const ReusablePictureForLinkBlock = lazy(() =>
   import('../../shared/globalBlocks/ReusablePictureForLinkBlock')
 )
 
-const headerText = 'We’re changing the world of medicine'
-const text =
-  'We are creating a new category of medicines and harnessing the power of mRNA.'
+const headerText = 'We’re changing'
+const text = 'We are creating'
 
-const ChangingTheWorld = ({ isSmallScreen }) => {
+const ChangingTheWorld = ({ isSmallScreen, t }) => {
   const { handleMouseEnter, handleMouseLeave, animations, isMouseOver } =
     useButtonContext()
   const { handleActiveLink } = useHeaderContext()
@@ -28,7 +27,7 @@ const ChangingTheWorld = ({ isSmallScreen }) => {
   return (
     <NavLink
       to="/vaccine/science-of-mrna"
-      onClick={(event) => {
+      onClick={() => {
         handleActiveLink(2)
       }}
     >
@@ -41,14 +40,13 @@ const ChangingTheWorld = ({ isSmallScreen }) => {
         }}
       >
         <ReusableLinkBlockWithPicture
-          text={text}
-          headerText={headerText}
-          buttonWidth={'190px'}
+          text={t(text)}
+          headerText={t(headerText)}
           mainPicture={umbrellaGuy}
           handleEnter={handleMouseEnter(6)}
           handleLeave={handleMouseLeave(6)}
           animationFor={animations[6]}
-          textForButton={'more about mrna'}
+          textForButton={t('more about mrna')}
           isMouseOver={isMouseOver[6]}
         />
         {isSmallScreen && (

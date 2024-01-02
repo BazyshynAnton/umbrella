@@ -71,7 +71,7 @@ const YellowButton = ({ children }) => {
       </div>
       <animated.div
         style={{
-          width: '150px',
+          width: '180px',
           left: props.typographyTwoLeft,
           position: 'absolute',
         }}

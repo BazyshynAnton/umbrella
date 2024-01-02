@@ -7,13 +7,13 @@ import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 import { LazyLoadImage } from '../../../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import discoverTheScienceOfMrnaPicture from '../../../../../assets/pictures/discoverTheScienceOfMrnaPicture.png'
 
-const DiscoverTheScienceOfMrna = () => {
+const DiscoverTheScienceOfMrna = ({ t }) => {
   return (
     <Box
       sx={{
         mt: { md: '0px', sm: '80px', xs: '40px' },
         width: '100%',
-        height: { md: '324px', sm: '600px' },
+        height: { md: '360px', sm: '600px' },
         display: 'flex',
         flexDirection: { md: 'row', xs: 'column' },
         borderRadius: '8px',
@@ -43,16 +43,10 @@ const DiscoverTheScienceOfMrna = () => {
             variant="h5"
             sx={{ color: '#053f68', fontWeight: '700', ...fontStyleOpenSans }}
           >
-            Transforming medicine with mRNA
+            {t('Transforming medicine with mRNA')}
           </Typography>
           <Typography variant="body1" sx={{ ...fontStyleOpenSans }}>
-            At Umbrella, we believe the future of medicine is mRNA, the language
-            of life inside every cell in our bodies. With our technology, we are
-            researching and developing investigational mRNA vaccines and
-            therapeutic approaches for infectious diseases, cancers, rare
-            diseases, cardiovascular diseases, and autoimmune diseases. Learn
-            more about the science of mRNA and how Umbrella is developing
-            investigational mRNA medicines.
+            {t('At Umbrella, we believe the future')}
           </Typography>
         </Box>
         <Button
@@ -72,7 +66,7 @@ const DiscoverTheScienceOfMrna = () => {
             ...fontStyleOpenSans,
           }}
         >
-          discover the science of mrna {'>'}
+          {t('discover the science of mrna')} {'>'}
         </Button>
       </Box>
       <Box

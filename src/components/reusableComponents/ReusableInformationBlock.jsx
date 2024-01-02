@@ -25,7 +25,7 @@ const ReusableInformationBlock = ({ picture, headerText, informationText }) => {
       </Box>
       <Box
         sx={{
-          height: { sm: '130px', xs: '100%' },
+          height: { sm: '100%', xs: '100%' },
           display: 'flex',
           flexDirection: 'column',
         }}

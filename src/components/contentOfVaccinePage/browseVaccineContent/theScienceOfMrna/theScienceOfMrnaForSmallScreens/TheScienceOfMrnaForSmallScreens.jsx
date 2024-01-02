@@ -1,7 +1,7 @@
 import { Box, Typography } from '../../../../shared/ui/MUIglobal/muiGlobal'
 import { fontStyleOpenSans } from '../../../../shared/ui/fontStyles/openSans'
 
-const TheScienceOfMrnaForSmallScreens = () => {
+const TheScienceOfMrnaForSmallScreens = ({ t }) => {
   return (
     <Box
       sx={{
@@ -21,7 +21,7 @@ const TheScienceOfMrnaForSmallScreens = () => {
           ...fontStyleOpenSans,
         }}
       >
-        Your cells are protein factories
+        {t('Your cells are protein factories')}
       </Typography>
       <Typography
         variant="body1"
@@ -31,8 +31,8 @@ const TheScienceOfMrnaForSmallScreens = () => {
           ...fontStyleOpenSans,
         }}
       >
-        Proteins are made in a process called <b>protein synthesis</b>.
-        <br /> And that's where mRNA comes in.
+        {t('Proteins are made in')} <b>{t('protein synthesis')}</b>.
+        <br /> {t("And that's")}.
       </Typography>
     </Box>
   )
