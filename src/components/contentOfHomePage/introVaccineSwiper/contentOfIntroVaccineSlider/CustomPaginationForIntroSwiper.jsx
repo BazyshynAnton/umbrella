@@ -43,10 +43,9 @@ const pausedStyles = {
 const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
   const swiper = useSwiper()
 
-  const allSlidesNavigation = swiper.slides
-
   const [activeIndex, setActiveIndex] = useState(swiper.activeIndex)
-  const [block, setBlock] = useState([0, 1, 2])
+
+  const block = [0, 1, 2]
 
   useEffect(() => {
     const handleSlideChange = () => {
