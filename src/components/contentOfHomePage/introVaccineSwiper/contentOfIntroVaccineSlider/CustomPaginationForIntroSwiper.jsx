@@ -46,6 +46,7 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
   const allSlidesNavigation = swiper.slides
 
   const [activeIndex, setActiveIndex] = useState(swiper.activeIndex)
+  const [block, setBlock] = useState([0, 1, 2])
 
   useEffect(() => {
     const handleSlideChange = () => {
@@ -63,7 +64,7 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
     from: { width: '0px' },
     to: { width: '40px' },
     reset: true,
-    config: { duration: 5000 },
+    config: { duration: 3000 },
   })
 
   return (
@@ -82,7 +83,7 @@ const CustomPaginationForIntroSwiper = ({ pausedSwiper, setPausedSwiper }) => {
         stylesForIcons={stylesForPauseAndPlayBtn.icons}
         setPausedSwiper={setPausedSwiper}
       />
-      {allSlidesNavigation.map((_, index) => (
+      {block.map((_, index) => (
         <Box
           key={index}
           sx={stylesForBlocksWithAnimatedLine}

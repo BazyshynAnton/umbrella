@@ -34,10 +34,7 @@ const IntroVaccineSlider = () => {
     <Swiper
       onClick={() => setChangeLang(false)}
       spaceBetween={30}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
+      autoplay={true}
       modules={[Autoplay]}
       className="mySwiper"
       style={{
