@@ -32,7 +32,7 @@ Start the project `npm run dev`
 <div align='center'><img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/1a267a56-6150-4604-afe3-a0d5dfc67e74' /></div>
 
 <h3 align='center'>🟦 Main Page 🟦</h3>
-<img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/89653cd7-4b14-4be9-a38f-f14c04e50e1c' />
+<img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/ac9b7060-1643-4a72-a0b1-e3e1158d5446' />
 
 <h3 align='center'>🟦 Vaccine Page 🟦</h3>
 <img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/278fc26c-6aef-42af-841e-865119e848d0' />
