@@ -5,6 +5,7 @@ import {
 } from '../../shared/ui/reactImportsGlobal/reactImportsGlobal'
 import { Box } from '../../shared/ui/MUIglobal/muiGlobal'
 import { useHeaderContext } from '../../../context/HeaderContext'
+import { useCallback } from 'react'
 
 import langIcon from '../../../assets/pictures/app-icons/langIcon.webp'
 import ChangeLang from './ChangeLang'
@@ -20,18 +21,21 @@ const LanguageIconHeader = () => {
 
   const ref = useRef(null)
 
-  const handleClickOutside = (event) => {
-    if (ref.current && !ref.current.contains(event.target)) {
-      setChangeLang(false)
-    }
-  }
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setChangeLang(false)
+      }
+    },
+    [setChangeLang, ref]
+  )
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [])
+  }, [handleClickOutside])
 
   const handleChangeLang = () => {
     setChangeLang(!changeLang)
