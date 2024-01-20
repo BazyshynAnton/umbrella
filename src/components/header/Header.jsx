@@ -40,7 +40,6 @@ const Header = () => {
             position: '  relative',
             display: 'flex',
             justifyContent: 'space-between',
-            padding: '0px 24px',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.3rem' }}>
