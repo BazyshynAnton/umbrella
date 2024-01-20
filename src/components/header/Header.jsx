@@ -31,7 +31,7 @@ const Header = () => {
         top: '0px',
         zIndex: '1000',
         background: '#fff',
-        boxShadow: '0px 1px 15px rgba(0, 0, 0, 0.6)',
+        boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
       }}
     >
       <Container>
