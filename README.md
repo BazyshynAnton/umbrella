@@ -4,10 +4,11 @@
 <div align='center'><img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/99c2b3b5-2fdb-404c-b683-7be8639a9d73'/></div>
 
 <h2>Technologies</h2>
--React. <br/>
--React-Router-DOM. <br/>
--Material-UI for UI components. <br/>
--vite. <br/>
+- React. <br/>
+- Context API </br>
+- React-Router-DOM. <br/>
+- Material-UI for UI components. <br/>
+- vite. <br/>
 and other.  
 
 
