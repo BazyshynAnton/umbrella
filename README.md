@@ -13,7 +13,7 @@
 
 Start the project&nbsp; &nbsp;- `npm run dev`    <br/>
 Build the project&nbsp;&nbsp;- `npm run build`  <br/>
-Production&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- `npm run start`  <br/>
+Production&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- `npm run preview`  <br/>
 
 ## Technologies
 
