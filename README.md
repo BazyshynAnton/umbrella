@@ -1,31 +1,33 @@
-<h2>⚠️Disclaimer⚠️</h2>
+## ⚠️Disclaimer⚠️
 
   <p>This project is purely an educational and technical exercise, created to showcase my programming skills. None of the elements presented in this project have any real-world connection, and any resemblances to real events, organizations, or individuals are purely coincidental.</p>
 <div align='center'><img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/99c2b3b5-2fdb-404c-b683-7be8639a9d73'/></div>
 
-<h2>Technologies</h2>
+## Installation
+
+1.&nbsp;Clone the repository or download the archive.  
+2.&nbsp;Navigate to the project's root folder.  
+3.&nbsp;Install dependencies: `npm install`  
+
+## Getting Started
+
+Start the project&nbsp; &nbsp;- `npm run dev`    <br/>
+Build the project&nbsp;&nbsp;- `npm run build`  <br/>
+Production&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- `npm run start`  <br/>
+
+## Technologies
+
 - React. <br/>
 - Context API </br>
 - React-Router-DOM. <br/>
 - Material-UI for UI components. <br/>
-- vite. <br/>
-and other.  
+- i18n for translation. <br/>
+- vite. <br/>and other.  
 
+## Authors
 
-<h2>Authors</h2>
 <p>Bazyshyn Anton</p>
 <p>GitHub - <a href='https://github.com/BazyshynAnton'>Bazyshyn Anton</a></p> 
-
-<h3>Installation</h3>  
-
-1.Clone the repository or download the archive.  
-2.Navigate to the project's root folder.  
-3.Install dependencies: `npm install`  
-
-
-<h3>Getting Started</h3>  
-
-Start the project `npm run dev`  
 
 <h2>Screenshots of the Project 📸</h2>
 <br/>
