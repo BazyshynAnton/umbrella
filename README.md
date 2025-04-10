@@ -1,7 +1,4 @@
-## ⚠️Disclaimer⚠️
-
-  <p>This project is purely an educational and technical exercise, created to showcase my programming skills. None of the elements presented in this project have any real-world connection, and any resemblances to real events, organizations, or individuals are purely coincidental.</p>
-<div align='center'><img src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/99c2b3b5-2fdb-404c-b683-7be8639a9d73'/></div>
+<div align='center'><img style="width:10%" src='https://github.com/BazyshynAnton/Umbrella.corp/assets/120124298/99c2b3b5-2fdb-404c-b683-7be8639a9d73'/></div>
 
 ## Installation
 
